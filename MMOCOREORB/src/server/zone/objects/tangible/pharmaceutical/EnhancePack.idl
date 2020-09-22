@@ -101,7 +101,7 @@ class EnhancePack extends PharmaceuticalObject {
 		if (selectedID != 20)
 			return 1;
 
-		if (player.getSkillMod("healing_ability") < super.medicineUseRequired) {
+		if (player.getSkillMod("pharmacy") < super.medicineUseRequired) {
 			player.sendSystemMessage("@error_message:insufficient_skill"); //You lack the skill to use this item.
 
 			return 0;

@@ -12,6 +12,7 @@
 #include "server/zone/objects/draftschematic/DraftSchematic.h"
 #include "server/zone/objects/tangible/attachment/Attachment.h"
 #include "server/zone/managers/skill/SkillModManager.h"
+#include "server/zone/objects/scene/SceneObjectType.h"
 
 /**
  * Rename for clarity/convenience
@@ -60,6 +61,42 @@ void WearableObjectImplementation::initializeTransientMembers() {
 	TangibleObjectImplementation::initializeTransientMembers();
 	setLoggingName("WearableObject");
 }
+
+bool WearableObjectImplementation::hasSeaRemovalTool(CreatureObject* player, bool removeItem) {
+
+	uint32 crc;
+
+	if (player == nullptr)
+		return 0;
+
+	ManagedReference<SceneObject*> inventory = player->getSlottedObject("inventory");
+
+	if (inventory == nullptr)
+		return false;
+
+	Locker inventoryLocker(inventory);
+
+	for (int i = 0; i < inventory->getContainerObjectsSize(); ++i) {
+		SceneObject* sceno = inventory->getContainerObject(i);
+
+		crc = sceno->getServerObjectCRC();
+		if (String::valueOf(crc) == "3905622464") { //Sea Removal Tool
+
+			if (sceno != nullptr) {
+				if (removeItem) {
+					Locker locker(sceno);
+					sceno->destroyObjectFromWorld(true);
+					sceno->destroyObjectFromDatabase(true);
+				}
+
+				return true;
+			}
+		}
+	}
+
+	return 0;
+}
+
 
 void WearableObjectImplementation::fillAttributeList(AttributeListMessage* alm,
 		CreatureObject* object) {
@@ -272,4 +309,3 @@ String WearableObjectImplementation::repairAttempt(int repairChance) {
 
 	return message;
 }
-

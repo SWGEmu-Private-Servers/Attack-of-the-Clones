@@ -60,8 +60,7 @@ public:
 				ManagedReference<SceneObject*> obj = cell->getContainerObject(j);
 
 				if(obj != nullptr && obj->isVendor()) {
-					creature->sendSystemMessage("@player_structure:vendor_no_private"); // A structure hosting a vendor cannot be declared private
-					return GENERALERROR;
+					creature->sendSystemMessage("Beward - you are adjusting the privacy on a building with a vendor in it!"); 
 				}
 			}
 		}

@@ -92,6 +92,16 @@ void LoginPacketHandler::handleDeleteCharacterMessage(LoginClient* client, Messa
 
 	int dbDelete = 0;
 
+	//String oldname = "Record Redacted";
+
+	//StringBuffer removeFactionQuery; //redact faction and mission data for website
+	//removeFactionQuery << "update mission_completions, faction_tracker SET mission_completions.player = '"<< oldname <<"', faction_tracker.player = '"<< oldname <<"' WHERE faction_tracker.player = (select firstname from characters where character_oid = '"<< charId <<"');" ;
+	//ServerDatabase::instance()->executeStatement(removeFactionQuery);
+
+
+
+
+
 	try {
 		UniqueReference<ResultSet*> moveResults(ServerDatabase::instance()->executeQuery(moveStatement.toString()));
 
@@ -137,5 +147,3 @@ void LoginPacketHandler::handleDeleteCharacterMessage(LoginClient* client, Messa
 	Message* msg = new DeleteCharacterReplyMessage(dbDelete);
 	client->sendMessage(msg);
 }
-
-

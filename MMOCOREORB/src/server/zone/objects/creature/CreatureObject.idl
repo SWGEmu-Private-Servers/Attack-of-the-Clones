@@ -1072,7 +1072,7 @@ class CreatureObject extends TangibleObject {
 	public native boolean isHealableBy(CreatureObject object);
 
 	@dirty
-	public native boolean isInvulnerable();
+	public native boolean isSamePvpFactionAs(CreatureObject first, CreatureObject second);
 
 	/**
 	 * Evaluates if the bounty hunter has a mission with the target.

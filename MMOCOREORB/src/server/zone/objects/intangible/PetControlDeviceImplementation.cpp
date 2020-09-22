@@ -153,7 +153,8 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 		bool ch = player->hasSkill("outdoors_creaturehandler_novice");
 
 		if (ch) {
-			maxPets = player->getSkillMod("keep_creature");
+			// Stack allow for 2X creatures out if you have creature mod
+			maxPets = (player->getSkillMod("keep_creature")) * 2;
 			maxLevelofPets = player->getSkillMod("tame_level");
 		}
 
@@ -178,7 +179,7 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 			if (object->isCreature() && petType == PetManager::CREATUREPET) {
 				const CreatureTemplate* activePetTemplate = object->getCreatureTemplate();
 
-				if (activePetTemplate == nullptr || activePetTemplate->getTemplateName() == "at_st")
+				if (activePetTemplate == NULL || activePetTemplate->getTemplateName() == "rep_at_xt" || activePetTemplate->getTemplateName() == "cis_hailfire"|| activePetTemplate->getTemplateName() == "rep_at_xt_pet"|| activePetTemplate->getTemplateName() == "cis_hailfire_pet")
 					continue;
 
 				if (++currentlySpawned >= maxPets) {
@@ -201,17 +202,27 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 				const CreatureTemplate* activePetTemplate = object->getCreatureTemplate();
 				const CreatureTemplate* callingPetTemplate = pet->getCreatureTemplate();
 
-				if (activePetTemplate == nullptr || callingPetTemplate == nullptr || activePetTemplate->getTemplateName() != "at_st")
-					continue;
 
-				if (++currentlySpawned >= maxPets || (activePetTemplate->getTemplateName() == "at_st" && callingPetTemplate->getTemplateName() == "at_st")) {
-					player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
-					return;
-				}
-			} else if (object->isDroidObject() && petType == PetManager::DROIDPET) {
-				if (++currentlySpawned >= maxPets) {
-					player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
-					return;
+					if (activePetTemplate == NULL || callingPetTemplate == NULL || (activePetTemplate->getTemplateName() != "rep_at_xt" && activePetTemplate->getTemplateName() != "cis_hailfire" && activePetTemplate->getTemplateName() != "rep_at_xt_pet" && activePetTemplate->getTemplateName() != "cis_hailfire_pet"))
+							continue;
+
+
+					if (++currentlySpawned >= maxPets || (activePetTemplate->getTemplateName() == "rep_at_xt" && callingPetTemplate->getTemplateName() == "rep_at_xt")
+							|| (activePetTemplate->getTemplateName() == "rep_at_xt_pet" && callingPetTemplate->getTemplateName() == "rep_at_xt_pet")
+							|| (activePetTemplate->getTemplateName() == "rep_at_xt" && callingPetTemplate->getTemplateName() == "rep_at_xt_pet")
+							|| (activePetTemplate->getTemplateName() == "rep_at_xt_pet" && callingPetTemplate->getTemplateName() == "rep_at_xt")
+							|| (activePetTemplate->getTemplateName() == "cis_hailfire" && callingPetTemplate->getTemplateName() == "cis_hailfire_pet")
+							|| (activePetTemplate->getTemplateName() == "cis_hailfire_pet" && callingPetTemplate->getTemplateName() == "cis_hailfire")
+							|| (activePetTemplate->getTemplateName() == "cis_hailfire" && callingPetTemplate->getTemplateName() == "cis_hailfire")
+							|| (activePetTemplate->getTemplateName() == "cis_hailfire_pet" && callingPetTemplate->getTemplateName() == "cis_hailfire_pet")) {
+						player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
+						return;
+					}
+				} else if (object->isDroidObject() && petType == PetManager::DROIDPET) {
+					if (++currentlySpawned >= maxPets) {
+						player->sendSystemMessage("@pet/pet_menu:at_max"); // You already have the maximum number of pets of this type that you can call.
+						return;
+
 				}
 			}
 
@@ -229,10 +240,10 @@ void PetControlDeviceImplementation::callObject(CreatureObject* player) {
 		Reference<CallPetTask*> callPet = new CallPetTask(_this.getReferenceUnsafeStaticCast(), player, "call_pet");
 
 		StringIdChatParameter message("pet/pet_menu", "call_pet_delay"); // Calling pet in %DI seconds. Combat will terminate pet call.
-		message.setDI(15);
+		message.setDI(5);
 		player->sendSystemMessage(message);
 
-		player->addPendingTask("call_pet", callPet, 15 * 1000);
+		player->addPendingTask("call_pet", callPet, 5 * 1000);
 
 		if (petControlObserver == nullptr) {
 			petControlObserver = new PetControlObserver(_this.getReferenceUnsafeStaticCast());

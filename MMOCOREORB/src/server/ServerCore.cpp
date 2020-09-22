@@ -347,6 +347,25 @@ void ServerCore::registerConsoleCommmands() {
 		return SUCCESS;
 	});
 
+	// Stack - adding in startsp and stopsp commands to server console
+	addCommand("startsp", [this](const String& arguments) -> CommandResult {
+		String spName = arguments;
+		System::out << " *** Starting screen play from console, named: " << spName << endl;
+
+		DirectorManager::instance()->startScreenPlay(nullptr, spName);
+
+		return SUCCESS;
+	});
+
+	addCommand("stopsp", [this](const String& arguments) -> CommandResult {
+		String spName = arguments;
+		System::out << " *** stopping screen play from console, named: " << spName << endl;
+
+		DirectorManager::instance()->stopScreenPlay(nullptr, spName);
+
+		return SUCCESS;
+	});
+
 	addCommand("reloadmanager", [this](const String& arguments) -> CommandResult {
 		if (arguments == "name") {
 			ZoneServer* server = zoneServerRef.get();
@@ -1030,4 +1049,3 @@ void coredetail::ConsoleReaderService::run() {
 		core->queueConsoleCommand(cmd);
 	}
 }
-

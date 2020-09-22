@@ -1057,6 +1057,9 @@ int CreatureObjectImplementation::inflictDamage(TangibleObject* attacker, int da
 	if (damageType % 3 != 0 && newValue < 0) // secondaries never should go negative
 		newValue = 0;
 
+	if (damageType == 6 && newValue <= 0)
+		newValue = 1;
+
 	setHAM(damageType, newValue, notifyClient);
 
 	if (attacker == nullptr)
@@ -1893,9 +1896,8 @@ void CreatureObjectImplementation::enqueueCommand(unsigned int actionCRC, unsign
 		if (priority == QueueCommand::NORMAL) {
 			commandQueue->put(action.get());
 		} else if (priority == QueueCommand::FRONT) {
-			if (commandQueue->size() > 0) {
+			if (commandQueue->size() > 0)
 				action->setCompareToCounter(commandQueue->get(0)->getCompareToCounter() - 1);
-			}
 
 			commandQueue->put(action.get());
 		}
@@ -1945,6 +1947,7 @@ void CreatureObjectImplementation::activateQueueAction() {
 	if (nextAction.isFuture()) {
 		CommandQueueActionEvent* e = new CommandQueueActionEvent(asCreatureObject());
 		e->schedule(nextAction);
+		//info ("test", true);
 
 		return;
 	}
@@ -1954,6 +1957,7 @@ void CreatureObjectImplementation::activateQueueAction() {
 	}
 
 	Reference<CommandQueueAction*> action = commandQueue->get(0);
+	//info (String::valueOf(commandQueue->size()), true);
 
 	ManagedReference<ObjectController*> objectController = getZoneServer()->getObjectController();
 
@@ -3017,10 +3021,20 @@ bool CreatureObjectImplementation::isAggressiveTo(CreatureObject* object) {
 	if (CombatManager::instance()->areInDuel(object, asCreatureObject()))
 		return true;
 
+	if (getWeapon()->isJediWeapon() && object->getFaction() != getFaction() && !(pvpStatusBitmask & CreatureFlag::TEF))
+		return false;
+
 	if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 		return true;
 
+	if (pvpStatusBitmask && object->getPvpStatusBitmask() && object->getFaction() != getFaction())
+		return true;
+
 	if (ghost->hasBhTef() && (hasBountyMissionFor(object) || object->hasBountyMissionFor(asCreatureObject()))) {
+		return true;
+	}
+
+	if (object->getPvpStatusBitmask() & CreatureFlag::TEF && getFaction() != object-> getFaction()){
 		return true;
 	}
 
@@ -3040,6 +3054,36 @@ bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object) {
 	return isAttackableBy(object, false);
 }
 
+// Stack
+// Creating a quick helper function to determine if they are the same faction
+bool CreatureObjectImplementation::isSamePvpFactionAs(CreatureObject* first, CreatureObject* second){
+
+	if(first == nullptr || second == nullptr)
+	{
+		// If its not an NPC with a faction, return true so no vis is granted.
+		return true;
+	}
+
+	bool reb = first->isRebel();
+	bool imp = first->isImperial();
+
+	bool otherReb = second->isRebel();
+	bool otherImp = second->isImperial();
+
+	if(reb)
+	{
+		return otherReb;
+	}
+
+	if(imp)
+	{
+		return otherImp;
+	}
+
+	// Player is neutral - return if the other is neutral;
+	return (!otherReb && !otherImp);
+}
+
 bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object, bool bypassDeadCheck) {
 	PlayerObject* ghost = getPlayerObject();
 
@@ -3052,10 +3096,6 @@ bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object, bool b
 	if ((!bypassDeadCheck && (isDead() || (isIncapacitated() && !isFeigningDeath()))) || isInvisible())
 		return false;
 
-	if (ghost->hasCrackdownTefTowards(object->getFaction())) {
-		return true;
-	}
-
 	if (getPvpStatusBitmask() == CreatureFlag::NONE)
 		return false;
 
@@ -3066,11 +3106,13 @@ bool CreatureObjectImplementation::isAttackableBy(TangibleObject* object, bool b
 		return false;
 
 	// if player is on leave, then faction object cannot attack it
-	if (getFactionStatus() == FactionStatus::ONLEAVE || getFaction() == 0)
-		return false;
+	//if (getFactionStatus() == FactionStatus::ONLEAVE || getFaction() == 0)
+	//	return false;
 
 	// if tano is overt, creature must be overt
-	if((object->getPvpStatusBitmask() & CreatureFlag::OVERT) && !(getPvpStatusBitmask() & CreatureFlag::OVERT))
+	//if((object->getPvpStatusBitmask() & CreatureFlag::OVERT) && !(getPvpStatusBitmask() & CreatureFlag::OVERT))
+		//return false;
+	if((getFactionStatus() == FactionStatus::COVERT && !(getPvpStatusBitmask() & CreatureFlag::TEF)) && object->getFaction() != 0)
 		return false;
 
 	// the other options are overt creature / overt tano  and covert/covert, covert tano, overt creature..  all are attackable
@@ -3099,10 +3141,6 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 				return false;
 			if (ConfigManager::instance()->getPvpMode())
 				return true;
-
-			if (object->isAiAgent() && ghost->hasCrackdownTefTowards(object->getFaction())) {
-				return true;
-			}
 		}
 	}
 
@@ -3149,12 +3187,24 @@ bool CreatureObjectImplementation::isAttackableBy(CreatureObject* object, bool b
 
 	if (object->hasBountyMissionFor(asCreatureObject()) || (ghost->hasBhTef() && hasBountyMissionFor(object)))
 		return true;
-
+		
 	if (getGroupID() != 0 && getGroupID() == object->getGroupID())
 		return false;
+		
+	if (ghost->hasBhTef() && (object->getFaction() != getFaction()) && getFaction()!=(0) && object->getFaction()!=(0))
+		return true;
 
 	if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 		return true;
+
+	if ((pvpStatusBitmask & CreatureFlag::OVERT) && object->getFaction() != getFaction() && object->getFaction()!=(0)) // anyone from opposing faction can attack you if you are overt
+		return true;
+
+	if (ghost->hasPvpTef() && object->getFaction() != getFaction() && object->getFaction()!=(0) && getFaction()!=(0)) //anyone from opposing faction can attack you if you have at tef
+			return true;
+
+	if (getWeapon()->isJediWeapon() && object->getFaction() != getFaction())
+			return true;
 
 	ManagedReference<GuildObject*> guildObject = guild.get();
 	if (guildObject != nullptr && guildObject->isInWaringGuild(object))
@@ -3179,7 +3229,7 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 		return false;
 
 	if (ghost->hasBhTef())
-		return false;
+		return true;
 
 	//if ((pvpStatusBitmask & CreatureFlag::OVERT) && (object->getPvpStatusBitmask() & CreatureFlag::OVERT) && object->getFaction() != getFaction())
 
@@ -3195,14 +3245,22 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 
 	uint32 targetFactionStatus = targetCreo->getFactionStatus();
 	uint32 currentFactionStatus = object->getFactionStatus();
+	PlayerObject* playerGhost = getPlayerObject();
 
-	if (getFaction() != object->getFaction() && !(targetFactionStatus == FactionStatus::ONLEAVE))
+	// Pets!
+	if(playerGhost == nullptr)
+	{
+		if(isPet() && object->getFaction() == getFaction())
+		{
+			return true;
+		}
+		return false;
+	}
+
+	if (playerGhost->hasPvpTef() && object->getFaction() != getFaction()) //can't heal player with tef if they aren't your faction
 		return false;
 
-	if ((targetFactionStatus == FactionStatus::OVERT) && !(currentFactionStatus == FactionStatus::OVERT))
-		return false;
-
-	if (!(targetFactionStatus == FactionStatus::ONLEAVE) && (currentFactionStatus == FactionStatus::ONLEAVE))
+	if (playerGhost->hasPvpTef() && !ghost->hasPvpTef()) //can't heal friendlies if they have tef and you don't
 		return false;
 
 	if(targetCreo->isPlayerCreature()) {
@@ -3212,10 +3270,6 @@ bool CreatureObjectImplementation::isHealableBy(CreatureObject* object) {
 	}
 
 	return true;
-}
-
-bool CreatureObjectImplementation::isInvulnerable()  {
-	return isPlayerCreature() && (getPvpStatusBitmask() & CreatureFlag::PLAYER) == 0;
 }
 
 bool CreatureObjectImplementation::hasBountyMissionFor(CreatureObject* target) {
@@ -3523,7 +3577,6 @@ bool CreatureObjectImplementation::hasEffectImmunity(uint8 effectType) const {
 	switch (effectType) {
 	case CommandEffect::BLIND:
 	case CommandEffect::DIZZY:
-	case CommandEffect::INTIMIDATE:
 	case CommandEffect::STUN:
 	case CommandEffect::NEXTATTACKDELAY:
 		if (isDroidSpecies() || const_cast<CreatureObjectImplementation*>(this)->isVehicleObject() || isWalkerSpecies())
@@ -3535,6 +3588,10 @@ bool CreatureObjectImplementation::hasEffectImmunity(uint8 effectType) const {
 		if (const_cast<CreatureObjectImplementation*>(this)->isVehicleObject() || isWalkerSpecies())
 			return true;
 		break;
+	case CommandEffect::INTIMIDATE:
+	if (const_cast<CreatureObjectImplementation*>(this)->isVehicleObject() || isWalkerSpecies() || (isDroidSpecies() && level>299))
+		return true;
+	break;
 	default:
 		return false;
 	}

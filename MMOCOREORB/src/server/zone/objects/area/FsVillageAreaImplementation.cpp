@@ -10,6 +10,8 @@
 #include "server/zone/objects/player/PlayerObject.h"
 #include "server/zone/Zone.h"
 #include "server/zone/objects/player/variables/PlayerQuestData.h"
+#include "server/zone/objects/player/FactionStatus.h"
+#include "server/zone/managers/faction/FactionManager.h"
 
 void FsVillageAreaImplementation::notifyEnter(SceneObject* player) {
 	ActiveAreaImplementation::notifyEnter(player);
@@ -38,12 +40,26 @@ void FsVillageAreaImplementation::notifyEnter(SceneObject* player) {
 		if (ghost->hasGodMode())
 			return;
 
-		if (!ghost->hasActiveQuestBitSet(PlayerQuestData::FS_VILLAGE_ELDER) && !ghost->hasCompletedQuestsBitSet(PlayerQuestData::FS_VILLAGE_ELDER)) {
-			playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
-			playerCreature->sendSystemMessage("@base_player:fs_village_unavailable");
-		} else if (playerCreature->isInCombat()) {
-			playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
-			playerCreature->sendSystemMessage("@base_player:fs_village_no_combat");
+		if (zone->getZoneName() == "rori"){
+				info("Target is on Rori", true);
+			if (playerCreature->getFaction() == 0){
+				info("Target is Neutral and cannot enter Restuss", true);
+				playerCreature->sendSystemMessage("You may not enter the city due to the ongoing battle between the Republic and Confederacy");
+				playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
+			}else{
+				info("Target is factioned and has been set to Overt", true);
+				playerCreature->sendSystemMessage("You have been set to Overt due to the ongoing battle between the Republic and Confederacy");
+				playerCreature->setFactionStatus(FactionStatus::OVERT);
+			}
+		}
+		if (zone->getZoneName() == "dathomir"){
+			if (!ghost->hasActiveQuestBitSet(PlayerQuestData::FS_VILLAGE_ELDER) && !ghost->hasCompletedQuestsBitSet(PlayerQuestData::FS_VILLAGE_ELDER)) {
+				playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
+				playerCreature->sendSystemMessage("@base_player:fs_village_unavailable");
+			} else if (playerCreature->isInCombat()) {
+				playerCreature->teleport(newPosX, getZone()->getHeight(newPosX, newPosY), newPosY, 0);
+				playerCreature->sendSystemMessage("@base_player:fs_village_no_combat");
+			}
 		}
 	}
 }

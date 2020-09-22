@@ -431,6 +431,13 @@ String ResourceManagerImplementation::healthCheck() {
 	return resourceSpawner->healthCheck();
 }
 
+String ResourceManagerImplementation::ghDump() {
+	Locker locker(_this.getReferenceUnsafeStaticCast());
+
+	return resourceSpawner->ghDump();
+}
+
+
 String ResourceManagerImplementation::dumpResources() {
 	Locker locker(_this.getReferenceUnsafeStaticCast());
 
@@ -443,8 +450,6 @@ String ResourceManagerImplementation::despawnResource(String& resourceName) {
 	if(spawn == nullptr) {
 		return "Spawn not Found";
 	}
-
-	Locker locker(spawn);
 
 	spawn->setDespawned(time(0) - 1);
 	resourceSpawner->shiftResources();

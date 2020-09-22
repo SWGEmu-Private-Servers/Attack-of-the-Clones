@@ -5,32 +5,39 @@
  *      Author: crush
  */
 
-#ifndef DESTROYSTRUCTUREREQUESTSUICALLBACK_H_
-#define DESTROYSTRUCTUREREQUESTSUICALLBACK_H_
+ #ifndef DESTROYSTRUCTUREREQUESTSUICALLBACK_H_
+ #define DESTROYSTRUCTUREREQUESTSUICALLBACK_H_
 
-#include "server/zone/objects/player/sui/SuiCallback.h"
-#include "server/zone/objects/player/sessions/DestroyStructureSession.h"
+ #include "server/zone/objects/player/sui/SuiCallback.h"
+ #include "server/zone/objects/player/sessions/DestroyStructureSession.h"
 
-class DestroyStructureRequestSuiCallback : public SuiCallback {
-public:
-	DestroyStructureRequestSuiCallback(ZoneServer* serv) : SuiCallback(serv) {
-	}
+ class DestroyStructureRequestSuiCallback : public SuiCallback {
+ private:
+     bool request_code = true;
 
-	void run(CreatureObject* player, SuiBox* sui, uint32 eventIndex, Vector<UnicodeString>* args) {
-		bool cancelPressed = (eventIndex == 1);
+ public:
+     DestroyStructureRequestSuiCallback(ZoneServer* serv, bool request_code=true) : SuiCallback(serv) {
+         this->request_code = request_code;
+     }
 
-		ManagedReference<DestroyStructureSession*> session = player->getActiveSession(SessionFacadeType::DESTROYSTRUCTURE).castTo<DestroyStructureSession*>();
+     void run(CreatureObject* player, SuiBox* sui, uint32 eventIndex, Vector<UnicodeString>* args) {
+         bool cancelPressed = (eventIndex == 1);
 
-		if (session == nullptr)
-			return;
+         ManagedReference<DestroyStructureSession*> session = player->getActiveSession(SessionFacadeType::DESTROYSTRUCTURE).castTo<DestroyStructureSession*>();
 
-		if (cancelPressed) {
-			session->cancelSession();
-			return;
-		}
+         if (session == nullptr)
+             return;
 
-		session->sendDestroyCode();
-	}
-};
+         if (cancelPressed) {
+             session->cancelSession();
+             return;
+         }
 
-#endif /* DESTROYSTRUCTUREREQUESTSUICALLBACK_H_ */
+         if(this->request_code)
+             session->sendDestroyCode();
+         else
+             session->destroyStructure();
+     }
+ };
+
+ #endif /* DESTROYSTRUCTUREREQUESTSUICALLBACK_H_ */

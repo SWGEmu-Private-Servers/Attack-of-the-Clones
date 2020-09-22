@@ -190,22 +190,14 @@ int APIProxyObjectManager::deleteObject(APIRequest& apiRequest, uint64 oid, bool
 		auto tano = scno->asTangibleObject();
 
 		if (tano != nullptr && tano->hasAntiDecayKit() && refundADK) {
-			Reference<SceneObject*> dest = scno->getParent().get();
+			auto dest = scno->getParent().get();
 
 			if (dest == nullptr && auctionOwnerID > 0) {
 				dest = getZoneServer()->getObject(auctionOwnerID);
 			}
 
 			if (dest != nullptr && dest->isCreatureObject()) {
-				Locker lock(dest);
-
-				auto inventory = dest->getSlottedObject("inventory");
-
-				if (inventory == nullptr && dest->isPlayerObject()) {
-					result << "; Failed to find inventory for " << dest->_getClassName() << "(" << dest->getObjectID() << ")";
-				}
-
-				dest = inventory;
+				dest = dest->getSlottedObject("inventory");
 			}
 
 			if (dest != nullptr) {
@@ -241,8 +233,6 @@ int APIProxyObjectManager::deleteObject(APIRequest& apiRequest, uint64 oid, bool
 						adk->destroyObjectFromDatabase(true);
 					}
 				}
-			} else {
-				result << "; failed to find destination to refund AntiDecayKit(" << tano->getAntiDecayKitObjectID() << ")";
 			}
 		}
 

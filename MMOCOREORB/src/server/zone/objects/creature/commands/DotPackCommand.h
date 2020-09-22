@@ -411,6 +411,19 @@ public:
 		doAnimationsRange(creature, creatureTarget, dotPack->getObjectID(), creature->getWorldPosition().distanceTo(creatureTarget->getWorldPosition()), dotPack->isArea());
 
 		creature->notifyObservers(ObserverEventType::MEDPACKUSED);
+		
+		bool shouldGcwTef = false, shouldBhTef = false;
+
+		CombatManager::instance()->checkForTefs(creature, creatureTarget, &shouldGcwTef, &shouldBhTef);
+		
+		if (shouldGcwTef || shouldBhTef) {
+			PlayerObject* ghost = creature->getPlayerObject();
+
+			if (ghost != nullptr) {
+				ghost->updateLastPvpCombatActionTimestamp(shouldGcwTef, shouldBhTef);
+			}
+		}
+
 
 		return SUCCESS;
 	}

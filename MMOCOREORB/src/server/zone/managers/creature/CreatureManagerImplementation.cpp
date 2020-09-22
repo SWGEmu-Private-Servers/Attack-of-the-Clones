@@ -25,6 +25,7 @@
 #include "server/zone/objects/creature/events/SampleDnaTask.h"
 #include "server/zone/objects/group/GroupObject.h"
 #include "server/zone/objects/player/PlayerObject.h"
+#include "server/zone/objects/player/FactionStatus.h"
 #include "server/zone/objects/creature/ai/AiAgent.h"
 #include "server/zone/objects/creature/events/DespawnCreatureTask.h"
 #include "server/zone/objects/area/SpawnArea.h"
@@ -571,8 +572,62 @@ int CreatureManagerImplementation::notifyDestruction(TangibleObject* destructor,
 
 					if(!player->isGrouped())
 						factionManager->awardFactionStanding(player, destructedObject->getFactionString(), level);
-					else
-						factionManager->awardFactionStanding(copyThreatMap.getHighestDamagePlayer(), destructedObject->getFactionString(), level);
+						else {
+							//CreatureObject* killerCreature = cast<CreatureObject*>(killer); Faction reward for all members in range in group
+								Vector<ManagedReference<CreatureObject*> > players;
+								ManagedReference<GroupObject*> group;
+								group = player->getGroup();
+								int playerCount = group->getNumberOfPlayerMembers();
+
+								for (int x = 0; x < group->getGroupSize(); x++){
+
+									Reference<CreatureObject*> groupMember = group->getGroupMember(x);
+									ManagedReference<PlayerObject*> ghost = groupMember->getPlayerObject().get();
+
+									if (groupMember->isPlayerCreature() && groupMember->isInRange(destructedObject, 128.0f))
+									{
+
+										//Stack - fix for abusing faction split. Conditions under which to split faction:
+										// First check to make sure if its imperial or rebel, in which case:
+										// 1. Same faction, both overt 2. Same faction, hasTEF
+
+										if(destructedObject->getFactionString() == "rebel" || destructedObject->getFactionString() == "imperial")
+										{
+											if(destructedObject->getFactionString() == "rebel"
+												&& groupMember->isImperial()
+												&& (groupMember->getFactionStatus() == FactionStatus::OVERT || ghost->hasPvpTef()))
+											{
+												players.add(groupMember);
+											}
+
+											if(destructedObject->getFactionString() == "imperial"
+												&& groupMember->isRebel()
+												&& (groupMember->getFactionStatus() == FactionStatus::OVERT || ghost->hasPvpTef()))
+											{
+												players.add(groupMember);
+											}
+
+										}
+										// NOT rebel or imp (different faction for split)- award to everyone
+										else
+										{
+											players.add(groupMember);
+										}
+									}
+								}
+
+								if(players.size() == 0)
+								{
+									factionManager->awardFactionStanding(player, destructedObject->getFactionString(), level);
+								}
+
+								for (int y = 0; y < players.size(); y++){
+									ManagedReference<CreatureObject*> player = players.get(y);
+									// Reduction of faction points based on amount of players in area
+									factionManager->awardFactionStanding(player, destructedObject->getFactionString(), (0.8*level));
+								}
+							}
+
 				}
 			}
 
@@ -1024,7 +1079,8 @@ void CreatureManagerImplementation::tame(Creature* creature, CreatureObject* pla
 	int currentlySpawned = 0;
 	int spawnedLevel = 0;
 	int level = creature->getLevel();
-	int maxPets = player->getSkillMod("keep_creature");
+	// Stack - increase pets by 2X (out at a time)
+	int maxPets = (player->getSkillMod("keep_creature") * 2);
 
 	for (int i = 0; i < ghost->getActivePetsSize(); ++i) {
 		ManagedReference<AiAgent*> object = ghost->getActivePet(i);

@@ -82,6 +82,7 @@ namespace server {
 
 		void startGlobalScreenPlays();
 		void startScreenPlay(CreatureObject* creatureObject, const String& screenPlayName);
+		void stopScreenPlay(CreatureObject* creatureObject, const String& screenPlayName);
 		void reloadScreenPlays();
 		void activateEvent(ScreenPlayTask* task);
 		ConversationScreen* getNextConversationScreen(const String& luaClass, ConversationTemplate* conversationTemplate, CreatureObject* conversingPlayer, int selectedOption, CreatureObject* conversingNPC);
@@ -121,6 +122,7 @@ namespace server {
 		static int dropObserver(lua_State* L);
 		static int hasObserver(lua_State* L);
 		static int spawnMobile(lua_State* L);
+		static int startStopScreenplayFromLua(lua_State* L);
 		static int spawnEventMobile(lua_State* L);
 		static int spawnSceneObject(lua_State* L);
 		static int spawnActiveArea(lua_State* L);

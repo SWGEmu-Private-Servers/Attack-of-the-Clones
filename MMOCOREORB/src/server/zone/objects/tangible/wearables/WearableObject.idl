@@ -38,6 +38,10 @@ class WearableObject extends TangibleObject {
 		Logger.setLoggingName("WearableObject");
 	}
 
+	@dirty
+	public native boolean hasSeaRemovalTool(CreatureObject player, boolean removeItem);
+
+
 	public native void initializeTransientMembers();
 
 	/**

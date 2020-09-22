@@ -35,7 +35,12 @@ int DestroyStructureSessionImplementation::initializeSession() {
 	String redeed = (structureObject->isRedeedable()) ? yes : no;
 
 	StringBuffer maint;
-	maint << "@player_structure:redeed_maintenance \\#" << ((structureObject->isRedeedable()) ? "32CD32 " : "FF6347 ") << structureObject->getSurplusMaintenance() << "/" << structureObject->getRedeedCost() << "\\#.";
+	bool struct_is_redeedable = structureObject->isRedeedable();
+	// Credit Erau at Sentinels Republic
+	// confirmation code will not be requested for Harvester and Generators with enough maintenance
+	bool request_confirmation_code = !(struct_is_redeedable && (structureObject->isHarvesterObject() or structureObject->isGeneratorObject()) );
+
+	maint << "@player_structure:redeed_maintenance \\#" << ((struct_is_redeedable) ? "32CD32 " : "FF6347 ") << structureObject->getSurplusMaintenance() << "/" << structureObject->getRedeedCost() << "\\#.";
 
 	StringBuffer entry;
 	entry << "@player_structure:confirm_destruction_d1 ";
@@ -49,7 +54,7 @@ int DestroyStructureSessionImplementation::initializeSession() {
 	cond << "@player_structure:redeed_condition \\#32CD32 " << (structureObject->getMaxCondition() - structureObject->getConditionDamage()) << "/" << structureObject->getMaxCondition() << "\\#.";
 
 	ManagedReference<SuiListBox*> sui = new SuiListBox(player);
-	sui->setCallback(new DestroyStructureRequestSuiCallback(creatureObject->getZoneServer()));
+	sui->setCallback(new DestroyStructureRequestSuiCallback(creatureObject->getZoneServer(), request_confirmation_code));
 	sui->setCancelButton(true, "@no");
 	sui->setOkButton(true, "@yes");
 	sui->setUsingObject(structureObject);

@@ -2292,7 +2292,7 @@ bool AiAgentImplementation::isScentMasked(CreatureObject* target) {
 		return false;
 	}
 
-	if (isNonPlayerCreatureObject() || isDroidObject())
+	if (isNonPlayerCreatureObject() || isDroidObject() || isDroidSpecies())
 		return false;
 
 	// Don't check if it's already been checked
@@ -2803,10 +2803,6 @@ bool AiAgentImplementation::isAggressiveTo(CreatureObject* target) {
 	uint32 targetFaction = target->getFaction();
 	PlayerObject* ghost = target->getPlayerObject();
 
-	if (ghost != nullptr && ghost->hasCrackdownTefTowards(getFaction())) {
-		return true;
-	}
-
 	// check the GCW factions if both entities have one
 	if (getFaction() != 0 && targetFaction != 0) {
 
@@ -2814,8 +2810,10 @@ bool AiAgentImplementation::isAggressiveTo(CreatureObject* target) {
 		if (ghost == nullptr && (targetFaction != getFaction()))
 			return true;
 		// this is the same thing, but ensures that if the target is a player, that they aren't on leave
-		else if (ghost != nullptr && (targetFaction != getFaction()) && target->getFactionStatus() != FactionStatus::ONLEAVE)
+		else if (ghost != nullptr && (targetFaction != getFaction()) && (target->getFactionStatus() == FactionStatus::OVERT || target->getPvpStatusBitmask() & CreatureFlag::TEF))
 			return true;
+		else if ((targetFaction !=getFaction()) && (target->getFactionStatus() == FactionStatus::COVERT))
+			return false;
 	}
 
 	// now grab the generic faction (which could include imp/reb)
@@ -3294,13 +3292,6 @@ bool AiAgentImplementation::isAttackableBy(CreatureObject* object) {
 
 	if (pvpStatusBitmask == 0) {
 		return false;
-	}
-
-	if (object->isPlayerCreature()) {
-		Reference<PlayerObject*> ghost = object->getPlayerObject();
-		if (ghost != nullptr && ghost->hasCrackdownTefTowards(getFaction())) {
-			return true;
-		}
 	}
 
 	unsigned int targetFaction = object->getFaction();

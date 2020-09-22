@@ -17,12 +17,12 @@ bool StructureContainerComponent::checkContainerPermission(SceneObject* sceneObj
 			if (building->isPublicStructure() && (building->isOnPermissionList("VENDOR", creature) || building->isOnAdminList(creature)))
 				return true;
 			else {
-				if (building->isPrivateStructure())
-					creature->sendSystemMessage("@player_structure:vendor_public_only"); //
-				else
+				if (building->isPrivateStructure()){
+					creature->sendSystemMessage("Be aware - You are placing a vendor in a private residence - your market will be limited!"); // Stack: Allow placement in a private building, but provide warning
+				} else {
 					creature->sendSystemMessage("@player_structure:drop_npc_vendor_perm"); // You do not have vendor permission in this building
-
-				return false;
+					return false;
+				}
 			}
 		}
 

@@ -17,6 +17,8 @@
 #include "server/zone/objects/region/Region.h"
 #include "server/zone/objects/creature/sui/RepairVehicleSuiCallback.h"
 #include "templates/customization/AssetCustomizationManagerTemplate.h"
+#include "server/zone/managers/stringid/StringIdManager.h"
+
 
 
 void VehicleObjectImplementation::fillObjectMenuResponse(ObjectMenuResponse* menuResponse, CreatureObject* player) {
@@ -233,6 +235,13 @@ void VehicleObjectImplementation::sendRepairConfirmTo(CreatureObject* player) {
 int VehicleObjectImplementation::calculateRepairCost(CreatureObject* player) {
 	if (player->getPlayerObject()->isPrivileged())
 		return 0;
+
+		// Stack - 10X increase in repair cost to non traditional speeders in prep for additional speeder patch
+	String vehicleNameRaw = StringIdManager::instance()->getStringId(getObjectName()->getFullPath().hashCode()).toString();
+	if(vehicleNameRaw != "Speederbike" && vehicleNameRaw != "Speederbike Swoop" && vehicleNameRaw != "X-31 Landspeeder")
+	{
+		return getConditionDamage() * 40;
+	}
 
 	return getConditionDamage() * 4;
 }

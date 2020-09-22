@@ -21,6 +21,7 @@
 #include "server/zone/objects/mission/events/FailMissionAfterCertainTimeTask.h"
 #include "events/CompleteMissionObjectiveTask.h"
 #include "server/zone/objects/transaction/TransactionLog.h"
+#include "server/db/ServerDatabase.h"
 
 void MissionObjectiveImplementation::destroyObjectFromDatabase() {
 	for (int i = 0; i < observers.size(); ++i) {
@@ -221,11 +222,11 @@ void MissionObjectiveImplementation::awardReward() {
 		players.add(owner);
 	}
 
-	int divisor = mission->getRewardCreditsDivisor();
+	int divisor = 1;
 	bool expanded = false;
 
-	if (playerCount > divisor) {
-		divisor = playerCount;
+	if (players.size() > divisor) {
+		divisor = players.size();
 		expanded = true;
 	}
 
@@ -244,6 +245,14 @@ void MissionObjectiveImplementation::awardReward() {
 		Locker lockerPl(player, _this.getReferenceUnsafeStaticCast());
 		TransactionLog trx(TrxCode::MISSIONSYSTEMDYNAMIC, player, dividedReward, false);
 		player->addBankCredits(dividedReward, true);
+		
+		StringBuffer missionRewardQuery; //store mission data for website
+		StringBuffer missionCompleteQuery;
+		String playerName = player->getFirstName();
+		missionRewardQuery << "Update mission_completions set reward = reward +'" <<dividedReward << "' where player  = '" <<playerName<<"';";
+		missionCompleteQuery << "Update mission_completions set completed = completed + 1 where player  = '" <<playerName<<"';";
+		ServerDatabase::instance()->executeStatement(missionRewardQuery);
+		ServerDatabase::instance()->executeStatement(missionCompleteQuery);
 	}
 
 	if (group != nullptr) {

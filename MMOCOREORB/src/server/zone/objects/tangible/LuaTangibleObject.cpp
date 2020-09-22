@@ -50,6 +50,8 @@ Luna<LuaTangibleObject>::RegType LuaTangibleObject::Register[] = {
 		{ "isBroken", &LuaTangibleObject::isBroken},
 		{ "isSliced", &LuaTangibleObject::isSliced},
 		{ "isNoTrade", &LuaTangibleObject::isNoTrade},
+		{ "getUseCount", &LuaTangibleObject::getUseCount},
+		{ "setUseCount", &LuaTangibleObject::setUseCount},
 		{ 0, 0 }
 };
 
@@ -379,4 +381,22 @@ int LuaTangibleObject::isNoTrade(lua_State* L){
 	lua_pushboolean(L, noTrade);
 
 	return 1;
+}
+
+int LuaTangibleObject::getUseCount(lua_State* L){
+	int useCount = realObject->getUseCount();
+
+	lua_pushinteger(L, useCount);
+
+	return 1;
+}
+
+int LuaTangibleObject::setUseCount(lua_State* L){
+	float useCount = lua_tonumber(L, -1);
+
+	Locker locker(realObject);
+
+	realObject->setUseCount(useCount, true);
+
+	return 0;
 }

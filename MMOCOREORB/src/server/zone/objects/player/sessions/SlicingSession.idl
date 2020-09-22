@@ -1,6 +1,8 @@
 /*
 				Copyright <SWGEmu>
-		See file COPYING for copying conditions. */
+		See file COPYING for copying conditions.
+		Credit Remastered (Tarkin?) for slice selection
+		*/
 
 package server.zone.objects.player.sessions;
 
@@ -34,6 +36,11 @@ class SlicingSession extends Facade {
 
 	protected boolean usedNode;
 	protected boolean usedClamp;
+
+	protected byte sliceOption;
+	protected boolean selectableSlice;
+	protected boolean selectedSlice;
+	protected boolean firstRun;
 
 	protected boolean baseSlice;
 	protected boolean keypadSlice;

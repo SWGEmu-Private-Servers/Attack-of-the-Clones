@@ -54,7 +54,8 @@ public:
 	EnhancePack* findEnhancePack(CreatureObject* enhancer, uint8 attribute) const {
 		SceneObject* inventory = enhancer->getSlottedObject("inventory");
 
-		int medicineUse = enhancer->getSkillMod("healing_ability");
+		int medicineUse = enhancer->getSkillMod("pharmacy");
+		//info(String::valueOf(medicineUse),true);
 
 		if (inventory != nullptr) {
 			for (int i = 0; i < inventory->getContainerObjectsSize(); ++i) {
@@ -335,7 +336,8 @@ public:
 				return false;
 			}
 
-			int medicineUse = enhancer->getSkillMod("healing_ability");
+			int medicineUse = enhancer->getSkillMod("pharmacy");
+			//info(String::valueOf(medicineUse),true);
 
 			if (enhancePack->getMedicineUseRequired() > medicineUse) {
 				enhancer->sendSystemMessage("@error_message:insufficient_skill"); // You lack the skill to use this item.

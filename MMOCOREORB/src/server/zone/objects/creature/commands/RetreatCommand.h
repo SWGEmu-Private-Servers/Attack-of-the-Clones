@@ -86,6 +86,8 @@ public:
 
 		for (int i = 1; i < group->getGroupSize(); ++i) {
 			ManagedReference<CreatureObject*> member = group->getGroupMember(i);
+			if (member == nullptr || !member->isPlayerCreature() || member->getZone() != creature->getZone() || !member->isInRange(creature, 128.0))
+			continue;
 
 			if (member == nullptr || !member->isPlayerCreature())
 				continue;

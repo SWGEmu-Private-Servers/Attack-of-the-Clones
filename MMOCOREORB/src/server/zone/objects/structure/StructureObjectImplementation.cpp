@@ -738,12 +738,23 @@ bool StructureObjectImplementation::isGuildHall() const {
 }
 
 int StructureObjectImplementation::getBaseMaintenanceRate() const {
+	// Stack - Adjust this rate to change all non commercial maintenance.
+	float maintAdjustment = 2.0;
+
 	const SharedStructureObjectTemplate* tmpl = cast<SharedStructureObjectTemplate*>(getObjectTemplate());
 
 	if(tmpl == nullptr)
 		return 0;
 
-	return tmpl->getBaseMaintenanceRate();
+  // Stack - adjusting the maintenance rate of NON COMMERCIAL structures (houses and such) to be adjusted by the factor
+	int rate = tmpl->getBaseMaintenanceRate();
+	if(!isCommercialStructure())
+	{
+		float adjustedRate = rate * maintAdjustment;
+		rate = (int) adjustedRate;
+	}
+
+	return rate;
 }
 
 int StructureObjectImplementation::getBasePowerRate() const {

@@ -155,6 +155,7 @@
 #include "server/zone/objects/creature/commands/DeclineCommand.h"
 #include "server/zone/objects/creature/commands/DefaultAttackCommand.h"
 #include "server/zone/objects/creature/commands/DefaultDroidAttackCommand.h"
+#include "server/zone/objects/creature/commands/DefaultDroidRangedAttackCommand.h"
 #include "server/zone/objects/creature/commands/DefuseMinefieldCommand.h"
 #include "server/zone/objects/creature/commands/DelegateFactionPointsCommand.h"
 #include "server/zone/objects/creature/commands/DenyServiceCommand.h"
@@ -253,6 +254,7 @@
 #include "server/zone/objects/creature/commands/ForceRun1Command.h"
 #include "server/zone/objects/creature/commands/ForceRun2Command.h"
 #include "server/zone/objects/creature/commands/ForceRun3Command.h"
+#include "server/zone/objects/creature/commands/ForceSerenity1Command.h"
 #include "server/zone/objects/creature/commands/ForceShield1Command.h"
 #include "server/zone/objects/creature/commands/ForceShield2Command.h"
 #include "server/zone/objects/creature/commands/ForceSpeed1Command.h"
@@ -425,6 +427,9 @@
 #include "server/zone/objects/creature/commands/MildPoisonCommand.h"
 #include "server/zone/objects/creature/commands/StrongPoisonCommand.h"
 #include "server/zone/objects/creature/commands/StrongDiseaseCommand.h"
+#include "server/zone/objects/creature/commands/GmEventToolsCommand.h"
+#include "server/zone/objects/creature/commands/GmStaffToolsCommand.h"
+
 
 using namespace server::zone::managers::objectcontroller::command;
 
@@ -555,6 +560,7 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<DeclineCommand>(String("decline").toLowerCase());
 	commandFactory.registerCommand<DefaultAttackCommand>(String("defaultAttack").toLowerCase());
 	commandFactory.registerCommand<DefaultDroidAttackCommand>(String("defaultDroidAttack").toLowerCase());
+		commandFactory.registerCommand<DefaultDroidRangedAttackCommand>(String("defaultDroidRangedAttack").toLowerCase());
 	commandFactory.registerCommand<DefuseMinefieldCommand>(String("defuseMinefield").toLowerCase());
 	commandFactory.registerCommand<DelegateFactionPointsCommand>(String("delegateFactionPoints").toLowerCase());
 	commandFactory.registerCommand<DenyServiceCommand>(String("denyService").toLowerCase());
@@ -654,6 +660,7 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<ForceRun1Command>(String("forceRun1").toLowerCase());
 	commandFactory.registerCommand<ForceRun2Command>(String("forceRun2").toLowerCase());
 	commandFactory.registerCommand<ForceRun3Command>(String("forceRun3").toLowerCase());
+	commandFactory.registerCommand<ForceSerenity1Command>(String("forceSerenity1").toLowerCase());
 	commandFactory.registerCommand<ForceShield1Command>(String("forceShield1").toLowerCase());
 	commandFactory.registerCommand<ForceShield2Command>(String("forceShield2").toLowerCase());
 	commandFactory.registerCommand<ForceSpeed1Command>(String("forceSpeed1").toLowerCase());
@@ -695,6 +702,8 @@ void CommandConfigManager::registerCommands2() {
 	commandFactory.registerCommand<GmForceCommandCommand>(String("gmForceCommand").toLowerCase());
 	commandFactory.registerCommand<GmCreateClassResourceCommand>(String("gmCreateClassResource").toLowerCase());
 	commandFactory.registerCommand<GmCreateSpecificResourceCommand>(String("gmCreateSpecificResource").toLowerCase());
+	commandFactory.registerCommand<GmEventToolsCommand>(String("gmEventTools").toLowerCase());
+	commandFactory.registerCommand<GmStaffToolsCommand>(String("gmStaffTools").toLowerCase());
 	commandFactory.registerCommand<GmForceRankCommand>(String("gmForceRank").toLowerCase());
 	commandFactory.registerCommand<GmFsVillageCommand>(String("gmFsVillage").toLowerCase());
 	commandFactory.registerCommand<GmJediStateCommand>(String("gmJediState").toLowerCase());

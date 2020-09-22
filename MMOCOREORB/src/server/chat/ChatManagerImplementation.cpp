@@ -75,6 +75,7 @@ void ChatManagerImplementation::stop() {
 	groupRoom = nullptr;
 	guildRoom = nullptr;
 	auctionRoom = nullptr;
+	serverRoom = nullptr;
 	gameRooms.removeAll();
 }
 
@@ -309,11 +310,16 @@ void ChatManagerImplementation::initiateRooms() {
 	Reference<ChatRoom*> generalRoom = createRoom("Chat", galaxyRoom);
 	generalRoom->setCanEnter(true);
 	generalRoom->setAllowSubrooms(true);
-	generalRoom->setTitle("public chat for this server, can create rooms here");
+	generalRoom->setTitle("Public Chat for this server, can create subrooms here");
 
 	auctionRoom = createRoom("Auction", galaxyRoom);
 	auctionRoom->setCanEnter(true);
 	auctionRoom->setChatRoomType(ChatRoom::AUCTION);
+
+	// Stack, adding in server wide roomMap
+	serverRoom = createRoom("Galaxy", generalRoom);
+	serverRoom->setCanEnter(true);
+	serverRoom->setTitle("Server Wide chat for all players -- auto joined");
 
 }
 

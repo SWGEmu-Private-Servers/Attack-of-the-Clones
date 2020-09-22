@@ -3,7 +3,8 @@
 		See file COPYING for copying conditions. */
 
 #include "server/zone/objects/player/PlayerObject.h"
-
+#include "server/zone/managers/stringid/StringIdManager.h"
+#include "server/zone/objects/installation/InstallationObject.h"
 #include "server/zone/managers/object/ObjectManager.h"
 #include "server/zone/managers/player/PlayerManager.h"
 #include "server/zone/managers/skill/SkillManager.h"
@@ -42,6 +43,8 @@
 #include "server/zone/managers/group/GroupManager.h"
 #include "server/zone/objects/creature/variables/Skill.h"
 #include "server/zone/objects/player/sui/inputbox/SuiInputBox.h"
+#include "server/zone/objects/player/sui/listbox/SuiListBox.h"
+#include "server/zone/objects/player/sui/SuiWindowType.h"
 #include "server/zone/objects/building/BuildingObject.h"
 #include "server/zone/objects/group/GroupObject.h"
 #include "server/zone/objects/guild/GuildObject.h"
@@ -320,6 +323,7 @@ void PlayerObjectImplementation::unload() {
 	creature->printReferenceHolders();*/
 }
 
+
 int PlayerObjectImplementation::calculateBhReward() {
 	int minReward = 25000; // Minimum reward for a player bounty
 
@@ -357,6 +361,88 @@ void PlayerObjectImplementation::sendBaselinesTo(SceneObject* player) {
 		player->sendMessage(play9);
 	}
 }
+
+void PlayerObjectImplementation::showInstallationInfo(CreatureObject* player)
+{
+	if(player == nullptr)
+	{
+		return;
+		
+	}
+	ManagedReference<SuiListBox*> listBox = new SuiListBox(player, SuiWindowType::ADMIN_LIST);
+	listBox->setPromptTitle("Installation Info");
+	listBox->setPromptText("Here are all of your installations");
+	listBox->setCancelButton(true, "@cancel");
+
+	ZoneServer* zoneServer = getZoneServer();
+	ResourceManager* resourceManager = zoneServer->getResourceManager();
+
+	for (int i = 0; i < ownedStructures.size(); ++i) {
+	  uint64 oid = ownedStructures.get(i);
+
+	  StructureObject* structure = getZoneServer()->getObject(oid).castTo<StructureObject*>();
+
+	  if (structure != nullptr) {
+	    Zone* zone = structure->getZone();
+			//stack
+
+	    if (zone != nullptr) {
+				// \\#e60000 RED, \\#00e604 GREEN
+				String colorAdjustment = "\\#00e604";
+				String zoneName = zone->getZoneName();
+				int remainingMaint = structure->getSurplusMaintenance();
+				int remainingPower = structure->getSurplusPower();
+
+				String extractionMessage = "";
+
+				InstallationObject* installation = cast<InstallationObject*> (structure);
+				if(installation != nullptr)
+				{
+					bool isOperational = installation->isOperating();
+					long resourceId = installation->getActiveResourceSpawnID();
+					String currentSpawn = installation->getCurrentSpawnName();
+
+					if(isOperational)
+					{
+						extractionMessage =  " ON Pulling: " + currentSpawn + " ";
+							// Color should stay green
+					}
+					else
+					{
+						extractionMessage = " OFF ";
+						colorAdjustment = "\\#e60000";
+					}
+
+				}
+				else
+				{
+					if(remainingMaint <= 0)
+					{
+						colorAdjustment = "\\#e60000";
+					}
+				}
+
+				float xPos = structure->getWorldPositionX();
+				float yPos = structure->getWorldPositionY();
+
+				String posString = "(" + String::valueOf(xPos) + ", " + String::valueOf(yPos) +") ";
+				String structureName = StringIdManager::instance()->getStringId(structure->getObjectName()->getFullPath().hashCode()).toString();
+
+				String strucName = colorAdjustment + structureName + " (" + zoneName + " " + posString + ")" + " Power: " + remainingPower + " Maint: " + remainingMaint + extractionMessage;
+
+
+
+				listBox->addMenuItem(strucName);
+			}
+
+		}
+
+	}
+
+	player->sendMessage(listBox->generateMessage());
+
+}
+
 
 void PlayerObjectImplementation::notifySceneReady() {
 	teleporting = false;
@@ -1342,6 +1428,9 @@ void PlayerObjectImplementation::notifyOnline() {
 		parent->sendMessage(sui->generateMessage());
 	}
 
+	//recalc skillmods credit Tinypebble
+	SkillModManager::instance()->verifySkillBoxSkillMods(playerCreature);
+
 	//Add player to visibility list
 	VisibilityManager::instance()->addToVisibilityList(playerCreature);
 
@@ -1383,13 +1472,17 @@ void PlayerObjectImplementation::notifyOnline() {
 
 	MissionManager* missionManager = zoneServer->getMissionManager();
 
-	if (missionManager != nullptr && playerCreature->hasSkill("force_title_jedi_rank_02")) {
+	if (missionManager != nullptr && playerCreature->getFactionRank() >= VisibilityManager::instance()->getMinimumFactionRankRequired()){// && playerCreature->hasSkill("force_title_jedi_rank_02")) {
 		uint64 id = playerCreature->getObjectID();
 
+		// Calculate an amount on top of the jedi amount. This should make jedi even more, but make players around the 25k-175k range
+		int amountPerFactionRank = 10000;
+		int adjustAmount = playerCreature->getFactionRank() * amountPerFactionRank;
+
 		if (!missionManager->hasPlayerBountyTargetInList(id))
-			missionManager->addPlayerToBountyList(id, calculateBhReward());
+			missionManager->addPlayerToBountyList(id, calculateBhReward() + adjustAmount);
 		else {
-			missionManager->updatePlayerBountyReward(id, calculateBhReward());
+			missionManager->updatePlayerBountyReward(id, calculateBhReward() + adjustAmount);
 			missionManager->updatePlayerBountyOnlineStatus(id, true);
 		}
 	}
@@ -2300,7 +2393,7 @@ void PlayerObjectImplementation::doForceRegen() {
 		Reference<ForceMeditateTask*> medTask = creature->getPendingTask("forcemeditate").castTo<ForceMeditateTask*>();
 
 		if (medTask != nullptr)
-			modifier = 3;
+			modifier = 6; // default value = 3
 	}
 
 	uint32 forceTick = tick * modifier;
@@ -2331,22 +2424,13 @@ Time PlayerObjectImplementation::getLastGcwPvpCombatActionTimestamp() const {
 	return lastGcwPvpCombatActionTimestamp;
 }
 
-Time PlayerObjectImplementation::getLastGcwCrackdownCombatActionTimestamp() const {
-	return lastCrackdownGcwCombatActionTimestamp;
-}
-
-void PlayerObjectImplementation::updateLastCombatActionTimestamp(bool updateGcwCrackdownAction, bool updateGcwAction, bool updateBhAction) {
+void PlayerObjectImplementation::updateLastPvpCombatActionTimestamp(bool updateGcwAction, bool updateBhAction) {
 	ManagedReference<CreatureObject*> parent = getParent().get().castTo<CreatureObject*>();
 
 	if (parent == nullptr)
 		return;
 
-	bool alreadyHasTef = hasTef();
-
-	if (updateGcwCrackdownAction) {
-		lastCrackdownGcwCombatActionTimestamp.updateToCurrentTime();
-		lastCrackdownGcwCombatActionTimestamp.addMiliTime(FactionManager::TEFTIMER);
-	}
+	bool alreadyHasTef = hasPvpTef();
 
 	if (updateBhAction) {
 		bool alreadyHasBhTef = hasBhTef();
@@ -2371,15 +2455,11 @@ void PlayerObjectImplementation::updateLastCombatActionTimestamp(bool updateGcwC
 }
 
 void PlayerObjectImplementation::updateLastBhPvpCombatActionTimestamp() {
-	updateLastCombatActionTimestamp(false, false, true);
+	updateLastPvpCombatActionTimestamp(false, true);
 }
 
 void PlayerObjectImplementation::updateLastGcwPvpCombatActionTimestamp() {
-	updateLastCombatActionTimestamp(false, true, false);
-}
-
-bool PlayerObjectImplementation::hasTef() const {
-	return hasCrackdownTef() || hasPvpTef();
+	updateLastPvpCombatActionTimestamp(true, false);
 }
 
 bool PlayerObjectImplementation::hasPvpTef() const {
@@ -2390,41 +2470,19 @@ bool PlayerObjectImplementation::hasBhTef() const {
 	return !lastBhPvpCombatActionTimestamp.isPast();
 }
 
-void PlayerObjectImplementation::setCrackdownTefTowards(unsigned int factionCrc, bool scheduleTefRemovalTask) {
-	crackdownFactionTefCrc = factionCrc;
-	if (scheduleTefRemovalTask) {
-		updateLastCombatActionTimestamp(true, false, false);
-	}
-}
-
-bool PlayerObjectImplementation::hasCrackdownTefTowards(unsigned int factionCrc) const {
-	return !lastCrackdownGcwCombatActionTimestamp.isPast() && factionCrc != 0 && crackdownFactionTefCrc == factionCrc;
-}
-
-bool PlayerObjectImplementation::hasCrackdownTef() const {
-	return !lastCrackdownGcwCombatActionTimestamp.isPast() && crackdownFactionTefCrc != 0;
-}
-
-void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeCrackdownGcwTefNow, bool removeGcwTefNow, bool removeBhTefNow) {
+void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeGcwTefNow, bool removeBhTefNow) {
 	ManagedReference<CreatureObject*> parent = getParent().get().castTo<CreatureObject*>();
 
-	if (parent == nullptr) {
+	if (parent == nullptr)
 		return;
-	}
 
 	if (pvpTefTask == nullptr) {
 		pvpTefTask = new PvpTefRemovalTask(parent);
 	}
 
-	if (removeCrackdownGcwTefNow || removeGcwTefNow || removeBhTefNow) {
-		if (removeCrackdownGcwTefNow) {
-			crackdownFactionTefCrc = 0;
-			lastCrackdownGcwCombatActionTimestamp.updateToCurrentTime();
-		}
-
-		if (removeGcwTefNow) {
+	if (removeGcwTefNow || removeBhTefNow) {
+		if (removeGcwTefNow)
 			lastGcwPvpCombatActionTimestamp.updateToCurrentTime();
-		}
 
 		if (removeBhTefNow) {
 			lastBhPvpCombatActionTimestamp.updateToCurrentTime();
@@ -2437,13 +2495,10 @@ void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeCrackdownG
 	}
 
 	if (!pvpTefTask->isScheduled()) {
-		if (hasTef()) {
-			auto gcwCrackdownTefMs = getLastGcwCrackdownCombatActionTimestamp().miliDifference();
+		if (hasPvpTef()) {
 			auto gcwTefMs = getLastGcwPvpCombatActionTimestamp().miliDifference();
 			auto bhTefMs = getLastBhPvpCombatActionTimestamp().miliDifference();
-			auto scheduleTime = gcwTefMs < bhTefMs ? gcwTefMs : bhTefMs;
-			scheduleTime = gcwCrackdownTefMs < scheduleTime ? gcwCrackdownTefMs : scheduleTime;
-			pvpTefTask->schedule(llabs(scheduleTime));
+			pvpTefTask->schedule(llabs(gcwTefMs < bhTefMs ? gcwTefMs : bhTefMs));
 		} else {
 			pvpTefTask->execute();
 		}
@@ -2451,7 +2506,7 @@ void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeCrackdownG
 }
 
 void PlayerObjectImplementation::schedulePvpTefRemovalTask(bool removeNow) {
-	schedulePvpTefRemovalTask(removeNow, removeNow, removeNow);
+	schedulePvpTefRemovalTask(removeNow, removeNow);
 }
 
 Vector3 PlayerObjectImplementation::getTrainerCoordinates() const {
@@ -2677,7 +2732,8 @@ int PlayerObjectImplementation::getSpentJediSkillPoints() {
 	for(int i = 0; i < skillList->size(); ++i) {
 		const Skill* jediSkill = skillList->get(i);
 
-		if (jediSkill->getSkillName().indexOf("force_discipline") != -1)
+		// Calc regular skill points
+		//if (jediSkill->getSkillName().indexOf("force_discipline") != -1)
 			jediSkillPoints += jediSkill->getSkillPointsRequired();
 	}
 

@@ -23,6 +23,8 @@ protected:
 	bool disabled;
 	bool registered;
 
+	bool isPrivateVendor;
+
 	SerializableTime lastSuccessfulUpdate;
 
 	int maintAmount;
@@ -108,6 +110,8 @@ public:
 	inline void setDisabled(bool isDisabled) {
 		disabled = isDisabled;
 	}
+
+	inline void setIsPrivateVendor(bool isPrivate) { isPrivateVendor = isPrivate;}
 
 	inline void setRegistered(bool reg) {
 		registered = reg;

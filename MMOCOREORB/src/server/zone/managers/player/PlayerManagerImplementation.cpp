@@ -105,6 +105,8 @@
 #include "server/zone/objects/player/badges/Badge.h"
 #include "server/zone/objects/building/TutorialBuildingObject.h"
 #include "server/zone/managers/frs/FrsManager.h"
+#include "server/zone/objects/creature/buffs/PrivateBuff.h"
+#include "server/zone/objects/creature/buffs/PrivateSkillMultiplierBuff.h"
 #include "server/zone/objects/player/events/OnlinePlayerLogTask.h"
 #include <sys/stat.h>
 #include "server/zone/objects/transaction/TransactionLog.h"
@@ -235,6 +237,10 @@ void PlayerManagerImplementation::loadLuaConfig() {
 	groupExpMultiplier = lua->getGlobalFloat("groupExpMultiplier");
 
 	globalExpMultiplier = lua->getGlobalFloat("globalExpMultiplier");
+	craftExpMultiplier = lua->getGlobalFloat("craftExpMultiplier");
+	jediExpMultiplier = lua->getGlobalFloat("jediExpMultiplier");
+	entExpMultiplier = lua->getGlobalFloat("entExpMultiplier");
+	pvpExpMultiplier = lua->getGlobalFloat("pvpExpMultiplier");
 
 	baseStoredCreaturePets = lua->getGlobalInt("baseStoredCreaturePets");
 	baseStoredFactionPets = lua->getGlobalInt("baseStoredFactionPets");
@@ -1197,12 +1203,84 @@ void PlayerManagerImplementation::killPlayer(TangibleObject* attacker, CreatureO
 
 	if (ghost != nullptr) {
 		ghost->resetIncapacitationTimes();
-		if (ghost->hasTef()) {
-			ghost->schedulePvpTefRemovalTask(true, true, true);
+		if (ghost->hasPvpTef()) {
+			ghost->schedulePvpTefRemovalTask(true, true);
 		}
 	}
 
 	ThreatMap* threatMap = player->getThreatMap();
+
+	if (attacker->isPlayerCreature() || attacker->isPet()){
+	CreatureObject* attackerCreature = attacker->asCreatureObject();
+	if (attackerCreature->isPet()) {
+			CreatureObject* owner = attackerCreature->getLinkedCreature().get();
+
+			if (owner != NULL && owner->isPlayerCreature()) {
+				attackerCreature = owner;
+			}
+	}
+
+	if (attackerCreature->isPlayerCreature()) {
+			if (!CombatManager::instance()->areInDuel(attackerCreature, player)) {
+				String playerName = player->getFirstName();
+				String killerName = attackerCreature->getFirstName();
+				StringBuffer zBroadcast;
+				String killerFaction, playerFaction;
+				if (attacker->isRebel())
+					killerFaction = "\\#FF9933 Separatist";
+				else if (attacker->isImperial())
+					killerFaction = "\\#7133FF Republic";
+				else
+					killerFaction = "\\#a3a011 Civilian";
+
+				if (player->isRebel())
+					playerFaction = "\\#FF9933 Separatist";
+				else if (player->isImperial())
+					playerFaction = "\\#7133FF Republic";
+				else
+					playerFaction = "\\#a3a011 Civilian";
+
+
+					// Stack - stop the printouts for self kills - and stop updating the table
+				if(killerName == playerName)
+				{
+					return;
+				}
+
+				Zone* zone = player->getZone();
+				String planetName = zone->getZoneName();
+
+				zBroadcast << playerFaction <<"\\#00e604 " << playerName << " \\#e60000 was slain in the war by " << killerFaction << "\\#00cc99 " << killerName << " \\#e60000 on Planet " << planetName;
+				ghost->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
+
+				StringBuffer gcwKillQuery; //store kill data for website
+				CreatureObject* killerCreature = cast<CreatureObject*>(attackerCreature);
+				ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();
+				ManagedReference<PlayerObject*> killedGhost = player->getPlayerObject();
+				int killerRating = ghost->getPvpRating();
+				int playerRating = killedGhost->getPvpRating();
+
+				if (attacker->isRebel())
+					killerFaction = "Separatist";
+				else if (attacker->isImperial())
+					killerFaction = "Republic";
+				else
+					killerFaction = "Civilian";
+
+				if (player->isRebel())
+					playerFaction = "Separatist";
+				else if (player->isImperial())
+					playerFaction = "Republic";
+				else
+					playerFaction = "Civilian";
+
+				gcwKillQuery << "INSERT INTO gcw_kills(killer, killer_rating, victim, victim_rating, winner, loser) VALUES ('" << killerName <<"','" << killerRating << "', '" << playerName << "','" << playerRating << "', '" << killerFaction << "', '" << playerFaction << "');";
+				ServerDatabase::instance()->executeStatement(gcwKillQuery);
+			}
+	}
+
+}
+
 
 	if (attacker->getFaction() != 0) {
 		if (attacker->isPlayerCreature() || attacker->isPet()) {
@@ -1389,6 +1467,14 @@ void PlayerManagerImplementation::sendActivateCloneRequest(CreatureObject* playe
 				String name = "Jedi Enclave (" + String::valueOf((int)loc->getWorldPositionX()) + ", " + String::valueOf((int)loc->getWorldPositionY()) + ")";
 				cloneMenu->addMenuItem(name, loc->getObjectID());
 			}
+		} else if (cbot->getFacilityType() != CloningBuildingObjectTemplate::JEDI_ONLY){
+		String name = "None";
+		ManagedReference<CityRegion*> cr2 = loc->getCityRegion().get();
+		if (cr2 != nullptr)
+			name = cr2->getRegionDisplayedName();
+		else
+			name = loc->getDisplayedName();
+		cloneMenu->addMenuItem(name, loc->getObjectID());
 		}
 	}
 
@@ -1495,8 +1581,8 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 		player->addShockWounds(100, true);
 	}
 
-	if (player->getFactionStatus() != FactionStatus::ONLEAVE && cbot->getFacilityType() != CloningBuildingObjectTemplate::FACTION_IMPERIAL && cbot->getFacilityType() != CloningBuildingObjectTemplate::FACTION_REBEL && !player->hasSkill("force_title_jedi_rank_03"))
-		player->setFactionStatus(FactionStatus::ONLEAVE);
+	if (player->getFactionStatus() != FactionStatus::COVERT && cbot->getFacilityType() != CloningBuildingObjectTemplate::FACTION_IMPERIAL && cbot->getFacilityType() != CloningBuildingObjectTemplate::FACTION_REBEL && !player->hasSkill("force_title_jedi_rank_03"))
+		player->setFactionStatus(FactionStatus::COVERT);
 
 	SortedVector<ManagedReference<SceneObject*> > insurableItems = getInsurableItems(player, false);
 
@@ -1542,7 +1628,22 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 
 	}
 
+	//Apply grogginess debuff
+	if (typeofdeath == 1) {
+		doEnhanceCharacter(0x2412A7EC, player, -2500, 300, BuffType::OTHER, 0);//debuff health and add icon
+		ManagedReference<PrivateBuff *> pvpDebuff = new PrivateBuff(player, STRING_HASHCODE("private_pvp_debuff"), 300, BuffType::JEDI);
+		Locker pvpLocker(pvpDebuff);
 
+		for(int i=1; i<CreatureAttribute::ARRAYSIZE; i++)
+			pvpDebuff->setAttributeModifier(i, -2500);
+		// TODO: Find potential end message for groggy debuff
+
+		// Add buffs to player
+		player->addBuff(pvpDebuff);
+	}
+
+	if (ghost->hasPvpTef())
+	ghost->schedulePvpTefRemovalTask(true);
 
 	Reference<Task*> task = new PlayerIncapacitationRecoverTask(player, true);
 	task->schedule(3 * 1000);
@@ -1550,23 +1651,37 @@ void PlayerManagerImplementation::sendPlayerToCloner(CreatureObject* player, uin
 	player->notifyObservers(ObserverEventType::PLAYERCLONED, player, 0);
 
 
+	PlayerObject* playerObject = player->getPlayerObject();
+	playerObject->setFoodFilling(0, false);
+	playerObject->setDrinkFilling(0, false);
+	// Reset player stomach to 0 fill when they clone:
+	// Credit: Rairaichu - SR2
+
+
+
+
 	// Jedi experience loss.
-	if (ghost->getJediState() >= 2) {
-		int jediXpCap = ghost->getXpCap("jedi_general");
-		int xpLoss = (int)(jediXpCap * -0.05);
-		int curExp = ghost->getExperience("jedi_general");
+	// Stack - only remove jedi XP if they are a padawan or greater
+	if (player->hasSkill("force_title_jedi_rank_02"))
+	{
+		if (ghost->getJediState() >= 2) {
+			int jediXpCap = ghost->getXpCap("jedi_general");
+			int xpLoss = (int)(jediXpCap * -0.05);
+			int curExp = ghost->getExperience("jedi_general");
 
-		int negXpCap = -10000000; // Cap on negative jedi experience
+			int negXpCap = -10000000; // Cap on negative jedi experience
 
-		if ((curExp + xpLoss) < negXpCap)
-			xpLoss = negXpCap - curExp;
+			if ((curExp + xpLoss) < negXpCap)
+				xpLoss = negXpCap - curExp;
 
-		awardExperience(player, "jedi_general", xpLoss, true);
-		StringIdChatParameter message("base_player","prose_revoke_xp");
-		message.setDI(xpLoss * -1);
-		message.setTO("exp_n", "jedi_general");
-		player->sendSystemMessage(message);
+			awardExperience(player, "jedi_general", xpLoss, true);
+			StringIdChatParameter message("base_player","prose_revoke_xp");
+			message.setDI(xpLoss * -1);
+			message.setTO("exp_n", "jedi_general");
+			player->sendSystemMessage(message);
+		}
 	}
+
 }
 
 void PlayerManagerImplementation::ejectPlayerFromBuilding(CreatureObject* player) {
@@ -1729,23 +1844,35 @@ void PlayerManagerImplementation::disseminateExperience(TangibleObject* destruct
 				String xpType = entry->elementAt(j).getKey();
 				float xpAmount = baseXp;
 
-				xpAmount *= (float) damage / totalDamage;
 
-				//Cap xp based on level
-				xpAmount = Math::min(xpAmount, calculatePlayerLevel(attacker, xpType) * 300.f);
+				// Stack making jedi XP based on % damage done
+				// Also does NOT apply group benefits
+				if (attacker->hasSkill("force_title_jedi_rank_02"))
+				{
+					xpAmount *= (float) damage / totalDamage;
+				}
+				else
+				{
+					//Cap xp based on level
+					xpAmount = Math::min(xpAmount, calculatePlayerLevel(attacker, xpType) * 300.f);
 
-				//Apply group bonus if in group
-				if (group != nullptr)
-					xpAmount *= groupExpMultiplier;
+					//Apply group bonus if in group
+					if (group != nullptr)
+						xpAmount *= groupExpMultiplier;
 
-				if (winningFaction == attacker->getFaction())
-					xpAmount *= gcwBonus;
+					if (winningFaction == attacker->getFaction())
+						xpAmount *= gcwBonus;
+				}
+
+				//xpAmount *= (float) damage / totalDamage;
+
+
 
 				//Jedi experience doesn't count towards combat experience, and is earned at 20% the rate of normal experience
 				if (xpType != "jedi_general")
 					combatXp += xpAmount;
-				else
-					xpAmount *= 0.2f;
+				//else
+				//	xpAmount *= 0.2f;
 
 				//Award individual expType
 				awardExperience(attacker, xpType, xpAmount);
@@ -2037,8 +2164,27 @@ int PlayerManagerImplementation::awardExperience(CreatureObject* player, const S
 
 	int xp = 0;
 
-	if (applyModifiers)
-		xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * globalExpMultiplier));
+	if (xpType == "jedi_general")
+		xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * jediExpMultiplier * globalExpMultiplier));
+	else if(xpType == "gcw_currency_rebel" || xpType == "gcw_currency_imperial")
+		xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * pvpExpMultiplier * globalExpMultiplier));
+		else if(xpType == "imagedesigner" || xpType == "music" || xpType == "dance" || xpType == "entertainer_healing")
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * entExpMultiplier * globalExpMultiplier));
+	else if (		xpType == "crafting_medicine_general" ||
+		xpType == "crafting_general" ||
+		xpType == "crafting_bio_engineer_creature" ||
+		xpType == "bio_engineer_dna_harvesting" ||
+		xpType == "crafting_clothing_armor" ||
+		xpType == "crafting_weapons_general" ||
+		xpType == "crafting_food_general" ||
+		xpType == "crafting_clothing_general" ||
+		xpType == "crafting_structure_general" ||
+		xpType == "crafting_droid_general" ||
+		xpType == "crafting_spice" ||
+		xpType == "shipwright")
+			xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * craftExpMultiplier * globalExpMultiplier));
+	else if (applyModifiers)
+		xp = playerObject->addExperience(xpType, (int) (amount * speciesModifier * buffMultiplier * localMultiplier * 2 * globalExpMultiplier));
 	else
 		xp = playerObject->addExperience(xpType, (int)amount);
 

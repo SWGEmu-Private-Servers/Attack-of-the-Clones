@@ -103,7 +103,8 @@ void EntertainingSessionImplementation::doEntertainerPatronEffects() {
 			try {
 				//**VERIFY THE PATRON IS NOT ON THE DENY SERVICE LIST
 
-				if (creo->isInRange(patron, 10.0f)) {
+				// Stack, increase range on ent buffs (10->15m)
+				if (creo->isInRange(patron, 15.0f)) {
 					healWounds(patron, woundHeal*(flourishCount+1), shockHeal*(flourishCount+1));
 					increaseEntertainerBuff(patron);
 
@@ -913,20 +914,30 @@ void EntertainingSessionImplementation::activateEntertainerBuff(CreatureObject* 
 		switch (performanceType){
 		case PerformanceType::MUSIC:
 		{
-			uint32 focusBuffCRC = STRING_HASHCODE("performance_enhance_music_focus");
-			uint32 willBuffCRC = STRING_HASHCODE("performance_enhance_music_willpower");
-			oldBuff = cast<PerformanceBuff*>(creature->getBuff(focusBuffCRC));
+			uint32 rangedCRC = 0x33329A7B;
+			uint32 meleeCRC = 0x548DE45B;
+
+			oldBuff = cast<PerformanceBuff*>(creature->getBuff(rangedCRC));
 			if (oldBuff != nullptr && oldBuff->getBuffStrength() > buffStrength)
 				return;
-			ManagedReference<PerformanceBuff*> focusBuff = new PerformanceBuff(creature, focusBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_FOCUS);
-			ManagedReference<PerformanceBuff*> willBuff = new PerformanceBuff(creature, willBuffCRC, buffStrength, buffDuration * 60, PerformanceBuffType::MUSIC_WILLPOWER);
 
-			Locker locker(focusBuff);
-			creature->addBuff(focusBuff);
+
+			ManagedReference<PerformanceBuff*> meleeAccBuff = new PerformanceBuff(creature, meleeCRC, buffStrength, buffDuration * 60, PerformanceBuffType::STAT_MELEE_ACC);
+			ManagedReference<PerformanceBuff*> rangedAccBuff = new PerformanceBuff(creature, rangedCRC, buffStrength, buffDuration * 60, PerformanceBuffType::STAT_RANGED_ACC);
+			ManagedReference<PerformanceBuff*> xpIncreaseBuff = new PerformanceBuff(creature, BuffCRC::FOOD_XP_INCREASE, buffStrength, buffDuration * 60, PerformanceBuffType::XP_INCREASE);
+
+			Locker locker(meleeAccBuff);
+			creature->addBuff(meleeAccBuff);
 			locker.release();
 
-			Locker locker2(willBuff);
-			creature->addBuff(willBuff);
+			Locker locker2(rangedAccBuff);
+			creature->addBuff(rangedAccBuff);
+			locker2.release();
+
+			Locker locker3(xpIncreaseBuff);
+			creature->addBuff(xpIncreaseBuff);
+			locker3.release();
+
 			break;
 		}
 		case PerformanceType::DANCE:

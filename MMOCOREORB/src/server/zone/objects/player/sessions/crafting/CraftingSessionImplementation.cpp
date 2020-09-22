@@ -1064,8 +1064,8 @@ void CraftingSessionImplementation::customization(const String& name, byte templ
 		}
 	}
 
-	if (schematicCount < 0 || schematicCount > 1000)
-		schematicCount = 1000;
+	if (schematicCount < 0 || schematicCount >= 1000)
+		schematicCount = 10000;
 
 	manufactureSchematic->setManufactureLimit(schematicCount);
 
@@ -1121,7 +1121,10 @@ void CraftingSessionImplementation::customization(const String& name, byte templ
 			new ManufactureSchematicObjectDeltaMessage3(
 					manufactureSchematic);
 	dMsco3->updateName(newName);
-	dMsco3->updateCondition(schematicCount);
+
+	if (schematicCount > 0 && schematicCount < 1000)
+		dMsco3->updateCondition(schematicCount);
+
 	dMsco3->close();
 
 	crafter->sendMessage(dMsco3);
@@ -1208,12 +1211,12 @@ void CraftingSessionImplementation::createPrototype(int clientCounter, bool crea
 
 		if (createItem) {
 
-			startCreationTasks(manufactureSchematic->getComplexity() * 2, false);
+			startCreationTasks(2, false);
 
 		} else {
 
 			// This is for practicing
-			startCreationTasks(manufactureSchematic->getComplexity() * 2, true);
+			startCreationTasks(2, true);
 			xp = round(xp * 1.05f);
 		}
 

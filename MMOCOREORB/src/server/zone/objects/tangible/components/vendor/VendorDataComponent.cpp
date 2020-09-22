@@ -42,6 +42,7 @@ void VendorDataComponent::addSerializableVariables() {
 	addSerializableVariable("vendorSearchEnabled", &vendorSearchEnabled);
 	addSerializableVariable("disabled", &disabled);
 	addSerializableVariable("registered", &registered);
+	addSerializableVariable("isPrivateVendor", &isPrivateVendor);
 	addSerializableVariable("maintAmount", &maintAmount);
 	addSerializableVariable("lastXpAward", &lastXpAward);
 	addSerializableVariable("awardUsageXP", &awardUsageXP);
@@ -63,6 +64,7 @@ void VendorDataComponent::writeJSON(nlohmann::json& j) const {
 	SERIALIZE_JSON_MEMBER(vendorSearchEnabled);
 	SERIALIZE_JSON_MEMBER(disabled);
 	SERIALIZE_JSON_MEMBER(registered);
+	SERIALIZE_JSON_MEMBER(isPrivateVendor);
 	SERIALIZE_JSON_MEMBER(maintAmount);
 	SERIALIZE_JSON_MEMBER(lastXpAward);
 	SERIALIZE_JSON_MEMBER(awardUsageXP);
@@ -92,7 +94,9 @@ void VendorDataComponent::initializeTransientMembers() {
 				originalDirection = strongParent->getDirectionAngle();
 
 			if(isRegistered() && strongParent->getZone() != nullptr)
+			{
 				strongParent->getZone()->registerObjectWithPlanetaryMap(strongParent);
+			}
 		}
 	}
 }
@@ -356,11 +360,24 @@ void VendorDataComponent::handleWithdrawMaintanence(int value) {
 }
 
 void VendorDataComponent::setVendorSearchEnabled(bool enabled) {
+
 	ManagedReference<SceneObject*> strongParent = parent.get();
 	ManagedReference<AuctionManager*> auctionManager = auctionMan.get();
 
 	if (auctionManager == nullptr || strongParent == nullptr || strongParent->getZoneServer() == nullptr || strongParent->getZone() == nullptr)
+	{
 		return;
+	}
+
+		if(isPrivateVendor)
+		{
+			// Just ensuring its OFF
+			vendorSearchEnabled = false;
+			auctionManager->updateVendorSearch(strongParent, false);
+			ManagedReference<CreatureObject*> owner = strongParent->getZoneServer()->getObject(getOwnerId()).castTo<CreatureObject*>();
+			owner->sendSystemMessage("Unable to adjust vendor search -- this vendor is set to private ONLY. Recreate in a public installation");
+			return;
+		}
 
 	vendorSearchEnabled = enabled;
 	auctionManager->updateVendorSearch(strongParent, vendorSearchEnabled);

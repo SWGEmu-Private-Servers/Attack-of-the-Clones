@@ -35,7 +35,7 @@ public:
 			return GENERALERROR;
 
 		if (creature->isAiAgent()) {
-			if (creature->isNonPlayerCreatureObject() && creature->isDizzied() && System::random(100) < 85) {
+			if (creature->isDizzied() && System::random(100) < 85) {
 				creature->queueDizzyFallEvent();
 			} else if (creature->isInCombat()) {
 				creature->setPosture(CreaturePosture::UPRIGHT, false, true);
@@ -57,4 +57,3 @@ public:
 };
 
 #endif //STANDCOMMAND_H_
-

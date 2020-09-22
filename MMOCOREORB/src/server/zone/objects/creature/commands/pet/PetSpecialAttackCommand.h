@@ -101,7 +101,7 @@ public:
 		}
 
 		pet->selectSpecialAttack(attackNumber - 1);
-		pet->enqueueAttack(QueueCommand::FRONT);
+		pet->enqueueAttack(QueueCommand::IMMEDIATE);
 
 		return SUCCESS;
 	}

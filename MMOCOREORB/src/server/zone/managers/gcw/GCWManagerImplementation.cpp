@@ -380,11 +380,9 @@ void GCWManagerImplementation::updateWinningFaction() {
 	}
 
 	int scaling = 0;
-	if (score > 0) {
-		for (int i = 0; i < difficultyScalingThresholds.size(); i++) {
-			if (score >= difficultyScalingThresholds.get(i)) {
-				scaling++;
-			}
+	for (int i = 0; i < difficultyScalingThresholds.size(); i++) {
+		if (score >= difficultyScalingThresholds.get(i)) {
+			scaling++;
 		}
 	}
 	winnerDifficultyScaling = scaling;
@@ -1146,8 +1144,8 @@ bool GCWManagerImplementation::canStartSlice(CreatureObject* creature, TangibleO
 	} else if (tano->getDistanceTo(creature) > 15) {
 		creature->sendSystemMessage("You are too far away from the terminal to continue slicing!");
 		return false;
-	} else if (!creature->hasSkill("combat_smuggler_slicing_01")) {
-		creature->sendSystemMessage("Only a smuggler with terminal slicing knowledge could expect to disable this security terminal!");
+	} else if (!creature->hasSkill("base_bust_security_hacker_04")) {
+		creature->sendSystemMessage("Only a Terminal Hacking Specialist could expect to disable this security terminal!");
 		return false;
 	}
 
@@ -1284,16 +1282,8 @@ void GCWManagerImplementation::sendDNASampleMenu(CreatureObject* creature, Build
 	if (chain == "") {
 		int length = 3;
 
-		if (creature->hasSkill("outdoors_bio_engineer_master"))
+		if (creature->hasSkill("base_bust_genetic_decrypter_04"))
 			length = 8;
-		else if (creature->hasSkill("outdoors_bio_engineer_dna_harvesting_04"))
-			length = 7;
-		else if (creature->hasSkill("outdoors_bio_engineer_dna_harvesting_03"))
-			length = 6;
-		else if (creature->hasSkill("outdoors_bio_engineer_dna_harvesting_02"))
-			length = 5;
-		else if (creature->hasSkill("outdoors_bio_engineer_dna_harvesting_01"))
-			length = 4;
 
 		for (int i = 0; i < length; i++) {
 			chain += dnaNucleotides.get(System::random(dnaNucleotides.size() - 1));
@@ -2580,16 +2570,12 @@ int GCWManagerImplementation::isStrongholdCity(String& city) {
 }
 
 void GCWManagerImplementation::runCrackdownScan(AiAgent* scanner, CreatureObject* player) {
-	if (!crackdownScansEnabled || !player->isPlayerCreature() || !scanner->isInRange(player, 16) || !CollisionManager::checkLineOfSight(scanner, player)) {
-		return;
-	}
-
-	if (!crackdownScanPrivilegedPlayers && player->isPlayerObject() && player->getPlayerObject()->isPrivileged()) {
+	if (!player->isPlayerCreature() || !scanner->isInRange(player, 16) || !CollisionManager::checkLineOfSight(scanner, player)) {
 		return;
 	}
 
 	if (scanner->checkCooldownRecovery("crackdown_scan") && player->checkCooldownRecovery("crackdown_scan")) {
-		ContrabandScanSession* contrabandScanSession = new ContrabandScanSession(scanner, player, getWinningFaction(), getWinningFactionDifficultyScaling());
+		ContrabandScanSession* contrabandScanSession = new ContrabandScanSession(scanner, player);
 		contrabandScanSession->initializeSession();
 	}
 }

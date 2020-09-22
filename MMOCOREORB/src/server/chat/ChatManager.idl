@@ -43,6 +43,7 @@ class ChatManager extends ManagedService implements Logger {
 	ChatRoom guildRoom;
 	ChatRoom auctionRoom;
 	ChatRoom systemRoom;
+	ChatRoom serverRoom;
 
 	transient ChatRoomMap roomMap;
 
@@ -446,6 +447,11 @@ class ChatManager extends ManagedService implements Logger {
 		return auctionRoom;
 	}
 
+	/* Server wide chat room */
+	public ChatRoom getServerChatRoom() {
+		return serverRoom;
+	}
+
 	/*
 	 * Returns the system chat room
 	 */
@@ -462,4 +468,3 @@ class ChatManager extends ManagedService implements Logger {
 	@reference
 	public native PendingMessageList getPendingMessages(unsigned long oid);
 }
-

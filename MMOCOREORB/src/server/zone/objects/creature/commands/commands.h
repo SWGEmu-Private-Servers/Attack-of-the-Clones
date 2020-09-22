@@ -235,6 +235,7 @@
 #include "ForceRun1Command.h"
 #include "ForceRun2Command.h"
 #include "ForceRun3Command.h"
+#include "ForceSerenity1Command.h"
 #include "ForceShield1Command.h"
 #include "ForceShield2Command.h"
 #include "ForceSpeed1Command.h"
@@ -842,4 +843,3 @@
 
 
 #endif /* COMMANDSNEW_H_ */
-

@@ -19,6 +19,12 @@ class CombatQueueCommand;
 class CombatManager : public Singleton<CombatManager>, public Logger, public Object {
 
 public:
+
+	// Stack - do a blanket buff on CH
+	float chBuffAttackMultiplier = 1.3; // 1.0 would be nothing. 1.3 is a 30% boost to damage, claculated before any chBuffDefense mult
+	float chBuffDefenseMultiplier = 0.7; // 1.0 is no change. .7 is 30% reduction in damage
+	float chBuffAccuracyMultiplier = 1.3; // 1.0 is no change. .7 is 30% reduction in accuracy
+
 	// hitstatus: 0x0-MISS 0x1-HIT 0x2-BLOCK 0x3-DODGE 0x5-COUNTER 0x7-RICOCHET 0x8-REFLECT 0x9-REFLECT_TO_TARGET
 	const static int MISS = 0x00;
 	const static int HIT = 0x01;
@@ -159,7 +165,7 @@ public:
 	float hitChanceEquation(float attackerAccuracy, float attackerRoll, float targetDefense, float defenderRoll) const;
 	float doDroidDetonation(CreatureObject* droid, CreatureObject* defender, float damage) const;
 
-	void checkForTefs(CreatureObject* attacker, CreatureObject* defender, bool* shouldGcwCrackdownTef, bool* shouldGcwTef, bool* shouldBhTef) const;
+	void checkForTefs(CreatureObject* attacker, CreatureObject* defender, bool* shouldGcwTef, bool* shouldBhTef) const;
 	void getFrsModifiedForceAttackDamage(CreatureObject* attacker, float& minDmg, float& maxDmg, const CreatureAttackData& data) const;
 	int getArmorObjectReduction(ArmorObject* armor, int damageType) const;
 
@@ -168,8 +174,8 @@ public:
 	//all the combat math will go here
 protected:
 
-	int doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, CreatureObject* defenderObject, const CreatureAttackData& data, bool* shouldGcwCrackdownTef, bool* shouldGcwTef, bool* shouldBhTef) const;
-	int doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* defenderObject, const CreatureAttackData& data, bool* shouldGcwCrackdownTef, bool* shouldGcwTef, bool* shouldBhTef) const;
+	int doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, CreatureObject* defenderObject, const CreatureAttackData& data, bool* shouldGcwTef, bool* shouldBhTef) const;
+	int doTargetCombatAction(CreatureObject* attacker, WeaponObject* weapon, TangibleObject* defenderObject, const CreatureAttackData& data, bool* shouldGcwTef, bool* shouldBhTef) const;
 	void applyDots(CreatureObject* attacker, CreatureObject* defender, const CreatureAttackData& data, int appliedDamage, int unmitDamage, int poolsToDamage) const;
 	void applyWeaponDots(CreatureObject* attacker, CreatureObject* defender, WeaponObject* weapon) const;
 	uint8 getPoolForDot(uint64 dotType, int poolsToDamage) const;

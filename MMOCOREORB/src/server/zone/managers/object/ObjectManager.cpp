@@ -146,6 +146,7 @@ void ObjectManager::registerObjectTypes() {
 	objectFactory.registerObject<FsCsObject>(SceneObjectType::FSCSOBJECT);
 	objectFactory.registerObject<FsBuffItem>(SceneObjectType::FSBUFFITEM);
 	objectFactory.registerObject<ContractCrate>(SceneObjectType::CONTRACTCRATE);
+	objectFactory.registerObject<VendorToken>(SceneObjectType::VENDORTOKEN);
 	objectFactory.registerObject<SlicingTool>(SceneObjectType::SLICINGTOOL);
 	objectFactory.registerObject<SlicingTool>(SceneObjectType::FLOWANALYZER);
 	objectFactory.registerObject<SlicingTool>(SceneObjectType::MOLECULARCLAMP);

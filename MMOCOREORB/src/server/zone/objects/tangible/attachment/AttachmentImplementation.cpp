@@ -19,6 +19,10 @@ void AttachmentImplementation::initializeTransientMembers() {
 
 }
 
+void AttachmentImplementation::updateAttachmentValues(const String& modName, int value) {
+        skillModMap.put(modName, value);
+}
+
 void AttachmentImplementation::updateCraftingValues(CraftingValues* values, bool firstUpdate) {
 	int level = values->getMaxValue("creatureLevel");
 	int roll = System::random(100);

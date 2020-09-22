@@ -9,11 +9,70 @@
 #include "FactionMap.h"
 #include "server/zone/objects/player/PlayerObject.h"
 #include "templates/manager/TemplateManager.h"
+#include "server/zone/managers/player/PlayerManager.h"
+#include "server/chat/ChatManager.h"
+#include "server/zone/managers/visibility/VisibilityManager.h"
+#include "server/zone/objects/group/GroupObject.h"
+#include "server/zone/managers/director/DirectorManager.h"
+
 
 FactionManager::FactionManager() {
 	setLoggingName("FactionManager");
 	setGlobalLogging(false);
 	setLogging(false);
+}
+
+void FactionManager::checkForDynamicEvent(PlayerObject* player)
+{
+	if(player == nullptr)
+	{
+		return;
+	}
+
+	if(currentCisFactionCounter > factionNeededToSpawnFactionEvent)
+	{
+		currentCisFactionCounter = 0;
+		// spawn REPUBLIC event!
+		String hurtFactionName = "Republic";
+		launchScreenPlayFactionEvent(republicSpawnableScreenplays, hurtFactionName, player);
+	}
+
+	if(currentRepublicFactionCounter > factionNeededToSpawnFactionEvent)
+	{
+		currentRepublicFactionCounter = 0;
+		// spawn CIS event!
+		String hurtFactionName = "CIS";
+		launchScreenPlayFactionEvent(cisSpawnableScreenplays, hurtFactionName, player);
+	}
+}
+
+void FactionManager::launchScreenPlayFactionEvent(Vector<FactionDynamicScreenplayData>& screenplays, String factionName, PlayerObject* player) {
+	if(screenplays.size() > 0)
+	{
+		String screenplayName = "";
+		String serverMessage = "";
+		int index = System::random(screenplays.size());
+		if(index == screenplays.size())
+		{
+			index -= 1;
+		}
+		FactionDynamicScreenplayData data = screenplays.get(index);
+		//if(data != NULL)
+		{
+			screenplayName = data.screenplayName;
+			serverMessage = data.serverMessage;
+
+			String zBroadcast = "\\#00e604 The " + factionName + " losses are too heavy -- " + serverMessage;
+			player->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast);
+
+			if(DirectorManager::instance() == nullptr)
+			{
+				return;
+			}
+			DirectorManager::instance()->startScreenPlay(nullptr, screenplayName);
+
+		}
+	}
 }
 
 void FactionManager::loadData() {
@@ -50,8 +109,48 @@ void FactionManager::loadLuaConfig() {
 	//Load the faction manager lua file.
 	lua->runFile("scripts/managers/faction_manager.lua");
 
-	LuaObject luaObject = lua->getGlobalObject("factionList");
+	isFactionDynamicEventsEnabled = lua->getGlobalInt("factionNeededToSpawnFactionEvent");
+	factionNeededToSpawnFactionEvent = lua->getGlobalInt("factionNeededToSpawnFactionEvent");
 
+	//republicSpawnableScreenplays();// = &(new Vector<FactionDynamicScreenplayData>());
+	LuaObject republicObject = lua->getGlobalObject("republicSpawnableScreenplays");
+	if (republicObject.isValidTable()) {
+		for (int i = 1; i <= republicObject.getTableSize(); ++i) {
+			LuaObject spData = republicObject.getObjectAt(i);
+			if (spData.isValidTable()) {
+	 		 	String spName = spData.getStringAt(1);
+		 		String svMessage = spData.getStringAt(2);
+	  		FactionDynamicScreenplayData screenPlayDataObj(spName, svMessage);
+	 		 	republicSpawnableScreenplays.add(screenPlayDataObj);
+			}
+
+			spData.pop();
+		}
+
+	}
+
+	republicObject.pop();
+
+
+	LuaObject cisObject = lua->getGlobalObject("cisSpawnableScreenplays");
+	if (cisObject.isValidTable()) {
+		for (int i = 1; i <= cisObject.getTableSize(); ++i) {
+			LuaObject spData = cisObject.getObjectAt(i);
+			if (spData.isValidTable()) {
+	 		 	String spName = spData.getStringAt(1);
+		 		String svMessage = spData.getStringAt(2);
+	  		FactionDynamicScreenplayData screenPlayDataObj(spName, svMessage);
+	 		 	cisSpawnableScreenplays.add(screenPlayDataObj);
+			}
+
+			spData.pop();
+		}
+
+	}
+
+	republicObject.pop();
+
+	LuaObject luaObject = lua->getGlobalObject("factionList");
 	if (luaObject.isValidTable()) {
 		for (int i = 1; i <= luaObject.getTableSize(); ++i) {
 			LuaObject factionData = luaObject.getObjectAt(i);
@@ -90,6 +189,12 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 	if (player == nullptr)
 		return;
 
+		// Get visibility threshold from the VisbilityManager - should only happen the first time
+	if(factionRankVisibilityThreshold == 0)
+	{
+		factionRankVisibilityThreshold = VisibilityManager::instance()->getMinimumFactionRankRequired();
+	}
+
 	ManagedReference<PlayerObject*> ghost = player->getPlayerObject();
 
 	if (!factionMap.contains(factionName))
@@ -103,6 +208,17 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 		return;
 
 	float gain = level * faction.getAdjustFactor();
+
+	// Stack - adjust faction gain by a percent if you're above the visibility threshold
+	int factionRank = player->getFactionRank();
+
+	if(factionRank >= factionRankVisibilityThreshold)
+	{
+		// Stack - 20% increase over the rank
+		gain *= 1.2;
+	}
+
+
 	float lose = gain * 2;
 
 	ghost->decreaseFactionStanding(factionName, lose);
@@ -148,6 +264,33 @@ void FactionManager::awardFactionStanding(CreatureObject* player, const String& 
 			continue;
 
 		ghost->increaseFactionStanding(enemy, gain);
+
+		if (gcw == true){
+
+			if(isFactionDynamicEventsEnabled != 0)
+			{
+				// Stack - accrue the points in each faction for dnyamic events
+				if(factionName == "imperial")
+				{
+					currentCisFactionCounter += gain;
+				}
+				if(factionName == "rebel")
+				{
+					currentRepublicFactionCounter += gain;
+				}
+
+				checkForDynamicEvent(ghost);
+			}
+
+
+			StringBuffer factionRewardQuery; //store mission data for website
+			StringBuffer factionKillQuery;
+			String playerName = player->getFirstName();
+			factionRewardQuery << "Update faction_tracker set reward = reward +'" <<gain << "' where player  = '" <<playerName.escapeString()<<"';";
+			factionKillQuery << "Update faction_tracker set kills = kills + 1 where player  = '" <<playerName.escapeString()<<"';";
+			ServerDatabase::instance()->executeStatement(factionRewardQuery);
+			ServerDatabase::instance()->executeStatement(factionKillQuery);
+		}
 	}
 }
 
@@ -156,17 +299,103 @@ void FactionManager::awardPvpFactionPoints(TangibleObject* killer, CreatureObjec
 	if (killer->isPlayerCreature() && destructedObject->isPlayerCreature()) {
 		CreatureObject* killerCreature = cast<CreatureObject*>(killer);
 		ManagedReference<PlayerObject*> ghost = killerCreature->getPlayerObject();
+		ManagedReference<GroupObject*> group;
 
 		ManagedReference<PlayerObject*> killedGhost = destructedObject->getPlayerObject();
+
+		ManagedReference<PlayerManager*> playerManager = killerCreature->getZoneServer()->getPlayerManager();
+
+				//Broadcast to Server
+				String playerName = destructedObject->getFirstName();
+				String killerName = killerCreature->getFirstName();
+				StringBuffer zBroadcast;
 
 		if (killer->isRebel() && destructedObject->isImperial()) {
 			ghost->increaseFactionStanding("rebel", 30);
 			ghost->decreaseFactionStanding("imperial", 45);
+			playerManager->awardExperience(killerCreature, "gcw_currency_rebel", 250);
+
+
+			group = killerCreature->getGroup();
+			Vector<ManagedReference<CreatureObject*> > players;
+			int playerCount = 1;
+
+			if (group != nullptr){
+				//Locker lockerGroup(group, _this.getReferenceUnsafeStaticCast());
+				playerCount = group->getNumberOfPlayerMembers();
+				for (int x=0; x< group->getGroupSize(); x++){
+					Reference<CreatureObject*> groupMember = group->getGroupMember(x);
+					if (groupMember == killerCreature)
+						continue;
+					if (groupMember->isRebel() && groupMember->isInRange(killerCreature, 128.0f))
+						players.add(groupMember);
+				}
+			} else {
+				players.add(killerCreature);
+			}
+
+			if (players.size() == 0) {
+				players.add(killerCreature);
+			}
+
+			if (playerCount > players.size()) {
+				killerCreature->sendSystemMessage("Some players were too far away from the kill!"); // Mission Alert! Some group members are too far away from the group to receive their reward and and are not eligible for reward.
+			}
+
+			int dividedKill = 1000 / players.size();
+			for (int i = 0; i < players.size(); i++){
+				ManagedReference<CreatureObject*> player = players.get(i);
+				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
+				groupPlayerManager->awardExperience(player, "gcw_currency_rebel", dividedKill);
+				StringBuffer sysMessage;
+				sysMessage << "You have received CW XP for your kill participation!";
+				player->sendSystemMessage(sysMessage.toString());
+			}
 
 			killedGhost->decreaseFactionStanding("imperial", 45);
 		} else if (killer->isImperial() && destructedObject->isRebel()) {
 			ghost->increaseFactionStanding("imperial", 30);
 			ghost->decreaseFactionStanding("rebel", 45);
+			playerManager->awardExperience(killerCreature, "gcw_currency_imperial", 250);
+			//zBroadcast << "\\#00e604" << playerName << " \\#e60000 was slain in the GCW by " << "\\#00cc99" << killerName;
+			//ghost->getZoneServer()->getChatManager()->broadcastGalaxy(NULL, zBroadcast.toString());
+
+			group = killerCreature->getGroup();
+			Vector<ManagedReference<CreatureObject*> > players;
+			int playerCount = 1;
+
+			if (group != nullptr){
+				//Locker lockerGroup(group, _this.getReferenceUnsafeStaticCast());
+				playerCount = group->getNumberOfPlayerMembers();
+				for (int x=0; x< group->getGroupSize(); x++){
+					Reference<CreatureObject*> groupMember = group->getGroupMember(x);
+					if (groupMember == killerCreature)
+						continue;
+					if (groupMember->isImperial() && groupMember->isInRange(killerCreature, 128.0f))
+						players.add(groupMember);
+				}
+			} else {
+				players.add(killerCreature);
+			}
+
+			if (players.size() == 0) {
+				players.add(killerCreature);
+			}
+
+			if (playerCount > players.size()) {
+				killerCreature->sendSystemMessage("Some players were too far away from the kill!"); // Mission Alert! Some group members are too far away from the group to receive their reward and and are not eligible for reward.
+			}
+
+			int dividedKill = 1000 / players.size();
+			for (int i = 0; i < players.size(); i++){
+				ManagedReference<CreatureObject*> player = players.get(i);
+				ManagedReference<PlayerManager*> groupPlayerManager = player->getZoneServer()->getPlayerManager();
+				groupPlayerManager->awardExperience(player, "gcw_currency_imperial", dividedKill);
+				StringBuffer sysMessage;
+				sysMessage << "You have received CW XP for your kill participation!";
+				player->sendSystemMessage(sysMessage.toString());
+
+			}
 
 			killedGhost->decreaseFactionStanding("rebel", 45);
 		}

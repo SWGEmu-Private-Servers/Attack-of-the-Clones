@@ -44,11 +44,11 @@ public:
 		groupTemplates.put(name, group);
 	}
 
-	const LootGroupTemplate* getLootGroupTemplate(const String& name) const {
+	LootGroupTemplate* getLootGroupTemplate(const String& name) const {
 		return groupTemplates.get(name);
 	}
 
-	const LootItemTemplate* getLootItemTemplate(const String& name) const {
+	LootItemTemplate* getLootItemTemplate(const String& name) const {
 		return itemTemplates.get(name);
 	}
 

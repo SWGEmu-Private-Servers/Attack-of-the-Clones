@@ -591,16 +591,21 @@ void BountyMissionObjectiveImplementation::handlePlayerKilled(ManagedObject* arg
 					VisibilityManager::instance()->clearVisibility(target);
 					int xpLoss = mission->getRewardCredits() * -2;
 
-					if (xpLoss > minXpLoss)
-						xpLoss = minXpLoss;
-					else if (xpLoss < maxXpLoss)
-						xpLoss = maxXpLoss;
+					// STack - adjust so you only lose jedi XP when you have jedi.
+					if (target->hasSkill("force_title_jedi_rank_02"))
+					{
+						if (xpLoss > minXpLoss)
+							xpLoss = minXpLoss;
+						else if (xpLoss < maxXpLoss)
+							xpLoss = maxXpLoss;
 
-					owner->getZoneServer()->getPlayerManager()->awardExperience(target, "jedi_general", xpLoss, true);
-					StringIdChatParameter message("base_player","prose_revoke_xp");
-					message.setDI(xpLoss * -1);
-					message.setTO("exp_n", "jedi_general");
-					target->sendSystemMessage(message);
+						owner->getZoneServer()->getPlayerManager()->awardExperience(target, "jedi_general", xpLoss, true);
+						StringIdChatParameter message("base_player","prose_revoke_xp");
+						message.setDI(xpLoss * -1);
+						message.setTO("exp_n", "jedi_general");
+						target->sendSystemMessage(message);
+					}
+
 				}
 			}
 
@@ -614,4 +619,3 @@ void BountyMissionObjectiveImplementation::handlePlayerKilled(ManagedObject* arg
 		}
 	}
 }
-

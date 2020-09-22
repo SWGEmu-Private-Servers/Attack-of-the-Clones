@@ -19,6 +19,7 @@
 class HealDamageCommand : public QueueCommand {
 	float range;
 	float mindCost;
+	float stimCost;
 
 public:
 	HealDamageCommand(const String& name, ZoneProcessServer* server)
@@ -26,6 +27,7 @@ public:
 
 		range = 5;
 		mindCost = 50;
+		stimCost = 20;
 	}
 
 	void deactivateInjuryTreatment(CreatureObject* creature, bool isRangedStim) const {
@@ -448,8 +450,19 @@ public:
 				stimPack = inventory->getContainerObject(pharmaceuticalObjectID).castTo<StimPack*>();
 			}
 		}
+		
+		if (!canPerformSkill(creature, targetCreature, stimPack, mindCost)){
+			return GENERALERROR;
+		}
+		int stimCost = stimPack->getMedicineUseRequired();
 
-		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+/*		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);*/
+		int medicineUse = creature->getSkillMod("healing_ability");
+		int combatMedicineUse = creature->getSkillMod("combat_healing_ability");
+		int mindCostNew = 1000-(medicineUse*7)-(combatMedicineUse*4)+(stimCost*6);
+		if (mindCostNew <100){
+			mindCostNew = 100;
+		}
 
 		if (!canPerformSkill(creature, targetCreature, stimPack, mindCostNew))
 			return GENERALERROR;

@@ -11,6 +11,7 @@
 #include "FactionMap.h"
 #include "server/zone/objects/creature/CreatureObject.h"
 #include "templates/faction/FactionRanks.h"
+#include "server/zone/managers/faction/faction_dynamic/FactionDynamicScreenplayData.h"
 
 class FactionManager : public Singleton<FactionManager>, public Logger, public Object {
 	FactionMap factionMap;
@@ -20,6 +21,24 @@ public:
 	FactionManager();
 
 	static const int TEFTIMER = 300000;
+
+	int factionRankVisibilityThreshold = 0;
+
+	int currentCisFactionCounter = 0;
+	int currentRepublicFactionCounter = 0;
+
+	// Stack - dynamic events
+	int isFactionDynamicEventsEnabled = 0;
+	int factionNeededToSpawnFactionEvent = 0;
+	Vector<FactionDynamicScreenplayData> cisSpawnableScreenplays;
+	Vector<FactionDynamicScreenplayData> republicSpawnableScreenplays;
+
+	/**
+	* Stack - Track and check dynamic events based on factionNeededToSpawnFactionEvent
+	**/
+	void checkForDynamicEvent(PlayerObject* player);
+
+	void launchScreenPlayFactionEvent(Vector<FactionDynamicScreenplayData>& screenplays, String factionName, PlayerObject* player);
 
 	/**
 	 * Loads faction configuration information from the faction manager lua file: managers/faction_manager.lua

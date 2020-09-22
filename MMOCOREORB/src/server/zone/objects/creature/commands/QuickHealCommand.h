@@ -28,7 +28,7 @@ public:
 		actionHealed = 0;
 		mindHealed = 0;
 
-		mindCost = 1000;
+		mindCost = 500;
 		mindWoundCost = 10;
 
 		speed = 1;
@@ -123,7 +123,8 @@ public:
 			return GENERALERROR;
 		}
 
-		int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+		//int mindCostNew = creature->calculateCostAdjustment(CreatureAttribute::FOCUS, mindCost);
+		int mindCostNew = mindCost;
 
 		if (creature->getHAM(CreatureAttribute::MIND) < abs(mindCostNew)) {
 			creature->sendSystemMessage("@healing_response:not_enough_mind"); //You do not have enough mind to do that.

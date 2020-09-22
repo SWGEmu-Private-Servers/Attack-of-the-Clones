@@ -84,10 +84,10 @@ void VehicleControlDeviceImplementation::generateObject(CreatureObject* player) 
 		Reference<CallMountTask*> callMount = new CallMountTask(_this.getReferenceUnsafeStaticCast(), player, "call_mount");
 
 		StringIdChatParameter message("pet/pet_menu", "call_vehicle_delay");
-		message.setDI(15);
+		message.setDI(5);
 		player->sendSystemMessage(message);
 
-		player->addPendingTask("call_mount", callMount, 15 * 1000);
+		player->addPendingTask("call_mount", callMount, 5 * 1000);
 
 		if (vehicleControlObserver == nullptr) {
 			vehicleControlObserver = new VehicleControlObserver(_this.getReferenceUnsafeStaticCast());
@@ -178,8 +178,10 @@ void VehicleControlDeviceImplementation::storeObject(CreatureObject* player, boo
 	/*if (!controlledObject->isInQuadTree())
 		return;*/
 
+/* // Stack -- Removing death or combat checks. You should now be able to store your vehicle in combat/while dead
 	if (!force && (player->isInCombat() || player->isDead()))
 		return;
+*/
 
 	if (player->isRidingMount() && player->getParent() == controlledObject) {
 

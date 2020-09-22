@@ -51,12 +51,13 @@ public:
 		}
 
 		if (!building->isPublicStructure()) {
-			player->sendSystemMessage("@player_structure:vendor_public_only");
-			return GENERALERROR;
+			player->sendSystemMessage("Be aware - You are placing a vendor in a private residence - your market will be limited!");
+			//player->sendSystemMessage("@player_structure:vendor_public_only");
+			//return GENERALERROR;
 		}
 
 		//Create Session
-		ManagedReference<CreateVendorSession*> session = new CreateVendorSession(player);
+		ManagedReference<CreateVendorSession*> session = new CreateVendorSession(player, building);
 		session->initializeSession();
 
 		return SUCCESS;
@@ -65,4 +66,3 @@ public:
 };
 
 #endif //CREATEVENDORCOMMAND_H_
-

@@ -31,6 +31,8 @@ float VisibilityManager::calculateVisibilityIncrease(CreatureObject* creature) {
 		closeObjectsVector->safeCopyReceiversTo(closeObjects, CloseObjectsVector::CREOTYPE);
 	}
 
+	//info("    Close object count: " + String::valueOf(closeObjects.size()), true);
+
 	for (int i = 0; i < closeObjects.size(); ++i) {
 		SceneObject* obj = static_cast<SceneObject*>(closeObjects.get(i));
 
@@ -56,8 +58,8 @@ float VisibilityManager::calculateVisibilityIncrease(CreatureObject* creature) {
 			//info(c->getCreatureName().toString() + " generating a 0.5 visibility modifier", true);
 		} else {
 			if (creature->getFaction() == c->getFaction()) {
-				visibilityIncrease += 0.25;
-				//info(c->getCreatureName().toString() + " generating a 0.25 visibility modifier", true);
+				visibilityIncrease += 0.05;
+				//info(c->getCreatureName().toString() + " generating a 0.0 visibility modifier", true);
 			} else {
 				visibilityIncrease += 1;
 				//info( c->getCreatureName().toString() + " generating a 1.0 visibility modifier", true);
@@ -139,6 +141,8 @@ void VisibilityManager::increaseVisibility(CreatureObject* creature, int visibil
 		Locker locker(ghost);
 		decreaseVisibility(creature);
 
+		//info("     Vis calc is: " + String::valueOf(calculateVisibilityIncrease(creature)), true);
+
 		float newVis = ghost->getVisibility() + (calculateVisibilityIncrease(creature) * visibilityMultiplier); // Calculate new total vis
 		newVis = Math::min(maxVisibility,  newVis); // Cap visibility
 
@@ -185,6 +189,7 @@ void VisibilityManager::loadConfiguration() {
 
 		maxVisibility  = (float)lua->getGlobalInt(String("maxVisibility"));
 		terminalVisThreshold = (float)lua->getGlobalInt(String("termThreshold"));
+		minimumFactionRankRequired = lua->getGlobalInt(String("minimumFactionRankRequired"));
 		falloffThreshold = (float)lua->getGlobalInt(String("falloffThreshold"));
 		pvpRatingDivisor = (float)lua->getGlobalInt(String("pvpRatingDivisor"));
 
@@ -199,4 +204,3 @@ void VisibilityManager::loadConfiguration() {
 		error(e.getMessage());
 	}
 }
-

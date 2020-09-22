@@ -130,5 +130,6 @@
 #include "server/zone/objects/area/MissionReconActiveArea.h"
 #include "server/zone/objects/area/SpawnArea.h"
 #include "server/zone/objects/tangible/misc/ContractCrate.h"
+#include "server/zone/objects/tangible/misc/VendorToken.h"
 
 #endif /* OBJECTS_H_ */

@@ -115,8 +115,7 @@ void SurveySessionImplementation::startSurvey(const String& resname) {
 	if (spawn == nullptr) {
 		return;
 	}
-
-	if (spawn->getSurveyToolType() != activeSurveyTool->getToolType() && !(activeSurveyTool->getToolType() == SurveyTool::INORGANIC && spawn->isType("inorganic"))) {
+	if (spawn->getSurveyToolType() != activeSurveyTool->getToolType() && !((activeSurveyTool->getToolType() == SurveyTool::INORGANIC && spawn->isType("inorganic")) || (activeSurveyTool->getToolType() == SurveyTool::ORGANIC && spawn->isType("organic")))) {
 		StringIdChatParameter message("@survey:wrong_tool"); // %TO resources cannot be located with this tool
 		message.setTO(spawn->getFinalClass());
 		surveyer->sendSystemMessage(message);
@@ -191,6 +190,12 @@ void SurveySessionImplementation::startSample(const String& resname) {
 		return;
 	}
 
+	// Do NOT let people sample from the ground for ORGANICs
+	if (activeSurveyTool->getToolType() == SurveyTool::ORGANIC && resourceSpawn->isType("organic") ) {
+		surveyer->sendSystemMessage("You cannot sample this resource from the ground. Hire a Ranger you cheap git.");
+		return;
+	}
+
 	//Get actual cost based upon player's Quickness
 	int actionCost = 124 - (int)(surveyer->getHAM(CreatureAttribute::QUICKNESS)/12.5f);
 
@@ -200,7 +205,7 @@ void SurveySessionImplementation::startSample(const String& resname) {
 		return;
 	}
 
-	if (resourceSpawn->getSurveyToolType() != activeSurveyTool->getToolType() && !(activeSurveyTool->getToolType() == SurveyTool::INORGANIC && resourceSpawn->isType("inorganic"))) {
+	if (resourceSpawn->getSurveyToolType() != activeSurveyTool->getToolType() && !((activeSurveyTool->getToolType() == SurveyTool::INORGANIC && resourceSpawn->isType("inorganic")) || (activeSurveyTool->getToolType() == SurveyTool::ORGANIC && resourceSpawn->isType("organic")))) {
 		StringIdChatParameter message("@survey:wrong_tool"); // %TO resources cannot be located with this tool
 		message.setTO(resourceSpawn->getFinalClass());
 		surveyer->sendSystemMessage(message);
@@ -228,6 +233,12 @@ void SurveySessionImplementation::startSample(const String& resname) {
 	message.setTO(lastResourceSampleName);
 	surveyer->sendSystemMessage(message);
 
+	if (!lastResourceSampleName.isEmpty())
+		resourceManager->sendSample(surveyer, lastResourceSampleName,
+				activeSurveyTool->getSampleAnimation());
+
+				/* sTack - Disable the mini game SUI
+
 	if (!doGamble && richSampleLocation.getPosition() == Vector3(0, 0, 0) && System::random(50) == 7) {
 
 		if (ghost->hasSuiBoxWindowType(SuiWindowType::SURVEY_TOOL_CONCENTRATED_MINIGAME)) {
@@ -249,6 +260,7 @@ void SurveySessionImplementation::startSample(const String& resname) {
 			resourceManager->sendSample(surveyer, lastResourceSampleName,
 					activeSurveyTool->getSampleAnimation());
 	}
+	*/
 }
 
 void SurveySessionImplementation::surveyCnodeMinigameSui() {
@@ -399,4 +411,3 @@ void SurveySessionImplementation::rescheduleSampleResults(const ResourceSpawner*
 		surveyer->addPendingTask("sampleresults", sampleResultsTask, 3000);
 	}
 }
-

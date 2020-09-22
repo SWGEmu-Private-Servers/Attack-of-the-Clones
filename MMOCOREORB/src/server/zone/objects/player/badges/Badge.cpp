@@ -44,10 +44,14 @@ uint8 Badge::getTypeFromString(const String& typeString) {
 		return EXPLORATION;
 	} else if (typeString == "master") {
 		return MASTER;
+	} else if (typeString == "master_nojedi") {
+		return MASTERNOJEDI;
 	} else if (typeString == "events") {
 		return EVENT;
 	} else if (typeString == "content") {
 		return CONTENT;
+	} else if (typeString == "aotc") {
+		return AOTC;
 	} else {
 		StringBuffer buffer;
 		buffer << "Unknown badge type ";

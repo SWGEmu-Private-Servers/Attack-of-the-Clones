@@ -24,6 +24,8 @@ class VisibilityManager : public Singleton<VisibilityManager>, public Logger, pu
 
 	float terminalVisThreshold;
 
+	int minimumFactionRankRequired;
+
 	/**
 	 * If a players visibility falls below this value they will be removed from the BH terminals
 	 */
@@ -122,6 +124,10 @@ public:
 	VisibilityManager();
 
 	float getTerminalVisThreshold();
+
+	int getMinimumFactionRankRequired(){
+		return minimumFactionRankRequired;
+	}
 
 	/**
 	 * Load lua configuration for visibility variables

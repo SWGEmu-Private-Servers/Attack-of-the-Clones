@@ -32,8 +32,8 @@ void DetectorZoneComponent::notifyPositionUpdate(SceneObject* sceneObject, QuadT
 
 	if(scannerData == nullptr || !scannerData->canScan())
 		return;
-
-	if(sceneObject->isDetector() && target->isPlayerCreature() && sceneObject->isInRange(target,65)){
+// Why does EMU HARD CODE THINGS
+	if(sceneObject->isDetector() && target->isPlayerCreature() && sceneObject->isInRange(target,80)){
 		ManagedReference<CreatureObject*> player = cast<CreatureObject*>(entry);
 		if(player == nullptr)
 			return;
@@ -47,6 +47,7 @@ void DetectorZoneComponent::notifyPositionUpdate(SceneObject* sceneObject, QuadT
 			scannerData->updateCooldown();
 			PlayClientEffectLoc* explodeLoc = new PlayClientEffectLoc("clienteffect/survey_effect.cef", tano->getZone()->getZoneName(), tano->getPositionX(), tano->getPositionZ(), tano->getPositionY());
 			tano->broadcastMessage(explodeLoc, false);
+			playerObject->updateLastPvpCombatActionTimestamp(true, false);
 		}
 
 	}

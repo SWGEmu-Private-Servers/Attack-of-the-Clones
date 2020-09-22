@@ -2,19 +2,22 @@
  * LootManagerImplementation.cpp
  *
  *  Created on: Jun 20, 2011
- *      Author: Kyle
+ *      Author: Kyle, Modified by stack aug 2020
  */
 
 #include "server/zone/managers/loot/LootManager.h"
 #include "server/zone/objects/scene/SceneObject.h"
+#include "server/zone/objects/creature/CreatureObject.h"
 #include "server/zone/objects/creature/ai/AiAgent.h"
 #include "server/zone/objects/tangible/weapon/WeaponObject.h"
 #include "server/zone/managers/crafting/CraftingManager.h"
 #include "templates/LootItemTemplate.h"
 #include "templates/LootGroupTemplate.h"
 #include "server/zone/ZoneServer.h"
+#include "server/zone/objects/creature/CreatureObject.h"
 #include "LootGroupMap.h"
 #include "server/zone/objects/tangible/component/lightsaber/LightsaberCrystalComponent.h"
+
 
 void LootManagerImplementation::initialize() {
 	info("Loading configuration.");
@@ -256,6 +259,81 @@ int LootManagerImplementation::calculateLootCredits(int level) {
 	return credits;
 }
 
+TangibleObject* LootManagerImplementation::createLootAttachment(LootItemTemplate* templateObject, const String& modName, int value) {
+
+	const String& directTemplateObject = templateObject->getDirectObjectTemplate();
+
+	TangibleObject* prototype = zoneServer->createObject(directTemplateObject.hashCode(), 2).castTo<TangibleObject*>();
+
+	if (prototype == nullptr) {
+		error("could not create loot object: " + directTemplateObject);
+		return nullptr;
+	}
+
+	Locker objLocker(prototype);
+
+	prototype->createChildObjects();
+
+	String serial = craftingManager->generateSerial();
+	prototype->setSerialNumber(serial);
+
+	ValuesMap valuesMap = templateObject->getValuesMapCopy();
+	CraftingValues* craftingValues = new CraftingValues(valuesMap);
+
+	setInitialObjectStats(templateObject, craftingValues, prototype);
+
+	setCustomObjectName(prototype, templateObject);
+
+	String subtitle;
+
+	for (int i = 0; i < craftingValues->getExperimentalPropertySubtitleSize(); ++i) {
+		subtitle = craftingValues->getExperimentalPropertySubtitle(i);
+
+		if (subtitle == "hitpoints" && !prototype->isComponent()) {
+			continue;
+		}
+
+		float min = craftingValues->getMinValue(subtitle);
+		float max = craftingValues->getMaxValue(subtitle);
+	}
+
+
+	if(prototype->isAttachment()){
+		Attachment* attachment = cast<Attachment*>( prototype);
+		attachment->updateAttachmentValues(modName, value);
+		delete craftingValues;
+
+		HashTable<String, int>* mods = attachment->getSkillMods();
+		HashTableIterator<String, int> iterator = mods->iterator();
+		StringId attachmentName;
+		String key = "";
+		int value = 0;
+		int last = 0;
+		String attachmentType = "AA ";
+		String attachmentCustomName = "";
+
+		if(attachment->isClothingAttachment()){
+			attachmentType = "CA ";
+		}
+
+		for(int i = 0; i < mods->size(); ++i) {
+			iterator.getNextKeyAndValue(key, value);
+
+			if(value > last){
+				last = value;
+				attachmentName.setStringId("stat_n", key);
+				prototype->setObjectName(attachmentName,false);
+				attachmentCustomName = attachmentType + prototype->getDisplayedName() + " " + String::valueOf(value);
+			}
+		}
+		prototype->setCustomObjectName(attachmentCustomName,false);
+	}
+	return prototype;
+
+}
+
+
+
 TangibleObject* LootManagerImplementation::createLootObject(const LootItemTemplate* templateObject, int level, bool maxCondition) {
 	int uncappedLevel = level;
 
@@ -487,6 +565,48 @@ TangibleObject* LootManagerImplementation::createLootObject(const LootItemTempla
 		addConditionDamage(prototype, craftingValues);
 
 	delete craftingValues;
+
+	// Attachment name ALA: AA - (ModVal) ModName
+	if (prototype->isAttachment()){
+		Attachment* attachment = cast<Attachment*>( prototype.get());
+
+		if (attachment == NULL)
+			return prototype;
+
+		HashTable<String, int>* skillMods = attachment->getSkillMods();
+ 		HashTableIterator<String, int> iterator = skillMods->iterator();
+
+ 		String key = "";
+ 		int value = 0;
+		int last = 0;
+ 		StringId attachmentName;
+		String attachFullName = "";
+
+ 		String attachmentType = "CA";
+
+		if(attachment->isArmorAttachment()){
+			attachmentType = "AA";
+		}
+
+		for(int i = 0; i < skillMods->size(); ++i) {
+			iterator.getNextKeyAndValue(key, value);
+
+			if(value > last){
+				last = value;
+				attachmentName.setStringId("stat_n", key);
+				prototype->setObjectName(attachmentName, false);
+				attachFullName = attachmentType + " - (" + String::valueOf(value) + ") " + prototype->getDisplayedName();
+
+			}
+		}
+
+		prototype->setCustomObjectName(attachFullName,  false);
+
+		//iterator.getNextKeyAndValue(key, value);
+		//attachmentName.setStringId("stat_n", key);
+
+
+	}
 
 	return prototype;
 }

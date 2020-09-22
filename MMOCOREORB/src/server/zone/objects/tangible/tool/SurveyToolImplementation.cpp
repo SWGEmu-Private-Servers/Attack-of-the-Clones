@@ -89,6 +89,15 @@ int SurveyToolImplementation::handleObjectMenuSelect(CreatureObject* player, byt
 void SurveyToolImplementation::sendRangeSui(CreatureObject* player) {
 	int surveyMod = player->getSkillMod("surveying");
 
+	// Stack - Adjustments for Ranger and organic
+	if(getToolType() == SurveyTool::ORGANIC)
+	{
+		surveyMod = player->getSkillMod("creature_harvesting");
+		// adjust this to scale with RANGER (novice has 64, so this would make novice box == 25, perfect)
+		surveyMod -= 40;
+	}
+
+
 	ManagedReference<SuiListBox*> suiToolRangeBox = new SuiListBox(player, SuiWindowType::SURVEY_TOOL_RANGE, 0);
 
 	suiToolRangeBox->setPromptTitle("@base_player:swg");
@@ -121,7 +130,16 @@ void SurveyToolImplementation::sendRangeSui(CreatureObject* player) {
 int SurveyToolImplementation::getRange(CreatureObject* player) {
 
 	int surveyMod = player->getSkillMod("surveying");
-	int rangeBasedOnSkill = getSkillBasedRange(surveyMod);
+	int rangeBasedOnSkill = 64;
+	// Stack - Making organic tool based off CREATURE_HARVESTING skill mod
+	if(getToolType() == SurveyTool::ORGANIC)
+	{
+		surveyMod = player->getSkillMod("creature_harvesting");
+		// adjust this to scale with RANGER (novice has 64, so this would make novice box == 25, perfect)
+		surveyMod -= 40;
+	}
+
+	rangeBasedOnSkill = getSkillBasedRange(surveyMod);
 
 	if (range > rangeBasedOnSkill)
 		setRange(rangeBasedOnSkill);

@@ -89,6 +89,7 @@
 #include "server/zone/objects/intangible/TheaterObject.h"
 #include "server/zone/objects/tangible/misc/ContractCrate.h"
 #include "server/zone/managers/crafting/schematicmap/SchematicMap.h"
+#include "server/zone/objects/tangible/misc/VendorToken.h"
 
 int DirectorManager::DEBUG_MODE = 0;
 int DirectorManager::ERROR_CODE = NO_ERROR;
@@ -348,6 +349,7 @@ void DirectorManager::initializeLuaEngine(Lua* luaEngine) {
 	luaEngine->registerFunction("dropObserver", dropObserver);
 	luaEngine->registerFunction("hasObserver", hasObserver);
 	luaEngine->registerFunction("spawnMobile", spawnMobile);
+	luaEngine->registerFunction("startStopScreenplayFromLua", startStopScreenplayFromLua);
 	luaEngine->registerFunction("spawnEventMobile", spawnEventMobile);
 	luaEngine->registerFunction("spatialChat", spatialChat);
 	luaEngine->registerFunction("spatialMoodChat", spatialMoodChat);
@@ -514,6 +516,7 @@ void DirectorManager::initializeLuaEngine(Lua* luaEngine) {
 	luaEngine->setGlobalInt("WAYPOINTRACETRACK", WaypointObject::SPECIALTYPE_RACETRACK);
 	luaEngine->setGlobalInt("WAYPOINTTREASUREMAP", WaypointObject::SPECIALTYPE_TREASUREMAP);
 	luaEngine->setGlobalInt("WAYPOINTQUESTTASK", WaypointObject::SPECIALTYPE_QUESTTASK);
+	luaEngine->setGlobalInt("WAYPOINTRESTUSSTASK", WaypointObject::SPECIALTYPE_RESTUSSTASK);
 
 	luaEngine->setGlobalInt("HEALTH", CreatureAttribute::HEALTH);
 	luaEngine->setGlobalInt("CONSTITUTION", CreatureAttribute::CONSTITUTION);
@@ -1986,6 +1989,26 @@ int DirectorManager::setAuthorizationState(lua_State* L) {
 	return 0;
 }
 
+int DirectorManager::startStopScreenplayFromLua(lua_State* L)
+{
+	String action = "";
+	String screenplayName = "";
+
+	int numberOfArguments = lua_gettop(L);
+	if (numberOfArguments != 2) {
+		String err = "incorrect number of arguments passed to DirectorManager::startStopScreenplayFromLua";
+		printTraceError(L, err);
+		ERROR_CODE = INCORRECT_ARGUMENTS;
+		return 0;
+	}
+
+	action = lua_tostring(L, -1);
+	screenplayName = lua_tostring(L, -2);
+
+	instance()->info("Starting screenplay from LUA " + action + "   " + screenplayName, true);
+	return 1;
+}
+
 int DirectorManager::spawnMobile(lua_State* L) {
 	int numberOfArguments = lua_gettop(L);
 	if (numberOfArguments != 8 && numberOfArguments != 9) {
@@ -2532,9 +2555,25 @@ void DirectorManager::startScreenPlay(CreatureObject* creatureObject, const Stri
 	Lua* lua = getLuaInstance();
 
 	LuaFunction startScreenPlay(lua->getLuaState(), screenPlayName, "start", 0);
-	startScreenPlay << creatureObject;
+	if(creatureObject != nullptr)
+	{
+		startScreenPlay << creatureObject;
+	}
+
 
 	startScreenPlay.callFunction();
+}
+
+void DirectorManager::stopScreenPlay(CreatureObject* creatureObject, const String& screenPlayName) {
+	Lua* lua = getLuaInstance();
+
+	LuaFunction stopScreenPlay(lua->getLuaState(), screenPlayName, "stop", 0);
+	if(creatureObject != nullptr)
+	{
+		stopScreenPlay << creatureObject;
+	}
+
+	stopScreenPlay.callFunction();
 }
 
 ConversationScreen* DirectorManager::getNextConversationScreen(const String& luaClass, ConversationTemplate* conversationTemplate, CreatureObject* conversingPlayer, int selectedOption, CreatureObject* conversingNPC) {

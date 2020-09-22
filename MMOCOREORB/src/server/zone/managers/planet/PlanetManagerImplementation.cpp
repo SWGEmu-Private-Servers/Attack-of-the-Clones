@@ -85,6 +85,25 @@ void PlanetManagerImplementation::initialize() {
 		zone->transferObject(sarlaccPreArea, -1, true);
 	}
 
+	if (zone->getZoneName() == "rori") {
+		Reference<ActiveArea*> pvparea = zone->getZoneServer()->createObject(STRING_HASHCODE("object/pvp_restuss_area.iff"), 0).castTo<ActiveArea*>();
+
+		Locker locker(pvparea);
+		pvparea->setRadius(500.f);
+		pvparea->initializePosition(5311, 0, 5691);
+		zone->transferObject(pvparea, -1, true);
+
+		ManagedReference<SceneObject*> scenery = zone->getZoneServer()->createObject(STRING_HASHCODE("object/static/structure/general/fs_village_nobuild_768m.iff"), 0);
+
+		Locker slocker(scenery, pvparea);
+		scenery->initializePosition(5311, zone->getHeight(5311, 5691), 5691);
+		pvparea->attachScenery(scenery);
+
+		slocker.release();
+		locker.release();
+
+	}
+
 	if (zone->getZoneName() == "tatooine") {
 		Reference<ActiveArea*> area = zone->getZoneServer()->createObject(
 				STRING_HASHCODE("object/sarlacc_area.iff"), 0).castTo<ActiveArea *>();
@@ -690,31 +709,6 @@ PlanetTravelPoint* PlanetManagerImplementation::getRandomStarport() {
 	}
 
 	return planetStarports.get(System::random(planetStarports.size() - 1));
-}
-
-Vector3 PlanetManagerImplementation::getRandomSpawnPoint() {
-	Vector3 position;
-	bool found = false;
-	float minX = zone->getMinX(), maxX = zone->getMaxX();
-	float minY = zone->getMinY(), maxY = zone->getMaxY();
-	float diameterX = maxX - minX;
-	float diameterY = maxY - minY;
-	int retries = 20;
-
-	while (!found && retries > 0) {
-		position.setX(System::random(diameterX) + minX);
-		position.setY(System::random(diameterY) + minY);
-
-		found = isSpawningPermittedAt(position.getX(), position.getY());
-
-		retries--;
-	}
-
-	if (retries == 0) {
-		position.set(0, 0, 0);
-	}
-
-	return position;
 }
 
 void PlanetManagerImplementation::loadClientPoiData() {

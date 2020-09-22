@@ -534,7 +534,7 @@ namespace conf {
 		}
 
 		inline bool getCharacterBuilderEnabled() {
-			return getBool("Core3.CharacterBuilderEnabled", false);
+			return getBool("Core3.CharacterBuilderEnabled", true);
 		}
 
 		inline int getPlayerLogLevel() {

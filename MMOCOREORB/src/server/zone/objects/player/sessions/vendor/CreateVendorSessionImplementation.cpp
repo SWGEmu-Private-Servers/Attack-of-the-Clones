@@ -216,6 +216,7 @@ void CreateVendorSessionImplementation::createVendor(String& name) {
 	}
 
 	vendorData->setOwnerId(player->getObjectID());
+	vendorData->setIsPrivateVendor(!building->isPublicStructure());
 
 	vendor->setCustomObjectName("Vendor: " + name, false);
 	vendor->setContainerOwnerID(player->getObjectID());

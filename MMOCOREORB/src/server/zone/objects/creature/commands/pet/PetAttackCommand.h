@@ -86,6 +86,9 @@ public:
 
 		ManagedReference<TangibleObject*> targetTano = targetObject.castTo<TangibleObject*>();
 
+		// Clear the last combat state - Makes sure its ready for switching target
+		//pet->clearCombatState();
+
 		Locker clocker(controlDevice, creature);
 		controlDevice->setLastCommand(PetManager::ATTACK);
 		controlDevice->setLastCommandTarget(targetTano);
@@ -93,7 +96,8 @@ public:
 		pet->activateInterrupt(pet->getLinkedCreature().get(), ObserverEventType::STARTCOMBAT);
 
 		pet->selectDefaultAttack();
-		pet->enqueueAttack(QueueCommand::FRONT);
+		// This was causing a loop. Replaced by the clearCombatState() above.
+		pet->enqueueAttack(QueueCommand::IMMEDIATE);
 
 		return SUCCESS;
 	}

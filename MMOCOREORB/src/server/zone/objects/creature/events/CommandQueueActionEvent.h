@@ -43,8 +43,8 @@ public:
 			//player->info("command queue action activated");
 
 		} catch (Exception& e) {
-			creature->error(e.getMessage());
-			e.printStackTrace();
+			//creature->error(e.getMessage());
+			//e.printStackTrace();
 		} catch (...) {
 			//creature = nullptr;
 

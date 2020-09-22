@@ -32,6 +32,7 @@ public:
 
 		float posX = creature->getPositionX(), posY = creature->getPositionY(), posZ = creature->getPositionZ();
 		uint64 parID = creature->getParentID();
+		uint64 dirID = creature->getDirectionAngle();
 
 		String objName = "", tempName = "object/mobile/boba_fett.iff";
 		bool baby = false;
@@ -144,6 +145,9 @@ public:
 
 			if (tokenizer.hasMoreTokens())
 				parID = tokenizer.getLongToken();
+
+			if (tokenizer.hasMoreTokens())
+				dirID = tokenizer.getLongToken();
 		} else {
 			creature->sendSystemMessage("Usage: /createCreature <template> [object template | ai template | baby | event [level] [scale] ] [X] [Z] [Y] [planet] [cellID]");
 			return GENERALERROR;
@@ -163,8 +167,13 @@ public:
 			npc = cast<AiAgent*>(creatureManager->spawnCreatureWithAi(templ, posX, posZ, posY, parID));
 		else {
 			npc = cast<AiAgent*>(creatureManager->spawnCreature(templ, objTempl, posX, posZ, posY, parID));
-			if (npc != nullptr)
+			if (npc != nullptr){
 				npc->activateLoad("");
+
+				StringBuffer msg;
+				msg << "spawnMobile(\"" << zone->getZoneName() << "\", \"" << tempName << "\", 300, " << posX << ", " << posZ << ", " << posY << ", " << dirID << ", " << parID << ")"<< endl;
+				creature->sendSystemMessage(msg.toString());
+			}
 		}
 
 		if (baby && npc == nullptr) {

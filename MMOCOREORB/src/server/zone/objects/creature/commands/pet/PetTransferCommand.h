@@ -84,7 +84,7 @@ public:
 		}
 
 		//none ch doesn't seem to have keep_creature, effectively returns 0/
-		if (activePets != 0 && activePets >= targetPlayer->getSkillMod("keep_creature")) {
+		if (activePets != 0 && activePets >= (targetPlayer->getSkillMod("keep_creature") * 2)) {
 			player->sendSystemMessage("@pet/pet_menu:targ_too_many"); // That person has too many pets. Transfer failed.
 			targetPlayer->sendSystemMessage("@pet/pet_menu:too_many"); // You can't control any more pets. Store one first.
 			return GENERALERROR;

@@ -386,7 +386,7 @@ int PetDeedImplementation::handleObjectMenuSelect(CreatureObject* player, byte s
 		int currentlySpawned = 0;
 		int spawnedLevel = 0;
 		int cLevel = level;
-		int maxPets = player->getSkillMod("keep_creature");
+		int maxPets = player->getSkillMod("keep_creature") * 2;
 		int maxLevelofPets = player->getSkillMod("tame_level");
 
 		for (int i = 0; i < ghost->getActivePetsSize(); ++i) {

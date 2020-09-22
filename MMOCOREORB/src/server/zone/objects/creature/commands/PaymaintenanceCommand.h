@@ -23,7 +23,13 @@ public:
 		if (!checkInvalidLocomotions(creature))
 			return INVALIDLOCOMOTION;
 
-		if (creature->getCashCredits() <= 0) {
+
+		// Stack, implementing the bank/cash credits for maintenance. Credit Tarkin
+		int bank = creature->getBankCredits();
+		int cash = creature->getCashCredits();
+		int availableCredits = bank + cash;
+
+		if (availableCredits <= 0) {
 			creature->sendSystemMessage("@player_structure:no_money"); //You do not have any money to pay maintenance.
 			return GENERALERROR;
 		}
