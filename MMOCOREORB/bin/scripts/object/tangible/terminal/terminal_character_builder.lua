@@ -1519,9 +1519,13 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Enhance Character", "enhance_character",
 			"Jedi",
 			{
-				--"Unlock Jedi Initiate", "unlock_jedi_initiate",
-				"Unlock FRS Light Side", "frs_light_side",
-				"Unlock FRS Dark Side", "frs_dark_side"
+--				"Unlock Jedi Initiate", "unlock_jedi_initiate",
+				"Unlock Soresu Master(Tank)", "unlock_jedi_tank",
+				"Unlock Healer Master", "unlock_jedi_healer",
+				"Unlock Ataru Master(Powers)", "unlock_jedi_powers",
+				"Unlock Shien Master(Sabers)", "unlock_jedi_sabers",
+--				"Unlock FRS Light Side", "frs_light_side",
+--				"Unlock FRS Dark Side", "frs_dark_side"
 			},
 			"Fill Force Bar", "fill_force_bar",
 			"Reset Buffs", "reset_buffs",
@@ -1537,8 +1541,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Become Glowy", "become_glowy",
 			"Faction Points",
 			{
-				"Imperial", "faction_imperial",
-				"Rebel", "faction_rebel"
+				"Republic", "faction_imperial",
+				"CIS", "faction_rebel"
 			}
 		},
 		"Items",
@@ -1546,7 +1550,16 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			"Jedi Items",
 			{
 				"Color Crystal", "color_crystals",
-				"Krayt Pearl", "krayt_pearls"
+				"Krayt Pearl", "krayt_pearls",
+				"Dark Blue 1H", "object/weapon/melee/sword/sword_lightsaber_darkblue.iff",
+				"Blue 1H", "object/weapon/melee/sword/sword_lightsaber_blue.iff",
+				"Green 1H", "object/weapon/melee/sword/sword_lightsaber_lightgreen.iff",
+				"Dark Blue 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_darkblue.iff",
+				"Blue 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_blue.iff",
+				"Green 2H", "object/weapon/melee/2h_sword/2h_sword_lightsaber_lightgreen.iff",
+				"Blue Polearm", "object/weapon/melee/polearm/lance_lightsaber_blue.iff",
+				"Dark Blue Polearm", "object/weapon/melee/polearm/lance_lightsaber_darkblue.iff",
+				"Green Polearm", "object/weapon/melee/polearm/lance_lightsaber_lightgreen.iff"
 			},
 			--"Attachments",
 			--{
@@ -1567,6 +1580,65 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				--		"Bone Helmet", "object/tangible/wearables/armor/bone/armor_bone_s01_helmet.iff",
 				--		"Bone Leggings", "object/tangible/wearables/armor/bone/armor_bone_s01_leggings.iff"
 				--	},
+				"Clone Trooper 212th Armor",
+				{
+					"Clone Trooper Belt", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_belt.iff",
+					"Clone Trooper Left Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bicep_l.iff",
+					"Clone Trooper Right Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bicep_r.iff",
+					"Clone Trooper Boots", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_boots.iff",
+					"Clone Trooper Left Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bracer_l.iff",
+					"Clone Trooper Right Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_bracer_r.iff",
+					"Clone Trooper Chest Plate", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_chest_plate.iff",
+					"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_gloves.iff",
+					"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_helmet.iff",
+					"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_imperial_s01_leggings.iff",
+					"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+					"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+					},
+					"Sep Battle Armour",
+					{
+						"Sep Battle Armor Belt", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_belt.iff",
+						"Sep Battle Armor Left Bicep", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bicep_l.iff",
+						"Sep Battle Armor Right Bicep", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bicep_r.iff",
+						"Sep Battle Armor Boots", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_boots.iff",
+						"Sep Battle Armor Left Bracer", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bracer_l.iff",
+						"Sep Battle Armor Right Bracer", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_bracer_r.iff",
+						"Sep Battle Armor Chest Plate", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_chest_plate.iff",
+						"Sep Battle Armor Gloves", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_gloves.iff",
+						"Sep Battle Armor Helmet", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_helmet.iff",
+						"Sep Battle Armor Leggings", "object/tangible/wearables/armor/rebel_battle/armor_rebel_battle_leggings.iff",
+						"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+						"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+						},
+
+						"Sep Infil Armour",
+						{
+							"Sep Infil Armor Belt", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_belt.iff",
+							"Sep Infil Armor Left Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_l.iff",
+							"Sep Infil Armor Right Bicep", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bicep_r.iff",
+							"Sep Infil Armor Boots", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_boots.iff",
+							"Sep Infil Armor Left Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_l.iff",
+							"Sep Infil Armor Right Bracer", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_bracer_r.iff",
+							"Sep Infil Armor Chest Plate", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_chest_plate.iff",
+							"Sep Infil Armor Gloves", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_gloves.iff",
+							"Sep Infil Armor Helmet", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_helmet.iff",
+							"Sep Infil Armor Leggings", "object/tangible/wearables/armor/infiltrator/armor_infiltrator_s01_leggings.iff",
+							"Test Shield", "object/tangible/component/armor/shield_generator_personal_c.iff",
+							"Test Imperial Shield", "object/tangible/component/armor/shield_generator_personal_imperial_test.iff"
+							},
+					"Clone Trooper Coruscant Armor",
+					{
+						"Clone Trooper Belt", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_belt.iff",
+						"Clone Trooper Left Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bicep_l.iff",
+						"Clone Trooper Right Bicep", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bicep_r.iff",
+						"Clone Trooper Boots", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_boots.iff",
+						"Clone Trooper Left Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bracer_l.iff",
+						"Clone Trooper Right Bracer", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_bracer_r.iff",
+						"Clone Trooper Chest Plate", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_chest_plate.iff",
+						"Clone Trooper Gloves", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_gloves.iff",
+						"Clone Trooper Helmet", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_helmet.iff",
+						"Clone Trooper Leggings", "object/tangible/wearables/armor/clone_trooper/armor_clone_trooper_rebel_s01_leggings.iff"
+						},
 				"Ithorian Armor",
 				{
 					"Ithorian Sentinel",
@@ -1654,11 +1726,11 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Backpack 01", "object/tangible/wearables/backpack/backpack_s01.iff"
 				}
 			},
-			--"Consumables",
-			--{
-			--	"Desserts",
-			--	{
-			--"Air Cake", "object/tangible/food/crafted/dessert_air_cake.iff",
+			"Consumables",
+			{
+				"Desserts",
+				{
+			"Air Cake", "object/tangible/food/crafted/dessert_air_cake.iff",
 			--"Almond Kwevvu Crisp Munchies", "object/tangible/food/crafted/dessert_almond_kwevvu_crisp_munchies.iff",
 			--"Bantha Butter", "object/tangible/food/crafted/dessert_bantha_butter.iff",
 			--"Blap Biscuit", "object/tangible/food/crafted/dessert_blap_biscuit.iff",
@@ -1666,7 +1738,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Bofa Treat", "object/tangible/food/crafted/dessert_bofa_treat.iff",
 			--"Cavaellin Creams", "object/tangible/food/crafted/dessert_cavaellin_creams.iff",
 			--"Chandad", "object/tangible/food/crafted/dessert_chandad.iff",
-			--"Citros Snow Cake", "object/tangible/food/crafted/dessert_citros_snow_cake.iff",
+			"Citros Snow Cake", "object/tangible/food/crafted/dessert_citros_snow_cake.iff",
 			--"Corellian Fried Icecream", "object/tangible/food/crafted/dessert_corellian_fried_icecream.iff",
 			--"Deneelian Fizz Pudding", "object/tangible/food/crafted/dessert_deneelian_fizz_pudding.iff",
 			--"Dweezel", "object/tangible/food/crafted/dessert_dweezel.iff",
@@ -1678,10 +1750,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Para Roll", "object/tangible/food/crafted/dessert_para_roll.iff",
 			--"Parwan Nutricake", "object/tangible/food/crafted/dessert_parwan_nutricake.iff",
 			--"Pastebread", "object/tangible/food/crafted/dessert_pastebread.iff",
-			--"Pikatta Pie", "object/tangible/food/crafted/dessert_pikatta_pie.iff",
+			"Pikatta Pie", "object/tangible/food/crafted/dessert_pikatta_pie.iff",
 			--"Pkneb", "object/tangible/food/crafted/dessert_pkneb.iff",
 			--"Puffcake", "object/tangible/food/crafted/dessert_puffcake.iff",
-			--"Pyollian Cake", "object/tangible/food/crafted/dessert_pyollian_cake.iff",
+			"Pyollian Cake", "object/tangible/food/crafted/dessert_pyollian_cake.iff",
 			--"Ryshcate", "object/tangible/food/crafted/dessert_ryshcate.iff",
 			--"Smugglers Delight", "object/tangible/food/crafted/dessert_smugglers_delight.iff",
 			--"Sweesonberry Rolls", "object/tangible/food/crafted/dessert_sweesonberry_rolls.iff",
@@ -1689,10 +1761,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Tranna Nougat Cream", "object/tangible/food/crafted/dessert_tranna_nougat_cream.iff",
 			--"Vagnerian Canape", "object/tangible/food/crafted/dessert_vagnerian_canape.iff",
 			--"Wedding Cake", "object/tangible/food/crafted/dessert_wedding_cake.iff",
-			--"Won Won", "object/tangible/food/crafted/dessert_won_won.iff",
-			--},
-			--"Dishes",
-			--{
+			"Won Won", "object/tangible/food/crafted/dessert_won_won.iff",
+			},
+			"Dishes",
+			{
 			--"Ahrisa", "object/tangible/food/crafted/dish_ahrisa.iff",
 			--"Bivoli Tempari", "object/tangible/food/crafted/dish_bivoli_tempari.iff",
 			--"Blood Chowder", "object/tangible/food/crafted/dish_blood_chowder.iff",
@@ -1700,7 +1772,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Cho Nor Hoola", "object/tangible/food/crafted/dish_cho_nor_hoola.iff",
 			--"Crispic", "object/tangible/food/crafted/dish_crispic.iff",
 			--"Dustcrepe", "object/tangible/food/crafted/dish_dustcrepe.iff",
-			--"Exo Protein Wafers", "object/tangible/food/crafted/dish_exo_protein_wafers.iff",
+			"Exo Protein Wafers", "object/tangible/food/crafted/dish_exo_protein_wafers.iff",
 			--"Fire Stew", "object/tangible/food/crafted/dish_fire_stew.iff",
 			--"Fried Endwa", "object/tangible/food/crafted/dish_fried_endwa.iff",
 			--"Gruuvan Shaal", "object/tangible/food/crafted/dish_gruuvan_shaal.iff",
@@ -1718,20 +1790,20 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Scrimpi", "object/tangible/food/crafted/dish_scrimpi.iff",
 			--"Soypro", "object/tangible/food/crafted/dish_soypro.iff",
 			--"Stewed Gwouch", "object/tangible/food/crafted/dish_stewed_gwouch.iff",
-			--"Synthsteak", "object/tangible/food/crafted/dish_synthsteak.iff",
+			"Synthsteak", "object/tangible/food/crafted/dish_synthsteak.iff",
 			--"Teltier Noodles", "object/tangible/food/crafted/dish_teltier_noodles.iff",
 			--"Terratta", "object/tangible/food/crafted/dish_terratta.iff",
-			--"Thakitillo", "object/tangible/food/crafted/dish_thakitillo.iff",
+			"Thakitillo", "object/tangible/food/crafted/dish_thakitillo.iff",
 			--"Travel Biscuits", "object/tangible/food/crafted/dish_travel_biscuits.iff",
 			--"Trimpian", "object/tangible/food/crafted/dish_trimpian.iff",
-			--"Vegeparsine", "object/tangible/food/crafted/dish_vegeparsine.iff",
+			"Vegeparsine", "object/tangible/food/crafted/dish_vegeparsine.iff",
 			--"Veghash", "object/tangible/food/crafted/dish_veghash.iff",
 			--"Vercupti of Agazza Boleruuee", "object/tangible/food/crafted/dish_vercupti_of_agazza_boleruuee.iff",
 			--"Wastril Bread", "object/tangible/food/crafted/dish_wastril_bread.iff",
 			--"Xermaauc", "object/tangible/food/crafted/dish_xermaauc.iff"
-			--},
-			--"Drinks",
-			--{
+			},
+			"Drinks",
+			{
 			--"Accarragm", "object/tangible/food/crafted/drink_accarragm.iff",
 			--"Aitha", "object/tangible/food/crafted/drink_aitha.iff",
 			--"Alcohol", "object/tangible/food/crafted/drink_alcohol.iff",
@@ -1739,7 +1811,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Angerian Fishak Surprise", "object/tangible/food/crafted/drink_angerian_fishak_surprise.iff",
 			--"Antakarian Fire Dancer", "object/tangible/food/crafted/drink_antakarian_fire_dancer.iff",
 			--"Bantha Blaster", "object/tangible/food/crafted/drink_bantha_blaster.iff",
-			--"Bespin Port", "object/tangible/food/crafted/drink_bespin_port.iff",
+			"Bespin Port", "object/tangible/food/crafted/drink_bespin_port.iff",
 			--"Blue Milk", "object/tangible/food/crafted/drink_blue_milk.iff",
 			--"Breath of Heaven", "object/tangible/food/crafted/drink_breath_of_heaven.iff",
 			--"Caf", "object/tangible/food/crafted/drink_caf.iff",
@@ -1768,10 +1840,10 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Tatooine Sunburn", "object/tangible/food/crafted/drink_tatooine_sunburn.iff",
 			--"Tilla Tiil", "object/tangible/food/crafted/drink_tilla_tiil.iff",
 			--"Tssolok", "object/tangible/food/crafted/drink_tssolok.iff",
-			--"Vasarian Brandy", "object/tangible/food/crafted/drink_vasarian_brandy.iff",
+			"Vasarian Brandy", "object/tangible/food/crafted/drink_vasarian_brandy.iff",
 			--"Vayerbok", "object/tangible/food/crafted/drink_vayerbok.iff",
 			--"Veronian Berry Wine", "object/tangible/food/crafted/drink_veronian_berry_wine.iff"
-			--},
+			},
 			--"Foraged Food",
 			--{
 			--"Jar of Berries", "object/tangible/food/foraged/edible_jar_berries.iff",
@@ -1817,7 +1889,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 			--"Thruster Head", "object/tangible/food/spice/spice_thruster_head.iff",
 			--"Yarrock", "object/tangible/food/spice/spice_yarrock.iff"
 			--}
-			--},
+			},
 			"Deeds",
 			{
 				"Resource Deed", "object/tangible/veteran_reward/resource.iff",
@@ -2090,7 +2162,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Rental: Flag of Yavin", "object/tangible/deed/event_perk/yavin_flag_deed.iff",
 					--"Rental: Flags of the Universe", "object/tangible/deed/event_perk/universe_flags_theater.iff",
 					--"Rental: Fruit Stand", "object/tangible/deed/event_perk/fruit_stand.iff",
-					--"", "object/tangible/deed/event_perk/game_flag_deed.iff",
+					"Rental: King of the Hill Flag Game", "object/tangible/deed/event_perk/game_flag_deed.iff",
 					--"Rental: Grave Stone", "object/tangible/deed/event_perk/gravestone.iff",
 					--"Rental: Graveyard", "object/tangible/deed/event_perk/graveyard_deed.iff",
 					--"Rental: Imperial At-AT Landing Party", "object/tangible/deed/event_perk/imperial_landing_party_atat_theater_deed.iff",
@@ -2136,8 +2208,8 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--"Rental: Scavenger Hunt Droid", "object/tangible/deed/event_perk/scavenger_droid_deed.iff",
 					--"", "object/tangible/deed/event_perk/shuttle_beacon.iff",
 					"Rental: Shuttle", "object/tangible/deed/event_perk/shuttle_static_deed.iff",
-					--"Rental: Skeleton (Treasure Chest)", "object/tangible/deed/event_perk/skeleton_chest_deed.iff",
-					--"Rental: Sparking Treasure Chest", "object/tangible/deed/event_perk/sparking_treasure_box_chest_deed.iff",
+					"Rental: Skeleton (Treasure Chest)", "object/tangible/deed/event_perk/skeleton_chest_deed.iff",
+					"Rental: Sparking Treasure Chest", "object/tangible/deed/event_perk/sparking_treasure_box_chest_deed.iff",
 					"Rental: Stone Based Banner", "object/tangible/deed/event_perk/stone_base_banner_static_deed.iff",
 					"Rental: Tatooine Banner", "object/tangible/deed/event_perk/tatooine_banner_static_deed.iff",
 					--"Rental: Technical Chest", "object/tangible/deed/event_perk/technical_chest_deed.iff",
@@ -2183,8 +2255,6 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"@veteran_new:resourcecrate","object/tangible/veteran_reward/resource.iff",
 				"@veteran_new:falconcouch","object/tangible/veteran_reward/frn_couch_falcon_corner_s01.iff",
 				"@veteran_new:falconchair","object/tangible/veteran_reward/frn_couch_falcon_section_s01.iff",
-				"@veteran_new:mini_tiefighter","object/tangible/veteran_reward/frn_vet_tie_fighter_toy.iff",
-				"@veteran_new:mini_xwing","object/tangible/veteran_reward/frn_vet_x_wing_toy.iff",
 				--270 Day Rewards
 				"Deed for Flash Speeder","object/tangible/deed/vehicle_deed/speederbike_flash_deed.iff",
 				"Special Edition Goggles Style 1","object/tangible/wearables/goggles/goggles_s01.iff",
@@ -2193,14 +2263,12 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Special Edition Goggles Style 4","object/tangible/wearables/goggles/goggles_s04.iff",
 				"Special Edition Goggles Style 5","object/tangible/wearables/goggles/goggles_s05.iff",
 				"Special Edition Goggles Style 6","object/tangible/wearables/goggles/goggles_s06.iff",
-				"@veteran_new:mini_darthvader","object/tangible/veteran_reward/frn_vet_darth_vader_toy.iff",
 				--360 Day Rewards
 				"@veteran_new:techconsole_a","object/tangible/veteran_reward/frn_tech_console_sectional_a.iff",
 				"@veteran_new:techconsole_b","object/tangible/veteran_reward/frn_tech_console_sectional_b.iff",
 				"@veteran_new:techconsole_c","object/tangible/veteran_reward/frn_tech_console_sectional_c.iff",
 				"@veteran_new:techconsole_d","object/tangible/veteran_reward/frn_tech_console_sectional_d.iff",
 				"@veteran_new:mini_jabba","object/tangible/veteran_reward/frn_vet_jabba_toy.iff",
-				"@veteran_new:mini_stormtrooper","object/tangible/veteran_reward/frn_vet_stormtrooper_toy.iff",
 				"@veteran_new:antidecay","object/tangible/veteran_reward/antidecay.iff",
 				--450 Day Rewards
 				"Camp Center (Small)","object/tangible/camp/camp_spit_s2.iff",
@@ -2248,14 +2316,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 				"Round Data Terminal","object/tangible/furniture/all/frn_all_desk_map_table.iff",
 				--1080 Day Rewards
 				"Painting: Cast Wing in Flight","object/tangible/veteran_reward/one_year_anniversary/painting_01.iff",
-				"Painting: Decimator","object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
+				"Painting: Armored Assault Tank","object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
 				"Painting: Tatooine Dune Speeder","object/tangible/veteran_reward/one_year_anniversary/painting_03.iff",
 				"Painting: Weapon of War","object/tangible/veteran_reward/one_year_anniversary/painting_04.iff",
 				"Painting: Fighter Study","object/tangible/veteran_reward/one_year_anniversary/painting_05.iff",
 				"Painting: Hutt Greed","object/tangible/veteran_reward/one_year_anniversary/painting_06.iff",
 				"Painting: Smuggler's Run","object/tangible/veteran_reward/one_year_anniversary/painting_07.iff",
-				"Painting: Imperial Oppression (TIE Oppressor)","object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
-				"Painting: Emperor's Eyes (TIE Sentinel)","object/tangible/veteran_reward/one_year_anniversary/painting_09.iff",
+				"Painting: Droid Control Ship","object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
+				"Painting: Lightsaber Cutaway","object/tangible/veteran_reward/one_year_anniversary/painting_09.iff",
 			},
 			"Furniture",
 			{
@@ -2349,14 +2417,14 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Zabrak (male)", "object/tangible/painting/painting_zabrak_m.iff",
 					"Zabrak (female)", "object/tangible/painting/painting_zabrak_f.iff",
 					"Veteran Reward (Cast Wing in Flight)", "object/tangible/veteran_reward/one_year_anniversary/painting_01.iff",
-					"Veteran Reward (Decimator)", "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
+					"Veteran Reward (Armored Assault Tank)", "object/tangible/veteran_reward/one_year_anniversary/painting_02.iff",
 					"Veteran Reward (Weapon of War)", "object/tangible/veteran_reward/one_year_anniversary/painting_04.iff",
 					"Veteran Reward (Tatooine Dune Speeder)", "object/tangible/veteran_reward/one_year_anniversary/painting_03.iff",
 					"Veteran Reward (Fighter Study)", "object/tangible/veteran_reward/one_year_anniversary/painting_05.iff",
 					"Veteran Reward (Hutt Greed)", "object/tangible/veteran_reward/one_year_anniversary/painting_06.iff",
 					"Veteran Reward (Smuggler's Run)", "object/tangible/veteran_reward/one_year_anniversary/painting_07.iff",
-					"Veteran Reward (Imperial TIE Oppressor)", "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
-					"Veteran Reward (Emperor's Eyes TIE Sentinel)", "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff"
+					"Veteran Reward (Droid Control Ship)", "object/tangible/veteran_reward/one_year_anniversary/painting_08.iff",
+					"Veteran Reward (Lightsaber Cutaway)", "object/tangible/veteran_reward/one_year_anniversary/painting_09.iff"
 				},
 				"Lighting",
 				{
@@ -2729,7 +2797,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					"Flora Survey Tool", "object/tangible/survey_tool/survey_tool_lumber.iff",
 					"Mineral Survey Tool", "object/tangible/survey_tool/survey_tool_mineral.iff",
 					"Moisture Survey Tool", "object/tangible/survey_tool/survey_tool_moisture.iff",
-					--"Organic Survey Tool", "object/tangible/survey_tool/survey_tool_organic.iff",
+					"Organic Survey Tool", "object/tangible/survey_tool/survey_tool_organic.iff",
 					"Solar Survey Tool", "object/tangible/survey_tool/survey_tool_solar.iff",
 					"Wind Survey Tool", "object/tangible/survey_tool/survey_tool_wind.iff"
 				}
@@ -2752,6 +2820,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"DH17 Carbine (black)", "object/weapon/ranged/carbine/carbine_dh17_black.iff",
 					--		"DH17 Short Carbine", "object/weapon/ranged/carbine/carbine_dh17_snubnose.iff",
 					"DXR6 Carbine", "object/weapon/ranged/carbine/carbine_dxr6.iff",
+					"DC15 Carbine", "object/weapon/ranged/carbine/ep3/carbine_dc15.iff",
 					--		"E11 Carbine", "object/weapon/ranged/carbine/carbine_e11.iff",
 					--		"Enhanced E11 Carbine", "object/weapon/ranged/carbine/carbine_e11_quest.iff",
 					--		"Lithitanium Carbine", "object/weapon/ranged/carbine/carbine_e11_victor_quest.iff",
@@ -2826,6 +2895,7 @@ object_tangible_terminal_terminal_character_builder = object_tangible_terminal_s
 					--		"Metal Staff", "object/weapon/melee/polearm/lance_staff_metal.iff",
 					"Vibro Lance", "object/weapon/melee/polearm/lance_vibrolance.iff",
 					"Long Vibro Axe", "object/weapon/melee/polearm/polearm_vibro_axe.iff",
+					"Magnaguard Staff", "object/weapon/melee/polearm/lance_staff_magna_guard.iff",
 				--		"Wood Staff", "object/weapon/melee/polearm/lance_staff_wood_s1.iff",
 				--		"Reinforced Combat Staff", "object/weapon/melee/polearm/lance_staff_wood_s2.iff",
 				},

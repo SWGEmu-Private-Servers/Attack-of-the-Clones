@@ -7,7 +7,7 @@ kormund_thrylle_missions =
 				{ npcTemplate = "reen_loruk", npcName = "Reen Loruk" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "kormund_probot", npcName = "an Imperial Probot" },
+				{ npcTemplate = "kormund_probot", npcName = "a Republic Probe" },
 			},
 			itemSpawns =
 			{
@@ -26,8 +26,8 @@ kormund_thrylle_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "a Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "a Stormtrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "" },
+				{ npcTemplate = "clonetrooper", npcName = "" },
 			},
 			itemSpawns = {},
 			rewards =

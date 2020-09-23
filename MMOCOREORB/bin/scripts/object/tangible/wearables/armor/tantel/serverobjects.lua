@@ -51,3 +51,7 @@ includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_chest_plate.lua
 includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_chest_plate_quest.lua")
 includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_helmet.lua")
 includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_helmet_quest.lua")
+includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_bicep_r.lua")
+includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_bicep_l.lua")
+includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_bracer_r.lua")
+includeFile("tangible/wearables/armor/tantel/armor_tantel_skreej_bracer_l.lua")

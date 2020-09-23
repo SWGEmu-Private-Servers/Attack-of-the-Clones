@@ -1,43 +1,43 @@
 --Copyright (C) 2007 <SWGEmu>
- 
+
 --This File is part of Core3.
- 
---This program is free software; you can redistribute 
---it and/or modify it under the terms of the GNU Lesser 
+
+--This program is free software; you can redistribute
+--it and/or modify it under the terms of the GNU Lesser
 --General Public License as published by the Free Software
---Foundation; either version 2 of the License, 
+--Foundation; either version 2 of the License,
 --or (at your option) any later version.
- 
---This program is distributed in the hope that it will be useful, 
---but WITHOUT ANY WARRANTY; without even the implied warranty of 
---MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+
+--This program is distributed in the hope that it will be useful,
+--but WITHOUT ANY WARRANTY; without even the implied warranty of
+--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 --See the GNU Lesser General Public License for
 --more details.
- 
---You should have received a copy of the GNU Lesser General 
+
+--You should have received a copy of the GNU Lesser General
 --Public License along with this program; if not, write to
 --the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
- 
---Linking Engine3 statically or dynamically with other modules 
---is making a combined work based on Engine3. 
---Thus, the terms and conditions of the GNU Lesser General Public License 
+
+--Linking Engine3 statically or dynamically with other modules
+--is making a combined work based on Engine3.
+--Thus, the terms and conditions of the GNU Lesser General Public License
 --cover the whole combination.
- 
---In addition, as a special exception, the copyright holders of Engine3 
---give you permission to combine Engine3 program with free software 
---programs or libraries that are released under the GNU LGPL and with 
---code included in the standard release of Core3 under the GNU LGPL 
---license (or modified versions of such code, with unchanged license). 
---You may copy and distribute such a system following the terms of the 
---GNU LGPL for Engine3 and the licenses of the other code concerned, 
---provided that you include the source code of that other code when 
+
+--In addition, as a special exception, the copyright holders of Engine3
+--give you permission to combine Engine3 program with free software
+--programs or libraries that are released under the GNU LGPL and with
+--code included in the standard release of Core3 under the GNU LGPL
+--license (or modified versions of such code, with unchanged license).
+--You may copy and distribute such a system following the terms of the
+--GNU LGPL for Engine3 and the licenses of the other code concerned,
+--provided that you include the source code of that other code when
 --and as the GNU LGPL requires distribution of source code.
- 
---Note that people who make modified versions of Engine3 are not obligated 
---to grant this special exception for their modified versions; 
---it is their choice whether to do so. The GNU Lesser General Public License 
---gives permission to release a modified version without this exception; 
---this exception also makes it possible to release a modified version 
+
+--Note that people who make modified versions of Engine3 are not obligated
+--to grant this special exception for their modified versions;
+--it is their choice whether to do so. The GNU Lesser General Public License
+--gives permission to release a modified version without this exception;
+--this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
 includeFile("object.lua")
@@ -288,6 +288,8 @@ includeFile("static/terrain/objects.lua")
 includeFile("static/test/objects.lua")
 includeFile("static/vehicle/e3/objects.lua")
 includeFile("static/vehicle/objects.lua")
+includeFile("static/worldbuilding/objects.lua")
+includeFile("static/worldbuilding/structures/objects.lua")
 includeFile("static/objects.lua")
 includeFile("tangible/bank/objects.lua")
 includeFile("tangible/base/objects.lua")
@@ -603,6 +605,7 @@ includeFile("tangible/lair/objects.lua")
 includeFile("tangible/loadbeacon/objects.lua")
 includeFile("tangible/location/base/objects.lua")
 includeFile("tangible/location/objects.lua")
+includeFile("tangible/loot/base/objects.lua")
 includeFile("tangible/loot/bestine/objects.lua")
 includeFile("tangible/loot/collectible/collectible_parts/objects.lua")
 includeFile("tangible/loot/collectible/collectible_rewards/objects.lua")
@@ -735,6 +738,7 @@ includeFile("tangible/wearables/apron/objects.lua")
 includeFile("tangible/wearables/armor/bone/objects.lua")
 includeFile("tangible/wearables/armor/bounty_hunter/objects.lua")
 includeFile("tangible/wearables/armor/chitin/objects.lua")
+includeFile("tangible/wearables/armor/clone_trooper/objects.lua")
 includeFile("tangible/wearables/armor/composite/objects.lua")
 includeFile("tangible/wearables/armor/ithorian_defender/objects.lua")
 includeFile("tangible/wearables/armor/ithorian_guardian/objects.lua")
@@ -748,6 +752,9 @@ includeFile("tangible/wearables/armor/marine/objects.lua")
 includeFile("tangible/wearables/armor/nightsister/objects.lua")
 includeFile("tangible/wearables/armor/padded/objects.lua")
 includeFile("tangible/wearables/armor/ris/objects.lua")
+includeFile("tangible/wearables/armor/sep_battle/objects.lua")
+includeFile("tangible/wearables/armor/sep_infil/objects.lua")
+includeFile("tangible/wearables/armor/sep_theme/objects.lua")
 includeFile("tangible/wearables/armor/singing_mountain_clan/objects.lua")
 includeFile("tangible/wearables/armor/stormtrooper/objects.lua")
 includeFile("tangible/wearables/armor/tantel/objects.lua")
@@ -763,6 +770,7 @@ includeFile("tangible/wearables/bodysuit/objects.lua")
 includeFile("tangible/wearables/boots/objects.lua")
 includeFile("tangible/wearables/bracelet/objects.lua")
 includeFile("tangible/wearables/bustier/objects.lua")
+includeFile("tangible/wearables/cosmetics/objects.lua")
 includeFile("tangible/wearables/cyborg/objects.lua")
 includeFile("tangible/wearables/dress/objects.lua")
 includeFile("tangible/wearables/earring/objects.lua")
@@ -836,3 +844,21 @@ includeFile("weapon/ranged/objects.lua")
 includeFile("weapon/trap/objects.lua")
 includeFile("weapon/objects.lua")
 
+--custom objects
+includeFile("../custom_scripts/object/allobjects.lua")
+includeFile("custom_content/building/kashyyyk/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/escape_tunnel/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/establish_uplink/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/lava_cave/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/mining_tunnel_01/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/mining_tunnel_02/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/monster_lair/objects.lua")
+includeFile("custom_content/building/mustafar/dungeon/obiwan_finale/objects.lua")
+includeFile("custom_content/building/mustafar/items/objects.lua")
+includeFile("custom_content/building/mustafar/particle/objects.lua")
+includeFile("custom_content/building/mustafar/structures/objects.lua")
+includeFile("custom_content/building/mustafar/terrain/objects.lua")
+includeFile("custom_content/building/mustafar/terrain/creature_lairs/objects.lua")
+includeFile("custom_content/tangible/component/droid/objects.lua")
+includeFile("custom_content/tangible/destructible/objects.lua")

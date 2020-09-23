@@ -1,0 +1,8 @@
+includeFile("tools/staff_tools.lua")
+includeFile("tools/event_tools.lua")
+includeFile("tools/shuttle_dropoff.lua")
+includeFile("tools/screenplaystarter.lua")
+includeFile("tools/firework_event.lua")
+includeFile("tools/event_spawn_manager.lua")
+includeFile("tools/mission_level_choice.lua")
+includeFile("tools/mission_direction_choice.lua")

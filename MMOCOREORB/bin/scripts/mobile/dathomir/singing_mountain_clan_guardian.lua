@@ -1,5 +1,5 @@
 singing_mountain_clan_guardian = Creature:new {
-	objectName = "@mob/creature_names:singing_mtn_clan_guardian",
+	objectName = "@mob/creature_names:singing_mountain_clan_guardian",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "mtn_clan",
@@ -22,26 +22,22 @@ singing_mountain_clan_guardian = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE,
 	creatureBitmask = PACK + KILLER,
-	optionsBitmask = AIENABLED,
+	optionsBitmask = AIENABLED + FACTIONAGGRO,
 	diet = HERBIVORE,
 
 	templates = {"object/mobile/dressed_dathomir_sing_mt_clan_guardian.iff"},
 	lootGroups = {
 		{
 			groups = {
-				{group = "junk", chance = 1500000},
-				{group = "power_crystals", chance = 500000},
-				{group = "color_crystals", chance = 500000},
-				{group = "armor_attachments", chance = 450000},
-				{group = "clothing_attachments", chance = 450000},
-				{group = "melee_weapons", chance = 2600000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "wearables_uncommon", chance = 500000},
-				{group = "tailor_components", chance = 500000}
+				{group = "junk", chance = 2000000},
+				{group = "power_crystals", chance = 2500000},
+				{group = "color_crystals", chance = 2500000},
+				{group = "armor_attachments", chance = 400000},
+				{group = "clothing_attachments", chance = 400000},
+				{group = "wearables_uncommon", chance = 1500000},
+				{group = "tailor_components", chance = 700000}
 			}
 		}
 	},

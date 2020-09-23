@@ -89,7 +89,7 @@ object_building_faction_perk_hq_hq_s02_imp = object_building_faction_perk_hq_sha
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = -14, z = 0, y = 17, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 }, -- right turret front
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = 0, z = 0, y = -13, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
-		{ templateFile = "object/installation/faction_perk/minefield/field_1x1.iff", x = 0, z = 0, y = 26.5, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
+		{ templateFile = "object/installation/faction_perk/covert_detector/detector_base.iff", x = 0, z = 0, y = 26.5,  ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
 		{ templateFile = "object/tangible/terminal/terminal_mission.iff", x = -0.27, z = -6.75, y = -6.52, ox = 0, oy = 0.707, oz = 0, ow = -0.707, cellid = 5, containmentType = -1 },
 		{ templateFile = "object/tangible/terminal/terminal_mission_imperial.iff", x = -8.9, z = -6.75, y = -6.47, ox = 0, oy = 0.707, oz = 0, ow = 0.707, cellid = 5, containmentType = -1 },
@@ -102,7 +102,7 @@ object_building_faction_perk_hq_hq_s02_imp = object_building_faction_perk_hq_sha
 
 	childCreatureObjects = {
 
-		{ mobile = "at_st", x = 0, z = 0, y = 52, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
+		{ mobile = "rep_at_xt", x = 0, z = 0, y = 52, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
 		{ mobile = "fbase_dark_trooper", x = 0, z = 0, y = 60, cellid = -1, respawn = 360, containmentType = -1, heading = 0},
 		{ mobile = "fbase_dark_trooper", x = 5, z = 0, y = 60, cellid = -1, respawn = 360, containmentType = -1, heading = 0},
 		{ mobile = "fbase_dark_trooper", x = -5, z = 0, y = 60, cellid = -1, respawn = 360, containmentType = -1, heading = 0},

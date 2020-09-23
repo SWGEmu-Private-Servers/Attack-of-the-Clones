@@ -1,5 +1,7 @@
 imperial_pilot = Creature:new {
 	objectName = "@npc_spawner_n:imperial_pilot",
+	randomNameType = NAME_SWAMPTROOPER,
+	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 20,
@@ -25,7 +27,7 @@ imperial_pilot = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stranded_imperial_pilot.iff"},
+	templates = {"object/mobile/dressed_tie_fighter_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -45,7 +47,7 @@ imperial_pilot = Creature:new {
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	
+
 	attacks = merge(brawlermaster,marksmanmaster)
 }
 

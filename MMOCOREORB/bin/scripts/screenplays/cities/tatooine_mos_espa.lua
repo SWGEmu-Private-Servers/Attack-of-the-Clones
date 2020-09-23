@@ -6,36 +6,36 @@ TatooineMosEspaScreenPlay = CityScreenPlay:new {
 	planet = "tatooine",
 
 	gcwMobs = {
-		{"comm_operator", "rebel_resistance_dissident", -2960.4,5,1973.9,74,0, "npc_imperial", "angry"},
-		{"dark_trooper", "rebel_commando", -3028.58,5.11515,2618.21,39.6237,0, "", ""},
-		{"dark_trooper", "rebel_commando", -2636.4,5,2254.3,81,0, "", ""},
-		{"dark_trooper", "rebel_commando", -2953.88,5,1933.16,344.533,0, "npc_imperial", "neutral"},
-		{"imperial_master_sergeant", "rebel_master_sergeant", -2954.65,5,1935.93,344.531,0, "npc_imperial", "neutral"},
-		{"imperial_master_sergeant", "rebel_master_sergeant", -3115,5,2199.8,-75,0, "npc_imperial", "neutral"},
-		{"imperial_master_sergeant", "rebel_master_sergeant", -3204.52,5,2091.93,204.135,0, "", ""},
-		{"imperial_master_sergeant", "rebel_master_sergeant", -3029.53,5.07697,2617.06,39.7527,0, "", ""},
-		{"imperial_noncom", "rebel_corporal", -2648.9,5,2290.2,67,0, "npc_imperial", "neutral"},
-		{"imperial_noncom", "rebel_corporal", -3027.01,5.06395,2617.66,289.047,0, "npc_imperial", "neutral"},
-		{"imperial_warrant_officer_ii", "rebel_warrant_officer_ii", -3207,5,2097.52,347.895,0, "", ""},
-		{"sand_trooper", "rebel_trooper", -2985.75,5,1978.7,74.49,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", -2963.4,5,1978.6,75,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", -2988.1,5,1978.04,74.4903,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", -2960.1,5,1968.6,67,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", -2695.6,5,1982.9,122,0, "", ""},
-		{"sand_trooper", "rebel_trooper", -3170.7,5,2137.7,-30,0, "", ""},
-		{"sand_trooper", "rebel_trooper", -3028.33,5.01162,2616.08,294.927,0, "", ""},
-		{"scout_trooper", "rebel_scout", -2982.5,5,1956.8,73,0, "", ""},
-		{"scout_trooper", "rebel_scout", -3029.2,5,2614.8,-52,0, "", ""},
-		{"stormtrooper", "rebel_crewman", -3207.39,5,2099.33,347.898,0, "", ""},
-		{"stormtrooper", "rebel_crewman", -3203.5,5,2091.5,-159,0, "", ""},
-		{"stormtrooper_captain", "rebel_army_captain", -3026.34,5.10198,2618.73,289.047,0, "npc_imperial", "conversation"},
-		{"stormtrooper_squad_leader", "rebel_resistance_leader", -2979.8,5,1957.6,67,0, "npc_imperial", "npc_consoling"},
+		{"comm_operator", "cis_resistance_separatist", -2960.4,5,1973.9,74,0, "npc_imperial", "angry"},
+		{"clone_commando", "cis_battle_droid_commando", -3028.58,5.11515,2618.21,39.6237,0, "", ""},
+		{"clone_commando", "cis_battle_droid_commando", -2636.4,5,2254.3,81,0, "", ""},
+		{"clone_commando", "cis_battle_droid_commando", -2953.88,5,1933.16,344.533,0, "npc_imperial", "neutral"},
+		{"imperial_master_sergeant", "cis_battle_droid_squad_leader", -2954.65,5,1935.93,344.531,0, "npc_imperial", "neutral"},
+		{"imperial_master_sergeant", "cis_battle_droid_squad_leader", -3115,5,2199.8,-75,0, "npc_imperial", "neutral"},
+		{"imperial_master_sergeant", "cis_battle_droid_squad_leader", -3204.52,5,2091.93,204.135,0, "", ""},
+		{"imperial_master_sergeant", "cis_battle_droid_squad_leader", -3029.53,5.07697,2617.06,39.7527,0, "", ""},
+		{"imperial_noncom", "cis_battle_droid_squad_leader", -2648.9,5,2290.2,67,0, "npc_imperial", "neutral"},
+		{"imperial_noncom", "cis_battle_droid_squad_leader", -3027.01,5.06395,2617.66,289.047,0, "npc_imperial", "neutral"},
+		{"imperial_warrant_officer_ii", "cis_sbd", -3207,5,2097.52,347.895,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -2985.75,5,1978.7,74.49,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -2963.4,5,1978.6,75,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -2988.1,5,1978.04,74.4903,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -2960.1,5,1968.6,67,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -2695.6,5,1982.9,122,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -3170.7,5,2137.7,-30,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", -3028.33,5.01162,2616.08,294.927,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_scout", -2982.5,5,1956.8,73,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_scout", -3029.2,5,2614.8,-52,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_pilot", -3207.39,5,2099.33,347.898,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_pilot", -3203.5,5,2091.5,-159,0, "", ""},
+		{"clonetrooper_captain", "cis_battle_droid_captain", -3026.34,5.10198,2618.73,289.047,0, "npc_imperial", "conversation"},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", -2979.8,5,1957.6,67,0, "npc_imperial", "npc_consoling"},
 		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -3022.29,5.02759,2618.41,268.2,0, "", ""},
 		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -2976.17,5,2009.31,171.013,0, "", ""},
 		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -3023.4,5,2618.4,86,0, "", ""},
 		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -2977.32,5,2010.1,171.012,0, "", ""},
 		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -3022.7,5.1,2619.6,-171,0, "", ""},
-		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -2976.54,5,2011.63,171.014,0, "", ""},		
+		{"mos_espa_police_officer", "mos_espa_police_officer_rebel", -2976.54,5,2011.63,171.014,0, "", ""},
 	},
 }
 
@@ -361,6 +361,32 @@ function TatooineMosEspaScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "jawa_thief",300,-2739.1,5,2175.5,-96,0)
 	spawnMobile(self.planet, "jawa_thief",300,-2736.1,5,2188.86,69.1613,0)
 
+	--Tusken Bunker
+	spawnMobile("tatooine", "tusken_raider", 180, -2751.07, 7.49405, 1593.73, 144, 0)
+	spawnMobile("tatooine", "tusken_raider", 180, -2761.9, 7.45009, 1586.77, 157, 0)
+	spawnMobile("tatooine", "tusken_raider", 180, -2778.37, 8.1499, 1601.17, 322, 0)
+	spawnMobile("tatooine", "tusken_raider", 180, -0.678496, 0.25, 2.67807, 4, 620001785)
+	spawnMobile("tatooine", "tusken_raider", 180, 3.55261, 0.25, -0.642577, 24, 620001785)
+	spawnMobile("tatooine", "tusken_raider", 180, -3.5992, 0.25, -4.37064, 82, 620001786)
+	spawnMobile("tatooine", "tusken_raider", 180, -4.05683, -3.25, 4.88679, 173, 620001787)
+	spawnMobile("tatooine", "tusken_raider", 180, 6.11803, -6.75, -0.849343, 198, 620001788)
+	spawnMobile("tatooine", "tusken_savage", 180, 6.4375, -6.75211, -9.30668, 287, 620001788)
+	spawnMobile("tatooine", "tusken_fighter", 180, -3.02075, -13.75, -18.7137, 351, 620001789)
+	spawnMobile("tatooine", "tusken_fighter", 180, -5.8791, -13.75, -3.04829, 34, 620001790)
+	spawnMobile("tatooine", "tusken_child", 180, -0.231004, -13.75, -9.77247, 310, 620001790)
+	spawnMobile("tatooine", "tusken_woman", 180, -5.59095, -13.75, -10.4033, 80, 620001790)
+	spawnMobile("tatooine", "tusken_woman", 180, -5.11417, -13.7499, 4.89645, 157, 620001790)
+	spawnMobile("tatooine", "tusken_woman", 180, -0.523184, -13.7499, 5.58513, 195, 620001790)
+	spawnMobile("tatooine", "tusken_child", 180, -1.19341, -13.7499, 0.415018, 211, 620001790)
+	spawnMobile("tatooine", "tusken_woman", 180, -2.55354, -13.7584, 12.5242, 71, 620001791)
+	spawnMobile("tatooine", "tusken_woman", 180, 3.31025, -13.7584, 11.4325, 287, 620001791)
+	spawnMobile("tatooine", "tusken_child", 180, 0.791783, -13.7584, 11.69, 340, 620001791)
+	spawnMobile("tatooine", "tusken_raider", 180, 7.66376, -13.7584, 13.2544, 200, 620001791)
+	spawnMobile("tatooine", "tusken_raider", 180, 14.5351, -13.7584, 14.1212, 167, 620001792)
+	spawnMobile("tatooine", "tusken_savage", 180, 16.7747, -13.7584, -0.710659, 359, 620001792)
+	spawnMobile("tatooine", "tusken_warlord", 360, 15.3267, -13.7584, -15.1427, 350, 620001793)
+
+
 	--More misc outside
 	spawnMobile(self.planet, "junk_dealer", 0, -2750.9, 5, 2057, 132, 0)
 	spawnMobile(self.planet, "junk_dealer", 0, -2904.51, 5, 2446.5, -87, 0)
@@ -424,6 +450,7 @@ function TatooineMosEspaScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "trainer_scout",0,-2912.86,5,2106.67,174,0)
 	spawnMobile(self.planet, "trainer_unarmed",0,-2812,5,1973,180,0)
 	spawnMobile(self.planet, "trainer_weaponsmith",0,-2869,5,2146,8,0)
+	spawnMobile(self.planet, "trainer_basebuster",0, -2981.19, 5, 2207.68, 307, 0)
 
 	--Creatures
 	spawnMobile(self.planet, "dwarf_eopie",300,-3217.87,6.7851,2010.86,329.47,0)

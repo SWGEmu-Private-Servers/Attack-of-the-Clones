@@ -6,12 +6,12 @@ axkva_min = Creature:new {
 	chanceHit = 30,
 	damageMin = 1645,
 	damageMax = 3000,
-	specialDamageMult = 7.5,
+	specialDamageMult = 5.0,
 	baseXp = 28549,
-	baseHAM = 385000,
-	baseHAMmax = 471000,
+	baseHAM = 485000,
+	baseHAMmax = 625000,
 	armor = 3,
-	resists = {100,135,135,100,100,100,100,100,-1},
+	resists = {75,135,135,100,100,100,100,100,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -30,22 +30,24 @@ axkva_min = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "power_crystals", chance = 900000},
-				{group = "nightsister_common", chance = 2600000},
-				{group = "pistols", chance = 1000000},
-				{group = "rifles", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "melee_weapons", chance = 2000000},
-				{group = "armor_attachments", chance = 500000},
-				{group = "clothing_attachments", chance = 500000},
-				{group = "wearables_rare", chance = 500000}
-			}
+				{group = "nightsister_common", chance = 3000000},
+				{group = "armor_attachments", chance = 3500000},
+				{group = "clothing_attachments", chance = 3500000},
+			},
+			lootChance = 10000000
+		},
+		{
+			groups = {
+				{group = "power_crystals", chance = 8000000},
+				{group = "wearables_rare", chance = 2000000}
+			},
+			lootChance = 10000000
 		},
 		{
 			groups = {
 				{group = "axkva_min", chance = 10000000},
 			},
-			lootChance = 5000000
+			lootChance = 7500000
 		}
 	},
 	weapons = {"mixed_force_weapons"},

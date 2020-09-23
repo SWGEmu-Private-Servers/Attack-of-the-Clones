@@ -1,7 +1,6 @@
 rebel_ensign = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_ensign",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 72,
@@ -27,24 +26,22 @@ rebel_ensign = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_major_human_male_01.iff"},
+	templates = {
+		"object/mobile/battle_droid.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
-				{group = "junk", chance = 4700000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "melee_weapons", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "clothing_attachments", chance = 100000},
-				{group = "armor_attachments", chance = 100000},
-				{group = "wearables_common", chance = 500000},
-				{group = "wearables_uncommon", chance = 500000}
+				{group = "color_crystals", chance = 1100000},
+				{group = "junk", chance = 4250000},
+				{group = "clothing_attachments", chance = 1100000},
+				{group = "armor_attachments", chance = 1100000},
+				{group = "rebel_officer_common", chance = 1450000},
+				{group = "wearables_scarce", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"rebel_weapons_medium"},
+	weapons = {"battle_droid_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

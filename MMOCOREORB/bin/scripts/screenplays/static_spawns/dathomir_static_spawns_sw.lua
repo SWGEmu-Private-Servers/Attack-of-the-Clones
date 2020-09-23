@@ -39,10 +39,10 @@ end
 function DathomirStaticSpawnsSwScreenPlay:spawnMobiles()
 
 	--destroyed imperial camp (-6467,-6722)
-	local pNpc = spawnMobile("dathomir", "specforce_marine", 300, -6455.5, 555.1, -6743.6, -33, 0)
+	local pNpc = spawnMobile("dathomir", "cis_battle_droid", 300, -6455.5, 555.1, -6743.6, -33, 0)
 	self:setMoodString(pNpc, "neutral")
-	spawnMobile("dathomir", "specforce_marine", 300, -6471.7, 553.5, -6741.9, 0, 0)
-	spawnMobile("dathomir", "specforce_marine", 300, -6476.2, 546.3, -6733.3, 33, 0)
+	spawnMobile("dathomir", "cis_battle_droid", 300, -6471.7, 553.5, -6741.9, 0, 0)
+	spawnMobile("dathomir", "cis_battle_droid", 300, -6476.2, 546.3, -6733.3, 33, 0)
 
 	--lookout station (-4573,-6556)
 	spawnMobile("dathomir", "singing_mountain_clan_sentry", 360, -4573.5, 34.7, -6556.4, 138, 0)
@@ -88,7 +88,7 @@ function DathomirStaticSpawnsSwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "mutant_rancor", 360, -4766.7, 92.3, -4738.5, 55, 0)
 
 	--empty hut (-6894,-4854)
-	spawnMobile("dathomir", "singing_mountain_clan_councilwoman", 7200, -6894.9, 461.8, -4853.8, 109, 0)
+	--spawnMobile("dathomir", "singing_mountain_clan_councilwoman", 7200, -6894.9, 461.8, -4853.8, 109, 0)
 
 	--worship stone (-6953,-3032)
 	spawnMobile("dathomir", "nightsister_elder", 4220, -6953.8, 551.6, -3032.1, -45, 0)
@@ -96,9 +96,9 @@ function DathomirStaticSpawnsSwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "rancor_pygmy", 1200, -6995.6, 570.0, -3058.8, 93, 0)
 
 	--tree hut (-5045,-2773)
-	spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5038.1, 8.9, -2773.2, -35, 0)
-	spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5041.1, 8.8, -2768.7, -135, 0)
-	spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5045.6, 8.4, -2773.6, 55, 0)
+	--spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5038.1, 8.9, -2773.2, -35, 0)
+	--spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5041.1, 8.8, -2768.7, -135, 0)
+	--spawnMobile("dathomir", "escaped_nightsister_slave", 360, -5045.6, 8.4, -2773.6, 55, 0)
 
 	--singing mountain clan rock & hut (-2419,-3111)
 	spawnMobile("dathomir", "singing_mountain_clan_huntress", 360, -2419.4, 48.5, -3111.5, -8, 0)

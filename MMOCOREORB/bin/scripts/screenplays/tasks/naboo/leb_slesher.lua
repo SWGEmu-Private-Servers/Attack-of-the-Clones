@@ -13,7 +13,7 @@ leb_slesher_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -29,7 +29,7 @@ leb_slesher_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 	}

@@ -1,5 +1,6 @@
 warren_altered_atst = Creature:new {
-	objectName = "@mob/creature_names:warren_agro_droid_atst",
+	objectName = "@mob/creature_names:at_xt",
+	customName = "An Altered AT-XT",
 	socialGroup = "warren_imperial",
 	faction = "",
 	level = 46,
@@ -25,7 +26,7 @@ warren_altered_atst = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/atst.iff"},
+	templates = {"object/mobile/atxt.iff"},
 	lootGroups = {},
 	conversationTemplate = "",
 	defaultAttack = "defaultdroidattack",

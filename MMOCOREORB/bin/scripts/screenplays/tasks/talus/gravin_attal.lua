@@ -23,12 +23,12 @@ gravin_attal_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_sgt_quest_gravin", npcName = "a Rebel Supply Sergeant" }
+				{ npcTemplate = "rebel_sgt_quest_gravin", npcName = "a Separatist Supply Sergeant" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_trooper", npcName = "" },
-				{ npcTemplate = "rebel_trooper", npcName = "" }
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -36,7 +36,7 @@ gravin_attal_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 125 },
+				{ rewardType = "credits", amount = 1250 },
 				{ rewardType = "faction", faction = "imperial", amount = 50 }
 			}
 		}

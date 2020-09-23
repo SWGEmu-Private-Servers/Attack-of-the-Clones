@@ -271,3 +271,5 @@ createMissionTargetConvoTemplate("vraker_orde_mission_target_convotemplate","vra
 createMissionTargetConvoTemplate("yith_seenath_mission_target_convotemplate","yith_seenath_mission_target_conv_handler")
 
 
+
+createMissionTargetConvoTemplate("restuss_fisto_mission_target_convotemplate","restuss_fisto_mission_target_conv_handler")

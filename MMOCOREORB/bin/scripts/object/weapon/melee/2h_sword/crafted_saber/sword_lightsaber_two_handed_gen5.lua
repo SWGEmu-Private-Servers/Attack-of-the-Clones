@@ -64,7 +64,7 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
 				"object/creature/player/zabrak_male.iff",
 				"object/creature/player/zabrak_female.iff" },
 
-	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK, 
+	-- RANGEDATTACK, MELEEATTACK, FORCEATTACK, TRAPATTACK, GRENADEATTACK, HEAVYACIDBEAMATTACK,
 	-- HEAVYLIGHTNINGBEAMATTACK, HEAVYPARTICLEBEAMATTACK, HEAVYROCKETLAUNCHERATTACK, HEAVYLAUNCHERATTACK
 	attackType = MELEEATTACK,
 
@@ -78,9 +78,9 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
 	-- combat_meleespecialize_unarmed, combat_meleespecialize_twohand, combat_meleespecialize_polearm, combat_meleespecialize_onehand, combat_general,
 	-- jedi_general, combat_meleespecialize_polearmlightsaber, combat_meleespecialize_onehandlightsaber
 	xpType = "jedi_general",
-	
+
 	-- See http://www.ocdsoft.com/files/certifications.xls
-	certificationsRequired = { "cert_twohandlightsaber_gen4" },
+	certificationsRequired = { "cert_twohandlightsaber_gen5" },
 	-- See http://www.ocdsoft.com/files/accuracy.xls
 	creatureAccuracyModifiers = { "twohandlightsaber_accuracy" },
 
@@ -95,16 +95,13 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
 
 	-- Leave blank for now
 	damageModifiers = { },
-	
-	defenderToughnessModifiers = { "lightsaber_toughness" },
-			
-	noTrade = 1,
-	
+
+
 	-- The values below are the default values.  To be used for blue frog objects primarily
-	healthAttackCost = 105,
+	healthAttackCost = 95,
 	actionAttackCost = 50,
-	mindAttackCost = 55,
-	forceCost = 60,
+	mindAttackCost = 45,
+	forceCost = 47,
 
 	pointBlankRange = 0,
 	pointBlankAccuracy = 20,
@@ -114,14 +111,31 @@ object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5 = ob
 
 	maxRange = 5,
 	maxRangeAccuracy = 5,
-
-	minDamage = 195,
-        maxDamage = 275,
+	
+	minDamage = 185,
+	maxDamage = 265,
 
 	attackSpeed = 4.8,
 
-	woundsRatio = 45,
+	woundsRatio = 37,
 
+	defenderToughnessModifiers = { "lightsaber_toughness" },
+			
+	noTrade = 1,
+	
+	childObjects = {
+		{templateFile = "object/tangible/inventory/lightsaber_inventory_4.iff", x = 0, z = 0, y = 0, ox = 0, oy = 0, oz = 0, ow = 0, cellid = -1, containmentType = 4}
+	},
+
+	numberExperimentalProperties = {1, 1, 2, 2, 2, 2, 2, 1, 1, 1},
+	experimentalProperties = {"XX", "XX", "CD", "OQ", "CD", "OQ", "CD", "OQ", "SR", "UT", "CD", "OQ", "OQ", "OQ", "OQ"},
+	experimentalWeights = {1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 2, 1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "expDamage", "expDamage", "expDamage", "expDamage", "expEffeciency", "expEffeciency", "expEffeciency", "expEffeciency"},
+	experimentalSubGroupTitles = {"null", "null", "mindamage", "maxdamage", "attackspeed", "woundchance", "forcecost", "attackhealthcost", "attackactioncost", "attackmindcost"},
+	experimentalMin = {0, 0, 325, 405, 5.1, 25, 55, 95, 60, 45},
+	experimentalMax = {0, 0, 335, 425, 4.8, 50, 48, 65, 45, 40},
+	experimentalPrecision = {0, 0, 0, 0, 1, 0, 1, 0, 0, 0},
+	experimentalCombineType = {0, 0, 1, 1, 1, 1, 1, 1, 1, 1},
 }
 
 ObjectTemplates:addTemplate(object_weapon_melee_2h_sword_crafted_saber_sword_lightsaber_two_handed_gen5, "object/weapon/melee/2h_sword/crafted_saber/sword_lightsaber_two_handed_gen5.iff")

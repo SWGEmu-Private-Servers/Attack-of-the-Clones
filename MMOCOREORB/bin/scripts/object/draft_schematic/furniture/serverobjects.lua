@@ -48,6 +48,7 @@ includeFile("draft_schematic/furniture/city/serverobjects.lua")
 
 -- Server Objects
 includeFile("draft_schematic/furniture/furniture_armoire_cheap.lua")
+includeFile("draft_schematic/furniture/furniture_dyekit.lua")
 includeFile("draft_schematic/furniture/furniture_armoire_elegant.lua")
 includeFile("draft_schematic/furniture/furniture_armoire_modern.lua")
 includeFile("draft_schematic/furniture/furniture_assorted_fruit.lua")

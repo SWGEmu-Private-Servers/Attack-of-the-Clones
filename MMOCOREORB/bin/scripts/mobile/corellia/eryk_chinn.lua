@@ -25,7 +25,7 @@ eryk_chinn = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_black_black.iff"},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",

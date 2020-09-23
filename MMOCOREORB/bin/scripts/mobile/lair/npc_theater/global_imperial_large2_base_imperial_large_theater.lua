@@ -1,7 +1,7 @@
 global_imperial_large2_base_imperial_large_theater = Lair:new {
 	mobiles = {
 		{"imperial_sergeant",1},
-		{"imperial_trooper",2},
+		{"clonetrooper",2},
 		{"imperial_private",2}
 	},
 	spawnLimit = 15,

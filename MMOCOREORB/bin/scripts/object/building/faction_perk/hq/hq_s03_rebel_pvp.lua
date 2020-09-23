@@ -62,17 +62,19 @@ object_building_faction_perk_hq_hq_s03_rebel_pvp = object_building_faction_perk_
 
 		skillMods = {
 			{"private_buff_mind", 100},
-			--{"private_faction_buff_mind", 25},
+			{"private_faction_buff_mind", 25},
 			{"private_med_battle_fatigue", 5},
-			--{"private_faction_mind_heal", 10},
+			{"private_faction_mind_heal", 10},
 			{"private_medical_rating", 100},
-			--{"private_faction_medical_rating", 25},
+			{"private_faction_medical_rating", 25},
 		},
 
 		childObjects = {
 			{ templateFile = "object/static/structure/general/poi_all_rebl_corral_64x64_s01.iff", x = 0.28, z = 0, y = 7.35, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 			{ templateFile = "object/static/structure/general/tankfarm_s01.iff", x = 10.04, z = 0, y = -12, ox = 0, oy = -0.579, oz = 0, ow = 0.815, cellid = -1, containmentType = -1 },
 			{ templateFile = "object/static/structure/general/tankfarm_s01.iff", x = -9.27, z = 0, y = -11.87, ox = 0, oy = 0.565, oz = 0, ow = 0.825, cellid = -1, containmentType = -1 },
+
+			{ templateFile = "object/installation/faction_perk/covert_detector/detector_base.iff", x = 0, z = 0, y = 31.7,  ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
 			{ templateFile = "object/tangible/terminal/terminal_hq_turret_control.iff", x = -4.75, z = 0, y = -2.4, ox = 0, oy = 0.707, oz = 0, ow = 0.707, cellid = 2, containmentType = -1 },
 			{ templateFile = "object/tangible/terminal/terminal_hq_turret_control.iff", x = -4.75, z = 0, y = -1.2, ox = 0, oy = 0.707, oz = 0, ow = 0.707, cellid = 2, containmentType = -1 },
@@ -84,7 +86,6 @@ object_building_faction_perk_hq_hq_s03_rebel_pvp = object_building_faction_perk_
 			{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = -25, z = 0, y = -9, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1 },
 			{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = -25, z = 0, y = -9, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1 },
 
-			{ templateFile = "object/installation/faction_perk/minefield/field_1x1.iff", x = 0, z = 0, y = 31.7, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
 			{ templateFile = "object/tangible/terminal/terminal_hq_rebel.iff", x = 0, z = 0.25, y = 1.86, ox = 0, oy = 0, oz = 0, ow = 1, cellid = 2, containmentType = -1 },
 

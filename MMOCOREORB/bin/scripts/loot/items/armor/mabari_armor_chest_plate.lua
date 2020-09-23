@@ -9,9 +9,9 @@ mabari_armor_chest_plate = {
 		{"blasteffectiveness",10,40,10},
 		{"armor_effectiveness",4,19,10},
 		{"armor_integrity",18750, 31250,0},
-		{"armor_health_encumbrance",75,45,0},
-		{"armor_action_encumbrance",11,7,0},
-		{"armor_mind_encumbrance",6,3,0},
+		{"armor_health_encumbrance",400,375,0},
+		{"armor_action_encumbrance",200,170,0},
+		{"armor_mind_encumbrance",200,175,0},
 	},
 	skillMods = {
 

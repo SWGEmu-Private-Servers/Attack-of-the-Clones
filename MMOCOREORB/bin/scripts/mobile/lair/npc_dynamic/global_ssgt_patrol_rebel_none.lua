@@ -1,7 +1,7 @@
 global_ssgt_patrol_rebel_none = Lair:new {
 	mobiles = {
-		{"rebel_staff_sergeant",1},
-		{"rebel_corporal",3}
+		{"cis_battle_droid_squad_leader",2},
+		{"cis_battle_droid",5}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},

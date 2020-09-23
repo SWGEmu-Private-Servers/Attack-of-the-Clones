@@ -1,18 +1,18 @@
 novatrooper_ensign = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_novatrooper_ensign",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
-	level = 87,
-	chanceHit = 0.85,
-	damageMin = 570,
-	damageMax = 850,
-	baseXp = 8315,
-	baseHAM = 13000,
-	baseHAMmax = 16000,
-	armor = 0,
-	resists = {40,35,80,30,0,0,30,45,-1},
+	level = 97,
+	chanceHit = 0.95,
+	damageMin = 620,
+	damageMax = 950,
+	baseXp = 9243,
+	baseHAM = 20000,
+	baseHAMmax = 25000,
+	armor = 1,
+	resists = {40,35,80,30,30,30,30,45,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -27,25 +27,21 @@ novatrooper_ensign = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_captain_black_gold.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
+				{group = "color_crystals", chance = 700000},
 				{group = "junk", chance = 6200000},
-				{group = "rifles", chance = 550000},
-				{group = "pistols", chance = 550000},
-				{group = "melee_weapons", chance = 550000},
-				{group = "carbines", chance = 550000},
-				{group = "clothing_attachments", chance = 25000},
-				{group = "armor_attachments", chance = 25000},
-				{group = "imperial_officer_common", chance = 450000},
-				{group = "wearables_common", chance = 500000},
-				{group = "wearables_uncommon", chance = 500000}
+				{group = "clothing_attachments", chance = 575000},
+				{group = "armor_attachments", chance = 575000},
+				{group = "imperial_officer_common", chance = 950000},
+				{group = "wearables_scarce", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

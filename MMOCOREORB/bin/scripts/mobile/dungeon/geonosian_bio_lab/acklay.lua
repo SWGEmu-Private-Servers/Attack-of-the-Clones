@@ -4,14 +4,14 @@ acklay = Creature:new {
 	socialGroup = "geonosian_creature",
 	faction = "",
 	level = 157,
-	chanceHit = 92.5,
-	damageMin = 935,
-	damageMax = 1580,
-	baseXp = 14884,
-	baseHAM = 96000,
-	baseHAMmax = 118000,
-	armor = 2,
-	resists = {130,145,155,155,145,30,30,30,-1},
+	chanceHit = 30,
+	damageMin = 2270,
+	damageMax = 4250,
+	baseXp = 28549,
+	baseHAM = 210000,
+	baseHAMmax = 301000,
+	armor = 3,
+	resists = {190,165,175,175,30,150,150,150,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -31,7 +31,8 @@ acklay = Creature:new {
 		{
 			groups = {
 				{group = "acklay", chance = 10000000}
-			}
+			},
+			lootChance = 10000000
 		}
 	},
 	weapons = {},

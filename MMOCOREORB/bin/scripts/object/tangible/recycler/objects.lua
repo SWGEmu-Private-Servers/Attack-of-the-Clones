@@ -41,6 +41,14 @@
 --which carries forward this exception.
 
 
+object_tangible_recycler_shared_gas_recycler = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/recycler/shared_gas_recycler.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_recycler_shared_gas_recycler, "object/tangible/recycler/shared_gas_recycler.iff")
+
+	
+
 object_tangible_recycler_shared_chemical_recycler = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/recycler/shared_chemical_recycler.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

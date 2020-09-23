@@ -64,10 +64,10 @@ object_draft_schematic_clothing_clothing_armor_ithorian_defender_leggings = obje
 
    ingredientTemplateNames = {"craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n", "craft_clothing_ingredients_n"},
    ingredientTitleNames = {"auxilary_coverage", "body", "liner", "hardware_and_attachments", "binding_and_reinforcement", "padding", "armor", "load_bearing_harness", "reinforcement"},
-   ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 1, 1},
-   resourceTypes = {"hide_leathery_lok", "hide_scaley", "fiberplast_corellia", "metal", "petrochem_inert_polymer", "hide_wooly", "object/tangible/component/armor/shared_armor_segment_padded.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
-   resourceQuantities = {60, 60, 30, 30, 30, 30, 3, 1, 1},
-   contribution = {100, 100, 100, 100, 100, 100, 100, 100, 100},
+   ingredientSlotType = {0, 0, 0, 0, 0, 0, 1, 2, 2},
+   resourceTypes = {"hide_leathery_lok", "hide_scaley", "fiberplast_corellia", "steel_cubirian", "petrochem_inert_polymer", "hide_wooly", "object/tangible/component/armor/shared_armor_segment_bone.iff", "object/tangible/component/clothing/shared_synthetic_cloth.iff", "object/tangible/component/clothing/shared_reinforced_fiber_panels.iff"},
+   resourceQuantities = {60, 60, 30, 30, 30, 30, 1, 3, 2},
+   contribution = {80, 80, 80, 80, 80, 80, 100, 80, 80},
 
 
    targetTemplate = "object/tangible/wearables/armor/ithorian_defender/ith_armor_s01_leggings.iff",

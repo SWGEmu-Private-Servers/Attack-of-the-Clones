@@ -2,7 +2,7 @@ global_imperial_1st_lieutenant_camp_imperial_medium_theater = Lair:new {
 	mobiles = {
 		{"imperial_first_lieutenant",1},
 		{"imperial_sergeant",2},
-		{"imperial_trooper",3}
+		{"clonetrooper",3}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/lok_imperial_medium4.iff","object/building/poi/lok_imperial_medium5.iff"},

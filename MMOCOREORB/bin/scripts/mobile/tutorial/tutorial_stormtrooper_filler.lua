@@ -1,5 +1,7 @@
 tutorial_stormtrooper_filler = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper",
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
+	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 30,
@@ -25,9 +27,9 @@ tutorial_stormtrooper_filler = Creature:new {
 	creatureBitmask = NONE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	attacks = {},
 	conversationTemplate = "stormtrooperFillerConvoTemplate",
 }

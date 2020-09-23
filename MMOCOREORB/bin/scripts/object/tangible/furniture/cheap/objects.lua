@@ -277,6 +277,12 @@ object_tangible_furniture_cheap_shared_chair_s01 = SharedTangibleObjectTemplate:
 
 ObjectTemplates:addClientTemplate(object_tangible_furniture_cheap_shared_chair_s01, "object/tangible/furniture/cheap/shared_chair_s01.iff")
 
+object_tangible_furniture_cheap_shared_dyekit = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/cheap/shared_dyekit.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_cheap_shared_dyekit, "object/tangible/furniture/cheap/shared_dyekit.iff")
+
 object_tangible_furniture_cheap_shared_chest_s01 = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/furniture/cheap/shared_chest_s01.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

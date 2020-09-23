@@ -2,7 +2,7 @@
 includeFile("conversations.lua")
 
 -- Dress Groups - Must be loaded before mobiles
-includeFile("dressgroup/serverobjects.lua") 
+includeFile("dressgroup/serverobjects.lua")
 
 -- Creatures
 includeFile("corellia/serverobjects.lua")
@@ -26,10 +26,10 @@ includeFile("tutorial/serverobjects.lua")
 includeFile("yavin4/serverobjects.lua")
 
 includeFile("faction/serverobjects.lua")
-includeFile("dungeon/serverobjects.lua") 
+includeFile("dungeon/serverobjects.lua")
 
 -- Weapons
-includeFile("weapon/serverobjects.lua") 
+includeFile("weapon/serverobjects.lua")
 
 -- Spawn Groups
 includeFile("spawn/serverobjects.lua")
@@ -46,5 +46,16 @@ includeFile("lair/serverobjects.lua")
 -- Outfits
 includeFile("outfits/serverobjects.lua")
 
--- Custom content - Loads last to allow for overrides
+--Aftermath
+includeFile("aftermath/serverobjects.lua")
+
+--Merchants
+includeFile("merchants/serverobjects.lua")
+
+--Custom
 includeFile("../custom_scripts/mobile/serverobjects.lua")
+includeFile("conversations/omega/conversations.lua")
+includeFile("conversations/restuss/conversations.lua")
+
+-- MISC
+includeFile("community/serverobjects.lua")

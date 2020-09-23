@@ -1221,6 +1221,19 @@ object_tangible_component_armor_shared_armor_segment_bone_advanced = SharedTangi
 
 ObjectTemplates:addClientTemplate(object_tangible_component_armor_shared_armor_segment_bone_advanced, "object/tangible/component/armor/shared_armor_segment_bone_advanced.iff")
 
+object_tangible_component_armor_shared_armor_segment_bone_experimental = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/armor/shared_armor_segment_bone_experimental.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_armor_shared_armor_segment_bone_experimental, "object/tangible/component/armor/shared_armor_segment_bone_experimental.iff")
+
+object_tangible_component_armor_shared_armor_segment_bone_interwoven = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/armor/shared_armor_segment_bone_interwoven.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_armor_shared_armor_segment_bone_interwoven, "object/tangible/component/armor/shared_armor_segment_bone_interwoven.iff")
+
+
 object_tangible_component_armor_shared_armor_segment_bone_donkuwah = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/component/armor/shared_armor_segment_bone_donkuwah.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups

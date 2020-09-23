@@ -29,9 +29,9 @@ ruwan_tokai_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_first_lieutenant", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" }
+				{ npcTemplate = "cis_sbd", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" }
 			},
 			itemSpawns =
 			{

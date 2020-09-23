@@ -1,8 +1,8 @@
 global_rebel_specforce_camp_rebel_small_theater = Lair:new {
 	mobiles = {
-		{"specforce_wilderness_operative",4},
-		{"senior_specforce_wilderness_scout",1},
-		{"senior_specforce_wilderness_fighter",1}
+		{"cis_battle_droid_commando",4},
+		{"cis_battle_droid_scout",1},
+		{"cis_battle_droid",1}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_camp_small_1.iff","object/building/poi/anywhere_rebel_camp_small_2.iff","object/building/poi/anywhere_rebel_camp_small_3.iff"},

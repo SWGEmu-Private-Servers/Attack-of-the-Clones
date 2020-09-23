@@ -1,17 +1,17 @@
 luthik_uwyr = Creature:new {
 	objectName = "",
 	customName = "Luthik Uwyr",
-	socialGroup = "imperial",
-	faction = "imperial",
+	socialGroup = "rebel",
+	faction = "rebel",
 	level = 100,
 	chanceHit = 1,
-	damageMin = 645,
-	damageMax = 1000,
+	damageMin = 1645,
+	damageMax = 2600,
 	baseXp = 9429,
-	baseHAM = 24000,
-	baseHAMmax = 30000,
-	armor = 0,
-	resists = {0,0,0,0,0,0,0,0,-1},
+	baseHAM = 264000,
+	baseHAMmax = 294000,
+	armor = 1,
+	resists = {55,55,55,55,55,55,55,55,55},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -21,7 +21,7 @@ luthik_uwyr = Creature:new {
 	milk = 0,
 	tamingChance = 0,
 	ferocity = 0,
-	pvpBitmask = NONE,
+	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK,
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
@@ -30,8 +30,7 @@ luthik_uwyr = Creature:new {
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "luthik_uwyr_mission_giver_convotemplate",
-	attacks = {
-	}
+	attacks = merge(forcepowermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(luthik_uwyr, "luthik_uwyr")

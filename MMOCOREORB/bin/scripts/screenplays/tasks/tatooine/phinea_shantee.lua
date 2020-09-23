@@ -10,7 +10,7 @@ phinea_shantee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 3000 },
 				{ rewardType = "loot",  lootGroup = "task_reward_phinea_shantee_q1" }
 			}
 		},
@@ -24,7 +24,7 @@ phinea_shantee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 },
+				{ rewardType = "credits", amount = 3000 },
 				{ rewardType = "loot",  lootGroup = "task_reward_phinea_shantee_q2" }
 			}
 		}

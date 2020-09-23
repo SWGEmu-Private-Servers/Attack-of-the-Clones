@@ -21,7 +21,7 @@ blerx_tango_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Imperial Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
@@ -37,9 +37,9 @@ blerx_tango_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "imperial_sergeant", npcName = "Imperial Sergeant" },
-				{ npcTemplate = "imperial_sergeant", npcName = "Imperial Sergeant" },
-				{ npcTemplate = "imperial_sergeant", npcName = "Imperial Sergeant" }
+				{ npcTemplate = "imperial_sergeant", npcName = "Republic Sergeant" },
+				{ npcTemplate = "imperial_sergeant", npcName = "Republic Sergeant" },
+				{ npcTemplate = "imperial_sergeant", npcName = "Republic Sergeant" }
 			},
 			itemSpawns = {},
 			rewards =

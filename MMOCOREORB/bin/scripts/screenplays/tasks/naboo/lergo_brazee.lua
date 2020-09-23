@@ -13,7 +13,7 @@ lergo_brazee_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -26,7 +26,7 @@ lergo_brazee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -44,7 +44,7 @@ lergo_brazee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -62,7 +62,7 @@ lergo_brazee_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 	}

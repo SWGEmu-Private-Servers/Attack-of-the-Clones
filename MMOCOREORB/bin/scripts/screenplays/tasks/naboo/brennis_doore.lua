@@ -16,7 +16,7 @@ brennis_doore_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 }
+				{ rewardType = "credits", amount = 5000 }
 			}
 		},
 		{
@@ -35,7 +35,7 @@ brennis_doore_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 }
+				{ rewardType = "credits", amount = 7500 }
 			}
 		},
 		{
@@ -54,7 +54,7 @@ brennis_doore_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		}
 	}

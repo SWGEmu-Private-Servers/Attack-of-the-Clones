@@ -1,5 +1,5 @@
 theme_park_imperial_rebel_sympathizer = Creature:new {
-	objectName = "@mob/creature_names:rebel_corporal",
+	objectName = "@mob/creature_names:cis_resistance_separatist",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 15,
@@ -38,7 +38,7 @@ theme_park_imperial_rebel_sympathizer = Creature:new {
 				{group = "theme_park_loot_documents", chance = 10000000}
 			},
 			lootChance = 10000000
-		}	
+		}
 	},
 	weapons = {"rebel_weapons_light"},
 	conversationTemplate = "",

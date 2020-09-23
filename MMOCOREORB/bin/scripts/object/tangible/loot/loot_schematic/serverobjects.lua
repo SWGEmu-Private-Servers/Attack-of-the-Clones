@@ -3,52 +3,59 @@
 
 --This File is part of Core3.
 
---This program is free software; you can redistribute 
---it and/or modify it under the terms of the GNU Lesser 
+--This program is free software; you can redistribute
+--it and/or modify it under the terms of the GNU Lesser
 --General Public License as published by the Free Software
---Foundation; either version 2 of the License, 
+--Foundation; either version 2 of the License,
 --or (at your option) any later version.
 
---This program is distributed in the hope that it will be useful, 
---but WITHOUT ANY WARRANTY; without even the implied warranty of 
---MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+--This program is distributed in the hope that it will be useful,
+--but WITHOUT ANY WARRANTY; without even the implied warranty of
+--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 --See the GNU Lesser General Public License for
 --more details.
 
---You should have received a copy of the GNU Lesser General 
+--You should have received a copy of the GNU Lesser General
 --Public License along with this program; if not, write to
 --the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
---Linking Engine3 statically or dynamically with other modules 
---is making a combined work based on Engine3. 
---Thus, the terms and conditions of the GNU Lesser General Public License 
+--Linking Engine3 statically or dynamically with other modules
+--is making a combined work based on Engine3.
+--Thus, the terms and conditions of the GNU Lesser General Public License
 --cover the whole combination.
 
---In addition, as a special exception, the copyright holders of Engine3 
---give you permission to combine Engine3 program with free software 
---programs or libraries that are released under the GNU LGPL and with 
---code included in the standard release of Core3 under the GNU LGPL 
---license (or modified versions of such code, with unchanged license). 
---You may copy and distribute such a system following the terms of the 
---GNU LGPL for Engine3 and the licenses of the other code concerned, 
---provided that you include the source code of that other code when 
+--In addition, as a special exception, the copyright holders of Engine3
+--give you permission to combine Engine3 program with free software
+--programs or libraries that are released under the GNU LGPL and with
+--code included in the standard release of Core3 under the GNU LGPL
+--license (or modified versions of such code, with unchanged license).
+--You may copy and distribute such a system following the terms of the
+--GNU LGPL for Engine3 and the licenses of the other code concerned,
+--provided that you include the source code of that other code when
 --and as the GNU LGPL requires distribution of source code.
 
---Note that people who make modified versions of Engine3 are not obligated 
---to grant this special exception for their modified versions; 
---it is their choice whether to do so. The GNU Lesser General Public License 
---gives permission to release a modified version without this exception; 
---this exception also makes it possible to release a modified version 
+--Note that people who make modified versions of Engine3 are not obligated
+--to grant this special exception for their modified versions;
+--it is their choice whether to do so. The GNU Lesser General Public License
+--gives permission to release a modified version without this exception;
+--this exception also makes it possible to release a modified version
 
 
 
 --Children folder includes
 
 -- Server Objects
+includeFile("tangible/loot/loot_schematic/speeder_stap_schematic.lua")
+includeFile("tangible/loot/loot_schematic/barc_speeder_schematic.lua")
 includeFile("tangible/loot/loot_schematic/agitator_motor_schematic.lua")
 includeFile("tangible/loot/loot_schematic/assorted_fruit_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bacta_tank_schematic.lua")
 includeFile("tangible/loot/loot_schematic/basket_closed_schematic.lua")
+includeFile("tangible/loot/loot_schematic/dc15_rifle_schematic.lua")
+includeFile("tangible/loot/loot_schematic/mustafar_disruptor_rifle_schematic.lua")
+includeFile("tangible/loot/loot_schematic/dc15_carbine_schematic.lua")
+includeFile("tangible/loot/loot_schematic/e5_carbine_schematic.lua")
+includeFile("tangible/loot/loot_schematic/pistol_mandalorian_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bottle_fat_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bottle_pear_schematic.lua")
 includeFile("tangible/loot/loot_schematic/bottle_tall_schematic.lua")
@@ -59,6 +66,7 @@ includeFile("tangible/loot/loot_schematic/campfire_schematic.lua")
 includeFile("tangible/loot/loot_schematic/cantina_chair_schematic.lua")
 includeFile("tangible/loot/loot_schematic/chair_cafe_schematic.lua")
 includeFile("tangible/loot/loot_schematic/chemical_recycler_schematic.lua")
+includeFile("tangible/loot/loot_schematic/gas_recycler_schematic.lua")
 includeFile("tangible/loot/loot_schematic/command_console_schematic.lua")
 includeFile("tangible/loot/loot_schematic/corellian_corvette_landspeeder_av21_schematic.lua")
 includeFile("tangible/loot/loot_schematic/corellian_corvette_rifle_berserker_schematic.lua")
@@ -128,3 +136,50 @@ includeFile("tangible/loot/loot_schematic/technical_console_s02_schematic.lua")
 includeFile("tangible/loot/loot_schematic/throwpillow_schematic.lua")
 includeFile("tangible/loot/loot_schematic/tumble_blender_schematic.lua")
 includeFile("tangible/loot/loot_schematic/utensils_schematic.lua")
+
+--aftermath armors
+includeFile("tangible/loot/loot_schematic/stormtrooper_chest_plate_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_helmet_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_utility_belt_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/stormtrooper_leggings_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_chest_plate_rebel_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_helmet_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/marine_leggings_crafted_schematic.lua")
+
+--nge houses
+includeFile("tangible/loot/loot_schematic/musty_house_loot_schem.lua")
+includeFile("tangible/loot/loot_schematic/vehicle_house_loot_schem.lua")
+includeFile("tangible/loot/loot_schematic/bespin_house_loot_schem.lua")
+
+--clone armour
+includeFile("tangible/loot/loot_schematic/clonetrooper_chest_plate_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_helmet_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_utility_belt_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/clonetrooper_leggings_crafted_schematic.lua")
+
+--sep battle armour
+includeFile("tangible/loot/loot_schematic/sep_battle_chest_plate_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_helmet_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bicep_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bicep_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bracer_r_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_bracer_l_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_boots_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_gloves_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_utility_belt_crafted_schematic.lua")
+includeFile("tangible/loot/loot_schematic/sep_battle_leggings_crafted_schematic.lua")

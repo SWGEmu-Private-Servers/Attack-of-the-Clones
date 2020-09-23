@@ -1,7 +1,7 @@
 csi = {
 	level = 9,
 	name = "csi",
-	tag = "SWGEmu-CSI",
+	tag = "CSR",
 	skills = {
 		"admin_base",
 		"admin_debug_01",

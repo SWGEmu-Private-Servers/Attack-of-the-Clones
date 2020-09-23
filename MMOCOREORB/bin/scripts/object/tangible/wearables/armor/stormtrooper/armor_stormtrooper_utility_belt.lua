@@ -44,9 +44,12 @@
 object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_utility_belt = object_tangible_wearables_armor_stormtrooper_shared_armor_stormtrooper_utility_belt:new {
 	templateType = CLOTHINGOBJECT,
 	faction = "Imperial",
-	playerRaces = { "object/creature/player/bothan_male.iff",
+
+	objectMenuComponent = "ArmorObjectMenuComponent",
+	playerRaces = { 
+				"object/creature/player/bothan_male.iff",
 				"object/creature/player/bothan_female.iff",
-					"object/creature/player/human_male.iff",
+				"object/creature/player/human_male.iff",
 				"object/creature/player/human_female.iff",
 				"object/creature/player/ithorian_male.iff",
 				"object/creature/player/ithorian_female.iff",
@@ -93,7 +96,18 @@ object_tangible_wearables_armor_stormtrooper_armor_stormtrooper_utility_belt = o
 				"object/mobile/vendor/wookiee_female.iff",
 				"object/mobile/vendor/wookiee_male.iff",
 				"object/mobile/vendor/zabrak_female.iff",
-				"object/mobile/vendor/zabrak_male.iff" },
+				"object/mobile/vendor/zabrak_male.iff"
+				},
+
+	numberExperimentalProperties = {1, 1, 1},
+	experimentalProperties = {"XX", "XX", "XX"},
+	experimentalWeights = {1, 1, 1},
+	experimentalGroupTitles = {"null", "null", "null"},
+	experimentalSubGroupTitles = {"null", "null", "sockets"},
+	experimentalMin = {0, 0, 0},
+	experimentalMax = {0, 0, 0},
+	experimentalPrecision = {0, 0, 0},
+	experimentalCombineType = {0, 0, 4},
 	
 
 }

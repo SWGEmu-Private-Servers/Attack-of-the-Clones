@@ -38,8 +38,8 @@ function Yavin4MiningOutpostScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "npc_sitting_chair")
 
 	--outside tavern area
-	spawnMobile("yavin4", "rebel_commando", 460, -255.5, 35.0, 4859.2, 81, 0)
-	spawnMobile("yavin4", "rebel_commando", 460, -250.5, 35.0, 4854.2, 86, 0)
-	spawnMobile("yavin4", "rebel_commando", 460, -260.5, 35.0, 4864.2, 76, 0)
-	
+	spawnMobile("yavin4", "cis_battle_droid_commando", 460, -255.5, 35.0, 4859.2, 81, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 460, -250.5, 35.0, 4854.2, 86, 0)
+	spawnMobile("yavin4", "cis_battle_droid_commando", 460, -260.5, 35.0, 4864.2, 76, 0)
+
 end

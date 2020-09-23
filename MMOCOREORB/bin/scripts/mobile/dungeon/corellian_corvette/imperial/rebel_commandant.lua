@@ -1,7 +1,6 @@
 rebel_commandant = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_commandant",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Battle Droid Commando",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 151,
@@ -27,20 +26,18 @@ rebel_commandant = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_general_human_female_02.iff"},
+	templates = {
+		"object/mobile/death_watch_battle_droid.iff"
+		},
 	lootGroups = {
 		{
 			groups = {
 				{group = "color_crystals", chance = 300000},
 				{group = "junk", chance = 4150000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "melee_weapons", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "clothing_attachments", chance = 300000},
-				{group = "armor_attachments", chance = 300000},
-				{group = "rebel_officer_common", chance = 450000},
-				{group = "wearables_rare", chance = 500000}
+				{group = "clothing_attachments", chance = 1300000},
+				{group = "armor_attachments", chance = 1300000},
+				{group = "rebel_officer_common", chance = 1450000},
+				{group = "wearables_rare", chance = 1500000}
 			}
 		}
 	},

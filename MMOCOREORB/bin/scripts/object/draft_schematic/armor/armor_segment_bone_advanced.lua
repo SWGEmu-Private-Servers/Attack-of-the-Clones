@@ -45,15 +45,15 @@ object_draft_schematic_armor_armor_segment_bone_advanced = object_draft_schemati
 
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Advanced Bone Armor Segment",
+	customObjectName = "Armor Segment (Advanced)",
 
 	craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-	complexity = 8,
-	size = 4,
+	complexity = 20,
+	size = 6,
 	factoryCrateSize = 50,
 
 	xpType = "crafting_clothing_armor",
-	xp = 30,
+	xp = 35,
 
 	assemblySkill = "armor_assembly",
 	experimentingSkill = "armor_experimentation",
@@ -63,12 +63,12 @@ object_draft_schematic_armor_armor_segment_bone_advanced = object_draft_schemati
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n"},
-	ingredientTitleNames = {"armor_segment_bone", "segment_mounting_tabs", "segment_enhancement"},
-	ingredientSlotType = {0, 0, 3},
-	resourceTypes = {"bone_mammal_rori", "iron_kammris", "object/tangible/component/armor/shared_base_armor_segment_enhancement.iff"},
-	resourceQuantities = {23, 6, 1},
-	contribution = {100, 100, 100},
+	ingredientTemplateNames = {"craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n"},
+	ingredientTitleNames = {"segment_layer_assembly_plate", "armor_layer_weld_tabs", "segment_mounting_tabs", "defensive_layer", "defensive_layer_2", "defensive_layer_3", "segment_enhancement"},
+	ingredientSlotType = {0, 0, 0, 3, 3, 3, 3},
+	resourceTypes = {"iron_colat", "steel_kiirium", "copper_polysteel", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_base_armor_segment_enhancement.iff"},
+	resourceQuantities = {32, 16, 10, 2, 2, 2, 1},
+	contribution = {100, 100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/armor/armor_segment_bone_advanced.iff",
 

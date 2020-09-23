@@ -62,7 +62,7 @@ object_building_faction_perk_hq_hq_s02_rebel_pvp = object_building_faction_perk_
 		{"private_medical_rating", 100},
 		{"private_med_wound_health", 100},
 		{"private_med_wound_action", 100},
-		--{"private_faction_medical_rating", 25},
+		{"private_faction_medical_rating", 25},
 	},
 
 	childObjects = {
@@ -74,11 +74,11 @@ object_building_faction_perk_hq_hq_s02_rebel_pvp = object_building_faction_perk_
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = 18.17, z = 0, y = -2.43, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1 },
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = -18.17, z = 0, y = -2.43, ox = 0, oy = 1, oz = 0, ow = 0, cellid = -1, containmentType = -1 },
 
+
+		{ templateFile = "object/installation/faction_perk/covert_detector/detector_base.iff", x = 0, z = 0, y = 39.5, ox = 0, oy = .7, oz = 0, ow = .7, cellid=-1, containmentType = -1 },
 		{ templateFile = "object/tangible/terminal/terminal_hq_turret_control.iff", x = -2.75, z = 0, y = 1, ox = 0, oy = -0.707, oz = 0, ow = 0.707, cellid = 2, containmentType = -1 },
 		{ templateFile = "object/tangible/terminal/terminal_hq_turret_control.iff", x = -2.75, z = 0, y = 0, ox = 0, oy = -0.707, oz = 0, ow = 0.707, cellid = 2, containmentType = -1 },
 		{ templateFile = "object/tangible/terminal/terminal_hq_turret_control.iff", x = -2.75, z = 0, y = -1, ox = 0, oy = -0.707, oz = 0, ow = 0.707, cellid = 2, containmentType = -1 },
-
-		{ templateFile = "object/installation/faction_perk/minefield/field_1x1.iff", x = 0, z = 0, y = 39.5, ox = 0, oy = .7, oz = 0, ow = .7, cellid = -1, containmentType = -1 },
 
 		{ templateFile = "object/tangible/terminal/terminal_hq_rebel.iff", x = 0, z = 0.25, y = 1.86, ox = 0, oy = 0, oz = 0, ow = 1, cellid = 2, containmentType = -1 },
 

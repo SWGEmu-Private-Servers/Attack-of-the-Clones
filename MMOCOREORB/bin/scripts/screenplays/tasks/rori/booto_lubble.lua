@@ -1,56 +1,56 @@
 booto_lubble_missions =
 {
-	{ 
+	{
 		missionType = "confiscate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "luhin_jinnor", npcName = "Warrant Officer Luhin Jinnor" } 
+		primarySpawns =
+		{
+			{ npcTemplate = "luhin_jinnor", npcName = "Warrant Officer Luhin Jinnor" }
 		},
 		secondarySpawns =
 		{
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" }
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" }
 		},
 		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/booto_lubble_q1_needed.iff", itemName = "" }
 		},
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 50 } 
+		rewards =
+		{
+			{ rewardType = "credits", amount = 500 }
 		}
 	},
 	{
-		missionType = "confiscate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "rohd_gostervek", npcName = "Captain Rohd Gostervek" }	
+		missionType = "confiscate",
+		primarySpawns =
+		{
+			{ npcTemplate = "rohd_gostervek", npcName = "Captain Rohd Gostervek" }
 		},
 		secondarySpawns =
 		{
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" },
-			{ npcTemplate = "stormtrooper", npcName = "" }
-		}, 
-		itemSpawns = 
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" }
+		},
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/booto_lubble_q2_needed.iff", itemName = "" }
 		},
-		rewards = 
+		rewards =
 		{
-			{ rewardType = "credits", amount = 50 },
-			{ rewardType = "faction", faction = "rebel", amount = 10 }
+			{ rewardType = "credits", amount = 500 },
+			{ rewardType = "faction", faction = "rebel", amount = 100 }
 		}
 	},
 }
 
-npcMapBootoLubble = 
-{ 
-	{ 
+npcMapBootoLubble =
+{
+	{
 		spawnData = { npcTemplate = "booto_lubble", x = 4.0, z = 0.7, y = 0.5, direction = 170, cellID = 4505791, position = STAND },
-		worldPosition = { x = 3701, y = -6488 }, 
+		worldPosition = { x = 3701, y = -6488 },
 		npcNumber = 1,
 		stfFile = "@static_npc/rori/rori_rebeloutpost_booto_lubble",
 		missions = booto_lubble_missions

@@ -1,8 +1,8 @@
 global_imperial_stormtrooper_camp_imperial_medium_theater = Lair:new {
 	mobiles = {
-		{"stormtrooper",2},
-		{"stormtrooper_rifleman",1},
-		{"stormtrooper_bombardier",2}
+		{"clonetrooper",2},
+		{"clonetrooper_sniper",1},
+		{"clonetrooper_bombardier",2}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/lok_imperial_medium4.iff","object/building/poi/lok_imperial_medium5.iff"},

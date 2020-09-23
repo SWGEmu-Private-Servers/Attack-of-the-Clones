@@ -13,7 +13,7 @@ arven_wendik_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -24,14 +24,14 @@ arven_wendik_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -42,15 +42,15 @@ arven_wendik_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "imperial_warrant_officer_i", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 25000 },
 			}
 		}
 	}
@@ -72,7 +72,7 @@ ArvenWendik = ThemeParkLogic:new {
 	screenPlayState = "arven_wendik_quest",
 	planetName = "naboo",
 	distance = 600,
-	faction = FACTIONREBEL
+	faction = FACTIONIMPERIAL
 }
 
 registerScreenPlay("ArvenWendik", true)

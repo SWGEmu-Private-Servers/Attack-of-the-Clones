@@ -49,20 +49,8 @@ SaberPolearmHit2Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 2.0,
+	forceCostMultiplier = 1.0,
 	visMod = 25,
-
-	stateEffects = {
-	  StateEffect( 
-		STUN_EFFECT, 
-		{}, 
-		{ "stun_defense" }, 
-		{ "jedi_state_defense", "resistance_states" },
-		50, 
-		0, 
-		45 
-	  )
-	},
 
 	animation = "combo_5a", 
 	animType = GENERATE_INTENSITY,
@@ -77,4 +65,3 @@ SaberPolearmHit2Command = {
 }
 
 AddCommand(SaberPolearmHit2Command)
-

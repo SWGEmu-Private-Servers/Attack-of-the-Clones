@@ -9,6 +9,25 @@
 -- allies        - This is a comma delimited list of string key factions that this faction is allies with.
 -- adjustFactor  - This factor affects the amount of faction gained/lost when killing a mobile
 
+--Sets a global faction multiplier
+globalFactionMultiplier = 1.0
+globalGcwMultiplier = 1.0
+
+isFactionDynamicEventsEnabled = 0 -- Set to 0 to disable faction dynamic events
+factionNeededToSpawnFactionEvent = 100000
+
+-- These are {screenplayName, serverMessage}
+-- The list of screenplays that will randomly cycle through when faction exceeds that amount
+cisSpawnableScreenplays = {
+	{"cisNabooSpaceports", "Republic presence on Naboo has grown beyond our control - Sending assistance to ensure full planetary lockdown by disrupting their Spaceports in Moenia and Keren"},
+	{"cisTheedInvasion", "We've seen hightened Republic activity on Naboo - Dispatching an elite unit to shut down Theed's shuttleports."},
+}
+
+republicSpawnableScreenplays = {
+	--{"nightsisterShapeshifter", "We've hired the nightsister's to help in our battle. They will be assaulting Theed, on the planet Naboo."},
+	{"republicCnetInvasion", "We've seen hightened CIS activity on Corellia - Dispatching an elite unit to lock down the capitol building. Landing troops in the clearing behind the cantina"},
+}
+
 factionList = {
 	{ "rebel", true, "imperial", "", 1.0 },
 	{ "imperial", true, "rebel", "", 1.0 },

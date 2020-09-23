@@ -1,0 +1,42 @@
+object_tangible_veteran_reward_shared_frn_vet_rug_rebel = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_vet_rug_rebel.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_vet_rug_rebel, "object/tangible/veteran_reward/shared_frn_vet_rug_rebel.iff")
+
+object_tangible_veteran_reward_shared_frn_vet_rug_imperial = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_vet_rug_imperial.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_vet_rug_imperial, "object/tangible/veteran_reward/shared_frn_vet_rug_imperial.iff")
+
+object_tangible_veteran_reward_shared_frn_gaping_spider_toy = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_gaping_spider_toy.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_gaping_spider_toy, "object/tangible/veteran_reward/shared_frn_gaping_spider_toy.iff")
+
+object_tangible_veteran_reward_shared_frn_malkloc_toy = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_malkloc_toy.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_malkloc_toy, "object/tangible/veteran_reward/shared_frn_malkloc_toy.iff")
+
+object_tangible_veteran_reward_shared_frn_mutated_rancor_toy = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_mutated_rancor_toy.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_mutated_rancor_toy, "object/tangible/veteran_reward/shared_frn_mutated_rancor_toy.iff")
+
+object_tangible_veteran_reward_shared_frn_reptilian_flyer_toy = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_reptilian_flyer_toy.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_reptilian_flyer_toy, "object/tangible/veteran_reward/shared_frn_reptilian_flyer_toy.iff")
+
+object_tangible_veteran_reward_shared_frn_shear_mite_toy = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/veteran_reward/shared_frn_shear_mite_toy.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_veteran_reward_shared_frn_shear_mite_toy, "object/tangible/veteran_reward/shared_frn_shear_mite_toy.iff")
+

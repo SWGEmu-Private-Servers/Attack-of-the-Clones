@@ -15,13 +15,13 @@ cx_425_trooper_missions =
 			buildingSpawn = supplyDepot,
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_medic", npcName = "Lead Sympathizer" }
+				{ npcTemplate = "rogue", npcName = "Lead Sympathizer" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" },
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" },
-				{ npcTemplate = "rogue", npcName = "a Rebel Sympathizer" }
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" },
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" },
+				{ npcTemplate = "rogue", npcName = "a Separatist Sympathizer" }
 			},
 			itemSpawns =
 			{

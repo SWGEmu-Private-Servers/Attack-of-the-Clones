@@ -4,12 +4,12 @@ lian_byrne_missions =
 			missionType = "retrieve",
 			primarySpawns =
 			{
-				{ npcTemplate = "lian_imperial_courier", npcName = "Imperial Courier" }
+				{ npcTemplate = "lian_imperial_courier", npcName = "Republic Courier" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_trooper", npcName = "" },
-				{ npcTemplate = "rebel_trooper", npcName = "" }
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -25,7 +25,7 @@ lian_byrne_missions =
 			missionType = "escort",
 			primarySpawns =
 			{
-				{ npcTemplate = "lian_imperial_operative", npcName = "Imperial Operative" }
+				{ npcTemplate = "lian_imperial_operative", npcName = "Republic Operative" }
 			},
 			secondarySpawns = {
 				{ npcTemplate = "lian_thief", npcName = "Scavenger" },
@@ -42,7 +42,7 @@ lian_byrne_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "lian_spynet_operative", npcName = "Rebel Spy" }
+				{ npcTemplate = "lian_spynet_operative", npcName = "Separatist Spy" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -59,8 +59,8 @@ lian_byrne_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "lian_rebel_specforce_urban_guerrilla", npcName = "" },
-				{ npcTemplate = "lian_rebel_specforce_urban_guerrilla", npcName = "" }
+				{ npcTemplate = "lian_rebel_specforce_urban_guerrilla", npcName = "Separatist Guerrilla Fighter" },
+				{ npcTemplate = "lian_rebel_specforce_urban_guerrilla", npcName = "Separatist Guerrilla Fighter" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},

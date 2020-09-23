@@ -1,72 +1,72 @@
 drakka_judarrl_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "stormtrooper_rifleman", npcName = "random" } 
-		}, 
-		secondarySpawns = 
+		primarySpawns =
 		{
-				{ npcTemplate = "stormtrooper_rifleman", npcName = "Stormtrooper Rifleman" },
-				{ npcTemplate = "stormtrooper_rifleman", npcName = "Stormtrooper Rifleman" }
+			{ npcTemplate = "cis_battle_droid_squad_leader", npcName = "" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 500 },		
-			{ rewardType = "faction", faction = "rebel", amount = 15 },
+		secondarySpawns =
+		{
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" }
+		},
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 5000 },
+			{ rewardType = "faction", faction = "imperial", amount = 150 },
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "aroho_preni", npcName = "Aroho Preni (a Dantari Raider)" } 
-		}, 
-		secondarySpawns = 
+		missionType = "escort",
+		primarySpawns =
 		{
-				{ npcTemplate = "stormtrooper_commando", npcName = "Stormtrooper Commando" },
-				{ npcTemplate = "stormtrooper_commando", npcName = "Stormtrooper Commando" },				
-				{ npcTemplate = "stormtrooper_commando", npcName = "Stormtrooper Commando" },
-				{ npcTemplate = "stormtrooper_commando", npcName = "Stormtrooper Commando" }
+			{ npcTemplate = "aroho_preni", npcName = "Aroho Preni (a Dantari Raider)" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 650 },		
-			{ rewardType = "faction", faction = "rebel", amount = 15 },
+		secondarySpawns =
+		{
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" }
+		},
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 6500 },
+			{ rewardType = "faction", faction = "rebel", amount = 150 },
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "force_crystal_hunter", npcName = "Deelomae Raede (a force crystal hunter)" } 
-		}, 
-		secondarySpawns = 
+		missionType = "assassinate",
+		primarySpawns =
+		{
+			{ npcTemplate = "force_crystal_hunter", npcName = "Deelomae Raede (a force crystal hunter)" }
+		},
+		secondarySpawns =
 		{
 				{ npcTemplate = "dark_side_savage", npcName = "random" },
-				{ npcTemplate = "dark_side_savage", npcName = "random" },				
+				{ npcTemplate = "dark_side_savage", npcName = "random" },
 				{ npcTemplate = "dark_side_savage", npcName = "random" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "faction", faction = "rebel", amount = 800 },	
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "faction", faction = "imperial", amount = 2000 },
 			{ rewardType = "loot", lootGroup = "task_reward_drakka_judarrl" },
 		}
-	}	
+	}
 }
 
-npcMapDrakkaJudarrl = 
-{ 
-	{ 
-		spawnData = { npcTemplate = "drakka_judarrl", x = 73.1, z = -46, y = -141, direction = 97, cellID = 8535548, position = STAND }, 
-		worldPosition = { x = 4221.2, y = 4959.3 }, 
-		npcNumber = 1,   
-		stfFile = "@static_npc/dantooine/dantooine_remotehaven_drakka_judarrl", 
-		missions = drakka_judarrl_missions 
+npcMapDrakkaJudarrl =
+{
+	{
+		spawnData = { npcTemplate = "drakka_judarrl", x = 73.1, z = -46, y = -141, direction = 97, cellID = 8535548, position = STAND },
+		worldPosition = { x = 4221.2, y = 4959.3 },
+		npcNumber = 1,
+		stfFile = "@static_npc/dantooine/dantooine_remotehaven_drakka_judarrl",
+		missions = drakka_judarrl_missions
 	},
 }
 
@@ -76,7 +76,7 @@ DrakkaJudarrl = ThemeParkLogic:new {
 	screenPlayState = "drakka_judarrl_quest",
 	planetName = "dantooine",
 	distance = 1000,
-	faction = FACTIONREBEL
+	faction = FACTIONIMPERIAL
 }
 
 registerScreenPlay("DrakkaJudarrl", true)

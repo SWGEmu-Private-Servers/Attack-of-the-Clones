@@ -1,0 +1,7 @@
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_vet_rug_imperial.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_vet_rug_rebel.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_gaping_spider_toy.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_malkloc_toy.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_mutated_rancor_toy.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_reptilian_flyer_toy.lua")
+includeFile("../custom_scripts/object/tangible/veteran_reward/frn_shear_mite_toy.lua")

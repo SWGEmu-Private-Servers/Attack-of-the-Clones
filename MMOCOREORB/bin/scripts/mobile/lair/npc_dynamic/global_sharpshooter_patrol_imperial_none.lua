@@ -1,5 +1,5 @@
 global_sharpshooter_patrol_imperial_none = Lair:new {
-	mobiles = {{"imperial_sharpshooter",1}},
+	mobiles = {{"clonetrooper_sniper",1}},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},
 	buildingsEasy = {},

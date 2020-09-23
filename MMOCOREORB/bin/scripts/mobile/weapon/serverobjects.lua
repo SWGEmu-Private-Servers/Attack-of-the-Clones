@@ -23,7 +23,8 @@ includeFile("weapon/droid_probot_ranged.lua")
 
 -- npc weapons
 includeFile("weapon/groups/dark_trooper_weapons.lua")
-includeFile("weapon/groups/darth_vader_weapons.lua")
+includeFile("weapon/groups/darth_vader_weapons.lua") -- Vader LS has a broken animation do not use on mobiles.
+includeFile("weapon/groups/arzo_suun_weapons.lua") -- 2H Lightsaber
 includeFile("weapon/groups/blood_razer_weapons.lua")
 includeFile("weapon/groups/canyon_corsair_weapons.lua")
 includeFile("weapon/groups/death_watch_commander_weapons.lua")
@@ -49,6 +50,27 @@ includeFile("weapon/groups/unarmed_weapons.lua")
 includeFile("weapon/groups/novice_weapons.lua")
 includeFile("weapon/groups/corsec_police_weapons.lua")
 includeFile("weapon/groups/geonosian_mercenary_weapons.lua")
+
+--CustomMobWeapons
+includeFile("weapon/groups/sniper_weapons.lua")
+includeFile("weapon/groups/pikeman_weapons.lua")
+includeFile("weapon/groups/twohand_weapons.lua")
+includeFile("weapon/groups/pistoleer_weapons.lua")
+includeFile("weapon/groups/commando_weapons.lua")
+includeFile("weapon/groups/tkm_weapons.lua")
+includeFile("weapon/groups/firebat_weapons.lua")
+
+-- Flamethrower
+includeFile("weapon/groups/assault_weapons.lua")
+
+-- Carbines
+
+-- Rifles
+includeFile("weapon/groups/clonetrooper_rifle_weapons.lua")
+
+--Jedi
+includeFile("weapon/groups/dark_jedi_gen4_pike.lua")
+includeFile("weapon/groups/jedi_gen4_allcolors.lua")
 
 
 -- Groups gotten from swgemu
@@ -82,3 +104,21 @@ includeFile("weapon/groups/tusken_weapons.lua")
 
 -- tutorial
 includeFile("weapon/groups/tutorial_bandit.lua")
+
+-- nilyahin Weapons
+includeFile("weapon/groups/nilyahin_apprentice.lua")
+includeFile("weapon/groups/nilyahin_assassin.lua")
+includeFile("weapon/groups/nilyahin_master_smuggler.lua")
+includeFile("weapon/groups/nilyahin_mentor.lua")
+includeFile("weapon/groups/nilyahin_old_guard.lua")
+includeFile("weapon/groups/nilyahin_smuggler.lua")
+includeFile("weapon/groups/nilyahin_specialist.lua")
+includeFile("weapon/groups/nilyahin_tribunal.lua")
+
+-- Prequel Weapons
+
+includeFile("weapon/groups/clonetrooper_weapons.lua")
+includeFile("weapon/groups/clonetrooper_heavy_weapons.lua")
+includeFile("weapon/groups/clonetrooper_weapons_mix.lua")
+includeFile("weapon/groups/magnaguard_weapons.lua")
+includeFile("weapon/groups/light_jedi_weapons_basic.lua")

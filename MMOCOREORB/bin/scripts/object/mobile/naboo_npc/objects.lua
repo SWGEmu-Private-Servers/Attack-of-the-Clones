@@ -206,3 +206,33 @@ object_mobile_naboo_npc_shared_veers = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_naboo_npc_shared_veers, "object/mobile/naboo_npc/shared_veers.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_01 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_01.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_01, "object/mobile/shared_dressed_naboo_handmaiden_01.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_02 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_02.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_02, "object/mobile/shared_dressed_naboo_handmaiden_02.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_03 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_03.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_03, "object/mobile/shared_dressed_naboo_handmaiden_03.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_04 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_04.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_04, "object/mobile/shared_dressed_naboo_handmaiden_04.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_05 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_05.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_05, "object/mobile/shared_dressed_naboo_handmaiden_05.iff")
+
+object_mobile_shared_dressed_naboo_handmaiden_06 = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/shared_dressed_naboo_handmaiden_06.iff"
+}
+ObjectTemplates:addClientTemplate(object_mobile_shared_dressed_naboo_handmaiden_06, "object/mobile/shared_dressed_naboo_handmaiden_06.iff")

@@ -11996,3 +11996,9 @@ object_static_particle_shared_pt_webber = SharedStaticObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_static_particle_shared_pt_webber, "object/static/particle/shared_pt_webber.iff")
+
+object_static_particle_shared_pt_flocking_willowisp = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/particle/shared_pt_flocking_willowisp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_static_particle_shared_pt_flocking_willowisp, "object/static/particle/shared_pt_flocking_willowisp.iff")

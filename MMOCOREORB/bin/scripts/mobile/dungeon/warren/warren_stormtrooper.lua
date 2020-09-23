@@ -1,6 +1,6 @@
 warren_stormtrooper = Creature:new {
-	objectName = "@mob/creature_names:warren_stormtrooper",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "warren_imperial",
 	faction = "",
@@ -26,7 +26,7 @@ warren_stormtrooper = Creature:new {
 	creatureBitmask = PACK + KILLER,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/warren_stormtrooper.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {
 		{
 			groups = {
@@ -43,7 +43,7 @@ warren_stormtrooper = Creature:new {
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	attacks = merge(brawlermaster,marksmanmaster,riflemanmaster,carbineermaster)
 }
 

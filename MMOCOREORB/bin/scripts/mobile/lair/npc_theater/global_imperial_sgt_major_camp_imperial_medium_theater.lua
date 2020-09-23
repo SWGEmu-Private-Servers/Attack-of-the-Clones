@@ -3,7 +3,7 @@ global_imperial_sgt_major_camp_imperial_medium_theater = Lair:new {
 		{"imperial_sergeant_major",1},
 		{"imperial_sergeant",2},
 		{"imperial_corporal",3},
-		{"imperial_trooper",3}
+		{"clonetrooper",3}
 	},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/lok_imperial_large2.iff","object/building/poi/anywhere_imperial_base_large_1.iff"},

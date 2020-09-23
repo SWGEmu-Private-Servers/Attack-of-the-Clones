@@ -1,0 +1,353 @@
+object_tangible_furniture_decorative_shared_wod_deco_mask = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_deco_mask.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_deco_mask, "object/tangible/furniture/decorative/shared_wod_deco_mask.iff")
+
+object_tangible_furniture_decorative_shared_wod_floating_stones = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_floating_stones.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_floating_stones, "object/tangible/furniture/decorative/shared_wod_floating_stones.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_gate = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_gate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_gate, "object/tangible/furniture/decorative/shared_wod_ns_gate.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_01, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_02, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_03, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_04, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_05, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_06, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_07, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_08, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_potted_plant_09 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_potted_plant_09, "object/tangible/furniture/decorative/shared_wod_ns_potted_plant_09.iff")
+
+object_tangible_furniture_decorative_shared_wod_ns_wall = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_ns_wall.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_ns_wall, "object/tangible/furniture/decorative/shared_wod_ns_wall.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_01, "object/tangible/furniture/decorative/shared_wod_potted_plant_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_02, "object/tangible/furniture/decorative/shared_wod_potted_plant_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_03, "object/tangible/furniture/decorative/shared_wod_potted_plant_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_04, "object/tangible/furniture/decorative/shared_wod_potted_plant_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_05, "object/tangible/furniture/decorative/shared_wod_potted_plant_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_06, "object/tangible/furniture/decorative/shared_wod_potted_plant_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_07, "object/tangible/furniture/decorative/shared_wod_potted_plant_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_08, "object/tangible/furniture/decorative/shared_wod_potted_plant_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_potted_plant_09 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_potted_plant_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_potted_plant_09, "object/tangible/furniture/decorative/shared_wod_potted_plant_09.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_01, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_02, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_03, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_04, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_05, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_06, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_07, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_ns_tree_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_ns_tree_08, "object/tangible/furniture/decorative/shared_wod_pro_ns_tree_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_01, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_02, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_03, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_04, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_05, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_06, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_07, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_sm_tree_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_sm_tree_08, "object/tangible/furniture/decorative/shared_wod_pro_sm_tree_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_01, "object/tangible/furniture/decorative/shared_wod_pro_tree_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_02, "object/tangible/furniture/decorative/shared_wod_pro_tree_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_03, "object/tangible/furniture/decorative/shared_wod_pro_tree_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_04, "object/tangible/furniture/decorative/shared_wod_pro_tree_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_05, "object/tangible/furniture/decorative/shared_wod_pro_tree_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_06, "object/tangible/furniture/decorative/shared_wod_pro_tree_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_07, "object/tangible/furniture/decorative/shared_wod_pro_tree_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_pro_tree_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_pro_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_pro_tree_08, "object/tangible/furniture/decorative/shared_wod_pro_tree_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_01 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_01, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_01.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_02 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_02, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_02.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_03 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_03, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_03.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_04 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_04, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_04.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_05 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_05, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_05.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_06 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_06, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_06.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_07 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_07, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_07.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_08 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_08, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_08.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_potted_plant_09 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_potted_plant_09, "object/tangible/furniture/decorative/shared_wod_sm_potted_plant_09.iff")
+
+object_tangible_furniture_decorative_shared_wod_sm_wall = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_sm_wall.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_sm_wall, "object/tangible/furniture/decorative/shared_wod_sm_wall.iff")
+
+object_tangible_furniture_decorative_shared_wod_tower = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_tower.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_tower, "object/tangible/furniture/decorative/shared_wod_tower.iff")
+
+object_tangible_furniture_decorative_shared_wod_trilithon = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/furniture/decorative/shared_wod_trilithon.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_furniture_decorative_shared_wod_trilithon, "object/tangible/furniture/decorative/shared_wod_trilithon.iff")

@@ -49,32 +49,39 @@ PolearmSpinAttack2Command = {
 	healthCostMultiplier = 2.0,
 	actionCostMultiplier = 1.5,
 	mindCostMultiplier = 1.5,
-	accuracyBonus = 10,
+	accuracyBonus = 20,
 
 	areaAction = true,
 	areaRange = 16,
 
 	stateEffects = {
-	  StateEffect( 
-		DIZZY_EFFECT, 
-		{}, 
-		{ "dizzy_defense" }, 
+	  StateEffect(
+		DIZZY_EFFECT,
+		{},
+		{ "dizzy_defense" },
 		{ "jedi_state_defense", "resistance_states" },
-		75, 
-		0, 
-		25 
-	  )
-	},
+		75,
+		0,
+		25
+	  ),
+  StateEffect(
+    POSTUREDOWN_EFFECT,
+    { "postureDownRecovery" },
+    { "posture_change_down_defense" },
+    {},
+    100,
+    0,
+    0
+    ),
+  },
+animation = "combo_2c",
+animType = GENERATE_INTENSITY,
 
-	animation = "combo_2c", 
-	animType = GENERATE_INTENSITY,
+combatSpam = "limbbreaker",
 
-	combatSpam = "limbbreaker",
-	
-	weaponType = POLEARMWEAPON,
+weaponType = POLEARMWEAPON,
 
-	range = -1
+range = -1
 }
 
 AddCommand(PolearmSpinAttack2Command)
-

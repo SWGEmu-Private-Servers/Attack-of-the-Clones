@@ -57,7 +57,7 @@ function NymConvoHandler:runNymScreenHandlers(pConvTemplate, pPlayer, pNpc, sele
 			PlayerObject(pGhost):removeWaypoint(oldWaypointID, true)
 			removeQuestStatus(playerID .. ":nymFacilityWaypointID")
 		end
-		local waypointID = PlayerObject(pGhost):addWaypoint("lok", "Imperial Research Facility", "Imperial Research Facility", ThemeParkNym.waypointMap.researchfacility.x, ThemeParkNym.waypointMap.researchfacility.y, WAYPOINT_COLOR_PURPLE, true, true, 0)
+		local waypointID = PlayerObject(pGhost):addWaypoint("lok", "Secret Research Facility", "Secret Research Facility", ThemeParkNym.waypointMap.researchfacility.x, ThemeParkNym.waypointMap.researchfacility.y, WAYPOINT_COLOR_PURPLE, true, true, 0)
 		setQuestStatus(playerID .. ":nymFacilityWaypointID", waypointID)
 		self.themePark:setState(CreatureObject(pPlayer), 1, "nym_theme_park_nymNpc")
 	elseif (screenID == "go_to_officer") then
@@ -155,7 +155,7 @@ function NymConvoHandler:runKoleScreenHandlers(pConvTemplate, pPlayer, pNpc, sel
 			PlayerObject(pGhost):removeWaypoint(oldWaypointID, true)
 			removeQuestStatus(playerID .. ":nymGasMineWaypointID")
 		end
-		local waypointID = PlayerObject(pGhost):addWaypoint("lok", "Imperial Gas Mine", "", ThemeParkNym.waypointMap.gasmine.x, ThemeParkNym.waypointMap.gasmine.y, WAYPOINT_COLOR_PURPLE, true, true, 0)
+		local waypointID = PlayerObject(pGhost):addWaypoint("lok", "Secret Gas Mine", "", ThemeParkNym.waypointMap.gasmine.x, ThemeParkNym.waypointMap.gasmine.y, WAYPOINT_COLOR_PURPLE, true, true, 0)
 		setQuestStatus(playerID .. ":nymGasMineWaypointID", waypointID)
 		self.themePark:setState(CreatureObject(pPlayer), 1, "nym_theme_park_koleNpc")
 	elseif (screenID == "here_is_imperial") then

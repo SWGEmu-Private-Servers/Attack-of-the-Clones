@@ -5,12 +5,12 @@ yith_seenath_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_courier_quest_yith", npcName = "Imperial Courier" }
+				{ npcTemplate = "imperial_courier_quest_yith", npcName = "Republic Courier" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" }
+				{ npcTemplate = "clonetrooper", npcName = "" },
+				{ npcTemplate = "clonetrooper", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -26,7 +26,7 @@ yith_seenath_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_lieutenant_colonel", npcName = "" }
+				{ npcTemplate = "rep_jedi_knight", npcName = "" }
 			},
 			secondarySpawns =
 			{
@@ -48,14 +48,14 @@ yith_seenath_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_inquisitor", npcName = "" }
+				{ npcTemplate = "rep_jedi_knight", npcName = "" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "storm_commando", npcName = "" },
-				{ npcTemplate = "storm_commando", npcName = "" },
-				{ npcTemplate = "storm_commando", npcName = "" },
-				{ npcTemplate = "storm_commando", npcName = "" }
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" }
 			},
 			itemSpawns =
 			{

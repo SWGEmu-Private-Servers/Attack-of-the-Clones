@@ -1,0 +1,6 @@
+includeFile("../custom_scripts/object/draft_schematic/weapon/carbine_geo.lua")
+includeFile("../custom_scripts/object/draft_schematic/weapon/lance_staff_cryo.lua")
+includeFile("../custom_scripts/object/draft_schematic/weapon/2h_wod_sword.lua")
+includeFile("../custom_scripts/object/draft_schematic/weapon/wod_lance.lua")
+includeFile("../custom_scripts/object/draft_schematic/weapon/wod_scyth.lua")
+includeFile("../custom_scripts/object/draft_schematic/weapon/wod_war_fan.lua")

@@ -8,8 +8,8 @@ boss_nass_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
 			},
 			itemSpawns =
 			{
@@ -17,7 +17,7 @@ boss_nass_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -30,7 +30,7 @@ boss_nass_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 15000 },
 			}
 		},
 		{
@@ -41,33 +41,33 @@ boss_nass_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 },
+				{ rewardType = "credits", amount = 25000 },
 			}
 		},
 		{
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "Stormtrooper Squad Leader" }
+				{ npcTemplate = "cis_battle_droid_squad_leader", npcName = "" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" },
-				{ npcTemplate = "stormtrooper", npcName = "" }
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 50000 },
 			}
 		},
 	}
@@ -89,7 +89,7 @@ BossNass = ThemeParkLogic:new {
 	screenPlayState = "boss_nass_quest",
 	planetName = "naboo",
 	distance = 1000,
-	faction = FACTIONREBEL
+	faction = FACTIONIMPERIAL
 }
 
 registerScreenPlay("BossNass", true)

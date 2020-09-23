@@ -1,7 +1,6 @@
 rebel_admiral = Creature:new {
-	objectName = "@mob/creature_names:corvette_rebel_admiral",
-	randomNameType = NAME_GENERIC,
-	randomNameTag = true,
+	objectName = "@mob/creature_names:cis_magnaguard",
+	customName = "A Magnaguard",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 226,
@@ -11,8 +10,8 @@ rebel_admiral = Creature:new {
 	baseXp = 21533,
 	baseHAM = 208000,
 	baseHAMmax = 254000,
-	armor = 0,
-	resists = {80,90,0,0,30,30,80,65,-1},
+	armor = 2,
+	resists = {80,90,30,30,30,30,80,65,-1},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -27,27 +26,24 @@ rebel_admiral = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_rebel_major_zabrak_male_01.iff"},
+	templates = {
+		"object/mobile/magnaguard.iff"
+	},
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
+				{group = "color_crystals", chance = 1100000},
 				{group = "junk", chance = 4250000},
-				{group = "rifles", chance = 1000000},
-				{group = "pistols", chance = 1000000},
-				{group = "melee_weapons", chance = 1000000},
-				{group = "carbines", chance = 1000000},
-				{group = "clothing_attachments", chance = 100000},
-				{group = "armor_attachments", chance = 100000},
-				{group = "rebel_officer_common", chance = 450000},
+				{group = "clothing_attachments", chance = 1100000},
+				{group = "armor_attachments", chance = 1100000},
+				{group = "rebel_officer_common", chance = 1450000},
 				{group = "wearables_scarce", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"rebel_weapons_heavy"},
+	weapons = {"magnaguard_weapons"},
 	conversationTemplate = "",
-	reactionStf = "@npc_reaction/military",
-	attacks = merge(commandomaster,marksmanmaster,brawlermaster)
+	attacks = merge(lightsabermaster,pikemanmaster)
 }
 
 CreatureTemplates:addCreatureTemplate(rebel_admiral, "rebel_admiral")

@@ -27,12 +27,19 @@ meatlump_loon = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_gran_thug_male_01.iff",
-		"object/mobile/dressed_gran_thug_male_02.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_female_01.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_female_02.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_male_01.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_male_02.iff"},
+		"object/mobile/dressed_meatlump_female_01.iff",
+		"object/mobile/dressed_meatlump_female_02.iff",
+		"object/mobile/dressed_meatlump_female_03.iff",
+		"object/mobile/dressed_meatlump_female_04.iff",
+		"object/mobile/dressed_meatlump_female_05.iff",
+		"object/mobile/dressed_meatlump_female_06.iff",
+		"object/mobile/dressed_meatlump_male_01.iff",
+		"object/mobile/dressed_meatlump_male_02.iff",
+		"object/mobile/dressed_meatlump_male_03.iff",
+		"object/mobile/dressed_meatlump_male_04.iff",
+		"object/mobile/dressed_meatlump_male_05.iff",
+		"object/mobile/dressed_meatlump_male_06.iff",
+	},
 	lootGroups = {
 		{
 			groups = {

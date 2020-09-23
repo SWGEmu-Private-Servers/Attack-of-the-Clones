@@ -46,6 +46,7 @@
 
 -- Server Objects
 includeFile("tangible/furniture/cheap/armoire_s01.lua")
+includeFile("tangible/furniture/cheap/dyekit.lua")
 includeFile("tangible/furniture/cheap/bookcase_s01.lua")
 includeFile("tangible/furniture/cheap/cabinet_s01.lua")
 includeFile("tangible/furniture/cheap/chair_s01.lua")

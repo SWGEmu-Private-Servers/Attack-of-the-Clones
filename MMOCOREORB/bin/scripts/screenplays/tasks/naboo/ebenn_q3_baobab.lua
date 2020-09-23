@@ -16,7 +16,7 @@ ebenn_q3_baobab_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -36,7 +36,7 @@ ebenn_q3_baobab_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 		{
@@ -57,7 +57,7 @@ ebenn_q3_baobab_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 }
+				{ rewardType = "credits", amount = 20000 }
 			}
 		},
 		{
@@ -78,7 +78,7 @@ ebenn_q3_baobab_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 }
+				{ rewardType = "credits", amount = 25000 }
 			}
 		}
 	}
@@ -102,7 +102,7 @@ EbennQ3Baobab = ThemeParkLogic:new {
 	distance = 1000,
 }
 
-registerScreenPlay("EbennQ3Baobab", true)
+registerScreenPlay("EbennQ3Baobab", false)
 
 ebenn_q3_baobab_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = EbennQ3Baobab

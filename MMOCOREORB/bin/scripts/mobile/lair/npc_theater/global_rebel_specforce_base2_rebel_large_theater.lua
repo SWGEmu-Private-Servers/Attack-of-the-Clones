@@ -1,8 +1,8 @@
 global_rebel_specforce_base2_rebel_large_theater = Lair:new {
 	mobiles = {
-		{"specforce_procurement_specialist",1},
-		{"specforce_technician",1},
-		{"specforce_marine",1}
+		{"cis_battle_droid_pilot",1},
+		{"cis_battle_droid",1},
+		{"cis_battle_droid",1}
 	},
 	spawnLimit = 15,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_base_large_1.iff"},

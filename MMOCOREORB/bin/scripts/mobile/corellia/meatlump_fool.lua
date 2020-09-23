@@ -27,20 +27,19 @@ meatlump_fool = Creature:new {
 	diet = HERBIVORE,
 
 	templates = {
-		"object/mobile/dressed_criminal_thug_aqualish_female_01.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_female_02.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_male_01.iff",
-		"object/mobile/dressed_criminal_thug_aqualish_male_02.iff",
-		"object/mobile/dressed_criminal_thug_human_female_01.iff",
-		"object/mobile/dressed_criminal_thug_human_female_02.iff",
-		"object/mobile/dressed_criminal_thug_human_male_01.iff",
-		"object/mobile/dressed_criminal_thug_human_male_02.iff",
-		"object/mobile/dressed_criminal_thug_rodian_female_01.iff",
-		"object/mobile/dressed_criminal_thug_rodian_male_01.iff",
-		"object/mobile/dressed_criminal_thug_trandoshan_female_01.iff",
-		"object/mobile/dressed_criminal_thug_trandoshan_male_01.iff",
-		"object/mobile/dressed_criminal_thug_zabrak_female_01.iff",
-		"object/mobile/dressed_criminal_thug_zabrak_male_01.iff"},
+		"object/mobile/dressed_meatlump_female_01.iff",
+		"object/mobile/dressed_meatlump_female_02.iff",
+		"object/mobile/dressed_meatlump_female_03.iff",
+		"object/mobile/dressed_meatlump_female_04.iff",
+		"object/mobile/dressed_meatlump_female_05.iff",
+		"object/mobile/dressed_meatlump_female_06.iff",
+		"object/mobile/dressed_meatlump_male_01.iff",
+		"object/mobile/dressed_meatlump_male_02.iff",
+		"object/mobile/dressed_meatlump_male_03.iff",
+		"object/mobile/dressed_meatlump_male_04.iff",
+		"object/mobile/dressed_meatlump_male_05.iff",
+		"object/mobile/dressed_meatlump_male_06.iff",
+	},
 	lootGroups = {
 		{
 			groups = {

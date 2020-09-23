@@ -1,5 +1,5 @@
 corvette_imperial_inquisitor = Creature:new {
-	objectName = "@mob/creature_names:imperial_inquisitor",
+	objectName = "@mob/creature_names:rep_jedi_knight",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "imperial",
@@ -9,10 +9,10 @@ corvette_imperial_inquisitor = Creature:new {
 	damageMin = 1270,
 	damageMax = 2250,
 	baseXp = 21533,
-	baseHAM = 208000,
-	baseHAMmax = 254000,
-	armor = 0,
-	resists = {80,90,0,0,30,30,80,65,-1},
+	baseHAM = 308000,
+	baseHAMmax = 354000,
+	armor = 1,
+	resists = {65,65,65,65,65,65,65,65,65},
 	meatType = "",
 	meatAmount = 0,
 	hideType = "",
@@ -27,27 +27,28 @@ corvette_imperial_inquisitor = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_imperial_inquisitor_human_male_01.iff"},
+	templates = {
+		"object/mobile/dressed_jedi_knight_01.iff",
+		"object/mobile/dressed_jedi_knight_02.iff",
+		"object/mobile/dressed_neja_bertolo.iff"
+		},
+
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
+				{group = "color_crystals", chance = 600000},
 				{group = "junk", chance = 6650000},
-				{group = "rifles", chance = 550000},
-				{group = "pistols", chance = 550000},
-				{group = "melee_weapons", chance = 550000},
-				{group = "carbines", chance = 550000},
-				{group = "clothing_attachments", chance = 25000},
-				{group = "armor_attachments", chance = 25000},
-				{group = "wearables_all", chance = 1000000}
+				{group = "clothing_attachments", chance = 575000},
+				{group = "armor_attachments", chance = 575000},
+				{group = "wearables_all", chance = 1600000}
 			}
 		}
 	},
-	weapons = {"imperial_weapons_heavy"},
+	weapons = {"light_jedi_weapons_basic"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/military",
 	personalityStf = "@hireling/hireling_military",
-	attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
+	attacks = merge(lightsabermaster,forcepowermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(corvette_imperial_inquisitor, "corvette_imperial_inquisitor")

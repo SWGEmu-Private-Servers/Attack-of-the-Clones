@@ -25,7 +25,8 @@ admin_debug_03 = {
 		"destroy",
 		"lag",
 		"script",
-		"server"
+		"server",
+		"gmstafftools"
 	},
 	skillModifiers = {},
 	schematicsGranted = {},

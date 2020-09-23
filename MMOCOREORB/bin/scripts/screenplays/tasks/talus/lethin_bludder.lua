@@ -14,19 +14,19 @@ lethin_bludder_missions =
 			missionType = "escort",
 			primarySpawns =
 			{
-				{ npcTemplate = "defector_quest_lethin", npcName = "an Imperial Defector" }
+				{ npcTemplate = "defector_quest_lethin", npcName = "a Republic Defector" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_specforce_pathfinder", npcName = "" },
-				{ npcTemplate = "rebel_specforce_pathfinder", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" }
 			},
 			itemSpawns =
 			{
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 },
+				{ rewardType = "credits", amount = 2500 },
 				{ rewardType = "faction", faction = "imperial", amount = 50 }
 			}
 		},
@@ -35,20 +35,20 @@ lethin_bludder_missions =
 			buildingSpawn = rebelLab,
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_scout", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_trooper", npcName = "" },
-				{ npcTemplate = "rebel_trooper", npcName = "" },
-				{ npcTemplate = "rebel_trooper", npcName = "" }
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" },
+				{ npcTemplate = "cis_battle_droid", npcName = "" }
 			},
 			itemSpawns =
 			{
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 				{ rewardType = "faction", faction = "imperial", amount = 100 }
 			}
 		}

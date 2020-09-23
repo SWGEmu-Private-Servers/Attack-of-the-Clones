@@ -1,0 +1,1 @@
+includeFile("../custom_scripts/object/weapon/melee/2h_sword/2h_sword_wod_sword.lua")

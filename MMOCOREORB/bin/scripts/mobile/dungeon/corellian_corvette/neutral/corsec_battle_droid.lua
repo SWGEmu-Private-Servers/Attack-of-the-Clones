@@ -32,6 +32,7 @@ corsec_battle_droid = Creature:new {
   lootGroups = {
   },
   weapons = {"battle_droid_weapons"},
+  defaultAttack = "defaultdroidrangedattack",
   attacks = merge(pistoleermaster,carbineermaster,marksmanmaster)
 }
 

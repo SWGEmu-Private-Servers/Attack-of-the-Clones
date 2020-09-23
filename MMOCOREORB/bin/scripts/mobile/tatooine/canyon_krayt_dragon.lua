@@ -7,8 +7,8 @@ canyon_krayt_dragon = Creature:new {
 	damageMin = 1520,
 	damageMax = 2750,
 	baseXp = 26356,
-	baseHAM = 321000,
-	baseHAMmax = 392000,
+	baseHAM = 191000,
+	baseHAMmax = 292000,
 	armor = 3,
 	resists = {160,160,160,160,120,160,160,160,-1},
 	meatType = "meat_carnivore",
@@ -36,7 +36,7 @@ canyon_krayt_dragon = Creature:new {
 				{group = "armor_all", chance = 2000000},
 				{group = "weapons_all", chance = 2000000},
 			},
-			lootChance = 6500000
+			lootChance = 7800000
 		}
 	},
 	weapons = {},

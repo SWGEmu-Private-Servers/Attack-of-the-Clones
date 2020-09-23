@@ -1,5 +1,6 @@
 rebel_battle_droid = Creature:new {
-	objectName = "@mob/creature_names:rebel_battle_droid",
+	objectName = "@mob/creature_names:cis_battle_droid",
+	customName = "A Prototype Battle Droid",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 134,

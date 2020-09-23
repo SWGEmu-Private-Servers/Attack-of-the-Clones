@@ -5480,6 +5480,202 @@ object_draft_schematic_clothing_shared_clothing_armor_ris_leggings = SharedDraft
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_ris_leggings, "object/draft_schematic/clothing/shared_clothing_armor_ris_leggings.iff")
 
+object_draft_schematic_clothing_shared_clothing_armor_tantel_bicep_l = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_tantel_bicep_l.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "",
+	arrangementDescriptorFilename = "abstract/slot/arrangement/arrangement_datapad.iff",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2049,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "string_id_table",
+
+	gameObjectType = 2049,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "string_id_table",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2070704485,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/draft_schematic/base/shared_base_draft_schematic.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_tantel_bicep_l, "object/draft_schematic/clothing/shared_clothing_armor_tantel_bicep_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_tantel_bracer_r = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_tantel_bracer_r.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "",
+	arrangementDescriptorFilename = "abstract/slot/arrangement/arrangement_datapad.iff",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2049,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "string_id_table",
+
+	gameObjectType = 2049,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "string_id_table",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2070704485,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/draft_schematic/base/shared_base_draft_schematic.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_tantel_bracer_r, "object/draft_schematic/clothing/shared_clothing_armor_tantel_bracer_r.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_tantel_bracer_l = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_tantel_bracer_l.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "",
+	arrangementDescriptorFilename = "abstract/slot/arrangement/arrangement_datapad.iff",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2049,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "string_id_table",
+
+	gameObjectType = 2049,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "string_id_table",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2070704485,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/draft_schematic/base/shared_base_draft_schematic.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_tantel_bracer_l, "object/draft_schematic/clothing/shared_clothing_armor_tantel_bracer_l.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_tantel_bicep_r = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_tantel_bicep_r.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "",
+	arrangementDescriptorFilename = "abstract/slot/arrangement/arrangement_datapad.iff",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 2049,
+	collisionActionBlockFlags = 0,
+	collisionActionFlags = 0,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 0,
+	collisionMaterialFlags = 0,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "string_id_table",
+
+	gameObjectType = 2049,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "string_id_table",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 0,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 2070704485,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/intangible/base/shared_base_intangible.iff", "object/draft_schematic/base/shared_base_draft_schematic.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_tantel_bicep_r, "object/draft_schematic/clothing/shared_clothing_armor_tantel_bicep_r.iff")
+
 object_draft_schematic_clothing_shared_clothing_armor_tantel_boots = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_tantel_boots.iff"
 	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
@@ -24736,3 +24932,234 @@ object_draft_schematic_clothing_shared_clothing_wke_skirt_s04 = SharedDraftSchem
 }
 
 ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_wke_skirt_s04, "object/draft_schematic/clothing/shared_clothing_wke_skirt_s04.iff")
+
+object_draft_schematic_clothing_shared_clothing_hat_covert = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_hat_covert.iff"
+}
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_hat_covert, "object/draft_schematic/clothing/shared_clothing_hat_covert.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_chest_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_chest_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_helmet_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_helmet_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bicep_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bicep_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bicep_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bicep_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bracer_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bracer_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bracer_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_bracer_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_boots_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_boots_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_gloves_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_gloves_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_utility_belt_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_utility_belt_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_utility_belt_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_utility_belt_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_leggings_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_stormtrooper_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_stormtrooper_leggings_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_chest_rebel_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_chest_rebel_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_chest_rebel_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_chest_rebel_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_boots_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_boots_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_leggings_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_leggings_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_bicep_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_bicep_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_bicep_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_bicep_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_marine_helmet_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_marine_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_marine_helmet_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_robe_jedi_padawan, "object/draft_schematic/clothing/shared_clothing_robe_jedi_padawan.iff")
+
+--*******************************************************
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_chest_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_chest_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_helmet_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_helmet_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bicep_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bicep_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bicep_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bicep_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bracer_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bracer_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bracer_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_bracer_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_boots_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_boots_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_gloves_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_gloves_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_utility_belt_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_utility_belt_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_utility_belt_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_utility_belt_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_leggings_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_clonetrooper_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_clonetrooper_leggings_crafted.iff")
+
+--*********************************************
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_chest_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_chest_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_chest_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_chest_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_helmet_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_helmet_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_helmet_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_helmet_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bicep_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bicep_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bicep_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bicep_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bicep_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bicep_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bicep_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bicep_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bracer_r_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bracer_r_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bracer_r_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bracer_r_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bracer_l_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bracer_l_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_bracer_l_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_bracer_l_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_boots_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_boots_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_boots_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_boots_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_gloves_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_gloves_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_gloves_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_gloves_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_utility_belt_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_utility_belt_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_utility_belt_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_utility_belt_crafted.iff")
+
+object_draft_schematic_clothing_shared_clothing_armor_sep_battle_leggings_crafted = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_leggings_crafted.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_clothing_shared_clothing_armor_sep_battle_leggings_crafted, "object/draft_schematic/clothing/shared_clothing_armor_sep_battle_leggings_crafted.iff")

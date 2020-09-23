@@ -1,0 +1,11 @@
+includeFile("../custom_scripts/mobile/conversations/conversations.lua")
+includeFile("../custom_scripts/mobile/dungeon/dathomir_bunker/serverobjects.lua")
+includeFile("../custom_scripts/mobile/tatooine/serverobjects.lua")
+includeFile("../custom_scripts/mobile/wod/serverobjects.lua")
+includeFile("../custom_scripts/mobile/elite_spawns/serverobjects.lua")
+--MISC Mobs
+includeFile("../custom_scripts/mobile/cad_bane.lua")
+includeFile("../custom_scripts/mobile/cad_bane_sbd.lua")
+includeFile("../custom_scripts/mobile/death_watch_sbd.lua")
+includeFile("../custom_scripts/mobile/death_watch_grevious.lua")
+includeFile("../custom_scripts/mobile/shadow_collective_sbd.lua")

@@ -91,7 +91,7 @@ object_building_faction_perk_hq_hq_s04_imp = object_building_faction_perk_hq_sha
 		{ templateFile = "object/static/structure/corellia/corl_power_transformer_s02.iff", x = 8.01, z = 0, y = -7.99, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 		{ templateFile = "object/static/structure/corellia/corl_power_bubble_node.iff", x = -7.99, z = 0, y = -7.99, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
-		{ templateFile = "object/installation/faction_perk/minefield/field_1x1.iff", x = 0, z = 0, y = 38, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
+		{ templateFile = "object/installation/faction_perk/covert_detector/detector_base.iff", x = 0, z = 0, y = 38,  ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = 14, z = 0, y = 21, ox = 0, oy = -0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
 		{ templateFile = "object/installation/faction_perk/turret/tower_lg.iff", x = -14, z = 0, y = 21, ox = 0, oy = 0, oz = 0, ow = 1, cellid = -1, containmentType = -1 },
@@ -112,9 +112,9 @@ object_building_faction_perk_hq_hq_s04_imp = object_building_faction_perk_hq_sha
 
 	childCreatureObjects = {
 
-		{ mobile = "fbase_at_st", x = 30, z = 0, y = 18, cellid = -1, respawn = 720, containmentType = -1, heading = 3.14},
-		{ mobile = "fbase_at_st", x = -30, z = 0, y = 18, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
-		{ mobile = "fbase_at_st", x = 0, z = 0, y = 44, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
+		{ mobile = "fbase_at_xt", x = 30, z = 0, y = 18, cellid = -1, respawn = 720, containmentType = -1, heading = 3.14},
+		{ mobile = "fbase_at_xt", x = -30, z = 0, y = 18, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
+		{ mobile = "fbase_at_xt", x = 0, z = 0, y = 44, cellid = -1, respawn = 720, containmentType = -1, heading = 0},
 		{ mobile = "fbase_imperial_exterminator_hard", x = 5, z = 0, y = 50, cellid = -1, respawn = 360, containmentType = -1, heading = 0},
 
 		{ mobile = "fbase_dark_trooper_hard", x = 22, z = 0, y = 2, cellid = -1, respawn = 360, containmentType = -1, heading = 0},

@@ -32,6 +32,7 @@ function ForceShrineMenuComponent:handleObjectMenuSelect(pObject, pPlayer, selec
 end
 
 function ForceShrineMenuComponent:doMeditate(pObject, pPlayer)
+
 	if (tonumber(readScreenPlayData(pPlayer, "KnightTrials", "completedTrials")) == 1 and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_03")) then
 		KnightTrials:resetCompletedTrialsToStart(pPlayer)
 	end
@@ -81,6 +82,16 @@ end
 
 function ForceShrineMenuComponent:recoverRobe(pPlayer)
 	local pInventory = SceneObject(pPlayer):getSlottedObject("inventory")
+	
+	if (pPlayer == nil) then
+		return
+	end
+
+	local pGhost = CreatureObject(pPlayer):getPlayerObject()
+
+	if (pGhost == nil) then
+		return
+	end
 
 	if (pInventory == nil) then
 		return
@@ -106,4 +117,5 @@ function ForceShrineMenuComponent:recoverRobe(pPlayer)
 
 	giveItem(pInventory, robeTemplate, -1)
 	CreatureObject(pPlayer):sendSystemMessage("@force_rank:items_recovered")
+
 end

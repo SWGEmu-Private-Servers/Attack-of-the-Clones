@@ -5,7 +5,7 @@ ImperialVsGunganScreenPlay = ScreenPlay:new {
 
 	screenplayName = "ImperialVsGunganScreenPlay",
 
-	gunganMobiles = {
+	imperialMobiles = {
 		{ "rebel_gungan_priest", 420, 4760.9, 13.7, -3894.2, 11 },
 		{ "rebel_gungan_boss", 300, 4763.8, 28.2, -3929.1, 0 },
 		{ "rebel_gungan_captain", 300, 4764.3, 28.2, -3922.5, -90 },
@@ -40,27 +40,27 @@ ImperialVsGunganScreenPlay = ScreenPlay:new {
 		{ "rebel_gungan_guard", 300, 4772.4, 13.1, -3875.1, 13 }
 	},
 
-	imperialMobiles = {
-		{ "imperial_exterminator", 420, 4761.4, 10.7, -3823.9, -175 },
-		{ "plasma_thieving_swamp_trooper", 300, 4742.5, 10.2, -3836.4, -165 },
-		{ "plasma_thieving_swamp_trooper_captain", 300, 4791.3, 11.4, -3821.6, -167 },
-		{ "imperial_exterminator", 300, 4759.2, 10.7, -3830.4, 72 },
-		{ "plasma_thieving_swamp_trooper", 300, 4757.2, 10.7, -3826.7, 72 },
-		{ "plasma_thieving_swamp_trooper_captain", 300, 4784.7, 11.3, -3820.7, 95 },
-		{ "plasma_thieving_swamp_trooper", 300, 4768.4, 10.9, -3825.0, 35 },
+	gunganMobiles = {
+		{ "cis_battle_droid_commando", 420, 4761.4, 10.7, -3823.9, -175 },
+		{ "cis_battle_droid", 300, 4742.5, 10.2, -3836.4, -165 },
+		{ "cis_battle_droid_captain", 300, 4791.3, 11.4, -3821.6, -167 },
+		{ "cis_battle_droid_commando", 300, 4759.2, 10.7, -3830.4, 72 },
+		{ "cis_battle_droid", 300, 4757.2, 10.7, -3826.7, 72 },
+		{ "cis_battle_droid_captain", 300, 4784.7, 11.3, -3820.7, 95 },
+		{ "cis_battle_droid", 300, 4768.4, 10.9, -3825.0, 35 },
 
-		{ "plasma_thieving_swamp_trooper", 300, 4781.3, 12.0, -3847.1, 161 },
-		{ "plasma_thieving_swamp_trooper", 300, 4740.9, 10.7, -3851.5, -90 },
-		{ "plasma_thieving_swamp_trooper", 300, 4784.3, 12.0, -3845.9, 160 },
-		{ "plasma_thieving_swamp_trooper", 300, 4778.3, 12.0, -3849.5, 170 },
-		{ "plasma_thieving_swamp_trooper_captain", 300, 4768.7, 11.8, -3854.9, 175 },
-		{ "plasma_thieving_swamp_trooper", 300, 4761.2, 11.8, -3856.0, 175 },
-		{ "plasma_thieving_swamp_trooper", 300, 4754.7, 11.7, -3858.0, 175 },
-		{ "plasma_thieving_swamp_trooper", 300, 4747.7, 11.6, -3859.1, 175 },
+		{ "cis_battle_droid", 300, 4781.3, 12.0, -3847.1, 161 },
+		{ "cis_battle_droid", 300, 4740.9, 10.7, -3851.5, -90 },
+		{ "cis_battle_droid", 300, 4784.3, 12.0, -3845.9, 160 },
+		{ "cis_battle_droid", 300, 4778.3, 12.0, -3849.5, 170 },
+		{ "cis_battle_droid_captain", 300, 4768.7, 11.8, -3854.9, 175 },
+		{ "cis_battle_droid", 300, 4761.2, 11.8, -3856.0, 175 },
+		{ "cis_battle_droid", 300, 4754.7, 11.7, -3858.0, 175 },
+		{ "cis_battle_droid", 300, 4747.7, 11.6, -3859.1, 175 },
 
-		{ "plasma_thieving_swamp_trooper", 300, 4726.2, 9.6, -3825.6, 175 },
-		{ "plasma_thieving_swamp_trooper", 300, 4712.3, 11.2, -3871.0, 15 },
-		{ "plasma_thieving_swamp_trooper", 300, 4808.3, 11.7, -3836.6, 166 }
+		{ "cis_battle_droid", 300, 4726.2, 9.6, -3825.6, 175 },
+		{ "cis_battle_droid", 300, 4712.3, 11.2, -3871.0, 15 },
+		{ "cis_battle_droid", 300, 4808.3, 11.7, -3836.6, 166 }
 	}
 
 }

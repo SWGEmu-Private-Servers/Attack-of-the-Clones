@@ -1,12 +1,12 @@
 lx_466_rebel_scout = Creature:new {
 	objectName = "",
-	customName = "(a Stranded Rebel Scout)",	
+	customName = "(a Stranded Rebel Scout)",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 50,
 	chanceHit = 1,
 	damageMin = 330,
-	damageMax = 5000,
+	damageMax = 500,
 	baseXp = 4533,
 	baseHAM = 12000,
 	baseHAMmax = 15000,
@@ -23,7 +23,7 @@ lx_466_rebel_scout = Creature:new {
 	ferocity = 0,
 	pvpBitmask = ATTACKABLE,
 	creatureBitmask = PACK + STALKER + KILLER,
-	optionsBitmask = AIENABLED,	
+	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
 	templates = {

@@ -3225,3 +3225,8 @@ object_soundobject_shared_soundobject_wind_power_generator = SharedStaticObjectT
 }
 
 ObjectTemplates:addClientTemplate(object_soundobject_shared_soundobject_wind_power_generator, "object/soundobject/shared_soundobject_wind_power_generator.iff")
+
+object_soundobject_shared_soundobject_gunship = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/soundobject/shared_soundobject_gunship.iff"
+}
+ObjectTemplates:addClientTemplate(object_soundobject_shared_soundobject_gunship, "object/soundobject/shared_soundobject_gunship.iff")

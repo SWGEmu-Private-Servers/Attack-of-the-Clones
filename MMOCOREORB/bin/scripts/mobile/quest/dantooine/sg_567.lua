@@ -1,6 +1,6 @@
 sg_567 = Creature:new {
 	objectName = "@npc_name:human_base_male",
-	customName = "SG-567",
+	customName = "CT-567",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -26,7 +26,7 @@ sg_567 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_sg_567.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "sg_567_mission_giver_convotemplate",

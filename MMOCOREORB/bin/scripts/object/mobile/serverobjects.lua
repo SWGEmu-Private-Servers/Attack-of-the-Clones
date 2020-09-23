@@ -3,42 +3,42 @@
 
 --This File is part of Core3.
 
---This program is free software; you can redistribute 
---it and/or modify it under the terms of the GNU Lesser 
+--This program is free software; you can redistribute
+--it and/or modify it under the terms of the GNU Lesser
 --General Public License as published by the Free Software
---Foundation; either version 2 of the License, 
+--Foundation; either version 2 of the License,
 --or (at your option) any later version.
 
---This program is distributed in the hope that it will be useful, 
---but WITHOUT ANY WARRANTY; without even the implied warranty of 
---MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+--This program is distributed in the hope that it will be useful,
+--but WITHOUT ANY WARRANTY; without even the implied warranty of
+--MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 --See the GNU Lesser General Public License for
 --more details.
 
---You should have received a copy of the GNU Lesser General 
+--You should have received a copy of the GNU Lesser General
 --Public License along with this program; if not, write to
 --the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
 
---Linking Engine3 statically or dynamically with other modules 
---is making a combined work based on Engine3. 
---Thus, the terms and conditions of the GNU Lesser General Public License 
+--Linking Engine3 statically or dynamically with other modules
+--is making a combined work based on Engine3.
+--Thus, the terms and conditions of the GNU Lesser General Public License
 --cover the whole combination.
 
---In addition, as a special exception, the copyright holders of Engine3 
---give you permission to combine Engine3 program with free software 
---programs or libraries that are released under the GNU LGPL and with 
---code included in the standard release of Core3 under the GNU LGPL 
---license (or modified versions of such code, with unchanged license). 
---You may copy and distribute such a system following the terms of the 
---GNU LGPL for Engine3 and the licenses of the other code concerned, 
---provided that you include the source code of that other code when 
+--In addition, as a special exception, the copyright holders of Engine3
+--give you permission to combine Engine3 program with free software
+--programs or libraries that are released under the GNU LGPL and with
+--code included in the standard release of Core3 under the GNU LGPL
+--license (or modified versions of such code, with unchanged license).
+--You may copy and distribute such a system following the terms of the
+--GNU LGPL for Engine3 and the licenses of the other code concerned,
+--provided that you include the source code of that other code when
 --and as the GNU LGPL requires distribution of source code.
 
---Note that people who make modified versions of Engine3 are not obligated 
---to grant this special exception for their modified versions; 
---it is their choice whether to do so. The GNU Lesser General Public License 
---gives permission to release a modified version without this exception; 
---this exception also makes it possible to release a modified version 
+--Note that people who make modified versions of Engine3 are not obligated
+--to grant this special exception for their modified versions;
+--it is their choice whether to do so. The GNU Lesser General Public License
+--gives permission to release a modified version without this exception;
+--this exception also makes it possible to release a modified version
 
 
 
@@ -76,6 +76,7 @@ includeFile("mobile/arachne_hatchling.lua")
 includeFile("mobile/astromech_waiter.lua")
 includeFile("mobile/atat.lua")
 includeFile("mobile/atst.lua")
+includeFile("mobile/atxt.lua")
 includeFile("mobile/aujante_klee.lua")
 includeFile("mobile/baby_bol.lua")
 includeFile("mobile/bageraset.lua")
@@ -2657,3 +2658,37 @@ includeFile("mobile/zabrak_female.lua")
 includeFile("mobile/zabrak_male.lua")
 includeFile("mobile/zucca_boar.lua")
 includeFile("mobile/zucca_boar_hue.lua")
+includeFile("mobile/battle_droid_red.lua")
+includeFile("mobile/battle_droid_blue.lua")
+includeFile("mobile/battle_droid_yellow.lua")
+includeFile("mobile/battle_droid_yellow_geo.lua")
+includeFile("mobile/battle_droid_geo.lua")
+includeFile("mobile/dressed_clonetrooper_m.lua")
+includeFile("mobile/dressed_clonetrooper_medic_501.lua")
+includeFile("mobile/dressed_clonetrooper_blue_m.lua")
+includeFile("mobile/dressed_clonetrooper_blue_nh_m.lua")
+includeFile("mobile/dressed_clone_commando_m.lua")
+includeFile("mobile/dressed_clonetrooper_heavy_501.lua")
+includeFile("mobile/magnaguard.lua")
+includeFile("mobile/dressed_jedi_knight_01.lua")
+includeFile("mobile/dressed_jedi_knight_02.lua")
+includeFile("mobile/dressed_jedi_knight_03.lua")
+includeFile("mobile/dressed_jedi_knight_04.lua")
+includeFile("mobile/dressed_jedi_knight_05.lua")
+includeFile("mobile/dressed_jedi_knight_06.lua")
+includeFile("mobile/general_grievous.lua")
+includeFile("mobile/padme_dress.lua")
+includeFile("mobile/dressed_clone_cadet_black.lua")
+includeFile("mobile/dressed_clone_cadet_red.lua")
+includeFile("mobile/kit_fisto_cloak.lua")
+includeFile("mobile/dressed_clone_sandtrooper_m.lua")
+includeFile("mobile/dressed_dooku.lua")
+includeFile("mobile/dressed_sevrance.lua")
+includeFile("mobile/dressed_ventress.lua")
+includeFile("mobile/dressed_clone_arc_m.lua")
+includeFile("mobile/dressed_clone_arc_501.lua")
+includeFile("mobile/dressed_clone_arc_nh_501.lua")
+includeFile("mobile/anakin_robe.lua")
+includeFile("mobile/cad_bane.lua")
+includeFile("mobile/savage.lua")
+includeFile("mobile/hailfire.lua")

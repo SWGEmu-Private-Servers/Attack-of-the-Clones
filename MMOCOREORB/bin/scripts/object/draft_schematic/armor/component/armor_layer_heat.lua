@@ -68,7 +68,7 @@ object_draft_schematic_armor_component_armor_layer_heat = object_draft_schematic
 	ingredientSlotType = {0, 0, 0},
 	resourceTypes = {"metal_nonferrous", "petrochem_inert_polymer", "ore_intrusive"},
 	resourceQuantities = {25, 12, 10},
-	contribution = {100, 100, 100},
+	contribution = {80, 80, 80},
 
 	targetTemplate = "object/tangible/component/armor/armor_layer_heat.iff",
 

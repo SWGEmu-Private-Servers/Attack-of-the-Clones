@@ -13,7 +13,7 @@ rakir_banai_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -32,7 +32,7 @@ rakir_banai_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 2000 },
+				{ rewardType = "credits", amount = 20000 },
 			}
 		},
 		{
@@ -49,7 +49,7 @@ rakir_banai_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 3000 }
+				{ rewardType = "credits", amount = 20000 }
 			}
 		},
 		{
@@ -69,7 +69,7 @@ rakir_banai_missions =
 			rewards =
 			{
 				{ rewardType = "loot",  lootGroup = "task_reward_rakir_banai" },
-				{ rewardType = "credits", amount = 4000 }
+				{ rewardType = "credits", amount = 40000 }
 			}
 		}
 	}

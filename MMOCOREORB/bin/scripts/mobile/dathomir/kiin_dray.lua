@@ -27,7 +27,17 @@ kiin_dray = Creature:new {
 
 	templates = {"object/mobile/gaping_spider_recluse_giant_kiin_dray.iff"},
 	scale = 4.0,
-	lootGroups = {},
+	lootGroups = {
+		{
+			groups = {
+					{group = "fire_breathing_spider", chance = 4000000},
+					{group = "rancor_common", chance = 3000000},
+					{group = "armor_all", chance = 1000000},
+					{group = "wearables_all", chance = 2000000}
+					},
+			lootChance = 5780000
+		}
+	},
 	weapons = {"creature_spit_small_toxicgreen"},
 	conversationTemplate = "",
 	attacks = {

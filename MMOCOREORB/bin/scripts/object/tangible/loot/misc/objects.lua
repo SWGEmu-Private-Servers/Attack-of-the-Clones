@@ -4229,3 +4229,15 @@ object_tangible_loot_misc_shared_worklight = SharedTangibleObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_loot_misc_shared_worklight, "object/tangible/loot/misc/shared_worklight.iff")
+
+object_tangible_loot_misc_shared_event_token = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/misc/shared_event_token.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_misc_shared_event_token, "object/tangible/loot/misc/shared_event_token.iff")
+
+object_tangible_loot_misc_shared_event_token_restuss = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/misc/shared_event_token_restuss.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_misc_shared_event_token_restuss, "object/tangible/loot/misc/shared_event_token_restuss.iff")

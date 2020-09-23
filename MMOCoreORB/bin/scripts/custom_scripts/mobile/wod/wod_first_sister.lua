@@ -1,0 +1,35 @@
+wod_first_sister = Creature:new {
+	objectName = "@mob/creature_names:wod_first_sister",
+	socialGroup = "wod_reanimated",
+	faction = "",
+	level = 131,
+	chanceHit = 4.75,
+	damageMin = 770,
+	damageMax = 1250,
+	baseXp = 12424,
+	baseHAM = 50000,
+	baseHAMmax = 61000,
+	armor = 2,
+	resists = {65,180,65,180,180,180,180,180,45},
+	meatType = "",
+	meatAmount = 0,
+	hideType = "",
+	hideAmount = 0,
+	boneType = "",
+	boneAmount = 0,
+	milk = 0,
+	tamingChance = 0,
+	ferocity = 0,
+	pvpBitmask = AGGRESSIVE + ATTACKABLE + ENEMY,
+	creatureBitmask = KILLER,
+	optionsBitmask = AIENABLED + CONVERSABLE,
+	diet = HERBIVORE,
+
+	templates = {"object/mobile/wod_first_sister.iff"},
+	lootGroups = {},
+	weapons = {"mixed_force_weapons"},
+	conversationTemplate = "wod_first_sister",
+	attacks = merge(fencermaster,swordsmanmaster,tkamid,brawlermaster,pikemanmaster,forcewielder)
+}
+
+CreatureTemplates:addCreatureTemplate(wod_first_sister, "wod_first_sister")

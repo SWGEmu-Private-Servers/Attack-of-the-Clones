@@ -6,51 +6,51 @@ TatooineMosEnthaScreenPlay = CityScreenPlay:new {
 	planet = "tatooine",
 
 	gcwMobs = {
-		{"crackdown_comm_operator", "rebel_resistance_leader", 1626.03,7.36699,3513.56,31.2213,0, "npc_imperial", "conversation", true},
-		{"elite_sand_trooper", "rebel_brigadier_general", 1618.9,11,3241.7,86.0025,0, "npc_imperial", "neutral"},
-		{"elite_sand_trooper", "rebel_brigadier_general", 1376.6,7,3267.5,133.004,0, "npc_imperial", "neutral"},
-		{"elite_sand_trooper", "rebel_brigadier_general", 1629.95,7.34272,3522.79,42.3654,0, "", ""},
-		{"imperial_exterminator", "rebel_obscureops_agent", 1593.3,7,3020.2,82.0024,0, "npc_imperial", "neutral"},
-		{"imperial_exterminator", "rebel_obscureops_agent", 1502.5,7,3156.9,359.01,0, "", ""},
-		{"imperial_noncom", "rebel_resistance_leader", 1566.7,11,3230.16,357.031,0, "npc_imperial", "neutral"},
-		{"imperial_sergeant", "rebel_sergeant", 1602.89,11,3255.09,268.945,0, "", ""},
-		{"imperial_sharpshooter", "rebel_resistance_separatist", 1538.7,10.866,3219.9,266.008,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1605.71,11,3255.47,290.005,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1600.5,11,3188.98,71.1851,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1738.6,7.6,3191.1,178.005,0, "npc_imperial", "neutral"},
-		{"sand_trooper",  "rebel_trooper", 1715.3,7,3147.1,176.005,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1688.8,7,3125.2,358.011,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1759.6,7,3186.1,78.0023,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1663,7,3109.8,147.004,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1637.2,7,2980.3,181.005,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1557.7,9.5,3045.7,173.005,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1508.1,7,3127.9,174.005,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1444.6,7,3106.9,90.0027,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1380.4,9.5,3012.4,181.005,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1333.6,7,3490,93.0027,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1286.3,7.7102,2954.7,42.0012,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1181.3,7,3087.9,281.008,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1264,7,3159.3,278.008,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1272.7,7,3255.9,87.0026,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1431.6,9.5,3372.5,181.005,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1625.7,7,2978.1,137,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1626.92,7.34652,3512.12,27.1283,0, "", ""},
-		{"sand_trooper", "rebel_trooper", 1598.04,11,3188.15,71.1795,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1407.2,7.6,3472.1,175,0, "npc_imperial", "neutral"},
-		{"sand_trooper", "rebel_trooper", 1624.2,7.41708,3516.48,81.6028,0, "", ""},
-		{"scout_trooper", "rebel_medic", 1487.2,7,3240.8,318.009,0, "npc_imperial", "npc_consoling"},
-		{"scout_trooper", "rebel_medic", 1455.2,7,3232.5,188.006,0, "npc_imperial", "neutral"},
-		{"scout_trooper", "rebel_medic", 1597.4,11,3186.76,74.2722,0, "", ""},
-		{"storm_commando", "rebel_commando", 1289.2,7,3128,26.0008,0, "npc_imperial", "neutral"},
-		{"storm_commando", "rebel_commando", 1282.4,7,3133.1,28.0008,0, "npc_imperial", "neutral"},
-		{"storm_commando", "rebel_commando", 1320.9,9.5,3382.9,90.0027,0, "", ""},
-		{"stormtrooper", "rebel_staff_corporal", 1401,7,3094.3,267.747,0, "", ""},
-		{"stormtrooper", "rebel_staff_corporal", 1399.4,7,3094.3,268.154,0, "", ""},
-		{"stormtrooper", "rebel_staff_corporal", 1628.23,7.32035,3512.41,23.9809,0, "", ""},
-		{"stormtrooper", "rebel_staff_corporal", 1565.41,11,3235.35,191.674,0, "npc_imperial", "neutral"},
-		{"stormtrooper", "rebel_staff_corporal", 1623.03,7.45177,3516.22,42.7463,0, "", ""},
-		{"stormtrooper_captain", "rebel_army_captain", 1400.2,7,3090.2,241.546,0, "", ""},
-		{"stormtrooper_rifleman", "rebel_resistance_anarchist", 1256,7.7102,2954.3,306.009,0, "", ""},
+		{"crackdown_comm_operator", "cis_battle_droid_squad_leader", 1626.03,7.36699,3513.56,31.2213,0, "npc_imperial", "conversation", true},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1618.9,11,3241.7,86.0025,0, "npc_imperial", "neutral"},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1376.6,7,3267.5,133.004,0, "npc_imperial", "neutral"},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 1629.95,7.34272,3522.79,42.3654,0, "", ""},
+		{"clone_commando", "cis_battle_droid_specforce", 1593.3,7,3020.2,82.0024,0, "npc_imperial", "neutral"},
+		{"clone_commando", "cis_battle_droid_specforce", 1502.5,7,3156.9,359.01,0, "", ""},
+		{"imperial_noncom", "cis_battle_droid_squad_leader", 1566.7,11,3230.16,357.031,0, "npc_imperial", "neutral"},
+		{"imperial_sergeant", "cis_battle_droid_squad_leader", 1602.89,11,3255.09,268.945,0, "", ""},
+		{"clonetrooper_sniper", "cis_resistance_separatist", 1538.7,10.866,3219.9,266.008,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1605.71,11,3255.47,290.005,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1600.5,11,3188.98,71.1851,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1738.6,7.6,3191.1,178.005,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper",  "cis_battle_droid_geo", 1715.3,7,3147.1,176.005,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1688.8,7,3125.2,358.011,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1759.6,7,3186.1,78.0023,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1663,7,3109.8,147.004,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1637.2,7,2980.3,181.005,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1557.7,9.5,3045.7,173.005,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1508.1,7,3127.9,174.005,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1444.6,7,3106.9,90.0027,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1380.4,9.5,3012.4,181.005,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1333.6,7,3490,93.0027,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1286.3,7.7102,2954.7,42.0012,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1181.3,7,3087.9,281.008,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1264,7,3159.3,278.008,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1272.7,7,3255.9,87.0026,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1431.6,9.5,3372.5,181.005,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1625.7,7,2978.1,137,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1626.92,7.34652,3512.12,27.1283,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1598.04,11,3188.15,71.1795,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1407.2,7.6,3472.1,175,0, "npc_imperial", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_geo", 1624.2,7.41708,3516.48,81.6028,0, "", ""},
+		{"clone_scout_trooper", "rebel_medic", 1487.2,7,3240.8,318.009,0, "npc_imperial", "npc_consoling"},
+		{"clone_scout_trooper", "rebel_medic", 1455.2,7,3232.5,188.006,0, "npc_imperial", "neutral"},
+		{"clone_scout_trooper", "rebel_medic", 1597.4,11,3186.76,74.2722,0, "", ""},
+		{"clone_commando", "cis_battle_droid_commando", 1289.2,7,3128,26.0008,0, "npc_imperial", "neutral"},
+		{"clone_commando", "cis_battle_droid_commando", 1282.4,7,3133.1,28.0008,0, "npc_imperial", "neutral"},
+		{"clone_commando", "cis_battle_droid_commando", 1320.9,9.5,3382.9,90.0027,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_squad_leader", 1401,7,3094.3,267.747,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_squad_leader", 1399.4,7,3094.3,268.154,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_squad_leader", 1628.23,7.32035,3512.41,23.9809,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_squad_leader", 1565.41,11,3235.35,191.674,0, "npc_imperial", "neutral"},
+		{"clonetrooper", "cis_battle_droid_squad_leader", 1623.03,7.45177,3516.22,42.7463,0, "", ""},
+		{"clonetrooper_captain", "cis_battle_droid_captain", 1400.2,7,3090.2,241.546,0, "", ""},
+		{"clonetrooper_sniper", "cis_resistance_separatist", 1256,7.7102,2954.3,306.009,0, "", ""},
 		{"mos_entha_police_officer", "mos_entha_police_officer_rebel", 41.2,-0.5,29.7,63,4005523, "angry", "angry"},
 		{"mos_entha_police_officer", "mos_entha_police_officer_rebel", 1625.6,7,3029.5,-179,0, "", ""},
 		{"mos_entha_police_officer", "mos_entha_police_officer_rebel", 1815.9,7,3182,40,0, "", ""},
@@ -527,6 +527,33 @@ function TatooineMosEnthaScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "jawa_warlord",300,1347.83,7,3060.74,47.0278,0)
 	spawnMobile(self.planet, "jawa_warlord",300,1608.4,7,3328.1,-21,0)
 	spawnMobile(self.planet, "jawa_warlord",300,1572.44,7,3337.29,83.3917,0)
+
+	--------------------------
+	-- Valarian Bunker  -- 
+	--------------------------
+	spawnMobile("tatooine", "valarian_thug", 300, 1547.57, 15, 3521.34, 2, 0)
+	spawnMobile("tatooine", "valarian_thug", 300, 1551.73, 15.084, 3521.72, 349, 0)
+	spawnMobile("tatooine", "valarian_swooper", 300, -0.242862, 0.25, 3.65365, 359, 620001754)
+	spawnMobile("tatooine", "valarian_swooper", 300, -3.48503, 0.25, -4.56064, 355, 620001754)
+	spawnMobile("tatooine", "valarian_thief", 300, 2.6705, 0.25, -4.00217, 355, 620001755)
+	spawnMobile("tatooine", "valarian_thug", 300, -4.55059, -6.75, 5.47483, 173, 620001756)
+	spawnMobile("tatooine", "valarian_thief", 300, -7.56909, -6.75, -4.1345, 4, 620001757)
+	spawnMobile("tatooine", "valarian_scout", 300, -7.76972, -6.75, -6.3854, 255, 620001757)
+	spawnMobile("tatooine", "valarian_scout", 300, -0.999217, -6.75, -7.33594, 36, 620001757)
+	spawnMobile("tatooine", "valarian_thug", 300, -7.40882, -6.76678, -12.4354, 104, 620001758)
+	spawnMobile("tatooine", "valarian_thug", 300, -2.64852, -6.76678, -15.338, 163, 620001758)
+	spawnMobile("tatooine", "valarian_swooper", 300, 8.20069, -6.76678, -12.5793, 244, 620001758)
+	spawnMobile("tatooine", "valarian_thief", 300, 7.9847, -6.75, -1.39738, 183, 620001759)
+	spawnMobile("tatooine", "valarian_swooper", 300, 7.1793, -6.75528, -8.86877, 316, 620001759)
+	spawnMobile("tatooine", "valarian_swooper", 300, 3.55387, -6.75, -0.954385, 162, 620001759)
+	spawnMobile("tatooine", "valarian_thief", 300, -2.82908, -13.75, 8.17581, 174, 620001760)
+	spawnMobile("tatooine", "valarian_swooper", 300, 1.5841, -13.75, 2.47851, 156, 620001761)
+	spawnMobile("tatooine", "valarian_swooper_leader", 300, -5.07091, -13.75, 3.16758, 141, 620001761)
+	spawnMobile("tatooine", "valarian_swooper_leader", 300, -4.85842, -13.75, -6.14691, 103, 620001761)
+	spawnMobile("tatooine", "valarian_swooper_leader", 300, -4.19489, -13.75, -10.2335, 79, 620001761)
+	spawnMobile("tatooine", "valarian_swooper_leader", 300, -0.141336, -13.75, -12.5067, 305, 620001761)
+
+
 
 	--Creatures
 	spawnMobile(self.planet, "desert_razorback",300,1085.48,5.82507,3065.96,107.775,0)

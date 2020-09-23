@@ -1,7 +1,7 @@
 global_imperial_large_base_imperial_large_theater = Lair:new {
 	mobiles = {
-		{"imperial_colonel",1},
-		{"imperial_major",1},
+		{"rep_jedi_knight",1},
+		{"clonetrooper_major",1},
 		{"imperial_second_lieutenant",2},
 	},
 	spawnLimit = 15,

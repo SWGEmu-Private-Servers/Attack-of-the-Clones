@@ -1,0 +1,8 @@
+includeFile("../custom_scripts/object/building/heroic/axkva_altar.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_empty_crystal.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_hall_fire.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_kimaru_crystal.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_lelli_hi_crystal.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_min_crystal.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_min_lair.lua")
+includeFile("../custom_scripts/object/building/heroic/axkva_suin_chalo_crystal.lua")

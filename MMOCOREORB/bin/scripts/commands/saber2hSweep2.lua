@@ -50,19 +50,9 @@ Saber2hSweep2Command = {
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
 	forceCostMultiplier = 1.75,
+  areaAction = true,
+  areaRange = 16,
 	visMod = 25,
-
-	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
-		{},
-		100, 
-		0, 
-		0 
-	  )
-	},
 
 	animation = "combo_4b", 
 	animType = GENERATE_INTENSITY,
@@ -77,4 +67,3 @@ Saber2hSweep2Command = {
 }
 
 AddCommand(Saber2hSweep2Command)
-

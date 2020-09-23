@@ -1,5 +1,5 @@
 neo_cobral_hitman = Creature:new {
-	objectName = "@mob/creature_names:cobral_hitman",
+	objectName = "@mob/creature_names:neo_cobral_hitman",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "cobral",

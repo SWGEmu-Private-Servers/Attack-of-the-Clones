@@ -22,7 +22,7 @@ function printf(...) io.write(string.format(table.unpack({...}))) end
 JediManager = ScreenPlay:new {
 	screenplayName = jediManagerName,
 	jediManagerName = jediManagerName,
-	jediProgressionType = NOJEDIPROGRESSION,
+	jediProgressionType = VILLAGEJEDIPROGRESSION,
 }
 
 -- Default handling of the start event.
@@ -86,4 +86,3 @@ function JediManager:onFSTreeCompleted(pCreatureObject, branch)
 end
 
 return JediManager
-

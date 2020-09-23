@@ -4,9 +4,9 @@ function SkillTrainer:getTrainerType(pPlayer, pNpc, pConvTemplate)
 	local pGhost = CreatureObject(pPlayer):getPlayerObject()
 	local isJediTrainer = false
 
-	if (pGhost ~= nil and PlayerObject(pGhost):isJediTrainer(pNpc)) then
-		return "trainer_jedi"
-	end
+	--if (pGhost ~= nil and PlayerObject(pGhost):isJediTrainer(pNpc)) then
+	--	return "trainer_jedi"
+	--end
 
 	local convoTemplate = LuaConversationTemplate(pConvTemplate)
 	local pScreen = convoTemplate:getScreen("trainerType")

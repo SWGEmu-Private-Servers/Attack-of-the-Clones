@@ -1,6 +1,6 @@
 elite_novatrooper = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper_novatrooper_elite",
-	randomNameType = NAME_STORMTROOPER,
+	objectName = "@mob/creature_names:clonetrooper_elite",
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -27,23 +27,21 @@ elite_novatrooper = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_black_gold.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
+
 	lootGroups = {
 		{
 			groups = {
-				{group = "color_crystals", chance = 100000},
-				{group = "junk", chance = 6650000},
-				{group = "rifles", chance = 550000},
-				{group = "pistols", chance = 550000},
-				{group = "melee_weapons", chance = 550000},
-				{group = "carbines", chance = 550000},
-				{group = "clothing_attachments", chance = 25000},
-				{group = "armor_attachments", chance = 25000},
-				{group = "wearables_rare", chance = 1000000}
+				{group = "color_crystals", chance = 700000},
+				{group = "junk", chance = 6200000},
+				{group = "clothing_attachments", chance = 575000},
+				{group = "armor_attachments", chance = 575000},
+				{group = "imperial_officer_common", chance = 950000},
+				{group = "wearables_scarce", chance = 1000000}
 			}
 		}
 	},
-	weapons = {"stormtrooper_weapons"},
+	weapons = {"clonetrooper_weapons"},
 	conversationTemplate = "",
 	reactionStf = "@npc_reaction/stormtrooper",
 	attacks = merge(riflemanmaster,carbineermaster,marksmanmaster,brawlermaster)

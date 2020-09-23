@@ -1,3 +1,6 @@
+includeFile("dungeon/geonosian_bio_lab/nightbrother_acklay.lua")
+includeFile("dungeon/geonosian_bio_lab/adolescent_acklay.lua")
+includeFile("dungeon/geonosian_bio_lab/poison_acklay.lua")
 includeFile("dungeon/geonosian_bio_lab/acklay.lua")
 includeFile("dungeon/geonosian_bio_lab/alert_droideka.lua")
 includeFile("dungeon/geonosian_bio_lab/biogenic_assistant.lua")

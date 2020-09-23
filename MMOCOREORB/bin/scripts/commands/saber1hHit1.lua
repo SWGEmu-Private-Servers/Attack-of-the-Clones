@@ -49,7 +49,7 @@ Saber1hHit1Command = {
 	healthCostMultiplier = 0,
 	actionCostMultiplier = 0,
 	mindCostMultiplier = 0,
-	forceCostMultiplier = 1.0,
+	forceCostMultiplier = 0.75,
 	visMod = 25,
 	
 	animation = "combo_jedi_1", 
@@ -65,4 +65,3 @@ Saber1hHit1Command = {
 }
 
 AddCommand(Saber1hHit1Command)
-

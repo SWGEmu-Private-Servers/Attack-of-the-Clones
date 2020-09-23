@@ -72,21 +72,22 @@ enable_factional_entertainer_missions = "true"
 
 enable_same_account_bounty_missions = "false"
 
-playerBountyKillBuffer = 30 * 60 * 1000 -- Buffer before player bounty can be put back on terminal after target is killed, set 0 to disable
+playerBountyKillBuffer = 1200 * 1000 -- Buffer before player bounty can be put back on terminal after target is killed, set 0 to disable (3 minutes for testing)
 
-playerBountyDebuffLength = 3 * 24 * 60 * 60 * 1000 -- Time before their bounty resets from the minimum amount
+playerBountyDebuffLength = 0 -- Time before their bounty resets from the minimum amount
+-- playerBountyDebuffLength = 3 * 24 * 60 * 60 * 1000 -- Time before their bounty resets from the minimum amount
 
 -- Destroy Mission Configuration
--- Distance calculated as: 
---    <BaseDistance> + <DifficultyDistanceFactor> * <difficultyLevel> + 
+-- Distance calculated as:
+--    <BaseDistance> + <DifficultyDistanceFactor> * <difficultyLevel> +
 --    rand(<RandomDistance>) + rand(<DifficutlyRandomDistance * <difficultyLevel>)
 destroyMissionBaseDistance = 1000
 destroyMissionDifficultyDistanceFactor = 0
 destroyMissionRandomDistance = 1000
 destroyMissionDifficultyRandomDistance = 0
 
--- Mission payout calculated as: 
---    <BaseReward> + <DifficultyRewardFactor> * <difficultyLevel> + 
+-- Mission payout calculated as:
+--    <BaseReward> + <DifficultyRewardFactor> * <difficultyLevel> +
 --    rand(<RandomReward>) + rand(<DifficutlyRandomReward * <difficultyLevel>)
 destroyMissionBaseReward = 0
 destroyMissionDifficultyRewardFactor = 375

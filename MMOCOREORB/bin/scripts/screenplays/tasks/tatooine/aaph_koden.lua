@@ -2,10 +2,10 @@ aaph_koden_missions =
 {
 	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
+		primarySpawns =
+		{
 			{ npcTemplate = "talia_reede", npcName = "Talia Reede" }
-		}, 
+		},
 		secondarySpawns =
 		{
 
@@ -13,52 +13,52 @@ aaph_koden_missions =
 		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/aaph_koden_q1_needed.iff", itemName = "" }
-		}, 
-		rewards = 
-		{ 
+		},
+		rewards =
+		{
 			{ rewardType = "faction", faction = "rebel", amount = 150 },
 		}
 	},
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "stormtrooper_groupleader", npcName = "GK-72" } 
-		}, 
-		secondarySpawns = 
+		missionType = "assassinate",
+		primarySpawns =
 		{
-			{ npcTemplate = "stormtrooper", npcName = "Imperial Storm Trooper" },
-			{ npcTemplate = "stormtrooper", npcName = "Imperial Storm Trooper" }
+			{ npcTemplate = "clonetrooper_squad_leader", npcName = "" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
+		secondarySpawns =
+		{
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" }
+		},
+		itemSpawns = {},
+		rewards =
+		{
 			{ rewardType = "faction", faction = "rebel", amount = 400 },
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "talia_reede", npcName = "Talia Reede" } 
-		}, 
+		missionType = "escort",
+		primarySpawns =
+		{
+			{ npcTemplate = "talia_reede", npcName = "Talia Reede" }
+		},
 		secondarySpawns = {
-			{ npcTemplate = "stormtrooper", npcName = "Imperial Storm Trooper" },
-			{ npcTemplate = "stormtrooper", npcName = "Imperial Storm Trooper" },
-			{ npcTemplate = "stormtrooper", npcName = "Imperial Storm Trooper" },
-		}, 
-		itemSpawns = {}, 
-		rewards = 
-		{ 
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" },
+			{ npcTemplate = "clonetrooper", npcName = "" },
+		},
+		itemSpawns = {},
+		rewards =
+		{
 			{ rewardType = "faction", faction = "rebel", amount = 600 }
 		}
 	}
 
 }
 
-npcMapAaphKoden = 
-{ 
-	{ 
+npcMapAaphKoden =
+{
+	{
 		spawnData = { npcTemplate = "aaph_koden", x = 130.0, z = 52.0, y = -5399.6, direction = -67, cellID = 0, position = STAND },
 		npcNumber = 1,
 		stfFile = "@static_npc/tatooine/aaph_koden",

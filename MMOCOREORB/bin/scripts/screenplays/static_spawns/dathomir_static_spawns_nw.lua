@@ -39,16 +39,16 @@ end
 function DathomirStaticSpawnsNwScreenPlay:spawnMobiles()
 
 	--rebel camp (-50,86) already has a recruiter & commander
-
+	local pNpc
 	-- nightsister outcast camp (-2597,4954)
-	local pNpc = spawnMobile("dathomir", "nightsister_outcast", 420, -2602.2, 131.2, 4958.5, 105, 0)
-	self:setMoodString(pNpc, "threaten")
-	spawnMobile("dathomir", "nightsister_outcast", 420, -2596.6, 131.2, 4951.8, -165, 0)
-	spawnMobile("dathomir", "nightsister_outcast", 420, -2569.4, 125.9, 4986.5, -135, 0)
+	--local pNpc = spawnMobile("dathomir", "nightsister_outcast", 420, -2602.2, 131.2, 4958.5, 105, 0)
+	--self:setMoodString(pNpc, "threaten")
+	--spawnMobile("dathomir", "nightsister_outcast", 420, -2596.6, 131.2, 4951.8, -165, 0)
+	--spawnMobile("dathomir", "nightsister_outcast", 420, -2569.4, 125.9, 4986.5, -135, 0)
 
 	--imperial camp (-4630,5393)
-	spawnMobile("dathomir", "assault_trooper", 300, -4631.2, 121.1, 5392.8, -115, 0)
-	spawnMobile("dathomir", "assault_trooper", 300, -4626.9, 122.1, 5386.7, 175, 0)
+	spawnMobile("dathomir", "clonetrooper_captain", 300, -4631.2, 121.1, 5392.8, -115, 0)
+	spawnMobile("dathomir", "clonetrooper", 300, -4626.9, 122.1, 5386.7, 175, 0)
 
 	--singing mountain clan village (-7081,5888)
 	spawnMobile("dathomir", "singing_mountain_clan_arch_witch", 360, -7097.5, 379.7, 5897.5, 75, 0)
@@ -96,12 +96,12 @@ function DathomirStaticSpawnsNwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "singing_mountain_clan_sentry", 360, -854.8, 121.0, 4178.2, -90, 0)
 
 	--spell weavers trees (-850,2795)
-	spawnMobile("dathomir", "nightsister_spell_weaver", 720, -860.8, 146.4, 2792.5, -170, 0)
-	spawnMobile("dathomir", "nightsister_spell_weaver", 720, -840.5, 146.6, 2788.0, 17, 0)
+	--spawnMobile("dathomir", "nightsister_spell_weaver", 720, -860.8, 146.4, 2792.5, -170, 0)
+	--spawnMobile("dathomir", "nightsister_spell_weaver", 720, -840.5, 146.6, 2788.0, 17, 0)
 
 	--decorative rock (-999,856)
-	pNpc = spawnMobile("dathomir", "singing_mountain_clan_guardian", 7200, -999.9, 118.8, 855.8, -105, 0)
-	self:setMoodString(pNpc, "npc_sitting_ground")
+	--pNpc = spawnMobile("dathomir", "singing_mountain_clan_guardian", 7200, -999.9, 118.8, 855.8, -105, 0)
+	--self:setMoodString(pNpc, "npc_sitting_ground")
 
 	--crashed escape pod (-4442,575)
 	pNpc = spawnMobile("dathomir", "escaped_singing_mountain_clan_slave", 360, -4443.2, 15.7, 575.3, -37, 0)
@@ -115,10 +115,10 @@ function DathomirStaticSpawnsNwScreenPlay:spawnMobiles()
 	spawnMobile("dathomir", "nightsister_elder", 4200, -7120.29, 460.67, 1179.38, 35, 0)
 
 	--spiderclan floating rocks (-7121,2933)
-	spawnMobile("dathomir", "spiderclan_protector", 1220, -7121.9, 368.1, 2919.5, 0, 0)
-	spawnMobile("dathomir", "spiderclan_auspex", 600, -7111.2, 369.2, 2929.6, -75, 0)
-	spawnMobile("dathomir", "spiderclan_sentinel", 420, -7115.3, 368.2, 2939.7, -135, 0)
-	spawnMobile("dathomir", "spiderclan_sentinel", 420, -7126.9, 366.6, 2940.5, 135, 0)
-	spawnMobile("dathomir", "spiderclan_stalker", 420, -7131.1, 367.3, 2929.5, 75, 0)
+	--spawnMobile("dathomir", "spiderclan_protector", 1220, -7121.9, 368.1, 2919.5, 0, 0)
+	--spawnMobile("dathomir", "spiderclan_auspex", 600, -7111.2, 369.2, 2929.6, -75, 0)
+	--spawnMobile("dathomir", "spiderclan_sentinel", 420, -7115.3, 368.2, 2939.7, -135, 0)
+	--spawnMobile("dathomir", "spiderclan_sentinel", 420, -7126.9, 366.6, 2940.5, 135, 0)
+	--spawnMobile("dathomir", "spiderclan_stalker", 420, -7131.1, 367.3, 2929.5, 75, 0)
 
 end

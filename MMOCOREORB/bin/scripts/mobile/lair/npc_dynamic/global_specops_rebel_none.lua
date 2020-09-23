@@ -1,5 +1,5 @@
 global_specops_rebel_none = Lair:new {
-	mobiles = {{"specforce_marine",1}},
+	mobiles = {{"cis_battle_droid",1}},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},
 	buildingsEasy = {},

@@ -1,6 +1,6 @@
 stranded_imperial_pilot = Creature:new {
 	objectName = "@mob/creature_names:stranded_imperial_pilot",
-	randomNameType = NAME_GENERIC,
+	randomNameType = NAME_SWAMPTROOPER,
 	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
@@ -27,7 +27,7 @@ stranded_imperial_pilot = Creature:new {
 	optionsBitmask = AIENABLED,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stranded_imperial_pilot.iff"},
+	templates = {"object/mobile/dressed_tie_fighter_m.iff"},
 	lootGroups = {
 		{
 			groups = {

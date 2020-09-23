@@ -6,27 +6,27 @@ TatooineMosEisleyScreenPlay = CityScreenPlay:new {
 	planet = "tatooine",
 
 	gcwMobs = {
-		{"comm_operator", "rebel_resistance_leader", 3410.5,5,-4735.8,-154,0, "", ""},
-		{"elite_sand_trooper", "rebel_staff_sergeant", 3500.8,8,-4683.9,143,0, "", ""},
-		{"elite_sand_trooper", "rebel_staff_sergeant", 3496.81,5.52789,-4923.13,352.589,0, "neutral", "neutral"},
-		{"imperial_noncom", "rebel_warrant_officer_i", 3760.6,5,-4802,68,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3322.23,4.77649,-4623.57,331.647,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3304.54,5,-4602.49,86.0652,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3288.68,4.72215,-4636.09,61.7463,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3278.49,4.75246,-4676.19,22.0117,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3290.4,5,-4696.4,137,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3427.14,5,-4952.92,91.6772,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3417.99,5,-4974.46,-54,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3538.04,5.12541,-4806.46,312.721,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3516.17,5,-4879.7,80,0, "neutral", "neutral"},
-		{"sand_trooper", "rebel_crewman", 3279.95,5,-4835.74,40,0, "", ""},
-		{"sand_trooper", "rebel_crewman", 3341.8,5,-4750.9,124,0, "", ""},
-		{"scout_trooper", "rebel_trooper", 3585.84,5,-4719.95,281.969,0, "", ""},
-		{"scout_trooper", "rebel_trooper", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
-		{"scout_trooper", "rebel_trooper", 3377.5,0,-4709,156,0, "", ""},
-		{"stormtrooper", "rebel_commando", 3242.3,5,-4532.3,151,0, "npc_imperial", "neutral"},
-		{"stormtrooper_rifleman", "rebel_warrant_officer_ii", 3756.71,5,-4845.03,78.2181,0, "", ""},
-		{"imperial_colonel", "rebel_colonel", 3490.5,5,-4733.94,305,0, "npc_imperial", "conversation"},
+		{"comm_operator", "cis_battle_droid_squad_leader", 3410.5,5,-4735.8,-154,0, "", ""},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 3500.8,8,-4683.9,143,0, "", ""},
+		{"clonetrooper_squad_leader", "cis_battle_droid_squad_leader", 3496.81,5.52789,-4923.13,352.589,0, "neutral", "neutral"},
+		{"imperial_noncom", "cis_sbd", 3760.6,5,-4802,68,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3322.23,4.77649,-4623.57,331.647,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3304.54,5,-4602.49,86.0652,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3288.68,4.72215,-4636.09,61.7463,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3278.49,4.75246,-4676.19,22.0117,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3290.4,5,-4696.4,137,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3427.14,5,-4952.92,91.6772,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3417.99,5,-4974.46,-54,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3538.04,5.12541,-4806.46,312.721,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3516.17,5,-4879.7,80,0, "neutral", "neutral"},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3279.95,5,-4835.74,40,0, "", ""},
+		{"clone_sand_trooper", "cis_battle_droid_pilot", 3341.8,5,-4750.9,124,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_geo", 3585.84,5,-4719.95,281.969,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_geo", 3288.12,4.9981,-4842.11,27.4222,0, "", ""},
+		{"clone_scout_trooper", "cis_battle_droid_geo", 3377.5,0,-4709,156,0, "", ""},
+		{"clonetrooper", "cis_battle_droid_commando", 3242.3,5,-4532.3,151,0, "npc_imperial", "neutral"},
+		{"clonetrooper_sniper", "cis_sbd", 3756.71,5,-4845.03,78.2181,0, "", ""},
+		{"rep_jedi_knight", "cis_magnaguard", 3490.5,5,-4733.94,305,0, "npc_imperial", "conversation"},
 		{"mos_eisley_police_lieutenant", "mos_eisley_police_lieutenant_rebel", 3407,0,-4505,255,0, "npc_imperial", "calm"},
 		{"mos_eisley_police_sergeant", "mos_eisley_police_sergeant_rebel", 3405.2,0,-4505.5,75,0, "npc_accusing", "calm"},
 		{"mos_eisley_police_officer", "mos_eisley_police_officer_rebel", 3298.17,4.72998,-4655.93,335.574,0, "", ""},
@@ -76,6 +76,7 @@ end
 function TatooineMosEisleyScreenPlay:spawnMobiles()
 
 	--Starport
+	spawnMobile("tatooine", "rebel_recruiter", 300, 3535.69, 5, -4823.4, 272, 0)
 	local pNpc = spawnMobile(self.planet, "chassis_dealer",60,2.32807,0.639422,67.8972,165.339,1106372)
 	self:setMoodString(pNpc, "neutral")
 	pNpc = spawnMobile(self.planet, "ecik",60,1.1,0.639421,66.3,101.522,1106372)
@@ -167,9 +168,9 @@ function TatooineMosEisleyScreenPlay:spawnMobiles()
 	self:setMoodString(pNpc, "npc_sitting_chair")
 	pNpc = spawnMobile(self.planet, "r3",60,15.9215,-0.894992,-0.217826,56.8618,1082877)
 	self:setMoodString(pNpc, "happy")
-	pNpc = spawnMobile(self.planet, "stormtrooper",400,2.84,-0.894992,-6.3,16.0005,1082877)
+	pNpc = spawnMobile(self.planet, "clonetrooper",400,2.84,-0.894992,-6.3,16.0005,1082877)
 	self:setMoodString(pNpc, "npc_imperial")
-	pNpc = spawnMobile(self.planet, "stormtrooper_squad_leader",400,3.62,-0.894992,-6.78,360.011,1082877)
+	pNpc = spawnMobile(self.planet, "clonetrooper_squad_leader",400,3.62,-0.894992,-6.78,360.011,1082877)
 	self:setMoodString(pNpc, "npc_accusing")
 	pNpc = spawnMobile(self.planet, "wuher",60,-14,-0.9,0,90,1082877)
 	self:setMoodString(pNpc, "worried")
@@ -477,6 +478,41 @@ function TatooineMosEisleyScreenPlay:spawnMobiles()
 	pNpc = spawnMobile(self.planet, "commoner_tatooine",60,3268.7,5,-4851.2,194,0)
 	self:setMoodString(pNpc, "npc_sitting_chair")
 
+ -- Sandcrawler ()
+spawnMobile("tatooine", "jawa", 120, 3738.97, 20.2532, -5206.08, 166, 0)
+spawnMobile("tatooine", "jawa", 120, 3738.56, 20.368, -5202.74, 138, 0)
+spawnMobile("tatooine", "jawa", 120, 3754.31, 17.0433, -5243.62, 219, 0)
+spawnMobile("tatooine", "jawa", 120, 3786.49, 18.2188, -5222.16, 288, 0)
+spawnMobile("tatooine", "jawa_warlord", 120, 3775, 19.5441, -5209.67, 87, 0)
+spawnMobile("tatooine", "jawa_warlord", 120, 3765.54, 21.3314, -5182.29, 277, 0)
+spawnMobile("tatooine", "jawa_warlord", 120, 3796.84, 17.8569, -5222.26, 10, 0)
+spawnMobile("tatooine", "jawa_henchman", 120, 3765.66, 17.7545, -5227.66, 286, 0)
+spawnMobile("tatooine", "jawa_henchman", 120, 3758.98, 16.527, -5230.14, 347, 0)
+spawnMobile("tatooine", "jawa_henchman", 120, 3735.69, 20.2333, -5186.88, 42, 0)
+spawnMobile("tatooine", "jawa_henchman", 120, 3748.42, 20.0078, -5188.99, 230, 0)
+spawnMobile("tatooine", "jawa_henchman", 120, 3762.03, 20.1813, -5189.26, 233, 0)
+
+--Tusken Mini Bunker
+spawnMobile("tatooine", "tusken_fighter", 300, 3285.69, 6.99844, -5182.58, 24, 0)
+spawnMobile("tatooine", "tusken_sniper", 300, 3280.84, 6.83105, -5181.32, 18, 0)
+spawnMobile("tatooine", "tusken_avenger", 300, 0.112943, 0.25, 2.86313, 2, 620001796)
+spawnMobile("tatooine", "tusken_avenger", 300, -3.7364, 0.25, -0.956214, 13, 620001796)
+spawnMobile("tatooine", "tusken_fighter", 300, -0.200796, 0.25, -4.18135, 77, 620001797)
+spawnMobile("tatooine", "tusken_avenger", 300, 3.33427, -3.25, 5.38766, 277, 620001798)
+spawnMobile("tatooine", "tusken_avenger", 300, -4.52976, -6.75, 4.59226, 172, 620001798)
+spawnMobile("tatooine", "tusken_avenger", 300, 4.00577, -13.75, -5.79963, 351, 620001799)
+spawnMobile("tatooine", "tusken_warlord", 300, -2.3139, -13.75, 7.52598, 118, 620001801)
+spawnMobile("tatooine", "tusken_avenger", 300, -6.39505, -17.25, -3.68399, 344, 620001802)
+spawnMobile("tatooine", "tusken_avenger", 300, -1.37622, -20.7332, 3.03223, 29, 620001803)
+spawnMobile("tatooine", "tusken_sniper", 300, 3.52831, -20.7332, 10.9502, 208, 620001803)
+spawnMobile("tatooine", "tusken_chief", 300, 5.2735, -20.7332, 5.09175, 274, 620001803)
+spawnMobile("tatooine", "tusken_king", 300, 1.61926, -20.75, 32.9795, 184, 620001804)
+spawnMobile("tatooine", "tusken_brute", 300, -2.37384, -20.75, 26.2466, 176, 620001804)
+spawnMobile("tatooine", "tusken_brute", 300, 4.30125, -20.75, 26.9237, 189, 620001804)
+spawnMobile("tatooine", "tusken_chief", 300, 4.53268, -20.75, 16.5959, 303, 620001804)
+spawnMobile("tatooine", "tusken_brute", 300, -9.64233, -13.75, 7.85202, 96, 620001801)
+
+
 	--More Misc Outside
 	pNpc = spawnMobile(self.planet, "criminal",300,3331.07,5,-4485.81,123.98,0)
 	self:setMoodString(pNpc, "worried")
@@ -634,4 +670,6 @@ function TatooineMosEisleyScreenPlay:spawnMobiles()
 	spawnMobile(self.planet, "trainer_scout",0,3519.76,5,-4786.9,77,0)
 	pNpc = spawnMobile(self.planet, "trainer_smuggler",0,3401,5,-4879,340,0)
 	self:setMoodString(pNpc, "worried")
+	spawnMobile(self.planet, "trainer_basebuster",0, 3350.12, 5, -4799.09, 306, 0)
+
 end

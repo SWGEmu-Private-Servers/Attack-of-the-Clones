@@ -1,0 +1,7 @@
+includeFile("aftermath/roaming_jedi_npc.lua")
+includeFile("aftermath/easter_durni.lua")
+includeFile("aftermath/narglatch_alpha.lua")
+includeFile("aftermath/nuna_alpha.lua")
+includeFile("aftermath/cu_pa_alpha.lua")
+includeFile("aftermath/kliknik_event.lua")
+includeFile("aftermath/veermok_event.lua")

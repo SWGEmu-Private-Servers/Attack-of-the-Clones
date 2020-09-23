@@ -1,5 +1,5 @@
 horned_voritor_lizard = Creature:new {
-	objectName = "@mob/creature_names:horned_voritor_jungle_lizard",
+	objectName = "@mob/creature_names:horned_voritor_lizard",
 	socialGroup = "voritor",
 	faction = "",
 	level = 53,

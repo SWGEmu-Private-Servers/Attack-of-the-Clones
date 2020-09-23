@@ -45,30 +45,30 @@ object_draft_schematic_armor_armor_segment_bone = object_draft_schematic_armor_s
 
 	templateType = DRAFTSCHEMATIC,
 
-	customObjectName = "Bone Armor Segment",
+	customObjectName = "Armor Segment (Basic)",
 
 	craftingToolTab = 2, -- (See DraftSchematicObjectTemplate.h)
-	complexity = 8,
-	size = 4,
+	complexity = 20,
+	size = 6,
 	factoryCrateSize = 50,
 
-	xpType = "crafting_general",
-	xp = 34,
+	xpType = "crafting_clothing_armor",
+	xp = 35,
 
-	assemblySkill = "general_assembly",
-	experimentingSkill = "general_experimentation",
-	customizationSkill = "clothing_customization",
+	assemblySkill = "general_assembly", 
+    experimentingSkill = "general_experimentation", 
+	customizationSkill = "armor_customization",
 
 	customizationOptions = {},
 	customizationStringNames = {},
 	customizationDefaults = {},
 
-	ingredientTemplateNames = {"craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n"},
-	ingredientTitleNames = {"armor_segment_bone", "segment_mounting_tabs", "segment_enhancement"},
-	ingredientSlotType = {0, 0, 3},
-	resourceTypes = {"bone", "metal", "object/tangible/component/armor/shared_base_armor_segment_enhancement.iff"},
-	resourceQuantities = {14, 3, 1},
-	contribution = {100, 100, 100},
+	ingredientTemplateNames = {"craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n", "craft_armor_ingredients_n"},
+	ingredientTitleNames = {"segment_layer_assembly_plate", "armor_layer_weld_tabs", "segment_mounting_tabs", "defensive_layer", "defensive_layer_2", "segment_enhancement"},
+	ingredientSlotType = {0, 0, 0, 3, 3, 3},
+	resourceTypes = {"metal", "steel", "steel", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_armor_layer.iff", "object/tangible/component/armor/shared_base_armor_segment_enhancement.iff"},
+	resourceQuantities = {20, 10, 6, 1, 1, 1},
+	contribution = {100, 100, 100, 100, 100, 100},
 
 	targetTemplate = "object/tangible/component/armor/armor_segment_bone.iff",
 

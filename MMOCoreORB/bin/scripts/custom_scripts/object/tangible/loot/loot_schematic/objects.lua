@@ -1,0 +1,65 @@
+--Lightsaber Pike
+--object_tangible_loot_loot_schematic_shared_sword_lightsaber_polearm_s1_schematic = SharedTangibleObjectTemplate:new {
+--	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_sword_lightsaber_polearm_s1_schematic.iff"
+--}
+--ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_sword_lightsaber_polearm_s1_schematic, "object/tangible/loot/loot_schematic/shared_sword_lightsaber_polearm_s1_schematic.iff")
+
+--new weapons
+object_tangible_loot_loot_schematic_shared_carbine_geo_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_carbine_geo_schematic.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_carbine_geo_schematic, "object/tangible/loot/loot_schematic/shared_carbine_geo_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_lance_staff_cryo_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_lance_staff_cryo_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_lance_staff_cryo_schematic, "object/tangible/loot/loot_schematic/shared_lance_staff_cryo_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_floating_stones_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_floating_stones_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_floating_stones_schematic, "object/tangible/loot/loot_schematic/shared_wod_floating_stones_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_ns_gate_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_ns_gate_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_ns_gate_schematic, "object/tangible/loot/loot_schematic/shared_wod_ns_gate_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_ns_hut = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_ns_hut.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_ns_hut, "object/tangible/loot/loot_schematic/shared_wod_ns_hut.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_sm_hut = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_sm_hut.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_sm_hut, "object/tangible/loot/loot_schematic/shared_wod_sm_hut.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_tower_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_tower_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_tower_schematic, "object/tangible/loot/loot_schematic/shared_wod_tower_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_trilithon_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_trilithon_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_trilithon_schematic, "object/tangible/loot/loot_schematic/shared_wod_trilithon_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_ns_wall_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_ns_wall_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_ns_wall_schematic, "object/tangible/loot/loot_schematic/shared_wod_ns_wall_schematic.iff")
+
+object_tangible_loot_loot_schematic_shared_wod_sm_wall_schematic = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/loot/loot_schematic/shared_wod_sm_wall_schematic.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_loot_loot_schematic_shared_wod_sm_wall_schematic, "object/tangible/loot/loot_schematic/shared_wod_sm_wall_schematic.iff")

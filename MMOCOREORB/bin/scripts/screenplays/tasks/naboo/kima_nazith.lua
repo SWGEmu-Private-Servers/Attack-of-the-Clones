@@ -14,7 +14,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -33,7 +33,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -52,7 +52,7 @@ kima_nazith_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 7500 },
 			}
 		},
 	}
@@ -76,7 +76,7 @@ KimaNazith = ThemeParkLogic:new {
 	faction = FACTIONREBEL,
 }
 
-registerScreenPlay("KimaNazith", true)
+registerScreenPlay("KimaNazith", false)
 
 kima_nazith_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = KimaNazith
@@ -84,5 +84,3 @@ kima_nazith_mission_giver_conv_handler = mission_giver_conv_handler:new {
 kima_nazith_mission_target_conv_handler = mission_target_conv_handler:new {
 	themePark = KimaNazith
 }
-
-

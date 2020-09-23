@@ -1,6 +1,6 @@
 bestine_rumor07 = Creature:new {
-	objectName = "@mob/creature_names:stormtrooper",
-	customName = "TK-471",
+	objectName = "@mob/creature_names:clonetrooper_commando",
+	customName = "RC-4715",
 	socialGroup = "townsperson",
 	faction = "townsperson",
 	level = 100,
@@ -26,7 +26,7 @@ bestine_rumor07 = Creature:new {
 	optionsBitmask = INVULNERABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_bestine_rumor07.iff"},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",

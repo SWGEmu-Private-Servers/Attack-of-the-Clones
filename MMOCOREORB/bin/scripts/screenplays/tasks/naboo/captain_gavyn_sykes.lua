@@ -10,7 +10,7 @@ gavyn_sykes_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 }
+				{ rewardType = "credits", amount = 5000 }
 			}
 		},
 		{
@@ -23,7 +23,7 @@ gavyn_sykes_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 		{
@@ -40,7 +40,7 @@ gavyn_sykes_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 		{
@@ -57,7 +57,7 @@ gavyn_sykes_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 }
+				{ rewardType = "credits", amount = 20000 }
 			}
 		}
 	}

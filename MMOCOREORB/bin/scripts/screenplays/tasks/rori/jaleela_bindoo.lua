@@ -13,7 +13,7 @@ jaleela_bindoo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 		{
@@ -26,14 +26,14 @@ jaleela_bindoo_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
 			missionType = "deliver",
 			primarySpawns =
 			{
-				{ npcTemplate = "jaleela_imperial_courier", npcName = "Imperial Courier" }
+				{ npcTemplate = "jaleela_imperial_courier", npcName = "Republic Courier" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -42,7 +42,7 @@ jaleela_bindoo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -59,7 +59,7 @@ jaleela_bindoo_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 20000 },
 			}
 		},
 	}

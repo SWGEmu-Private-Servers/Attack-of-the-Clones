@@ -1,0 +1,10 @@
+
+includeFile("faction/cis_crackdown/crackdown_rebel_command_security_guard.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_commando.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_elite_sand_rat.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_guard_captain.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_guardsman.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_soldier.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_liberator.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_cadet.lua")
+includeFile("faction/cis_crackdown/crackdown_rebel_comm_operator.lua")

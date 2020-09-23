@@ -38,7 +38,7 @@ lt_harburik_missions =
 			missionType = "escort",
 			primarySpawns =
 			{
-				{ npcTemplate = "td334", npcName = "TD-334" }
+				{ npcTemplate = "td334", npcName = "CT-334" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},

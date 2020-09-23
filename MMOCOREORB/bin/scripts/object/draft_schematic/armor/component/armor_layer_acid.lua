@@ -68,7 +68,7 @@ object_draft_schematic_armor_component_armor_layer_acid = object_draft_schematic
 	ingredientSlotType = {0, 0, 0},
 	resourceTypes = {"metal_nonferrous", "gemstone_crystalline", "gas_reactive_skevon"},
 	resourceQuantities = {20, 10, 14},
-	contribution = {100, 100, 100},
+	contribution = {80, 80, 80},
 
 	targetTemplate = "object/tangible/component/armor/armor_layer_acid.iff",
 

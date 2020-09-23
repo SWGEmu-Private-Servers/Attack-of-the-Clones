@@ -1,5 +1,5 @@
 global_stormtrooper_rifleman_imperial_none = Lair:new {
-	mobiles = {{"stormtrooper_rifleman",1}},
+	mobiles = {{"clonetrooper_sniper",1}},
 	spawnLimit = 6,
 	buildingsVeryEasy = {},
 	buildingsEasy = {},

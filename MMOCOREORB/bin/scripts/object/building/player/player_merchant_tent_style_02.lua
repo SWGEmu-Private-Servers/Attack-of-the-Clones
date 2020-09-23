@@ -62,6 +62,7 @@ object_building_player_player_merchant_tent_style_02 = object_building_player_sh
 		{templateFile = "object/tangible/sign/player/shop_sign_s02.iff", x = 3, z = -0.5, y = 3, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_02", suiItem = "@player_structure:shop_sign2"},
 		{templateFile = "object/tangible/sign/player/shop_sign_s03.iff", x = 3, z = -0.5, y = 3, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_03", suiItem = "@player_structure:shop_sign3"},
 		{templateFile = "object/tangible/sign/player/shop_sign_s04.iff", x = 3, z = -0.5, y = 3, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "crafting_merchant_management_04", suiItem = "@player_structure:shop_sign4"},
+		{templateFile = "object/tangible/sign/player/wod_sm_standing_sign_01.iff", x = 3, z = -0.5, y = 3, ox = 0, oy = 0, oz = 0, ow =  1, cellid = -1, containmentType = -1, requiredSkill = "loot_sign_02", suiItem = "@player_structure:wod_sm_standing_sign_01"},
 	},
 }
 

@@ -1,5 +1,5 @@
 global_rebel_network_leader_camp_rebel_medium_theater = Lair:new {
-	mobiles = {{"rebel_network_leader",1}},
+	mobiles = {{"cis_battle_droid_specforce",1}},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_camp_large_1.iff"},
 	buildingsEasy = {"object/building/poi/anywhere_rebel_camp_large_1.iff"},

@@ -16,7 +16,29 @@ c3po_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 }
+				{ rewardType = "credits", amount = 500 }
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_1"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_boots" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_2"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_leggings" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_belt" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_4"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_gloves" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_r" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_6"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_l" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_r" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_8"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_9"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_chest" },
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_cis_banner"},
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_cis_ring"},
+--				{ rewardType = "loot", lootGroup = "theme_park_reward_republic_banner"},
+--				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_helmet" }
 			}
 		},
 		{
@@ -24,16 +46,16 @@ c3po_missions =
 			planetName = "corellia",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_captain", npcName = "Captain Montrasword" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Captain" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/medicine/crafted/medpack_wound_health_a.iff", itemName = "Medicine" }
+				{ itemTemplate = "object/tangible/loot/misc/worklight.iff", itemName = "Supplies" }
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 1000 }
 			}
 		},
 		{
@@ -47,7 +69,7 @@ c3po_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 1500 }
 			}
 		},
 		{
@@ -64,9 +86,10 @@ c3po_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 2000 },
 				{ rewardType = "faction", faction = "rebel", amount = 50 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_c_3po" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_1"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_boots" }
 			}
 		}
 	}
@@ -87,7 +110,7 @@ qualdo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 }
+				{ rewardType = "credits", amount = 2000 }
 			}
 		},
 		{
@@ -99,7 +122,7 @@ qualdo_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -107,7 +130,7 @@ qualdo_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 }
+				{ rewardType = "credits", amount = 2500 }
 			}
 		},
 		{
@@ -119,13 +142,13 @@ qualdo_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 300 }
+				{ rewardType = "credits", amount = 3000 }
 			}
 		},
 		{
@@ -140,7 +163,8 @@ qualdo_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 75 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_qualdo_herm" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_2"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_leggings"}
 			}
 		}
 	}
@@ -161,7 +185,7 @@ wedge_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 350 }
+				{ rewardType = "credits", amount = 3500 }
 			}
 		},
 		{
@@ -175,7 +199,7 @@ wedge_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 400 }
+				{ rewardType = "credits", amount = 4000 }
 			}
 		},
 		{
@@ -187,13 +211,13 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "imperial_first_lieutenant", npcName = "Imperial First Lieutenant" },
-				{ npcTemplate = "imperial_staff_corporal", npcName = "Imperial Staff Corporal" }
+				{ npcTemplate = "imperial_first_lieutenant", npcName = "Republic First Lieutenant" },
+				{ npcTemplate = "imperial_staff_corporal", npcName = "Republic Staff Corporal" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 450 }
+				{ rewardType = "credits", amount = 4500 }
 			}
 		},
 		{
@@ -205,10 +229,10 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -216,7 +240,7 @@ wedge_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 }
+				{ rewardType = "credits", amount = 5000 }
 			}
 		},
 		{
@@ -228,8 +252,8 @@ wedge_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -238,7 +262,9 @@ wedge_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 100 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_wedge_antilles" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_3"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_ring" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_belt" }
 			}
 		}
 	}
@@ -254,12 +280,12 @@ leia_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 550 }
+				{ rewardType = "credits", amount = 5500 }
 			}
 		},
 		{
@@ -273,7 +299,7 @@ leia_missions =
 			itemSpawns = { },
 			rewards =
 			{
-				{ rewardType = "credits", amount = 600 }
+				{ rewardType = "credits", amount = 6000 }
 			}
 		},
 		{
@@ -285,13 +311,13 @@ leia_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 650 }
+				{ rewardType = "credits", amount = 6500 }
 			}
 		},
 		{
@@ -304,11 +330,11 @@ leia_missions =
 			secondarySpawns = {},
 			itemSpawns =
 			{
-				{ itemTemplate = "object/tangible/mission/mission_datadisk.iff", itemName = "Imperial Codes" }
+				{ itemTemplate = "object/tangible/mission/mission_datadisk.iff", itemName = "Republic Codes" }
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 700 }
+				{ rewardType = "credits", amount = 7000 }
 			}
 		},
 		{
@@ -316,18 +342,19 @@ leia_missions =
 			planetName = "corellia",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_commander", npcName = "Imperial Undercover Commander" }
+				{ npcTemplate = "theme_park_imperial_commander", npcName = "Republic Undercover Commander" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 125 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_leia_organa" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_4"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_l" }
 			}
 		}
 	}
@@ -345,7 +372,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 750 }
+				{ rewardType = "credits", amount = 7500 }
 			}
 		},
 		{
@@ -359,7 +386,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 800 }
+				{ rewardType = "credits", amount = 8000 }
 			}
 		},
 		{
@@ -373,7 +400,7 @@ nien_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 850 }
+				{ rewardType = "credits", amount = 8500 }
 			}
 		},
 		{
@@ -391,7 +418,8 @@ nien_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 150 },
-				{ rewardType = "loot", lootGroup = "theme_park_reward_rebel_nien_nunb" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_5"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bracer_r" }
 			}
 		}
 	}
@@ -409,7 +437,7 @@ han_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 900 }
+				{ rewardType = "credits", amount = 9000 }
 			}
 		},
 		{
@@ -428,7 +456,7 @@ han_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 950 }
+				{ rewardType = "credits", amount = 9500 }
 			}
 		},
 		{
@@ -447,7 +475,7 @@ han_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1000 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -459,13 +487,13 @@ han_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1050 }
+				{ rewardType = "credits", amount = 10500 }
 			}
 		},
 		{
@@ -483,7 +511,8 @@ han_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 175 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_han_solo" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_6"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_l" }
 			}
 		}
 	}
@@ -495,15 +524,15 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1100 }
+				{ rewardType = "credits", amount = 11000 }
 			}
 		},
 		{
@@ -520,7 +549,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1150 }
+				{ rewardType = "credits", amount = 11500 }
 			}
 		},
 		{
@@ -537,7 +566,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1200 }
+				{ rewardType = "credits", amount = 12000 }
 			}
 		},
 		{
@@ -545,12 +574,12 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_jeremes_kelton", npcName = "Jeremes Kelton" }
+				{ npcTemplate = "theme_park_rebel_jeremes_kelton", npcName = "Dabudo Nano" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" },
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" },
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			itemSpawns =
 			{
@@ -558,7 +587,7 @@ ackbar_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1250 }
+				{ rewardType = "credits", amount = 12500 }
 			}
 		},
 		{
@@ -566,18 +595,19 @@ ackbar_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "Stormtrooper" }
+				{ npcTemplate = "clonetrooper", npcName = "Clonetrooper" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-437" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-871" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-437" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-871" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 200 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_captain_ackbar" }
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_7"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_bicep_r" }
 			}
 		}
 	}
@@ -598,7 +628,7 @@ mon_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1300 }
+				{ rewardType = "credits", amount = 13000 }
 			}
 		},
 		{
@@ -606,36 +636,36 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "Strike Team Leader" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "Strike Team Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-221" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-982" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-2210" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-9582" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1350 }
+				{ rewardType = "credits", amount = 13500 }
 			}
 		},
 		{
 			missionType = "escort",
 			planetName = "dantooine",
-			missionDescription = "MON MOTHMA needs you to ESCORT the CAPTAIN of the Corvette back to the REBEL BASE",
+			missionDescription = "GENERAL GREVIOUS needs you to ESCORT the CAPTAIN of the CIS SHIP back to the SEPARATIST BASE",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_altapi_tmman", npcName = "Altapi T'mman" }
+				{ npcTemplate = "theme_park_rebel_altapi_tmman", npcName = "Alostt Sharn" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-179" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-322" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-179" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-322" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1400 }
+				{ rewardType = "credits", amount = 14000 }
 			}
 		},
 		{
@@ -643,17 +673,17 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-1132" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-1132" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-658" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-459" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-658" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-459" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1450 }
+				{ rewardType = "credits", amount = 14500 }
 			}
 		},
 		{
@@ -665,13 +695,13 @@ mon_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-134" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-873" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-134" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-873" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1500 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 		{
@@ -679,18 +709,18 @@ mon_missions =
 			planetName = "dantooine",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_general", npcName = "Imperial General" }
+				{ npcTemplate = "imperial_general", npcName = "Republic General" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-297" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-447" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-297" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-447" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 225 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_mon_mothma" }
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_gloves" }
 			}
 		},
 	}
@@ -702,17 +732,17 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-419" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-419" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-447" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-428" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-447" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-428" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1550 }
+				{ rewardType = "credits", amount = 15500 }
 			}
 		},
 		{
@@ -720,13 +750,13 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Rebel Contact" }
+				{ npcTemplate = "theme_park_imperial_engineer", npcName = "Republic Engineer" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1600 }
+				{ rewardType = "credits", amount = 16000 }
 			}
 		},
 		{
@@ -734,17 +764,17 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "stormtrooper_squad_leader", npcName = "TK-770" }
+				{ npcTemplate = "clonetrooper_squad_leader", npcName = "CT-770" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "stormtrooper", npcName = "TK-400" },
-				{ npcTemplate = "stormtrooper", npcName = "TK-105" }
+				{ npcTemplate = "clonetrooper", npcName = "CT-400" },
+				{ npcTemplate = "clonetrooper", npcName = "CT-105" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1650 }
+				{ rewardType = "credits", amount = 16500 }
 			}
 		},
 		{
@@ -752,7 +782,7 @@ jan_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Nateba Kurr" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -761,16 +791,16 @@ jan_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1700 }
+				{ rewardType = "credits", amount = 17000 }
 			}
 		},
 		{
 			missionType = "deliver",
 			planetName = "yavin4",
-			missionDescription = "GENERAL DODONNA needs you to DELIVER the INFORMATION to REBEL PILOT",
+			missionDescription = "SAVAGE OPRESS needs you to DELIVER the INFORMATION to BATTLE DROID PILOT",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_bothan_spy", npcName = "Pilot" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -780,7 +810,8 @@ jan_missions =
 			rewards =
 			{
 				{ rewardType = "faction", faction = "rebel", amount = 250 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_jan_dodonna" },
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_8"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_helmet" },
 				{ rewardType = "permission", permissionGroup = "temple_of_exar_kun2" }
 			}
 		},
@@ -799,7 +830,7 @@ luke_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1750 }
+				{ rewardType = "credits", amount = 17500 }
 			}
 		},
 		{
@@ -816,7 +847,7 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1800 }
+				{ rewardType = "credits", amount = 18000 }
 			}
 		},
 		{
@@ -830,7 +861,7 @@ luke_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1850 }
+				{ rewardType = "credits", amount = 18500 }
 			}
 		},
 		{
@@ -847,7 +878,7 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1900 }
+				{ rewardType = "credits", amount = 19000 }
 			}
 		},
 		{
@@ -855,7 +886,7 @@ luke_missions =
 			planetName = "yavin4",
 			primarySpawns =
 			{
-				{ npcTemplate = "theme_park_rebel_supervisor", npcName = "Tribesman" }
+				{ npcTemplate = "theme_cis_battle_droid", npcName = "Ace Battle Droid Pilot" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -864,9 +895,11 @@ luke_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "faction", faction = "rebel", amount = 300 },
-				{ rewardType = "credits", amount = 1950 },
-				{ rewardType = "loot",  lootGroup = "theme_park_reward_rebel_luke_skywalker" },
+				{ rewardType = "faction", faction = "rebel", amount = 4250 },
+				{ rewardType = "credits", amount = 19500 },
+				{ rewardType = "loot", lootGroup = "theme_park_reward_joint_9"},
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_chest" },
+				{ rewardType = "loot",  lootGroup = "theme_park_reward_cis_banner" },
 				{ rewardType = "badge", badge = THEME_PARK_REBEL_BADGE }
 			}
 		},
@@ -875,14 +908,14 @@ luke_missions =
 npcMapRebel =
 	{
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "c_3po", x = -2.3, z = 2.0, y = 4.0, direction = 150, cellID = 8555472, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_b1", x = -2.3, z = 2.0, y = 4.0, direction = 150, cellID = 8555472, position = STAND },
 			worldPosition = { x = -6507.5, y = 5985.7 },
 			npcNumber = 1,
 			stfFile = "@theme_park_rebel/c3po",
 			missions = c3po_missions
 		},
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "r2d2", x = -3.98, z = 1.01, y = -0.67, direction = 58, cellID = 8555472, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "cis_battle_droid", x = -3.98, z = 1.01, y = -0.67, direction = 58, cellID = 8555472, position = STAND },
 			npcNumber = -1,
 			stfFile = "",
 			missions = {}
@@ -894,69 +927,63 @@ npcMapRebel =
 			missions = {}
 		},
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "qualdo_herm", x = 14.91, z = 1.01, y = -6.68, direction = 0, cellID = 8555475, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_po", x = 14.91, z = 1.01, y = -6.68, direction = 0, cellID = 8555475, position = STAND },
 			worldPosition = { x = -6512.3, y = 6005.2 },
 			npcNumber = 2,
 			stfFile = "@theme_park_rebel/qualdo_herm",
 			missions = qualdo_missions
 		},
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "wedge_antilles", x = 0.01, z = 1.01, y = -22.01, direction = 0, cellID = 8555477, position = SIT },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_mars_onyo", x = 0.01, z = 1.01, y = -22.01, direction = 0, cellID = 8555477, position = SIT },
 			worldPosition = { x = -6491.1, y = 6005.6 },
 			npcNumber = 4,
 			stfFile = "@theme_park_rebel/wedge_antilles",
 			missions = wedge_missions
 		},
 		{
-			spawnData = { planetName = "corellia", npcTemplate = "leia_organa", x = -11.13, z = 7.00971, y = 11.31, direction = 175, cellID = 8555481, position = STAND },
+			spawnData = { planetName = "corellia", npcTemplate = "theme_sevrance_tann", x = -11.13, z = 7.00971, y = 11.31, direction = 175, cellID = 8555481, position = STAND },
 			worldPosition = { x = -6506.3, y = 5974.2 },
 			npcNumber = 8,
 			stfFile = "@theme_park_rebel/princess_leia",
 			missions = leia_missions
 		},
 		{
-			spawnData = { planetName = "lok", npcTemplate = "nien_nunb", x = -12.12, z = -0.894992, y = 23.08, direction = 80.0024, cellID = 8145384, position = SIT },
+			spawnData = { planetName = "lok", npcTemplate = "theme_cad_bane", x = -12.12, z = -0.894992, y = 23.08, direction = 80.0024, cellID = 8145384, position = SIT },
 			worldPosition = { x = 476.2, y = 5075.7 },
 			npcNumber = 16,
 			stfFile = "@theme_park_rebel/nien_nunb",
 			missions = nien_missions
 		},
 		{
-			spawnData = { planetName = "lok", npcTemplate = "chewbacca", x = -28.48, z = -0.519991, y = 5.87, direction = 12.0003, cellID = 8145388, position = STAND },
-			npcNumber = -1,
-			stfFile = "",
-			missions = {}
-		},
-		{
-			spawnData = { planetName = "lok", npcTemplate = "han_solo", x = -30.2, z = -0.519991, y = 7.24, direction = 45.0013, cellID = 8145388, position = STAND },
+			spawnData = { planetName = "lok", npcTemplate = "theme_asajj_ventress", x = -30.2, z = -0.519991, y = 7.24, direction = 45.0013, cellID = 8145388, position = STAND },
 			worldPosition = { x = 471.5, y = 5052.1 },
 			npcNumber = 32,
 			stfFile = "@theme_park_rebel/han_solo",
 			missions = han_missions
 		},
 		{
-			spawnData = { planetName = "dantooine", npcTemplate = "ackbar", x = -14.4, z = 1.0, y = -21.7, direction = 0, cellID = 6555566, position = STAND },
+			spawnData = { planetName = "dantooine", npcTemplate = "theme_magnaguard", x = -14.4, z = 1.0, y = -21.7, direction = 0, cellID = 6555566, position = STAND },
 			worldPosition = { x = -6812.5, y = 5560.7 },
 			npcNumber = 64,
 			stfFile = "@theme_park_rebel/captain_ackbar",
 			missions = ackbar_missions
 		},
 		{
-			spawnData = { planetName = "dantooine", npcTemplate = "mon_mothma", x = -3.4, z = 7.0, y = -12.2, direction = -34, cellID = 6555568, position = STAND },
+			spawnData = { planetName = "dantooine", npcTemplate = "theme_general_grievous", x = -3.4, z = 7.0, y = -12.2, direction = -34, cellID = 6555568, position = STAND },
 			worldPosition = { x = -6823.6, y = 5551.2 },
 			npcNumber = 128,
 			stfFile = "@theme_park_rebel/mon_mothma",
 			missions = mon_missions
 		},
 		{
-			spawnData = { planetName = "yavin4", npcTemplate = "jan_dodonna", x = 0, z = 0, y = -41.9, direction = 0, cellID = 3465388, position = STAND },
+			spawnData = { planetName = "yavin4", npcTemplate = "theme_savage_opress", x = 0, z = 0, y = -41.9, direction = 0, cellID = 3465388, position = STAND },
 			worldPosition = { x = 5014.8, y = 5537.8 },
 			npcNumber = 256,
 			stfFile = "@theme_park_rebel/jan_dodonna",
 			missions = jan_missions
 		},
 		{
-			spawnData = { planetName = "yavin4", npcTemplate = "luke_skywalker", x = 1.2, z = -6.0, y = -26.8, direction = 180, cellID = 3465390, position = STAND },
+			spawnData = { planetName = "yavin4", npcTemplate = "theme_count_dooku", x = 1.2, z = -6.0, y = -26.8, direction = 180, cellID = 3465390, position = STAND },
 			worldPosition = { x = 5029.9, y = 5536.6 },
 			npcNumber = 512,
 			stfFile = "@theme_park_rebel/luke_skywalker",

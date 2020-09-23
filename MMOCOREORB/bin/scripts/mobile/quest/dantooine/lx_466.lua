@@ -1,6 +1,6 @@
 lx_466 = Creature:new {
 	objectName = "",
-	customName = "LX-466",
+	customName = "CT-7466",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -26,7 +26,7 @@ lx_466 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_lx_466.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "lx_466_mission_giver_convotemplate",

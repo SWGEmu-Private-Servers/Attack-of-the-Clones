@@ -10,7 +10,7 @@ gramm_rile_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 2000 },
 			}
 		},
 		{
@@ -23,7 +23,7 @@ gramm_rile_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -36,7 +36,7 @@ gramm_rile_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 750 },
+				{ rewardType = "credits", amount = 7500 },
 			}
 		},
 		{
@@ -63,7 +63,7 @@ gramm_rile_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 1200 },
+				{ rewardType = "credits", amount = 12000 },
 			}
 		}
 	}

@@ -8,13 +8,13 @@ huff_darklighter_missions =
 			preReq = { type = "state", screenPlayState = "krayt_skull_epic_quest", state = 2 },
 			primarySpawns =
 			{
-				{ npcTemplate = "huff_niece", npcName = "Huff's Niece" }
+				{ npcTemplate = "huff_niece", npcName = "Huff's Sister" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -66,7 +66,7 @@ borvo_the_hutt_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 1000 },
 			}
 		},
 		{
@@ -102,7 +102,7 @@ thale_dusturnner_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 250 },
 			}
 		},
 		{
@@ -137,7 +137,7 @@ borvo_guard_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 250 },
 			}
 		},
 		{

@@ -12,7 +12,7 @@ rep_been_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 }
+				{ rewardType = "credits", amount = 500 }
 			}
 		},
 	-- Quests 2 - 4 disabled due to missing strings in string file
@@ -32,7 +32,7 @@ rep_been_missions =
 	itemSpawns = {},
 	rewards =
 	{
-	{ rewardType = "credits", amount = 50 }
+	{ rewardType = "credits", amount = 500 }
 	}
 	},
 	{
@@ -49,7 +49,7 @@ rep_been_missions =
 	itemSpawns = {},
 	rewards =
 	{
-	{ rewardType = "credits", amount = 75 }
+	{ rewardType = "credits", amount = 7500 }
 	}
 	},
 	{
@@ -67,7 +67,7 @@ rep_been_missions =
 	itemSpawns = {},
 	rewards =
 	{
-	{ rewardType = "credits", amount = 100 }
+	{ rewardType = "credits", amount = 10000 }
 	}
 	}
 	--]]

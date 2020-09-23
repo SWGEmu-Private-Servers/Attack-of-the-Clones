@@ -10,7 +10,7 @@ lorne_prestar_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 }
+				{ rewardType = "credits", amount = 300 }
 			}
 		},
 		{
@@ -23,7 +23,7 @@ lorne_prestar_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 }
+				{ rewardType = "credits", amount = 300 }
 			}
 		},
 		{
@@ -36,7 +36,7 @@ lorne_prestar_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 40 }
+				{ rewardType = "credits", amount = 4000 }
 			}
 		},
 		{
@@ -54,7 +54,7 @@ lorne_prestar_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 40 }
+				{ rewardType = "credits", amount = 40000 }
 			}
 		},
 	}

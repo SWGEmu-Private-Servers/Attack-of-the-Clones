@@ -1,5 +1,5 @@
 donkuwah_chieftain = Creature:new {
-	objectName = "@mob/creature_names:donkuwah_chieftan",
+	objectName = "@mob/creature_names:donkuwah_chieftain",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "donkuwah_tribe",

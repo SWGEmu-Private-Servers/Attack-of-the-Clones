@@ -1,5 +1,6 @@
 td334 = Creature:new {
 	objectName = "",
+	customName = "CT-334",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 25,
@@ -25,7 +26,7 @@ td334 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_stormtrooper_m.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
 	weapons = {"stormtrooper_weapons"},
 	conversationTemplate = "lt_harburik_mission_target_convotemplate",

@@ -14,7 +14,7 @@ xalox_guul_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 750 },
 				{ rewardType = "faction", faction = "imperial", amount = 15 },
 			}
 		},
@@ -35,7 +35,7 @@ xalox_guul_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 750 },
 				{ rewardType = "faction", faction = "imperial", amount = 15 },
 			}
 		},
@@ -55,7 +55,7 @@ xalox_guul_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 75 },
+				{ rewardType = "credits", amount = 750 },
 				{ rewardType = "faction", faction = "imperial", amount = 15 },
 			}
 		},

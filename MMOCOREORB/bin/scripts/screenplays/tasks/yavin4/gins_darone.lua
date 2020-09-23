@@ -4,7 +4,7 @@ gins_darone_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "gins_stranded_rebel_officer", npcName = "Stranded Rebel Officer" }
+				{ npcTemplate = "gins_stranded_rebel_officer", npcName = "Stranded Separatist Officer" }
 			},
 			secondarySpawns = {},
 			itemSpawns =
@@ -21,14 +21,14 @@ gins_darone_missions =
 			missionType = "confiscate",
 			primarySpawns =
 			{
-				{ npcTemplate = "gins_rebel_specforce_sergeant", npcName = "" }
+				{ npcTemplate = "gins_rebel_specforce_sergeant", npcName = "a Separatist Specforce Sergeant" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "senior_specforce_pathfinder", npcName = "" },
-				{ npcTemplate = "senior_specforce_pathfinder", npcName = "" },
-				{ npcTemplate = "senior_specforce_urban_guerrilla", npcName = "" },
-				{ npcTemplate = "senior_specforce_urban_guerrilla", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_specforce", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -44,7 +44,7 @@ gins_darone_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "gins_scientist", npcName = "Rebel Scientist" }
+				{ npcTemplate = "gins_scientist", npcName = "Separatist Scientist" }
 			},
 			secondarySpawns = {},
 			itemSpawns = {},

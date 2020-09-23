@@ -10,7 +10,7 @@ huff_zinga_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 		{
@@ -23,7 +23,7 @@ huff_zinga_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		},
 		{
@@ -36,7 +36,7 @@ huff_zinga_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 20000 },
 			}
 		},
 		{
@@ -49,7 +49,7 @@ huff_zinga_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
+				{ rewardType = "credits", amount = 20000 },
 			}
 		},
 

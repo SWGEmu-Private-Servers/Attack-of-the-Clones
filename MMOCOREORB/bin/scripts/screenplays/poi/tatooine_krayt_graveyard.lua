@@ -42,4 +42,18 @@ function KraytGraveyardScreenPlay:spawnMobiles()
 	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 7003.0, 86.3, 4200.4, 10, 0)
 	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 6726.8, 19.5, 4288.6, -91, 0)
 
+	--Just south of GY
+	spawnMobile("tatooine", "krayt_dragon_grand", 1800, 6697.54, 10.5581, 3198.8, 309, 0)
+	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 6644.58, 8.01662, 3171.85, 309, 0)
+	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 6760.06, 13.1678, 3279.81, 342, 0)
+
+	-- Additional Krayts inside GY
+	spawnMobile("tatooine", "krayt_dragon_ancient", 1800, 7052.62, 105.013, 4684.13, 137, 0)
+	spawnMobile("tatooine", "giant_canyon_krayt_dragon", 1800, 6983.78, 123.874, 4521.56, 40, 0)
+	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 7124.15, 129.685, 4556.56, 203, 0)
+	spawnMobile("tatooine", "krayt_dragon_ancient", 1800, 7550.29, 21.4743, 4962.99, 188, 0)
+	spawnMobile("tatooine", "krayt_dragon_adolescent", 1800, 7620.43, 31.7115, 4757.5, 235, 0)
+	spawnMobile("tatooine", "giant_canyon_krayt_dragon", 1800, 7484.5, 6.80448, 4778.94, 170, 0)
+	spawnMobile("tatooine", "krayt_dragon_grand", 1800, 7551.23, 20.6367, 5125.65, 190, 0)
+
 end

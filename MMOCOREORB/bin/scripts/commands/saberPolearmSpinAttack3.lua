@@ -54,18 +54,6 @@ SaberPolearmSpinAttack3Command = {
 	areaRange = 16,
 	visMod = 25,
 
-	stateEffects = {
-	  StateEffect( 
-		POSTUREDOWN_EFFECT, 
-		{ "postureDownRecovery" }, 
-		{ "posture_change_down_defense" }, 
-		{},
-		100, 
-		0, 
-		0 
-	  )
-	},
-
 	animation = "showoff_1", 
 	animType = GENERATE_INTENSITY,
 
@@ -79,4 +67,3 @@ SaberPolearmSpinAttack3Command = {
 }
 
 AddCommand(SaberPolearmSpinAttack3Command)
-

@@ -15,7 +15,7 @@ stella_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 }
+				{ rewardType = "credits", amount = 300 }
 			}
 		},
 		{
@@ -31,7 +31,7 @@ stella_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 }
+				{ rewardType = "credits", amount = 3000 }
 			}
 		},
 		{
@@ -47,7 +47,7 @@ stella_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 30 }
+				{ rewardType = "credits", amount = 3000 }
 			}
 		}
 	}

@@ -142,7 +142,7 @@ GiladPellaeon = ThemeParkLogic:new {
 	distance = 800
 }
 
-registerScreenPlay("GiladPellaeon", true)
+registerScreenPlay("GiladPellaeon", false)
 
 gilad_pellaeon_mission_giver_conv_handler = mission_giver_conv_handler:new {
 	themePark = GiladPellaeon

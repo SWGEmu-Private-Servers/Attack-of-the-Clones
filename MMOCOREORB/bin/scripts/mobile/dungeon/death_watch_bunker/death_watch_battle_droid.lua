@@ -33,12 +33,15 @@ death_watch_battle_droid = Creature:new {
 	lootGroups = {
 		{
 			groups = {
-				{group = "death_watch_bunker_commoners", chance = 10000000}
+				{group = "death_watch_bunker_commoners", chance = 9000000},
+				{group = "clothing_attachments", chance = 500000},
+				{group = "armor_attachments", chance = 500000}
 			},
-			lootChance = 500000
+			lootChance = 2500000
 		}
 	},
 	weapons = {"battle_droid_weapons"},
+	defaultAttack = "defaultdroidrangedattack",
 	conversationTemplate = "",
 	attacks = merge(pistoleermaster,carbineermaster,marksmanmaster)
 }

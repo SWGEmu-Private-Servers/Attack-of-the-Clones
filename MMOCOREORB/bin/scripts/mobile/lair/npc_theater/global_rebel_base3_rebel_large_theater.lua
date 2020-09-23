@@ -1,9 +1,9 @@
 global_rebel_base3_rebel_large_theater = Lair:new {
 	mobiles = {
-		{"rebel_sergeant",2},
-		{"rebel_sergeant_major",1},
-		{"rebel_corporal",2},
-		{"rebel_trooper",3}
+		{"cis_battle_droid_captain",2},
+		{"cis_battle_droid_squad_leader",1},
+		{"cis_battle_droid_squad_leader",2},
+		{"cis_battle_droid",6}
 	},
 	spawnLimit = 15,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_base_large_1.iff"},

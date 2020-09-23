@@ -2,13 +2,15 @@ local ObjectManager = require("managers.object.object_manager")
 local Logger = require("utils.logger")
 
 Glowing = ScreenPlay:new {
-	requiredBadges = {
-		{ type = "exploration_jedi", amount = 3 },
-		{ type = "exploration_dangerous", amount = 2 },
-		{ type = "exploration_easy", amount = 5 },
-		{ type = "master", amount = 1 },
-		{ type = "content", amount = 5 },
-	}
+    requiredBadges = {
+        { type = "exploration_jedi", amount = 3 },
+        { type = "exploration_dangerous", amount = 2 },
+        { type = "exploration_easy", amount = 5 },
+        { type = "master", amount = 1 },
+        { type = "content", amount = 5 },
+        { type = "aotc", amount = 7 },
+        --{ type = "accumulation", amount = 0 },
+    }
 }
 
 function Glowing:getCompletedBadgeTypeCount(pPlayer)
@@ -80,6 +82,7 @@ end
 -- Handling of the onPlayerLoggedIn event. The progression of the player will be checked and observers will be registered.
 -- @param pPlayer pointer to the creature object of the player who logged in.
 function Glowing:onPlayerLoggedIn(pPlayer)
+	CreatureData:onPlayerLoggedIn(pPlayer)
 	if not self:isGlowing(pPlayer) then
 		if self:hasRequiredBadgeCount(pPlayer) then
 			VillageJediManagerCommon.setJediProgressionScreenPlayState(pPlayer, VILLAGE_JEDI_PROGRESSION_GLOWING)
@@ -93,8 +96,7 @@ end
 -- Handling of the checkForceStatus command.
 -- @param pPlayer pointer to the creature object of the player who performed the command
 function Glowing:checkForceStatusCommand(pPlayer)
-	local progress = "@jedi_spam:fs_progress_" .. self:getCompletedBadgeTypeCount(pPlayer)
-
+	local	progress = "@jedi_spam:fs_progress_" .. self:getCompletedBadgeTypeCount(pPlayer)
 	CreatureObject(pPlayer):sendSystemMessage(progress)
 end
 

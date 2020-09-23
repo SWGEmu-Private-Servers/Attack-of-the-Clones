@@ -27,7 +27,7 @@ stoos_stormtrooper_squad_leader = Creature:new {
   optionsBitmask = AIENABLED + CONVERSABLE,
   diet = HERBIVORE,
 
-  templates = {"object/mobile/dressed_stormtrooper_squad_leader_white_white.iff"},
+  templates = {"object/mobile/dressed_clonetrooper_m.iff"},
   lootGroups = {},
   weapons = {"stormtrooper_weapons"},
   conversationTemplate = "stoos_olko_mission_target_convotemplate",

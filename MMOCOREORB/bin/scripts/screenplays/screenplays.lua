@@ -30,6 +30,24 @@ require("sui.custom.SuiReceiverPuzzle")
 includeFile("helperfuncs.lua")
 includeFile("playerTriggers.lua")
 
+-- Quest Tasks
+includeFile("quest_tasks/task.lua")
+includeFile("quest_tasks/persistent_event.lua")
+includeFile("quest_tasks/encounter.lua")
+includeFile("quest_tasks/escort.lua")
+includeFile("quest_tasks/go_to_location.lua")
+includeFile("quest_tasks/go_to_theater.lua")
+includeFile("quest_tasks/patrol.lua")
+
+--Merchants
+--includeFile("merchants/house_merch.lua")
+--includeFile("merchants/merchant_system.lua")
+includeFile("merchants/vendor_logic.lua")
+includeFile("merchants/vendorData.lua") -- Load this after vendor_logic
+includeFile("merchants/houseVendorData.lua")
+includeFile("merchants/restussRepData.lua")
+includeFile("merchants/vendor_conv_handler.lua") --Load this after all Vendor Data
+
 -- Theme parks
 includeFile("themepark/conversations/goru_conv_handler.lua")
 includeFile("themepark/conversations/mission_giver_conv_handler.lua")
@@ -47,18 +65,21 @@ includeFile("themepark/valarian/themeParkValarian.lua")
 includeFile("themepark/marauder/themeParkMarauderCharal.lua")
 includeFile("themepark/marauder/themeParkMarauderRaglithJorak.lua")
 includeFile("themepark/marauder/themeParkMarauderSzingoTerak.lua")
-includeFile("themepark/nightsister/themeParkNightsister.lua")
-includeFile("themepark/smc/themeParkSmcZideera.lua")
-includeFile("themepark/smc/themeParkSmcVhaundaIzaryx.lua")
-includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
+--includeFile("themepark/nightsister/themeParkNightsister.lua")
+--includeFile("themepark/smc/themeParkSmcZideera.lua")
+--includeFile("themepark/smc/themeParkSmcVhaundaIzaryx.lua")
+--includeFile("themepark/smc/themeParkSmcVurleneAujante.lua")
+--includeFile("themepark/wod/screenplays.lua")
 
 -- Screenplay utilities
 includeFile("utils/quest_spawner.lua")
 
 -- Staff tools
-includeFile("tools/tools.lua")
+includeFile("tools/screenplays.lua")
+includeFile("tools/event_tools.lua")
 includeFile("tools/shuttle_dropoff.lua")
 includeFile("tools/firework_event.lua")
+includeFile("tools/event_spawn_manager.lua")
 
 includeFile("trainers/trainerData.lua")
 includeFile("trainers/skillTrainer.lua")
@@ -69,15 +90,6 @@ includeFile("gcw/newsnet.lua")
 includeFile("gcw/recruiters/recruiterConvoHandler.lua")
 includeFile("gcw/recruiters/recruiterScreenplay.lua")
 includeFile("crackdown/cantina.lua")
-
--- Quest Tasks
-includeFile("quest_tasks/task.lua")
-includeFile("quest_tasks/persistent_event.lua")
-includeFile("quest_tasks/encounter.lua")
-includeFile("quest_tasks/escort.lua")
-includeFile("quest_tasks/go_to_location.lua")
-includeFile("quest_tasks/go_to_theater.lua")
-includeFile("quest_tasks/patrol.lua")
 
 -- Tutorial
 includeFile("tutorial/tutorialContainerComponents.lua")
@@ -154,6 +166,12 @@ includeFile("dungeon/corellian_corvette/ticket_givers/corvette_yondalla_neutral_
 includeFile("dungeon/corellian_corvette/ticket_takers/ds_297.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/klaatu.lua")
 includeFile("dungeon/corellian_corvette/ticket_takers/lt_lance.lua")
+includeFile("dungeon/lok_bunker/lok_bunker.lua")
+includeFile("dungeon/dath_bunker/dath_bunker.lua")
+
+-- Creatures
+includeFile("elite_spawns/creature_data.lua")
+includeFile("elite_spawns/creature_data_fin.lua")
 
 
 -- Village
@@ -299,15 +317,15 @@ includeFile("events/bestine_election/convos/victor_visalis_conv_handler.lua")
 includeFile("events/bestine_election/convos/tour_aryon_conv_handler.lua")
 
 -- Cries of Alderaan
-includeFile("events/coa/coa.lua")
-includeFile("events/coa/coa2Screenplay.lua")
-includeFile("events/coa/conversations/imperial_commander_conv_handler.lua")
-includeFile("events/coa/conversations/imperial_coordinator_conv_handler.lua")
-includeFile("events/coa/conversations/imperial_informant_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_commander_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_coordinator_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_lyda_conv_handler.lua")
-includeFile("events/coa/conversations/rebel_sympathizer_conv_handler.lua")
+--includeFile("events/coa/coa.lua")
+--includeFile("events/coa/coa2Screenplay.lua")
+--includeFile("events/coa/conversations/imperial_commander_conv_handler.lua")
+--includeFile("events/coa/conversations/imperial_coordinator_conv_handler.lua")
+--includeFile("events/coa/conversations/imperial_informant_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_commander_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_coordinator_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_lyda_conv_handler.lua")
+--includeFile("events/coa/conversations/rebel_sympathizer_conv_handler.lua")
 
 -- Events
 includeFile("events/conversations/bestine_artist_conv_handler.lua")
@@ -319,7 +337,7 @@ includeFile("events/conversations/life_day_tebeurra_conv_handler.lua")
 includeFile("events/conversations/museum_curator_conv_handler.lua")
 includeFile("events/conversations/race_droid_conv_handler.lua")
 includeFile("events/bestineMuseum.lua")
-includeFile("events/eventPromoter.lua")
+--includeFile("events/eventPromoter.lua")
 includeFile("events/lifeDay.lua")
 includeFile("events/buffTerminalMenuComponent.lua")
 includeFile("events/race_droid.lua")
@@ -531,6 +549,10 @@ includeFile("caves/tatooine_hutt_hideout.lua")
 includeFile("caves/tatooine_sennex_cave.lua")
 includeFile("caves/tatooine_squill_cave.lua")
 includeFile("caves/tatooine_tusken_bunker.lua")
+includeFile("caves/talus_death_watch.lua")
+includeFile("caves/yavin4_death_watch.lua")
+
+
 
 -- Cities
 includeFile("cities/city.lua")
@@ -626,6 +648,7 @@ includeFile("poi/tatooine_village_ruins.lua")
 includeFile("poi/yavin4_blueleaf_temple.lua")
 includeFile("poi/yavin4_imperial_base.lua")
 includeFile("poi/yavin4_woolamander_temple.lua")
+includeFile("poi/yavin4_Nightbrothers.lua")
 
 --Static Spawns
 includeFile("static_spawns/corellia_static_spawns.lua")
@@ -650,6 +673,9 @@ includeFile("static_spawns/yavin4_static_spawns.lua")
 --Magic Eight Ball
 includeFile("tools/MagicEightBallMenuComponent.lua")
 
+--Versafunction88
+includeFile("tools/versafunction88.lua")
+
 --Treasure Maps
 includeFile("treasure_map/EncodedDiskMenuComponent.lua")
 includeFile("treasure_map/TreasureMapMenuComponent.lua")
@@ -666,8 +692,22 @@ includeFile("record_keepers/record_keepers.lua")
 --Tests
 includeFile("tests/tests.lua")
 
--- Server Event Automation
-includeFile("events/ServerEventAutomation.lua")
+--Elite Spawns
+includeFile("elite_spawns/eliteSpawns.lua")
+includeFile("elite_spawns/eliteSpawnMap.lua")
 
--- Custom content - Loads last to allow for overrides
-includeFile("../custom_scripts/screenplays/screenplays.lua")
+--World Bosses
+includeFile("world_boss/nightsister_shapeshifter.lua")
+
+-- Loot grab!
+includeFile("world_boss/loot/lootBoxes.lua")
+
+--Faction bosses
+includeFile("world_boss/faction_dynamic/cis_theed_invasion.lua")
+includeFile("world_boss/faction_dynamic/cis_naboo_spaceports.lua")
+includeFile("world_boss/faction_dynamic/republic_cnet_invasion.lua")
+
+--Custom Content
+--includeFile("../custom_scripts/screenplays/screenplays.lua")
+includeFile("omega/screenplays.lua")
+includeFile("restuss/screenplays.lua")

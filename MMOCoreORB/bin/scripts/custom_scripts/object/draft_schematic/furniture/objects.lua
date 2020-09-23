@@ -1,0 +1,335 @@
+object_draft_schematic_furniture_shared_wod_deco_mask = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_deco_mask.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_deco_mask, "object/draft_schematic/furniture/shared_wod_deco_mask.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_gate = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_gate.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_gate, "object/draft_schematic/furniture/shared_wod_ns_gate.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_01, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_01.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_02, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_02.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_03, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_03.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_04, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_04.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_05, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_05.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_06, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_06.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_07, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_07.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_08, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_08.iff")
+
+object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_09 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_ns_potted_plant_scem_09, "object/draft_schematic/furniture/shared_wod_ns_potted_plant_scem_09.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_01, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_01.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_02, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_02.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_03, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_03.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_04, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_04.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_05, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_05.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_06, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_06.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_07, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_07.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_08, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_08.iff")
+
+object_draft_schematic_furniture_shared_wod_potted_plant_scem_09 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_potted_plant_scem_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_potted_plant_scem_09, "object/draft_schematic/furniture/shared_wod_potted_plant_scem_09.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_01, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_01.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_02, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_02.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_03, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_03.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_04, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_04.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_05, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_05.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_06, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_06.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_07, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_07.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_ns_tree_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_ns_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_ns_tree_08, "object/draft_schematic/furniture/shared_wod_pro_ns_tree_08.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_01, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_01.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_02, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_02.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_03, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_03.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_04, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_04.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_05, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_05.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_06, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_06.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_07, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_07.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_sm_tree_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_sm_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_sm_tree_08, "object/draft_schematic/furniture/shared_wod_pro_sm_tree_08.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_01, "object/draft_schematic/furniture/shared_wod_pro_tree_01.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_02, "object/draft_schematic/furniture/shared_wod_pro_tree_02.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_03, "object/draft_schematic/furniture/shared_wod_pro_tree_03.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_04, "object/draft_schematic/furniture/shared_wod_pro_tree_04.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_05, "object/draft_schematic/furniture/shared_wod_pro_tree_05.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_06, "object/draft_schematic/furniture/shared_wod_pro_tree_06.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_07, "object/draft_schematic/furniture/shared_wod_pro_tree_07.iff")
+
+object_draft_schematic_furniture_shared_wod_pro_tree_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_pro_tree_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_pro_tree_08, "object/draft_schematic/furniture/shared_wod_pro_tree_08.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_01, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_01.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_02, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_02.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_03, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_03.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_04 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_04.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_04, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_04.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_05 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_05.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_05, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_05.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_06 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_06.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_06, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_06.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_07 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_07.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_07, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_07.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_08 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_08.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_08, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_08.iff")
+
+object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_09 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_09.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_sm_potted_plant_scem_09, "object/draft_schematic/furniture/shared_wod_sm_potted_plant_scem_09.iff")
+
+object_draft_schematic_furniture_shared_wod_witch_banner_s01 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_witch_banner_s01.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_witch_banner_s01, "object/draft_schematic/furniture/shared_wod_witch_banner_s01.iff")
+
+object_draft_schematic_furniture_shared_wod_witch_banner_s02 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_witch_banner_s02.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_witch_banner_s02, "object/draft_schematic/furniture/shared_wod_witch_banner_s02.iff")
+
+object_draft_schematic_furniture_shared_wod_witch_banner_s03 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_wod_witch_banner_s03.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_wod_witch_banner_s03, "object/draft_schematic/furniture/shared_wod_witch_banner_s03.iff")

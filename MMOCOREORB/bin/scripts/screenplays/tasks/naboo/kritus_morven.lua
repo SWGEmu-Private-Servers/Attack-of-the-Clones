@@ -12,7 +12,7 @@ kritus_morven_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 50 }
+			{ rewardType = "credits", amount = 35000 }
 		}
 	},
 	{
@@ -32,7 +32,7 @@ kritus_morven_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 100 }
+			{ rewardType = "credits", amount = 40000 }
 		}
 	},
 	{
@@ -52,7 +52,7 @@ kritus_morven_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 150 }
+			{ rewardType = "credits", amount = 15000 }
 		}
 	},
 	{
@@ -72,7 +72,7 @@ kritus_morven_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 200 }
+			{ rewardType = "credits", amount = 20000 }
 		}
 	},
 	{
@@ -90,7 +90,7 @@ kritus_morven_missions =
 		},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 250 }
+			{ rewardType = "credits", amount = 25000 }
 		}
 	}
 }

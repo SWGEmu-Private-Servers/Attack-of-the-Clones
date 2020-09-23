@@ -10,7 +10,7 @@ dilvin_lormurojo_missions =
 		itemSpawns = {},
 		rewards =
 		{
-			{ rewardType = "credits", amount = 100 }
+			{ rewardType = "credits", amount = 10000 }
 		}
 	}
 }

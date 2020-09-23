@@ -23,7 +23,7 @@ stoos_olko_missions =
 			missionType = "deliver",
 			primarySpawns =
 			{
-				{ npcTemplate = "stoos_imperial_ensign", npcName = "Imperial Ensign" }
+				{ npcTemplate = "stoos_imperial_ensign", npcName = "Republic Ensign" }
 			},
 			secondarySpawns =
 			{
@@ -42,12 +42,12 @@ stoos_olko_missions =
 			missionType = "deliver",
 			primarySpawns =
 			{
-				{ npcTemplate = "stoos_stormtrooper_squad_leader", npcName = "Stormtrooper Squad Leader" }
+				{ npcTemplate = "stoos_stormtrooper_squad_leader", npcName = "Clone Trooper Squad Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "scout_trooper", npcName = "a Scout Trooper" },
-				{ npcTemplate = "scout_trooper", npcName = "a Scout Trooper" }
+				{ npcTemplate = "clonetrooper", npcName = "a Scout Trooper" },
+				{ npcTemplate = "clonetrooper", npcName = "a Scout Trooper" }
 			},
 			itemSpawns =
 			{

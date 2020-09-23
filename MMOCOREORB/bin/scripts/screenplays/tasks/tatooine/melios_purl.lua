@@ -42,7 +42,7 @@ melios_purl_missions =
 			rewards =
 			{
 				{ rewardType = "item", itemTemplate = "object/tangible/loot/quest/quest_stimpack_a_schematic.iff" },
-				{ rewardType = "credits", amount = 1000 }
+				{ rewardType = "credits", amount = 5000 }
 			}
 		},
 	}

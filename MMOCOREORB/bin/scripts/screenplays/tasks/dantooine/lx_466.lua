@@ -1,75 +1,75 @@
 lx_466_missions =
 {
 	{
-		missionType = "assassinate", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "lx_466_rebel_commander", npcName = "Ivo (a Stranded Rebel Commander)" } 
-		}, 
-		secondarySpawns = 
+		missionType = "assassinate",
+		primarySpawns =
 		{
-				{ npcTemplate = "lx_466_rebel_scout", npcName = "Casa (a Stranded Rebel Scout)" },
-				{ npcTemplate = "lx_466_rebel_scout", npcName = "Parana (a Stranded Rebel Scout)" }
+			{ npcTemplate = "lx_466_rebel_commander", npcName = "Ivo (a Stranded Separatist Commander)" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 480 },		
+		secondarySpawns =
+		{
+				{ npcTemplate = "lx_466_rebel_scout", npcName = "Casa (a Stranded Separatist Scout)" },
+				{ npcTemplate = "lx_466_rebel_scout", npcName = "Parana (a Stranded Separatist Scout)" }
+		},
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 4800 },
 			{ rewardType = "faction", faction = "imperial", amount = 300 },
 		}
 	},
-	{ 
+	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "lx_466_dantari", npcName = "Drak (a Dantari tribesman)" } 
-		}, 
-		secondarySpawns = 
+		primarySpawns =
+		{
+			{ npcTemplate = "lx_466_dantari", npcName = "Drak (a Dantari tribesman)" }
+		},
+		secondarySpawns =
 		{
 				{ npcTemplate = "huurton_huntress", npcName = "(a huurton huntress)" },
 				{ npcTemplate = "huurton_bloodhunter", npcName = "(a huurton bloodhunter)" }
 		},
-		itemSpawns = 
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/lx466_q2_needed.iff", itemName = "Rations" }
-		}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 620 },		
+		},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 6200 },
 			{ rewardType = "faction", faction = "imperial", amount = 400 },
 		}
-	},	
-	{ 
+	},
+	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "lx_466_imperial_courier", npcName = "Re (an Imperial Courier)" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "lx_466_imperial_courier", npcName = "(a Republic Courier)" }
+		},
 		secondarySpawns = 
 		{
-				{ npcTemplate = "mercenary_aggro", npcName = "random" },				
+				{ npcTemplate = "mercenary_aggro", npcName = "random" },
 				{ npcTemplate = "mercenary_aggro", npcName = "random" },
 				{ npcTemplate = "mercenary_aggro", npcName = "random" }
 		},
-		itemSpawns = 
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/lx466_q3_needed.iff", itemName = "recording rod" }
-		}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 745 },		
+		},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 7450 },
 			{ rewardType = "faction", faction = "imperial", amount = 500 },
 		}
-	}	
+	}
 }
 
-npcMapLX466 = 
-{ 
-	{ 
-		spawnData = { npcTemplate = "lx_466", x = -4181.94, z = 3, y = -2385.99, direction = 345.343, cellID = 0, position = STAND }, 
-		npcNumber = 1,   
-		stfFile = "@static_npc/dantooine/lx_466", 
-		missions = lx_466_missions 
+npcMapLX466 =
+{
+	{
+		spawnData = { npcTemplate = "lx_466", x = -4181.94, z = 3, y = -2385.99, direction = 345.343, cellID = 0, position = STAND },
+		npcNumber = 1,
+		stfFile = "@static_npc/dantooine/lx_466",
+		missions = lx_466_missions
 	},
 }
 

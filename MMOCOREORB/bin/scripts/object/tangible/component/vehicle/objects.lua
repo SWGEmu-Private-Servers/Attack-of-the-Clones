@@ -40,6 +40,11 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
+object_tangible_component_vehicle_shared_veh_power_plant = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/component/vehicle/shared_veh_power_plant.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_component_vehicle_shared_veh_power_plant, "object/tangible/component/vehicle/shared_veh_power_plant.iff")
 
 object_tangible_component_vehicle_shared_adv_hvy_blaster_power_handler = SharedTangibleObjectTemplate:new {
 	clientTemplateFileName = "object/tangible/component/vehicle/shared_adv_hvy_blaster_power_handler.iff"

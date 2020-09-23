@@ -32,13 +32,13 @@ forsaken_force_drifter = Creature:new {
 		{
 			groups = {
 				{group = "junk", chance = 3000000},
-				{group = "power_crystals", chance = 800000},
+				{group = "power_crystals", chance = 900000},
 				{group = "color_crystals", chance = 700000},
-				{group = "holocron_dark", chance = 500000},
-				{group = "holocron_light", chance = 500000},
+				{group = "holocron_dark", chance = 50000},
+				{group = "holocron_light", chance = 50000},
 				{group = "melee_weapons", chance = 1000000},
-				{group = "armor_attachments", chance = 1000000},
-				{group = "clothing_attachments", chance = 1000000},
+				{group = "armor_attachments", chance = 1400000},
+				{group = "clothing_attachments", chance = 1400000},
 				{group = "wearables_common", chance = 700000},
 				{group = "wearables_uncommon", chance = 700000},
 				{group = "force_hunter_rare", chance = 100000}

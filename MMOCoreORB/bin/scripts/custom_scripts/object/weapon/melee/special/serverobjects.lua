@@ -1,0 +1,1 @@
+includeFile("../custom_scripts/object/weapon/melee/special/wod_war_fan.lua")

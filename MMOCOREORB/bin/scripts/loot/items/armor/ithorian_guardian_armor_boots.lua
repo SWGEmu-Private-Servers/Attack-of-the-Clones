@@ -5,12 +5,12 @@ ithorian_guardian_armor_boots = {
 	directObjectTemplate = "object/tangible/wearables/armor/ithorian_guardian/ith_armor_s02_boots.iff",
 	craftingValues = {
 		{"armor_rating",1,1,0},
-		{"kineticeffectiveness",10,40,10},
-		{"armor_effectiveness",4,29,10},
+		{"kineticeffectiveness",10,28,10},
+		{"armor_effectiveness",4,20,10},
 		{"armor_integrity",15000, 25000,0},
-		{"armor_health_encumbrance",13,8,0},
-		{"armor_action_encumbrance",25,16,0},
-		{"armor_mind_encumbrance",16,9,0},
+		{"armor_health_encumbrance",300,250,0},
+		{"armor_action_encumbrance",500,450,0},
+		{"armor_mind_encumbrance",300,250,0},
 	},
 	skillMods = {
 

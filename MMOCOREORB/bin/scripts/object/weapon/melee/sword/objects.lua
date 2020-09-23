@@ -1426,3 +1426,68 @@ object_weapon_melee_sword_shared_sword_rantok = SharedWeaponObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_rantok, "object/weapon/melee/sword/shared_sword_rantok.iff")
+
+
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_red = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_red.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_red, "object/weapon/melee/sword/shared_sword_lightsaber_red.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_blue = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_blue.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_blue, "object/weapon/melee/sword/shared_sword_lightsaber_blue.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_lightgreen = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_lightgreen.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_lightgreen, "object/weapon/melee/sword/shared_sword_lightsaber_lightgreen.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_yellow = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_yellow.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_yellow, "object/weapon/melee/sword/shared_sword_lightsaber_yellow.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_lightpurple = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_lightpurple.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_lightpurple, "object/weapon/melee/sword/shared_sword_lightsaber_lightpurple.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_darkpurple = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_darkpurple.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_darkpurple, "object/weapon/melee/sword/shared_sword_lightsaber_darkpurple.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_orange = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_orange.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_orange, "object/weapon/melee/sword/shared_sword_lightsaber_orange.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_darkblue = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_darkblue.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_darkblue, "object/weapon/melee/sword/shared_sword_lightsaber_darkblue.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_sword_shared_sword_lightsaber_darkred = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/sword/shared_sword_lightsaber_darkred.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_sword_shared_sword_lightsaber_darkred, "object/weapon/melee/sword/shared_sword_lightsaber_darkred.iff")

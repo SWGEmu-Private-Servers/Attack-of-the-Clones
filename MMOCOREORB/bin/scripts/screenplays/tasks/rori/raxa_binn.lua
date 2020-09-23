@@ -4,56 +4,56 @@ raxa_binn_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "raxa_stormtrooper_squad_leader", npcName = "Stormtrooper Squad Leader" }
+				{ npcTemplate = "clonetrooper_captain", npcName = "" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" }
+				{ npcTemplate = "clonetrooper", npcName = "" },
+				{ npcTemplate = "clonetrooper", npcName = "" },
+				{ npcTemplate = "clonetrooper", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
-				{ rewardType = "faction", faction = "rebel", amount = 20 },
+				{ rewardType = "credits", amount = 1000 },
+				{ rewardType = "faction", faction = "rebel", amount = 200 },
 			}
 		},
 		{
 			missionType = "escort",
 			primarySpawns =
 			{
-				{ npcTemplate = "raxa_rebel_scout", npcName = "Rebel Scout" }
+				{ npcTemplate = "raxa_rebel_scout", npcName = "Separatist Scout" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "raxa_stormtrooper_commando", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper_commando", npcName = "" }
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
-				{ rewardType = "faction", faction = "rebel", amount = 20 },
+				{ rewardType = "credits", amount = 1000 },
+				{ rewardType = "faction", faction = "rebel", amount = 200 },
 			}
 		},
 		{
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "raxa_stormtrooper_squad_leader", npcName = "Stormtrooper Squad Leader" }
+				{ npcTemplate = "clonetrooper_captain", npcName = "" }
 			},
 			secondarySpawns = {
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" },
-				{ npcTemplate = "raxa_stormtrooper", npcName = "" }
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" },
+				{ npcTemplate = "clone_commando", npcName = "" }
 			},
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 },
-				{ rewardType = "faction", faction = "rebel", amount = 30 },
+				{ rewardType = "credits", amount = 2000 },
+				{ rewardType = "faction", faction = "rebel", amount = 300 },
 			}
 		},
 	}

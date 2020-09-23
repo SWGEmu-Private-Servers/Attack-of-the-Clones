@@ -1,0 +1,6 @@
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_ns_seed_jar.lua")
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_pro_ns_seed_jars.lua")
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_pro_seed_jar.lua")
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_pro_sm_seed_jars.lua")
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_seed_jar.lua")
+includeFile("../custom_scripts/object/tangible/furniture/all/wod_sm_seed_jar.lua")

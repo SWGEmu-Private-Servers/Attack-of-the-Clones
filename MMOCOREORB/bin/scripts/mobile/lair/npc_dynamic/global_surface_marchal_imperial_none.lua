@@ -1,9 +1,9 @@
 global_surface_marchal_imperial_none = Lair:new {
 	mobiles = {
 		{"imperial_surface_marshall",1},
-		{"imperial_army_captain",2},
-		{"imperial_major",2},
-		{"imperial_first_lieutenant",3}
+		{"clonetrooper_captain",2},
+		{"clonetrooper_major",2},
+		{"clonetrooper_squad_leader",3}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},

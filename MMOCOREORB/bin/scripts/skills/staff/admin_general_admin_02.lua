@@ -22,11 +22,9 @@ admin_general_admin_02 = {
 	skillAbility = {},
 	commands = {
 		"findObject",
-		"goto",
 		"harmful",
 		"harmless",
 		"killPlayer",
-		"teleportTarget",
 		"planetWarp",
 		"planetWarpTarget",
 		"freezePlayer",

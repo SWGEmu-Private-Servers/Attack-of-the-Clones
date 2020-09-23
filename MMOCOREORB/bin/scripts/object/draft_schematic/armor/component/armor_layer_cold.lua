@@ -68,7 +68,7 @@ object_draft_schematic_armor_component_armor_layer_cold = object_draft_schematic
 	ingredientSlotType = {0, 0, 0},
 	resourceTypes = {"aluminum", "petrochem_inert_polymer", "ore_carbonate"},
 	resourceQuantities = {25, 10, 12},
-	contribution = {100, 100, 100},
+	contribution = {80, 80, 80},
 
 	targetTemplate = "object/tangible/component/armor/armor_layer_cold.iff",
 

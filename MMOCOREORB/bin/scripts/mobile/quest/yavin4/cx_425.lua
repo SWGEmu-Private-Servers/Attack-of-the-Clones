@@ -1,6 +1,6 @@
 cx_425 = Creature:new {
 	objectName = "",
-	customName = "CX-425",
+	customName = "CT-425",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -26,7 +26,7 @@ cx_425 = Creature:new {
 	optionsBitmask = AIENABLED + CONVERSABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_cx_425.iff"},
+	templates = {"object/mobile/dressed_clonetrooper_m.iff"},
 	lootGroups = {},
 	weapons = {"imperial_weapons_medium"},
 	conversationTemplate = "cx_425_trooper_mission_giver_convotemplate",

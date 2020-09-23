@@ -1,5 +1,5 @@
 global_imperial_scout_trooper_camp_imperial_medium_theater = Lair:new {
-	mobiles = {{"scout_trooper",1}},
+	mobiles = {{"clone_scout_trooper",1}},
 	spawnLimit = 12,
 	buildingsVeryEasy = {"object/building/poi/lok_imperial_medium4.iff","object/building/poi/lok_imperial_medium5.iff"},
 	buildingsEasy = {"object/building/poi/lok_imperial_medium4.iff","object/building/poi/lok_imperial_medium5.iff"},

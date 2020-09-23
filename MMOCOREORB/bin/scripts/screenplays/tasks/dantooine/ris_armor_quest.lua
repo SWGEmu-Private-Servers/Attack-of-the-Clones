@@ -10,7 +10,7 @@ risArmorQuest = ScreenPlay:new {
 
 
 		questItems = {
-			quest2 = { template = "object/tangible/component/armor/armor_segment_ris.iff", displayName = "@craft_clothing_ingredients_n:armor_segment_ris" },
+			quest2 = { template = "object/tangible/component/armor/armor_segment_bone_experimental.iff", displayName = "@craft_clothing_ingredients_n:armor_segment_ris" },
 			quest4 = { template = "object/tangible/component/armor/armor_layer_ris.iff", displayName = "@craft_clothing_ingredients_n:armor_layer_ris" },
 			quest6 = { template = "object/tangible/wearables/armor/ris/armor_ris_boots.iff", displayName = "@wearables_name:armor_ris_boots" }
 		},

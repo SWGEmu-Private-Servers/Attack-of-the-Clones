@@ -30,7 +30,15 @@ admin_player_management_02 = {
 		"setLastName",
 		"setPlayerAppearance",
 		"setPlayerState",
-		"unCityBan"
+		"unCityBan",
+		"setFaction",
+		"setFactionStanding",
+		"setRank",
+		"setTEF",
+		"showFactionInformation",
+		"gmRevive",
+		"grantSkill",
+		"revokeSkill"
 	},
 	skillModifiers = {},
 	schematicsGranted = {},

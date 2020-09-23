@@ -1,47 +1,47 @@
 sg_567_missions =
 {
-	{ 
+	{
 		missionType = "assassinate",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "sg_567_droideka", npcName = "(a Malfunctioning Droideka)" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "sg_567_droideka", npcName = "(a Malfunctioning Droideka)" }
+		},
 		secondarySpawns = {},
-		itemSpawns = 
-		{}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 5000 },		
+		itemSpawns =
+		{},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 5000 },
 			{ rewardType = "faction", faction = "imperial", amount = 400 },
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "sg_619", npcName = "SG-619" } 
+		missionType = "escort",
+		primarySpawns =
+		{
+			{ npcTemplate = "sg_619", npcName = "CT-619" }
 		}, 
-		secondarySpawns = 
-		{				
-				{ npcTemplate = "rebel_specforce_sergeant", npcName = "random" },
-				{ npcTemplate = "specforce_major", npcName = "random" }
+		secondarySpawns =
+		{
+				{ npcTemplate = "cis_resistance_separatist", npcName = "random" },
+				{ npcTemplate = "cis_resistance_separatist", npcName = "random" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 3000 },		
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 3000 },
 			{ rewardType = "faction", faction = "imperial", amount = 600 },
 		}
 	}
 }
 
-npcMapSG567 = 
-{ 
-	{ 
-		spawnData = { npcTemplate = "sg_567", x = -4216.85, z = 3, y = -2434.33, direction = 312.817, cellID = 0, position = STAND }, 
-		npcNumber = 1,   
-		stfFile = "@static_npc/dantooine/sg_567", 
-		missions = sg_567_missions 
+npcMapSG567 =
+{
+	{
+		spawnData = { npcTemplate = "sg_567", x = -4216.85, z = 3, y = -2434.33, direction = 312.817, cellID = 0, position = STAND },
+		npcNumber = 1,
+		stfFile = "@static_npc/dantooine/sg_567",
+		missions = sg_567_missions
 	},
 }
 

@@ -1,6 +1,6 @@
 global_imperial_major_camp_imperial_medium_theater = Lair:new {
 	mobiles = {
-		{"imperial_major",1},
+		{"clonetrooper_major",1},
 		{"imperial_first_lieutenant",1},
 		{"imperial_sergeant",2},
 		{"imperial_corporal",2}

@@ -68,7 +68,7 @@ object_draft_schematic_armor_component_armor_layer_energy = object_draft_schemat
 	ingredientSlotType = {0, 0, 0, 0},
 	resourceTypes = {"metal", "petrochem_inert_polymer", "gas_inert_known", "ore"},
 	resourceQuantities = {20, 8, 8, 5},
-	contribution = {100, 100, 100, 100},
+	contribution = {80, 80, 80, 80},
 
 	targetTemplate = "object/tangible/component/armor/armor_layer_energy.iff",
 

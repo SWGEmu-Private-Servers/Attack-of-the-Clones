@@ -1,8 +1,10 @@
 imperial_super_battle_droid = Creature:new {
-	objectName = "@mob/creature_names:imperial_super_battle_droid",
+	objectName = "@mob/creature_names:clonetrooper_commando",
+	randomNameType = NAME_DARKTROOPER,
+	randomNameTag = true,
 	socialGroup = "imperial",
 	faction = "imperial",
-	level = 200,
+	level = 300,
 	chanceHit = 18,
 	damageMin = 1200,
 	damageMax = 2300,
@@ -24,17 +26,24 @@ imperial_super_battle_droid = Creature:new {
 	creatureBitmask = KILLER,
 	optionsBitmask = AIENABLED,
 	diet = NONE,
-	scale = 1.40,
 
-	templates = {
-		"object/mobile/super_battle_droid.iff",
-	},
+	templates = {"object/mobile/dressed_clone_commando_m.iff"},
+
 	lootGroups = {
+    {
+      groups = {
+        {group = "armor_attachments", chance = 5000000},
+        {group = "clothing_attachments", chance = 5000000}
 
-	},
-	conversationTemplate = "",
-	defaultWeapon = "object/weapon/ranged/droid/droid_droideka_ranged.iff",
-	defaultAttack = "creaturerangedattack"
+      },
+      lootChance = 4000000
+    }
+  	},
+		weapons = {"clonetrooper_weapons"},
+		conversationTemplate = "",
+		reactionStf = "@npc_reaction/stormtrooper",
+		personalityStf = "@hireling/hireling_stormtrooper",
+		attacks = merge(riflemanmaster,carbineermaster,brawlermaster)
 }
 
 CreatureTemplates:addCreatureTemplate(imperial_super_battle_droid, "imperial_super_battle_droid")

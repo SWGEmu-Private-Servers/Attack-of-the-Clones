@@ -55,3 +55,17 @@ includeFile("weapon/melee/2h_sword/2h_sword_katana.lua")
 includeFile("weapon/melee/2h_sword/2h_sword_katana_quest.lua")
 includeFile("weapon/melee/2h_sword/2h_sword_maul.lua")
 includeFile("weapon/melee/2h_sword/2h_sword_scythe.lua")
+
+
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_red.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_darkred.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_yellow.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_darkyellow.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_lightpurple.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_darkpurple.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_orange.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_brown.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_blue.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_darkblue.lua")
+includeFile("weapon/melee/2h_sword/2h_sword_lightsaber_lightgreen.lua")
+

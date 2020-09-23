@@ -26,8 +26,9 @@ admin_spawn_management_01 = {
 		"createMissionElement",
 		"createSpawningElement",
 		"createSpawningElementWithDifficulty",
+		"gmEventTools",
 		"setName",
-		"spawnStatus",
+		"spawnStatus"
 	},
 	skillModifiers = {},
 	schematicsGranted = {},

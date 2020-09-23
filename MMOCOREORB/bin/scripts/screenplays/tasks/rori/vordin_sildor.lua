@@ -13,8 +13,8 @@ vordin_sildor_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
-				{ rewardType = "faction", faction = "rebel", amount = 10 }
+				{ rewardType = "credits", amount = 250 },
+				{ rewardType = "faction", faction = "rebel", amount = 100 }
 			}
 		},
 		{
@@ -32,8 +32,8 @@ vordin_sildor_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
-				{ rewardType = "faction", faction = "rebel", amount = 25 }
+				{ rewardType = "credits", amount = 250 },
+				{ rewardType = "faction", faction = "rebel", amount = 250 }
 			}
 		},
 		{
@@ -55,8 +55,8 @@ vordin_sildor_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
-				{ rewardType = "faction", faction = "rebel", amount = 50 }
+				{ rewardType = "credits", amount = 500 },
+				{ rewardType = "faction", faction = "rebel", amount = 350 }
 			}
 		},
 	}

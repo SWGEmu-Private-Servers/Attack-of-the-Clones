@@ -23,13 +23,7 @@ admin_player_management_01 = {
 	commands = {
 		"findPlayer",
 		"getGameTime",
-		"getRank",
-		"gmRevive",
-		"setFaction",
-		"setFactionStanding",
-		"setRank",
-		"setTEF",
-		"showFactionInformation"
+		"getRank"
 	},
 	skillModifiers = {},
 	schematicsGranted = {},

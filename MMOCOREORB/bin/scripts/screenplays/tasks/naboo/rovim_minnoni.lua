@@ -7,17 +7,17 @@ rovim_minnoni_missions =
 				{ npcTemplate = "zazzi", npcName = "Zazzi" }
 			},
 			secondarySpawns = {},
-			itemSpawns = 
+			itemSpawns =
 			{
 				{ itemTemplate = "object/tangible/mission/quest_item/rovim_minnoni_q1_needed.iff", itemName = "Signal Finder" }
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 25 },
+				{ rewardType = "credits", amount = 2500 },
 			}
 		},
 
--- Quests 2 and 3 disabled due to missing strings in string file 
+-- Quests 2 and 3 disabled due to missing strings in string file
 --[[
 		{
 			missionType = "escort",
@@ -29,7 +29,7 @@ rovim_minnoni_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 50 },
+				{ rewardType = "credits", amount = 5000 },
 			}
 		},
 		{
@@ -42,7 +42,7 @@ rovim_minnoni_missions =
 			itemSpawns = {},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 },
+				{ rewardType = "credits", amount = 10000 },
 			}
 		}
 --]]

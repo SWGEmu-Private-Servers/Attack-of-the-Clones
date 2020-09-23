@@ -1,48 +1,48 @@
 kelvus_naria_missions =
 {
-	{ 
+	{
 		missionType = "deliver",
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "kelvus_imperial", npcName = "Imperial Corporal" } 
-		}, 
+		primarySpawns =
+		{
+			{ npcTemplate = "kelvus_imperial", npcName = "Republic Corporal" }
+		},
 		secondarySpawns = {},
-		itemSpawns = 
+		itemSpawns =
 		{
 			{ itemTemplate = "object/tangible/mission/quest_item/kelvus_naria_q1_needed.iff", itemName = "Mining records" }
-		}, 
+		},
 		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 2000 },		
+		{
+			{ rewardType = "credits", amount = 20000 },
 			{ rewardType = "faction", faction = "imperial", amount = 150 },
 		}
 	},
 	{
-		missionType = "escort", 
-		primarySpawns = 
-		{ 
-			{ npcTemplate = "kelvus_miner", npcName = "random" } 
-		}, 
-		secondarySpawns = 
-		{				
+		missionType = "escort",
+		primarySpawns =
+		{
+			{ npcTemplate = "kelvus_miner", npcName = "random" }
+		},
+		secondarySpawns =
+		{
 				{ npcTemplate = "kelvus_criminal", npcName = "random" },
 				{ npcTemplate = "kelvus_criminal", npcName = "random" }
 		},
-		itemSpawns = {}, 
-		rewards = 
-		{ 
-			{ rewardType = "credits", amount = 4000 },		
+		itemSpawns = {},
+		rewards =
+		{
+			{ rewardType = "credits", amount = 4000 },
 		}
 	}
 }
 
-npcMapKelvusNaria = 
-{ 
-	{ 
-		spawnData = { npcTemplate = "kelvus_naria", x = -618.741, z = 3, y = 2539.25, direction = 57.3847, cellID = 0, position = STAND }, 
-		npcNumber = 1,   
-		stfFile = "@static_npc/dantooine/dantooine_miningoutpost_kelvus_naria", 
-		missions = kelvus_naria_missions 
+npcMapKelvusNaria =
+{
+	{
+		spawnData = { npcTemplate = "kelvus_naria", x = -618.741, z = 3, y = 2539.25, direction = 57.3847, cellID = 0, position = STAND },
+		npcNumber = 1,
+		stfFile = "@static_npc/dantooine/dantooine_miningoutpost_kelvus_naria",
+		missions = kelvus_naria_missions
 	},
 }
 

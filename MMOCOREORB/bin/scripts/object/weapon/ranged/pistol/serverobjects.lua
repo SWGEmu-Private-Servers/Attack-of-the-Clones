@@ -47,6 +47,7 @@ includeFile("weapon/ranged/pistol/base/serverobjects.lua")
 
 -- Server Objects
 includeFile("weapon/ranged/pistol/pistol_cdef.lua")
+includeFile("weapon/ranged/pistol/pistol_mandalorian.lua")
 includeFile("weapon/ranged/pistol/pistol_cdef_corsec.lua")
 includeFile("weapon/ranged/pistol/pistol_cdef_noob.lua")
 includeFile("weapon/ranged/pistol/pistol_d18.lua")

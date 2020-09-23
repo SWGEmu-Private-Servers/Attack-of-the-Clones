@@ -17,7 +17,7 @@ bardo_klinj_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 100 }
+				{ rewardType = "credits", amount = 10000 }
 			}
 		},
 		{
@@ -32,7 +32,7 @@ bardo_klinj_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 150 }
+				{ rewardType = "credits", amount = 15000 }
 			}
 		},
 		{
@@ -50,7 +50,7 @@ bardo_klinj_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 200 }
+				{ rewardType = "credits", amount = 20000 }
 			}
 		},
 		{
@@ -70,7 +70,7 @@ bardo_klinj_missions =
 			},
 			rewards =
 			{
-				{ rewardType = "credits", amount = 250 }
+				{ rewardType = "credits", amount = 25000 }
 			}
 		}
 	}

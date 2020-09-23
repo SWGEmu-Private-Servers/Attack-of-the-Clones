@@ -133,3 +133,26 @@ includeFile("dathomir/young_baz_nitch.lua")
 includeFile("dathomir/young_malkloc.lua")
 includeFile("dathomir/young_malkloc_plainswalker.lua")
 includeFile("dathomir/young_reptilian_flier.lua")
+
+--Nightsister Additions--
+--includeFile("dathomir/elite_nightsister_mother.lua")
+--Dathomir World Bosses--
+includeFile("dathomir/mother_talzin.lua")
+--Nightbrothers--
+includeFile("dathomir/elite_nightbrother_elder.lua")
+includeFile("dathomir/nightbrother_archer.lua")
+includeFile("dathomir/elite_nightbrother_weapons_master.lua")
+includeFile("dathomir/nightbrother_assasin.lua")
+includeFile("dathomir/boss_nightbrother_arzo_suun.lua")
+includeFile("dathomir/nightbrother_creature_handler.lua")
+
+--Shadow Collective--
+includeFile("dathomir/shadow_collective_thug.lua")
+includeFile("dathomir/shadow_collective_rancor.lua")
+includeFile("dathomir/elite_shadow_collective_spider.lua")
+
+--FS Mobs
+includeFile("dathomir/force_corrupt_rancor.lua")
+includeFile("dathomir/force_corrupt_rancor_pvp_zone.lua")
+includeFile("dathomir/force_corrupt_spider.lua")
+includeFile("dathomir/force_corrupt_spider_pvp_zone.lua")

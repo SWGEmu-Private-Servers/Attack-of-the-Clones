@@ -335,3 +335,13 @@ object_tangible_item_shared_vehicle_customization = SharedTangibleObjectTemplate
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_item_shared_vehicle_customization, "object/tangible/item/shared_vehicle_customization.iff")
+
+object_tangible_shared_clothing_sea_removal_tool = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/item/shared_clothing_sea_removal_tool.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_shared_clothing_sea_removal_tool, "object/tangible/item/shared_clothing_sea_removal_tool.iff")
+
+object_tangible_shared_versafunction88 = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/item/shared_versafunction88.iff"
+}
+ObjectTemplates:addClientTemplate(object_tangible_shared_versafunction88, "object/tangible/item/shared_versafunction88.iff")

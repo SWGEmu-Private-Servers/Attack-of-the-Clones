@@ -445,6 +445,7 @@ function GeonosianLab:spawnMobiles()
 	end
 
 	spawnMobile("yavin4", "herald_biogenic_gardo", 60, -3.8, 0.1, -3.8, 88, 1713374)
+
 end
 
 function GeonosianLab:turnOnTrap(pTrap)
@@ -843,4 +844,3 @@ function GeonosianLab:hasPermission(pPlayer, permissionGroup)
 
 	return PlayerObject(pGhost):hasPermissionGroup(permissionGroup)
 end
-

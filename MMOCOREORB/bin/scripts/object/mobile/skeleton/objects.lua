@@ -4439,3 +4439,15 @@ object_mobile_skeleton_shared_wed_treadwell = SharedCreatureObjectTemplate:new {
 }
 
 ObjectTemplates:addClientTemplate(object_mobile_skeleton_shared_wed_treadwell, "object/mobile/skeleton/shared_wed_treadwell.iff")
+
+object_mobile_skeleton_shared_massif = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/skeleton/shared_massif.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_skeleton_shared_massif, "object/mobile/skeleton/shared_massif.iff")
+
+object_mobile_skeleton_shared_undead_humanoid = SharedCreatureObjectTemplate:new {
+	clientTemplateFileName = "object/mobile/skeleton/shared_undead_humanoid.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_mobile_skeleton_shared_undead_humanoid, "object/mobile/skeleton/shared_undead_humanoid.iff")

@@ -171,7 +171,7 @@ function KnightTrials:doCouncilDecision(pPlayer, choice)
 	local musicFile
 	local successMsg
 
-	if (choice == JediTrials.COUNCIL_LIGHT) then
+	if (choice == JediTrials.COUNCIL_DARK) then
 		if (playerFaction == FACTIONIMPERIAL) then
 			local sui = SuiMessageBox.new("KnightTrials", "noCallback")
 			sui.setTitle("@jedi_trials:knight_trials_title")
@@ -184,7 +184,7 @@ function KnightTrials:doCouncilDecision(pPlayer, choice)
 
 		musicFile = "sound/music_themequest_victory_rebel.snd"
 		successMsg = "@jedi_trials:council_chosen_light"
-	elseif (choice == JediTrials.COUNCIL_DARK) then
+	elseif (choice == JediTrials.COUNCIL_LIGHT) then
 		if (playerFaction == FACTIONREBEL) then
 			local sui = SuiMessageBox.new("KnightTrials", "noCallback")
 			sui.setTitle("@jedi_trials:knight_trials_title")

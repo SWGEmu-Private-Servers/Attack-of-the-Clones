@@ -796,3 +796,89 @@ object_weapon_melee_polearm_shared_polearm_vibro_axe = SharedWeaponObjectTemplat
 }
 
 ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_polearm_vibro_axe, "object/weapon/melee/polearm/shared_polearm_vibro_axe.iff")
+
+object_weapon_melee_polearm_shared_lance_staff_magna_guard = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_staff_magna_guard.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_staff_magna_guard, "object/weapon/melee/polearm/shared_lance_staff_magna_guard.iff")
+
+
+
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_red = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_red.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_red, "object/weapon/melee/polearm/shared_lance_lightsaber_red.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_darkred = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_darkred.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_darkred, "object/weapon/melee/polearm/shared_lance_lightsaber_darkred.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_lightgreen = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_lightgreen.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_lightgreen, "object/weapon/melee/polearm/shared_lance_lightsaber_lightgreen.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_yellow = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_yellow.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_yellow, "object/weapon/melee/polearm/shared_lance_lightsaber_yellow.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_darkyellow = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_darkyellow.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_darkyellow, "object/weapon/melee/polearm/shared_lance_lightsaber_darkyellow.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_lightpurple = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_lightpurple.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_lightpurple, "object/weapon/melee/polearm/shared_lance_lightsaber_lightpurple.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_darkpurple = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_darkpurple.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_darkpurple, "object/weapon/melee/polearm/shared_lance_lightsaber_darkpurple.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_orange = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_orange.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_orange, "object/weapon/melee/polearm/shared_lance_lightsaber_orange.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_brown = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_brown.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_brown, "object/weapon/melee/polearm/shared_lance_lightsaber_brown.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_blue = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_blue.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_blue, "object/weapon/melee/polearm/shared_lance_lightsaber_blue.iff")
+
+--Made with MaxiScript
+
+object_weapon_melee_polearm_shared_lance_lightsaber_darkblue = SharedWeaponObjectTemplate:new {
+	clientTemplateFileName = "object/weapon/melee/polearm/shared_lance_lightsaber_darkblue.iff"
+}
+ObjectTemplates:addClientTemplate(object_weapon_melee_polearm_shared_lance_lightsaber_darkblue, "object/weapon/melee/polearm/shared_lance_lightsaber_darkblue.iff")

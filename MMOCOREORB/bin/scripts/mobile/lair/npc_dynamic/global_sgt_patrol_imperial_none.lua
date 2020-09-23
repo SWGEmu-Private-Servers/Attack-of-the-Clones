@@ -1,7 +1,7 @@
 global_sgt_patrol_imperial_none = Lair:new {
 	mobiles = {
-		{"imperial_sergeant",1},
-		{"imperial_trooper",3}
+		{"clonetrooper_squad_leader",1},
+		{"clonetrooper",3}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {},

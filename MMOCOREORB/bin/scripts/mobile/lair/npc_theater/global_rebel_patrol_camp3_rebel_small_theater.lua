@@ -1,7 +1,7 @@
 global_rebel_patrol_camp3_rebel_small_theater = Lair:new {
 	mobiles = {
-		{"rebel_sergeant",1},
-		{"rebel_trooper",3}
+		{"cis_battle_droid_squad_leader",1},
+		{"cis_battle_droid",3}
 	},
 	spawnLimit = 9,
 	buildingsVeryEasy = {"object/building/poi/anywhere_rebel_camp_small_1.iff","object/building/poi/anywhere_rebel_camp_small_2.iff","object/building/poi/anywhere_rebel_camp_small_3.iff"},

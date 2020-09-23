@@ -5,8 +5,8 @@ enhanced_gaping_spider = Creature:new {
 	faction = "",
 	level = 108,
 	chanceHit = 2.5,
-	damageMin = 715,
-	damageMax = 1140,
+	damageMin = 1715,
+	damageMax = 2140,
 	baseXp = 10267,
 	baseHAM = 32000,
 	baseHAMmax = 39000,
@@ -32,7 +32,14 @@ enhanced_gaping_spider = Creature:new {
 		{
 			groups = {
 				{group = "fire_breathing_spider", chance = 10000000}
-			}
+			},
+			lootChance = 8000000
+		},
+		{
+			groups = {
+				{group = "noob_weapons", chance = 10000000}
+			},
+			lootChance = 2000000
 		}
 	},
 	weapons = {"creature_spit_heavy_flame"},

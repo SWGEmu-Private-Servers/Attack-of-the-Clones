@@ -1,5 +1,5 @@
 theme_park_rebel_supervisor = Creature:new {
-	objectName = "@mob/creature_names:rebel_brigadier_general",
+	objectName = "@mob/creature_names:cis_high_general",
 	socialGroup = "rebel",
 	faction = "rebel",
 	level = 25,

@@ -383,3 +383,76 @@ object_static_vehicle_shared_static_tie_fighter = SharedStaticObjectTemplate:new
 }
 
 ObjectTemplates:addClientTemplate(object_static_vehicle_shared_static_tie_fighter, "object/static/vehicle/shared_static_tie_fighter.iff")
+
+object_static_vehicle_shared_static_jedifighter = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/vehicle/shared_static_jedifighter.iff"
+	--Data below here is deprecated and loaded from the tres, keeping for easy lookups
+--[[
+	appearanceFilename = "appearance/jedifighter_model.apt",
+	arrangementDescriptorFilename = "",
+
+	clearFloraRadius = 0,
+	clientDataFile = "",
+	clientGameObjectType = 5,
+	collisionActionBlockFlags = 255,
+	collisionActionFlags = 1,
+	collisionActionPassFlags = 0,
+	collisionMaterialBlockFlags = 1,
+	collisionMaterialFlags = 1,
+	collisionMaterialPassFlags = 0,
+	containerType = 0,
+	containerVolumeLimit = 0,
+
+	detailedDescription = "string_id_table",
+
+	gameObjectType = 5,
+
+	locationReservationRadius = 0,
+	lookAtText = "string_id_table",
+
+	noBuildRadius = 0,
+
+	objectName = "@obj_n:unknown_object",
+	onlyVisibleInTools = 0,
+
+	portalLayoutFilename = "",
+
+	scale = 1,
+	scaleThresholdBeforeExtentTest = 0.5,
+	sendToClient = 1,
+	slotDescriptorFilename = "",
+	snapToTerrain = 0,
+	surfaceType = 0,
+
+	totalCellNumber = 0,
+
+	clientObjectCRC = 1095801974,
+	derivedFromTemplates = {"object/object/base/shared_base_object.iff", "object/static/base/shared_static_base.iff"}
+]]
+}
+
+ObjectTemplates:addClientTemplate(object_static_vehicle_shared_static_jedifighter, "object/static/vehicle/shared_static_jedifighter.iff")
+
+object_static_vehicle_shared_static_arc170 = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/vehicle/shared_static_arc170.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_static_vehicle_shared_static_arc170, "object/static/vehicle/shared_static_arc170.iff")
+
+object_static_vehicle_shared_static_gunship = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/vehicle/shared_static_gunship.iff"
+
+}
+
+ObjectTemplates:addClientTemplate(object_static_vehicle_shared_static_gunship, "object/static/vehicle/shared_static_gunship.iff")
+
+object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_barc_speeder_static_destroyed, "object/static/worldbuilding/vehicles/shared_barc_speeder_static_destroyed.iff")
+
+object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed = SharedStaticObjectTemplate:new {
+	clientTemplateFileName = "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff"
+}
+ObjectTemplates:addClientTemplate(object_static_worldbuilding_vehicles_shared_speeder_bike_static_destroyed, "object/static/worldbuilding/vehicles/shared_speeder_bike_static_destroyed.iff")

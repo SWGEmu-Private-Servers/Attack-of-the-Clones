@@ -1,5 +1,5 @@
 garyns_prowler = Creature:new {
-	objectName = "@mob/creature_names:garyn_prowler",
+	objectName = "@mob/creature_names:garyns_prowler",
 	randomNameType = NAME_GENERIC,
 	randomNameTag = true,
 	socialGroup = "garyn",

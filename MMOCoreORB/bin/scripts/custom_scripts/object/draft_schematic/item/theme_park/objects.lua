@@ -1,0 +1,36 @@
+object_draft_schematic_item_theme_park_shared_wod_crafting_alter_1 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_1.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_alter_1, "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_1.iff")
+
+object_draft_schematic_item_theme_park_shared_wod_crafting_alter_2 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_2.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_alter_2, "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_2.iff")
+
+object_draft_schematic_item_theme_park_shared_wod_crafting_alter_3 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_3.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_alter_3, "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_3.iff")
+
+object_draft_schematic_item_theme_park_shared_wod_crafting_alter_4 = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_4.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_alter_4, "object/draft_schematic/item/theme_park/shared_wod_crafting_alter_4.iff")
+
+object_draft_schematic_item_theme_park_shared_wod_crafting_template = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_template.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_template, "object/draft_schematic/item/theme_park/shared_wod_crafting_template.iff")
+
+object_draft_schematic_item_theme_park_shared_wod_crafting_scanner_interface = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/item/theme_park/shared_wod_crafting_scanner_interface.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_item_theme_park_shared_wod_crafting_scanner_interface, "object/draft_schematic/item/theme_park/shared_wod_crafting_scanner_interface.iff")
+

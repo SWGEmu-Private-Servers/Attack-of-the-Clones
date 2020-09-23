@@ -4,13 +4,13 @@ vraker_orde_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_specforce_pathfinder", npcName = "Scout Leader" }
+				{ npcTemplate = "cis_resistance_separatist", npcName = "Scout Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_scout", npcName = "" },
-				{ npcTemplate = "rebel_scout", npcName = "" },
-				{ npcTemplate = "rebel_scout", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_scout", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -29,9 +29,9 @@ vraker_orde_missions =
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -46,14 +46,14 @@ vraker_orde_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "rebel_colonel", npcName = "Base Leader" }
+				{ npcTemplate = "cis_magnaguard", npcName = "Base Leader" }
 			},
 			secondarySpawns =
 			{
-				{ npcTemplate = "rebel_surface_marshall", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" }
+				{ npcTemplate = "cis_surface_marshall", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" }
 			},
 			itemSpawns =
 			{

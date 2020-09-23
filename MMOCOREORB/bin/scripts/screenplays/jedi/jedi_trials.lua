@@ -29,7 +29,7 @@ function JediTrials:isEligibleForPadawanTrials(pPlayer)
 
 	local learnedBranches = VillageJediManagerCommon.getLearnedForceSensitiveBranches(pPlayer)
 
-	return CreatureObject(pPlayer):hasScreenPlayState(32, "VillageJediProgression") and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02") and learnedBranches >= 6 and tonumber(readScreenPlayData(pPlayer, "PadawanTrials", "completedTrials")) ~= 1
+	return CreatureObject(pPlayer):hasScreenPlayState(32, "VillageJediProgression") and not CreatureObject(pPlayer):hasSkill("force_title_jedi_rank_02") and learnedBranches >= 4 and tonumber(readScreenPlayData(pPlayer, "PadawanTrials", "completedTrials")) ~= 1
 end
 
 function JediTrials:isOnPadawanTrials(pPlayer)
@@ -132,6 +132,7 @@ function JediTrials:unlockJediPadawan(pPlayer, dontSendSui)
 
 	CreatureObject(pPlayer):playEffect("clienteffect/trap_electric_01.cef", "")
 	CreatureObject(pPlayer):playMusicMessage("sound/music_become_jedi.snd")
+	broadcastGalaxy("\\#00ff00REPUBLIC COMMUNICATION FROM THE CHANCELLORS OFFICE: Grandmaster Yoda has detected a disturbance in the Force. Be on the lookout for any suspicious persons displaying unique or odd abilities. All citizens are advised to treat any such individual with extreme caution.")
 
 	PlayerObject(pGhost):setJediState(2)
 
@@ -168,7 +169,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 		enclaveLoc = { -5575, 4905, "yavin4" }
 		enclaveName = "Light Jedi Enclave"
 		jediState = 4
-		setFactionVal = FACTIONREBEL
+		setFactionVal = FACTIONIMPERIAL
 	elseif (councilType == self.COUNCIL_DARK) then
 		knightRobe = "object/tangible/wearables/robe/robe_jedi_dark_s01.iff"
 		unlockMusic = "sound/music_become_dark_jedi.snd"
@@ -176,7 +177,7 @@ function JediTrials:unlockJediKnight(pPlayer)
 		enclaveLoc = { 5079, 305, "yavin4" }
 		enclaveName = "Dark Jedi Enclave"
 		jediState = 8
-		setFactionVal = FACTIONIMPERIAL
+		setFactionVal = FACTIONREBEL
 	else
 		printLuaError("Invalid council type in JediTrials:unlockJediKnight")
 		return

@@ -1,0 +1,6 @@
+includeFile("../custom_scripts/mobile/tatooine/tusken_royal_king.lua")
+includeFile("../custom_scripts/mobile/tatooine/tusken_massif.lua")
+includeFile("../custom_scripts/mobile/tatooine/tusken_massif_handler.lua")
+includeFile("../custom_scripts/mobile/tatooine/tusken_royal_guard.lua")
+includeFile("../custom_scripts/mobile/tatooine/jawa_rescue_distressed_jawa.lua")
+includeFile("../custom_scripts/mobile/tatooine/jawa_rescue_jawa_captain.lua")

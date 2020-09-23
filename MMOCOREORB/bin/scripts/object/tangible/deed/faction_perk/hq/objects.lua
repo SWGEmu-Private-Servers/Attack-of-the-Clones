@@ -689,3 +689,51 @@ object_tangible_deed_faction_perk_hq_shared_hq_s05_pvp = SharedTangibleObjectTem
 }
 
 ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s05_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s05_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s01_rep_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s01_rep_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s01_rep_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s01_rep_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s02_rep_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s02_rep_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s02_rep_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s02_rep_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s03_rep_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s03_rep_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s03_rep_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s03_rep_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s04_rep_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s04_rep_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s04_rep_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s04_rep_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s01_cis_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s01_cis_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s01_cis_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s01_cis_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s02_cis_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s02_cis_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s02_cis_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s02_cis_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s03_cis_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s03_cis_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s03_cis_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s03_cis_pvp.iff")
+
+object_tangible_deed_faction_perk_hq_shared_hq_s04_cis_pvp = SharedTangibleObjectTemplate:new {
+	clientTemplateFileName = "object/tangible/deed/faction_perk/hq/shared_hq_s04_cis_pvp.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_tangible_deed_faction_perk_hq_shared_hq_s04_cis_pvp, "object/tangible/deed/faction_perk/hq/shared_hq_s04_cis_pvp.iff")

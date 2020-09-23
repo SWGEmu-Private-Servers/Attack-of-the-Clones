@@ -1,6 +1,6 @@
 victor_questn_capitol = Creature:new {
 	objectName = "",
-	customName = "TL-017",
+	customName = "CT-0174",
 	socialGroup = "imperial",
 	faction = "imperial",
 	level = 100,
@@ -26,7 +26,7 @@ victor_questn_capitol = Creature:new {
 	optionsBitmask = INVULNERABLE,
 	diet = HERBIVORE,
 
-	templates = {"object/mobile/dressed_victor_questn_capitol.iff"},
+	templates = {"object/mobile/dressed_clone_arc_m.iff",},
 	lootGroups = {},
 	weapons = {},
 	conversationTemplate = "",

@@ -11,8 +11,8 @@ captain_eso_missions =
 			{
 				{ npcTemplate = "swamp_trooper", npcName = "" },
 				{ npcTemplate = "swamp_trooper", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" },
-				{ npcTemplate = "rebel_commando", npcName = "" }
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" },
+				{ npcTemplate = "cis_battle_droid_commando", npcName = "" }
 			},
 			itemSpawns =
 			{
@@ -26,7 +26,7 @@ captain_eso_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "imperial_medic", npcName = "an Imperial Field Medic" }
+				{ npcTemplate = "clonetrooper_medic", npcName = "a Clone Trooper Field Medic" }
 			},
 			secondarySpawns =
 			{
@@ -54,7 +54,7 @@ captain_eso_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "deranged_rebel_quest_eso", npcName = "a Shellshocked Rebel Soldier" }
+				{ npcTemplate = "deranged_rebel_quest_eso", npcName = "a Shellshocked Separatist Soldier" }
 			},
 			secondarySpawns =
 			{
@@ -71,7 +71,7 @@ captain_eso_missions =
 			missionType = "assassinate",
 			primarySpawns =
 			{
-				{ npcTemplate = "scout_trooper", npcName = "Jungle Trooper" }
+				{ npcTemplate = "clone_scout_trooper", npcName = "Jungle Trooper" }
 			},
 			secondarySpawns =
 			{

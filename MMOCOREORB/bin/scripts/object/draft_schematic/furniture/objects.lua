@@ -40,6 +40,11 @@
 --this exception also makes it possible to release a modified version
 --which carries forward this exception.
 
+object_draft_schematic_furniture_shared_furniture_dyekit = SharedDraftSchematicObjectTemplate:new {
+	clientTemplateFileName = "object/draft_schematic/furniture/shared_furniture_dyekit.iff"
+}
+
+ObjectTemplates:addClientTemplate(object_draft_schematic_furniture_shared_furniture_dyekit, "object/draft_schematic/furniture/shared_furniture_dyekit.iff")
 
 object_draft_schematic_furniture_shared_furniture_armoire_cheap = SharedDraftSchematicObjectTemplate:new {
 	clientTemplateFileName = "object/draft_schematic/furniture/shared_furniture_armoire_cheap.iff"
